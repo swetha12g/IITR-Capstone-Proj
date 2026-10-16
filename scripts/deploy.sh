@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
+trap 'pipelinefortress_exit=$?; printf "deployment failed: line %s exit %s\n" "$LINENO" "$pipelinefortress_exit" >&2' ERR
 pipelinefortress_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$pipelinefortress_root"
 export KUBECONFIG="${PIPELINEFORTRESS_KUBECONFIG:-$pipelinefortress_root/reports/private/day2/kubeconfig}"
 mkdir -p "$(dirname -- "$KUBECONFIG")"
 if [[ " $(kind get clusters | tr '\n' ' ') " != *" pipelinefortress "* ]]; then
   KIND_EXPERIMENTAL_PROVIDER=docker kind create cluster --name pipelinefortress \
-    --config infra/kind.yaml --kubeconfig "$KUBECONFIG" --wait 180s
+    --config infra/kind.yaml --kubeconfig "$KUBECONFIG" --wait 180s --retain
 fi
 kubectl --context kind-pipelinefortress wait --for=condition=Ready nodes --all --timeout=180s
 kind load docker-image pipelinefortress:baseline --name pipelinefortress

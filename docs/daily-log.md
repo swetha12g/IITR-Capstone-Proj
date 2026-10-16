@@ -162,7 +162,7 @@ These are local Markdown planning IDs, not external JIRA issues. The user reques
 | PF-D2-04 | Create the local kind lab and verify readiness | Done | High | 60 min | PF-D2-02, PF-D2-03 | Use the recorded compatible node-image digest, create the named `pipelinefortress` cluster, load the exact source-built image, apply manifests, and verify node Ready, successful rollout, and ready pods. Inspect any failures privately and record actual results. |
 | PF-D2-05 | Verify loopback HTTP and document the runtime baseline | Done | High | 50 min | PF-D2-04 | Forward the service on `127.0.0.1:3000` only, verify HTTP, capture a sanitized screenshot/workload status, and write at least three locally confirmed insecure behaviors with safe reproductions, expected behavior, risk, and evidence. Keep suspicions separate from confirmed observations. |
 | PF-D2-06 | Implement and run baseline GitHub Actions | In progress: hosted run | High | 60 min | PF-D2-02, PF-D2-03 | Create root `.github/workflows/security.yml` for feature pushes/PRs with `contents: read`, verified action SHAs, timeouts, and a pinned supported runner. Use recorded app/runtime/lock paths, finite build/tests, and a separate ephemeral runner kind cluster with cleanup. Run the agreed workflow and record its actual URL/result; never target laptop localhost from hosted CI. |
-| PF-D2-07 | Review evidence and prepare an honest submission status | To Do | Highest | 30 min | PF-D2-05, PF-D2-06 | Update versions, runtime report, evidence index, requirements, report outline, and this log. Project owner performs real manual review. Review the safe diff/publication scope and record all remaining mandatory gaps before any submission/tag. Do not label a Day 2-only result as a complete capstone or invent approval/run evidence. |
+| PF-D2-07 | Review evidence and prepare an honest submission status | In progress: final hosted evidence | Highest | 30 min | PF-D2-05, PF-D2-06 | Update versions, runtime report, evidence index, requirements, report outline, and this log. Project owner performs real manual review. Review the safe diff/publication scope and record all remaining mandatory gaps before any submission/tag. Do not label a Day 2-only result as a complete capstone or invent approval/run evidence. |
 
 ### 18 October working checklist
 
@@ -217,3 +217,40 @@ If deadline/capacity cannot accommodate the mandatory evidence, record the actua
 - Review finding: replacing `pipelinefortress:baseline` in kind leaves an existing pod unchanged unless the deployment template changes.
 - Action: added an image-config-ID pod-template annotation in `scripts/deploy.sh`; changed image identity triggers a rollout. Syntax/actionlint checks passed; local rerun and hosted verification are required for the corrected helper.
 - The initial hosted run passed application build/tests and tool checksum verification. A new code push will supersede it under the workflow's concurrency policy; no cancelled/superseded result will be counted as final acceptance.
+
+- Rerun outcome: changed template rolled out; unchanged-image second apply reported no patch change; runtime recheck passed on the replacement pod. Corrected implementation `c1d78b9` was pushed normally. Final verification is [run 38955433523](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/38955433523); awaiting its actual result.
+
+## Next checkpoint backlog — Day 3, planned for 18 October 2026
+
+Day 2 was brought forward to 17 October. This is the next **unstarted** JIRA-style Markdown board, based on the guide's Day 3; no external JIRA issues or scanner installations are created by this plan. Target timebox: 300 minutes. The remaining Days 3–10 still total approximately 40 focused hours, so this board is not a promise of a complete submission on 18 October. Exact cutoff/coordinator interpretation remains unresolved.
+
+| ID | Task | Status | Priority | Estimate | Acceptance criteria |
+|---|---|---|---|---|---|
+| PF-D3-01 | Verify and pin official Semgrep, Trivy and Gitleaks tools; configure reviewed rules | To Do | High | 120 min | Official versions/checksums and supported CLI flags recorded; meaningful JS/TS rules and narrow generated/vendor exclusions; application source remains in scope |
+| PF-D3-02 | Run source, dependency, full-history and working-tree scans | To Do | High | 45 min | Private machine-readable output; timestamps/exit codes captured; full Git history fetched in CI; distinguish findings from scanner execution errors |
+| PF-D3-03 | Triage baseline and define exact expiring exceptions | To Do | High | 15 min | Rule/advisory, component/path fingerprint, reason, owner role, expiry and baseline commit; no blanket application suppression |
+| PF-D3-04 | Implement scan wrapper and fail-closed gate policy | To Do | Highest | 60 min | Explicit severity mappings; invalid/missing JSON, crashes, mandatory skips and expired exceptions block; collect all reports without blanket passing error suppression |
+| PF-D3-05 | Prove bad/fixed behavior with isolated synthetic fixtures | To Do | High | 30 min | Unsafe source pattern, verified advisory fixture and token-shaped canary detected; repaired/removed fixtures pass relevant gates; no real credential or seeded deployed feature |
+| PF-D3-06 | Run hosted checks and review sanitized evidence | To Do | High | 30 min | Actual run URL/results, policy tests, JSON validation and baseline risk visible; no raw secret matches in public output; update requirements/report/evidence |
+
+- [ ] PF-D3-01 — official tool pins and reviewed scanner configuration.
+- [ ] PF-D3-02 — three scanners execute with valid private reports, full history and working-tree coverage.
+- [ ] PF-D3-03 — precise reviewed baseline exceptions.
+- [ ] PF-D3-04 — fail-closed operational-error and expiry tests.
+- [ ] PF-D3-05 — real scanner detection of synthetic bad/fixed fixtures.
+- [ ] PF-D3-06 — actual hosted evidence and safe Markdown closeout.
+
+Entry dependency: accepted Day 2 baseline. This backlog is a next step, not execution of Day 3 or permission to start it while this session stops at Day 2. Day 4 acknowledgement and later live-AI configuration/budget remain separate requirements.
+
+### Hosted verification progress
+
+Corrected run `38955433523` passed application build/tests and official kind/kubectl checksum installation. The source-image build and subsequent runner deployment/runtime are still running; PF-D2-06 and final closeout remain unchecked until the complete job succeeds. The superseded first run concluded cancelled and is not counted as acceptance.
+
+### User-linked failed hosted job — 17 October 2026
+
+- Request: inspect [job 117157402202](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/38955433523/job/117157402202) while completing Day 2.
+- Verified result: application build/tests, verified tools and image build succeeded; deployment exited 1 after about 247 seconds, runtime was skipped, artifact upload and cluster cleanup succeeded. No full Day 2/CI success is claimed.
+- Evidence limitation: the visible job log contains only the deployment exit code; private runner output was not uploaded. Its sanitized artifact contains only the passing test manifest. Root cause remains unknown.
+- Action: added an early kind-startup diagnostic phase, retained failed owned nodes until cleanup, selected disk/node/pod/kubelet probes and redacted failure JSON. Synthetic privacy checks, actionlint and syntax checks passed. This is instrumentation, not an assumed root-cause fix or relaxed gate.
+- Investigation method: applied the local investigate skill. Its startup/freeze/learnings helpers are absent at their configured paths, so degraded local investigation is used without installing/upgrading the skill or changing settings. Helper restoration via `/gstack-upgrade` is separate from this task.
+- Next: publish the diagnostic change, capture the actual failure cause, apply a verified minimal fix and rerun full acceptance.

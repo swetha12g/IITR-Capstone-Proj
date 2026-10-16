@@ -53,4 +53,12 @@ Next is the guide's Day 3: pinned Semgrep, dependency and secrets scanning with 
 
 ### Deployment rerun correction
 
-Final reproduction review identified that changing a local image tag does not itself replace existing pods. The deployment helper now writes the built image config ID into the pod template annotation, so changed images trigger a rollout and unchanged images remain stable. Local validation/rerun is being checked. The first hosted run passed build/tests; its final image/deployment result is superseded by the new verification run after this helper correction.
+Final reproduction review identified that changing a local image tag does not itself replace existing pods. The deployment helper now writes the built image config ID into the pod template annotation, so changed images trigger a rollout and unchanged images remain stable. Local rollout succeeded; a second unchanged-image apply reported no patch change, and runtime verification passed on the replacement pod. The first hosted run passed build/tests; its final image/deployment result is superseded by the new verification run after this helper correction.
+
+Current corrected implementation: `c1d78b9`, pushed normally. Final hosted verification is [run 38955433523](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/38955433523); its result is still pending. The corrected run has passed the application build/tests and verified tool installation; source-image build and runner deployment/runtime remain in progress.
+
+## Hosted deployment failure — investigation active
+
+Corrected run `38955433523` failed in deployment (job `117157402202`) after application build/tests, checksum installation and source-image build succeeded. Cleanup succeeded. Its deployment output was redirected to an ignored runner file, and the available artifact contains only the passing test manifest; **the root cause is not established**. Day 2 CI/final acceptance remains unchecked.
+
+The next diagnostic run adds early retained kind-startup validation and publishes only selected/redacted operational messages, disk/node/pod status and filtered kubelet errors. Kubeconfig contents, environment dumps, secret resources, application responses and raw private logs are not published. A synthetic contact/auth/token canary check passed while preserving a useful disk-error message. The failure remains a failing workflow result; no timeout increase, retry-to-green or skipped gate is introduced.
