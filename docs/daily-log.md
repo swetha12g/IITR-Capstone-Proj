@@ -103,7 +103,7 @@ The user resumed work and requested completion of today's board. After the local
 | PF-D1-04 | Done | Added ignore rules; recovered missing `ensurepip` through temporary `virtualenv`; Python 3.10 environment, pytest 9.1.1, jsonschema 4.26.0, dependency and valid/invalid schema checks passed; exact requirements recorded |
 | PF-D1-05 | Done | Fork commit fetched; archived source into `app/juice-shop/`; all 1,466 tracked files match, MIT license preserved, no nested `.git` |
 | PF-D1-06 | Done | Root/frontend installation and explicit production build passed; frontend 1,372 passed, server 417 passed / 2 skipped, API 545 passed / 6 skipped; zero failures; dependency locks unchanged |
-| PF-D1-07 | Done; authorized publication in progress | Records and source/import/privacy checks complete; lint passed; source committed as `425d129`; user explicitly authorized feature-branch delivery |
+| PF-D1-07 | Done and published | Records and source/import/privacy checks complete; lint passed; commits `425d129` / `9bca61f` pushed to the feature branch with zero divergence verified |
 
 ### Implementation decisions and recovery
 
@@ -137,13 +137,13 @@ Per-ticket actual time was not independently timed; the planned estimates above 
 - Precommit verification: the upstream-required `npm run lint` passed with exit 0 in 8.57 seconds. The source-only index was checked against the 1,466 pinned upstream files plus the one narrow local ignore override; generated/private files were absent.
 - Source commit: `425d129` (`chore: import pinned Juice Shop v20.3.0 baseline`), with required DCO sign-off in Git metadata. Personal commit details are not copied into Markdown.
 - Whitespace review: the unchanged upstream snapshot has 190 pre-existing whitespace diagnostics. Preserved the verified pinned bytes rather than reformatting upstream source; the new local override passed its whitespace check. This is distinct from the successful lint/build/test results and is retained in sanitized review evidence.
-- Environment, lock, documentation, and evidence records are prepared as a separate commit. A normal push and remote verification are still required before recording publication success.
+- Environment, locks, documentation, sanitized evidence, completed 17 October ticks, and the 18 October board were committed separately as `9bca61f`. A normal push of both commits to `origin/feature-16-kick-start` succeeded; working tree was clean and ahead/behind counts were `0 / 0` at delivery verification. No private evidence, Python environment, or node_modules files were tracked.
 
 ### Requested final cross-check and next-day planning
 
 - Request: cross-check 17 October again, tick the completed JIRA checklist, and prepare the same style of checklist for 18 October from `10-days-work-break-down.md`.
 - Cross-check: the committed source blob IDs and file modes match all 1,466 upstream tracked files; build outputs exist; private test-log checksums match the sanitized manifest; all selected stages passed; lint passed; eight upstream test skips remain recorded. Project Node, Python dependency consistency, Docker warnings, and bridge settings were rechecked.
-- Result: PF-D1-01 through PF-D1-07 local acceptance items are checked. The source and environment/evidence commits will complete the already-authorized publication; remote success must be verified separately.
+- Result: PF-D1-01 through PF-D1-07 are checked and their source/environment/evidence records are published. Remote delivery succeeded and was verified; 18 October tasks remain unchecked.
 - Planning: 18 October follows the guide's **Day 2**, with image, own kind lab, runtime baseline, and baseline CI tasks. Because 18 October is also the stated submission date, the board includes an explicit submission gap review; unfinished Days 3–10 are not relabeled as completed.
 
 ## Plan for 18 October 2026 — JIRA-style backlog
