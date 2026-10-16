@@ -1,0 +1,40 @@
+# Local credentials and private evidence
+.env
+.env.*
+!.env.example
+reports/private/
+kubeconfig
+kubeconfig.*
+*.kubeconfig
+.kube/
+local-alias-maps/
+api-traces/
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+!app/juice-shop/ftp/encrypt.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# JavaScript dependencies and generated artifacts
+node_modules/
+build/
+dist/
+coverage/
+.angular/
+.cache/
+*.tsbuildinfo
+npm-debug.log*
+
+# Local runtime files and editor metadata
+*.log
+*.db
+*.sqlite
+*.sqlite3
+.DS_Store
+.idea/
+.vscode/

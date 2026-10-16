@@ -1,8 +1,8 @@
-# Day 1 local setup checkpoint — 16 October 2026
+# Day 1 setup checkpoint — updated 17 October 2026
 
 Repository: `/home/popos/Capstone/IITR-Capstone-Proj`.
 
-**Status:** Today's basic environment checkpoint is complete and closed for 16 October 2026. Work is paused at the user's request after documentation delivery. The execution guide's full Day 1 remains incomplete until upstream provenance, application build, and selected tests pass; these tasks carry over to 17 October 2026.
+**Status:** Day 1 local setup and the selected build/test acceptance checks passed on 17 October 2026. The real fork, pinned source import, supported Node/Python environments, dependency locks, production build, and finite frontend/server/API suites are verified. There were 2,334 passed tests, 8 upstream skips, and zero failures. The user authorized publishing the reviewed packet. The pinned source is recorded in commit `425d129`; remote delivery verification follows in the daily log. See the [execution log](daily-log.md#execution-on-17-october-2026) and [evidence index](evidence-index.md).
 
 **Documentation convention:** Every request is reflected in the relevant Markdown files before reporting completion. This file tracks current setup state; [daily-log.md](daily-log.md) records request outcomes, decisions, verification, blockers, and next steps. Personal details and credentials are omitted. The preference is also saved in personal Codex instructions outside the repository.
 
@@ -13,15 +13,26 @@ Repository: `/home/popos/Capstone/IITR-Capstone-Proj`.
 | kubectl | Complete | v1.37.0 installed in `~/.local/bin`; official checksum and client version verified |
 | Docker and kind | Complete | Docker 27.3.1 accessible; kind v0.33.0 verified |
 | Bridge networking | Complete | `br_netfilter` loaded; both bridge filters enabled; Docker warnings cleared |
-| Supported Node runtime | Pending | Install Node v24.22.0 separately from system Node |
-| Upstream provenance and source | Pending | Resolve fork requirement and record the pinned source before import |
-| Application build and tests | Pending | Run after supported Node and pinned source are available |
+| Supported Node runtime | Complete | Node v24.22.0 / npm 11.19.1 installed user-locally; checksum verified; system Node unchanged |
+| Python test environment | Complete | Python 3.10.12 virtual environment; pytest 9.1.1 / jsonschema 4.26.0; dependency and validation checks passed |
+| Upstream provenance and source | Complete | Separate real fork; pinned commit imported; 1,466 tracked files match; MIT license preserved |
+| Application build and tests | Complete with recorded skips | Root/frontend install and explicit build passed; frontend 1,372 passed; server 417 passed / 2 skipped; API 545 passed / 6 skipped |
+| Scope and review role | Recorded | Individual; submission 18 October 2026; project owner is manual reviewer; independent approval/coordinator acceptance remains a separate dependency |
+| Publication | Authorized; delivery in progress | User explicitly selected commit/push of the reviewed Day 1 packet; source commit `425d129` preserves the baseline |
 
-Bridge changes are temporary; recheck after reboot. No Kubernetes cluster has been created. The user authorized committing and pushing today's Markdown records to `feature-16-kick-start`; no further setup work is included in today's closeout.
+Bridge changes are temporary; recheck after reboot. No Kubernetes cluster has been created. Today's source and environment publication was separately authorized after the local checks and review packet were complete.
 
-**Publication verified:** Closeout commit `a172539` was successfully pushed to `origin/feature-16-kick-start` using a normal push. Today's records and tomorrow's plan are published; setup work is paused until the user resumes.
+**Prior publication verified:** Closeout commit `a172539` and delivery-record commit `3bea933` were pushed to `origin/feature-16-kick-start` on 16 October. Work resumed on 17 October; the new source commit and authorized delivery are recorded in the execution log.
 
-## Today's closeout
+## 17 October completion
+
+The six selected application stages all exited 0 and completed in 159.77 measured seconds, excluding environment setup/downloads and documentation. Dependency locks remained unchanged; all imported upstream tracked files still match after build/tests. The source has one additional local ignore override to preserve upstream-tracked public assets during a future publication, documented in [upstream-provenance.md](upstream-provenance.md).
+
+Use `source scripts/dev-env.sh` for the project Node/Python runtimes, then `python scripts/run-day1-checks.py` to reproduce the selected checks. Full versions, checksum verification, the missing-`ensurepip` recovery, and limitations are recorded in [versions.md](versions.md).
+
+Eight upstream tests were skipped, and Cypress E2E was not selected. No security scan jobs, live LLM triage, remediation PRs, production-safety claim, container deployment, or cluster connectivity test follows from this baseline result. Submission is 18 October; the remaining pipeline/AI/report scope is still outstanding and is not represented as complete.
+
+## 16 October closeout (historical)
 
 Final checks were rerun on 16 October 2026 before preparing the documentation commit:
 
@@ -39,7 +50,7 @@ Today's outcome is a verified basic environment, authenticated repository access
 
 Tomorrow's ordered work items and acceptance criteria are in the [17 October JIRA-style plan](daily-log.md#plan-for-17-october-2026--jira-style-backlog). This is a Markdown planning board; no external JIRA issues have been created.
 
-## Verified local results
+## 16 October verified local results (historical)
 
 - Initial working tree was clean on `main`; no local work needed stashing.
 - Switched safely to `feature-16-kick-start`, tracking `origin/feature-16-kick-start`, at `fbbe5bfa418a222557a71f60b6b384405c4d1abf`; origin was subsequently fetched successfully.
@@ -61,7 +72,7 @@ Official binary: <https://dl.k8s.io/release/v1.37.0/bin/linux/amd64/kubectl>
 
 Official checksum: <https://dl.k8s.io/release/v1.37.0/bin/linux/amd64/kubectl.sha256>
 
-## Recommended version pins
+## Selected version pins
 
 Use existing kind `v0.33.0` with Kubernetes `v1.37.0` and installed kubectl `v1.37.0`. The kind release explicitly lists the following node image built for that release:
 
@@ -77,7 +88,7 @@ Recommend Juice Shop release `v20.3.0`, pinned to upstream commit:
 f189f521266f42c6bd05884468292000cee852ed
 ```
 
-Recommend Node `v24.22.0` LTS for a future separate user-local installation, retaining `/usr/bin/node`. The release's README marks Node 24.x supported and tested; its package metadata specifies `node: "22 - 26"`. The official Node release page identifies v24.22.0 as LTS. Node 12 is unsupported for this Juice Shop release. Build and test compatibility still needs a smoke test after the separately authorized source/provenance checkpoint.
+Node `v24.22.0` LTS is installed user-locally, retaining `/usr/bin/node`. The release's README marks Node 24.x supported and tested; its package metadata specifies `node: "22 - 26"`. The official Node release page identifies v24.22.0 as LTS. Node 12 is unsupported for this Juice Shop release. Root/frontend installation, the explicit production build, and selected finite tests passed with project Node 24.22.0/npm 11.19.1.
 
 Sources checked:
 
@@ -144,10 +155,9 @@ Kernel reference for the module's behavior: <https://docs.kernel.org/networking/
 
 ## Remaining checkpoints
 
-1. Install the selected Node version separately without replacing system Node, when authorized.
-2. Prepare the Python virtual environment and required test dependencies described in the execution guide, when authorized.
-3. Resolve fork/provenance requirements before importing the pinned source, then build and run the documented tests.
-4. Finish the Day 1 version, scope, requirements, and evidence records after the build/test checkpoint. Do not mark Day 1 complete before its acceptance checks pass.
+1. Finish the authorized commit/push of the reviewed baseline, environment helpers, locks, documentation, and sanitized evidence; verify remote delivery.
+2. Resolve the independent review/coordinator evidence arrangement where required; manual review by the project owner is recorded without fabricating GitHub approval.
+3. Proceed to Day 2 source image, authored lab manifests, own kind cluster, and local runtime baseline when requested. The remaining six-stage pipeline and AI work are not implemented yet; plan against the confirmed 18 October submission date honestly.
 
 No credentials were inspected and no cluster was created. The user applied the authorized bridge-module load and restarted the idle Docker daemon for verification; no persistent configuration files were created. Today's closeout publication is limited to reviewed Markdown documentation on the feature branch.
 

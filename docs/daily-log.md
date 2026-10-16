@@ -60,6 +60,8 @@ This log records sanitized request outcomes and decisions. Current setup details
 
 These are local planning IDs for this Markdown board; no external JIRA tickets have been created. All items start as **To Do**. Estimated total: **5 hours**. Execute in the order below, updating actual time, status, evidence, and blockers in this log.
 
+Execution resumed on 17 October; current task states and actual results are tracked below. The board above remains the original planned acceptance criteria.
+
 | ID | Task | Priority | Estimate | Dependency | Acceptance criteria |
 |---|---|---|---|---|---|
 | PF-D1-01 | Resume and recheck the environment | High | 15 min | User resumes work | Preserve Git changes; fetch/check feature branch; verify Docker, kubectl, kind, bridge sysctls, and disk. If reboot removed the temporary module, restore it only within authorized scope. |
@@ -70,16 +72,16 @@ These are local planning IDs for this Markdown board; no external JIRA tickets h
 | PF-D1-06 | Build and run documented finite tests | High | 115 min | PF-D1-03, PF-D1-05 | Inspect pinned npm scripts and engine metadata; run `npm ci`, the documented build, and non-watching CI/unit tests. Preserve the lockfile. Record commands, exit codes, selected suites, duration, and sanitized evidence; report failures honestly. |
 | PF-D1-07 | Complete Day 1 records and review the next checkpoint | High | 30 min | PF-D1-04, PF-D1-06 | Update versions, provenance, scope/requirements, daily log, and evidence index. Mark Day 1 passed only when branch, provenance/license, Docker, build, tests, and staged-content checks pass. Review a scoped documentation/source diff and agree on the next publication step. |
 
-### Tomorrow's working checklist
+### 17 October working checklist — completed
 
-- [ ] Resume explicitly and read the current checkpoint and this board.
-- [ ] PF-D1-01 — environment recheck passed.
-- [ ] PF-D1-02 — scope and provenance route recorded; unresolved dependencies named.
-- [ ] PF-D1-03 — supported Node installed separately; system Node preserved.
-- [ ] PF-D1-04 — Python test environment and ignore rules verified.
-- [ ] PF-D1-05 — pinned upstream source and license provenance recorded.
-- [ ] PF-D1-06 — application build and selected finite tests passed, or blockers documented.
-- [ ] PF-D1-07 — Day 1 acceptance and evidence records reviewed.
+- [x] Resume explicitly and read the current checkpoint and this board.
+- [x] PF-D1-01 — environment recheck passed.
+- [x] PF-D1-02 — scope and provenance route recorded; unresolved dependencies named.
+- [x] PF-D1-03 — supported Node installed separately; system Node preserved.
+- [x] PF-D1-04 — Python test environment and ignore rules verified.
+- [x] PF-D1-05 — pinned upstream source and license provenance recorded.
+- [x] PF-D1-06 — application build and selected finite tests passed, or blockers documented.
+- [x] PF-D1-07 — local Day 1 acceptance, evidence records, and publication candidates reviewed; commit/push scope explicitly authorized.
 
 ### Dependencies and limits
 
@@ -88,3 +90,108 @@ These are local planning IDs for this Markdown board; no external JIRA tickets h
 - If fork/provenance acceptance is unresolved, continue independent environment/documentation tasks and mark source acquisition blocked rather than silently importing.
 - No live LLM API calls, keys, cluster creation, scanning of external targets, or automatic pushes are part of this next-day plan. Revisit those steps when their prerequisites and scope are agreed.
 - If the five-hour estimate is exceeded, record the actual result and revised plan; do not mark unfinished Day 1 work complete to advance the calendar.
+
+## Execution on 17 October 2026
+
+The user resumed work and requested completion of today's board. After the local acceptance checks and concrete review packet were ready, the user explicitly authorized committing and pushing the reviewed Day 1 work to `feature-16-kick-start`.
+
+| Ticket | Current status | Actual result |
+|---|---|---|
+| PF-D1-01 | Done | Clean feature branch, successful fetch, approximately 582 GiB free disk, warning-free Docker, both bridge sysctls enabled, verified kind/kubectl; no clusters |
+| PF-D1-02 | Done with external review dependency noted | Individual scope confirmed; real fork verified; submission 18 October 2026 and project-owner manual review confirmed. Independent approving review/coordinator assessment interpretation remains separate and unconfirmed |
+| PF-D1-03 | Done | Official Node v24.22.0 archive checksum passed; user-local Node/npm 24.22.0/11.19.1 selected via `scripts/dev-env.sh`; system Node 12.22.9 unchanged; no startup-file edits |
+| PF-D1-04 | Done | Added ignore rules; recovered missing `ensurepip` through temporary `virtualenv`; Python 3.10 environment, pytest 9.1.1, jsonschema 4.26.0, dependency and valid/invalid schema checks passed; exact requirements recorded |
+| PF-D1-05 | Done | Fork commit fetched; archived source into `app/juice-shop/`; all 1,466 tracked files match, MIT license preserved, no nested `.git` |
+| PF-D1-06 | Done | Root/frontend installation and explicit production build passed; frontend 1,372 passed, server 417 passed / 2 skipped, API 545 passed / 6 skipped; zero failures; dependency locks unchanged |
+| PF-D1-07 | Done; authorized publication in progress | Records and source/import/privacy checks complete; lint passed; source committed as `425d129`; user explicitly authorized feature-branch delivery |
+
+### Implementation decisions and recovery
+
+- `python3 -m venv` could not seed pip because host `ensurepip` is absent. A temporary PyPI `virtualenv` tool created `.venv` without system-package installation; Python dependencies were installed and verified inside it.
+- The upstream application does not track npm lockfiles. Resolved exact root/frontend locks with scripts disabled, recorded them under `locks/juice-shop/`, and kept the imported tracked tree unchanged. The runner checks lock stability after execution.
+- The runner captures raw output only under ignored private evidence and writes sanitized run manifests with commands, exit codes, duration, and log checksums. Cypress E2E and live LLM API calls are excluded from this Day 1 check selection.
+- Public upstream license/attribution remains intact. Newly written project Markdown omits user names, email addresses, and credentials.
+
+Per-ticket actual time was not independently timed; the planned estimates above are not presented as measured effort. Application stage durations are recorded in the runner's UTC-timestamped manifests.
+
+### Verified completion and review packet
+
+- All selected installation/build/test stages passed in 159.77 measured seconds, excluding setup/downloads and documentation. The run ID is `20261016T183808Z` in UTC, corresponding to 17 October 2026, 00:08:08–00:10:48 IST.
+- Totals: 2,342 tests counted, 2,334 passed, 8 skipped, 0 failed. Eight upstream skips and the exclusion of Cypress E2E remain explicit limitations.
+- The recorded dependency locks did not change. Rechecked all 1,466 imported upstream tracked files after execution; none changed. Production server/frontend outputs exist and remain ignored.
+- Content review caught ten public upstream files that ordinary Git staging would omit because of ignore patterns. Added narrow publication exceptions for the nine existing JavaScript assets and one public challenge fixture; the complete pinned source is now visible without broadly forcing ignored files into the index.
+- Private logs, Python environment, node_modules, API traces, and local alias maps are excluded from publication candidates. Lockfile resolved URLs contain no embedded authentication. New project Markdown passed personal-detail and fence checks, and whitespace checks passed. No full secrets-scanner verdict is claimed for the deliberately vulnerable public upstream fixtures.
+- Review references: [checkpoint](day1-checkpoint.md), [versions](versions.md), [scope](scope.md), [provenance](upstream-provenance.md), [requirements](requirements-checklist.md), [evidence index](evidence-index.md), and [report outline](final-report.md).
+- The user subsequently authorized publishing the reviewed source, environment helpers, locks, Markdown, and sanitized evidence. The pinned source is isolated in commit `425d129`; publication results will be verified before reporting delivery complete.
+
+### Submission-date and reviewer update
+
+- Request: record submission on 18 October and the user as reviewer.
+- Result: recorded **18 October 2026** and **project owner as manual reviewer** without personal contact details. The exact submission cutoff time was not supplied.
+- GitHub does not permit authors to approve their own PRs. Manual review notes will be retained honestly, with coordinator acceptance/independent approval requirements distinguished from self-review; no approval has been invented.
+- The submission date is one calendar day after this execution date. Source containerization, local deployment, security scans/gates, metrics, AI safeguards/evaluation, three reviewed remediation PRs, and the final report remain outstanding. No full-project deadline-readiness claim is made.
+
+### Authorized publication and upstream review
+
+- Request: commit and push the reviewed Day 1 work to `feature-16-kick-start`.
+- Precommit verification: the upstream-required `npm run lint` passed with exit 0 in 8.57 seconds. The source-only index was checked against the 1,466 pinned upstream files plus the one narrow local ignore override; generated/private files were absent.
+- Source commit: `425d129` (`chore: import pinned Juice Shop v20.3.0 baseline`), with required DCO sign-off in Git metadata. Personal commit details are not copied into Markdown.
+- Whitespace review: the unchanged upstream snapshot has 190 pre-existing whitespace diagnostics. Preserved the verified pinned bytes rather than reformatting upstream source; the new local override passed its whitespace check. This is distinct from the successful lint/build/test results and is retained in sanitized review evidence.
+- Environment, lock, documentation, and evidence records are prepared as a separate commit. A normal push and remote verification are still required before recording publication success.
+
+### Requested final cross-check and next-day planning
+
+- Request: cross-check 17 October again, tick the completed JIRA checklist, and prepare the same style of checklist for 18 October from `10-days-work-break-down.md`.
+- Cross-check: the committed source blob IDs and file modes match all 1,466 upstream tracked files; build outputs exist; private test-log checksums match the sanitized manifest; all selected stages passed; lint passed; eight upstream test skips remain recorded. Project Node, Python dependency consistency, Docker warnings, and bridge settings were rechecked.
+- Result: PF-D1-01 through PF-D1-07 local acceptance items are checked. The source and environment/evidence commits will complete the already-authorized publication; remote success must be verified separately.
+- Planning: 18 October follows the guide's **Day 2**, with image, own kind lab, runtime baseline, and baseline CI tasks. Because 18 October is also the stated submission date, the board includes an explicit submission gap review; unfinished Days 3–10 are not relabeled as completed.
+
+## Plan for 18 October 2026 — JIRA-style backlog
+
+**Sprint goal:** complete the guide's Day 2 baseline: source-built image, running owned kind lab, local HTTP evidence, three confirmed runtime observations, and a successful baseline build/test/deployment workflow.
+
+**Date and deadline:** 18 October 2026, Asia/Kolkata. The exact submission cutoff time is unconfirmed. After Day 1, the guide still allocates **45 focused hours to Days 2–10**; this **five-hour Day 2 plan does not complete that remaining scope**. The final report/AI/security requirements remain blocking gaps for a complete submission, and no complete submission is promised by this board.
+
+These are local Markdown planning IDs, not external JIRA issues. All 18 October tasks are **To Do** and unchecked. Planned total: **300 minutes / 5 hours**. Start only when the user resumes/requests this work; no cluster or workflow is created by writing this plan.
+
+| ID | Task | Status | Priority | Estimate | Dependency | Acceptance criteria |
+|---|---|---|---|---|---|---|
+| PF-D2-01 | Resume, recheck Day 1 evidence, and review submission gaps | To Do | Highest | 20 min | Day 1 delivery | Preserve changes, fetch/check branch, select project runtimes, recheck Docker/bridge filters after reboot, review recorded test skips, confirm cutoff time and actual deliverable gaps. Record unresolved coordinator/review decisions honestly. |
+| PF-D2-02 | Build the baseline image from pinned source | To Do | High | 50 min | PF-D2-01 | Inspect the upstream Dockerfile/build context and recorded locks; build `pipelinefortress:baseline` from `app/juice-shop/`. Verify image ID, source commit, architecture, and expected port; capture sanitized evidence. A downloaded prebuilt app image is not sufficient. |
+| PF-D2-03 | Author and validate owned lab manifests | To Do | High | 30 min | PF-D2-01 | Create `infra/kind.yaml` for one control-plane and namespace/deployment/ClusterIP service manifests under `infra/k8s/`. Use matching labels, verified port 3000, readiness probe, resource settings, the baseline tag and `IfNotPresent`. Validate YAML/schema; no public ingress or LoadBalancer. |
+| PF-D2-04 | Create the local kind lab and verify readiness | To Do | High | 60 min | PF-D2-02, PF-D2-03 | Use the recorded compatible node-image digest, create the named `pipelinefortress` cluster, load the exact source-built image, apply manifests, and verify node Ready, successful rollout, and ready pods. Inspect any failures privately and record actual results. |
+| PF-D2-05 | Verify loopback HTTP and document the runtime baseline | To Do | High | 50 min | PF-D2-04 | Forward the service on `127.0.0.1:3000` only, verify HTTP, capture a sanitized screenshot/workload status, and write at least three locally confirmed insecure behaviors with safe reproductions, expected behavior, risk, and evidence. Keep suspicions separate from confirmed observations. |
+| PF-D2-06 | Implement and run baseline GitHub Actions | To Do | High | 60 min | PF-D2-02, PF-D2-03 | Create root `.github/workflows/security.yml` for feature pushes/PRs with `contents: read`, verified action SHAs, timeouts, and a pinned supported runner. Use recorded app/runtime/lock paths, finite build/tests, and a separate ephemeral runner kind cluster with cleanup. Run the agreed workflow and record its actual URL/result; never target laptop localhost from hosted CI. |
+| PF-D2-07 | Review evidence and prepare an honest submission status | To Do | Highest | 30 min | PF-D2-05, PF-D2-06 | Update versions, runtime report, evidence index, requirements, report outline, and this log. Project owner performs real manual review. Review the safe diff/publication scope and record all remaining mandatory gaps before any submission/tag. Do not label a Day 2-only result as a complete capstone or invent approval/run evidence. |
+
+### 18 October working checklist
+
+- [ ] PF-D2-01 — environment and submission gap review recorded.
+- [ ] PF-D2-02 — exact baseline image built from pinned source and inspected.
+- [ ] PF-D2-03 — lab manifests authored and validated.
+- [ ] PF-D2-04 — owned kind node and app rollout Ready.
+- [ ] PF-D2-05 — loopback HTTP, sanitized screenshot, and three confirmed runtime observations recorded.
+- [ ] PF-D2-06 — baseline CI build/tests and runner deployment succeeded; run URL recorded.
+- [ ] PF-D2-07 — evidence, manual review notes, truthful submission status, and safe publication scope reviewed.
+
+### Day 2 acceptance from the execution guide
+
+- [ ] Source-built image exists with recorded identity.
+- [ ] Local kind is Ready.
+- [ ] Application HTTP is reachable locally.
+- [ ] Confirmed runtime baseline report exists.
+- [ ] CI build/test run succeeds.
+- [ ] Actual CI run URL is recorded.
+
+### Remaining mandatory submission gaps — not completed by this Day 2 plan
+
+- [ ] Day 3: Semgrep, dependency and secrets scans with bad/fixed gates and failure handling.
+- [ ] Day 4: Checkov custom policies, functional image/IaC hardening, exact-image scan, and Syft SBOM; required acknowledgement before this stage.
+- [ ] Day 5: ZAP baseline and all six mandatory jobs with a fail-closed aggregate gate.
+- [ ] Day 6: normalization, independent ground-truth labels including misses, and a recomputable metrics dashboard.
+- [ ] Day 7: tested source-free redaction, captured mock-body checks, injection/refusal cases, and zero-call refusals.
+- [ ] Day 8: explicitly budgeted real API triage after safeguards, grounding validation, honest FP/FN results, and cost/model disclosure.
+- [ ] Day 9: three genuine AI-assisted remediation PRs with before/after tests and genuine review evidence; resolve independent approval/coordinator acceptance as applicable.
+- [ ] Day 10: fresh reproduction, evidence-backed 12-page rendered report, maturity assessment, disclosure, final audit, and oral-defense preparation.
+
+If deadline/capacity cannot accommodate the mandatory evidence, record the actual partial result and discuss acceptable assessment scope with the coordinator. Do not skip redaction, human review, or mandatory tools to create an unsupported completion claim. No external messages or deadline-extension requests are sent by this plan.

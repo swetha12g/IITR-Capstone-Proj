@@ -1,0 +1,8 @@
+{
+  "private_generated_files_excluded": true,
+  "prospective_untracked_files": 1484,
+  "imported_tracked_files": 1466,
+  "upstream_files_ignored_by_default_staging": [],
+  "staged_files": [],
+  "source_scan_limit": "Public upstream fixtures are retained; no full secrets scanner verdict is claimed."
+}

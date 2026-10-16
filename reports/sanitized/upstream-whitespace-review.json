@@ -1,0 +1,8 @@
+{
+  "exit_code": 2,
+  "diagnostic_count": 190,
+  "status": "existing_upstream_whitespace_preserved",
+  "tracked_source_contents_match_pinned_commit": true,
+  "local_ignore_override_check": "passed",
+  "raw_log_reference": "reports/private/upstream-whitespace-check.log"
+}
