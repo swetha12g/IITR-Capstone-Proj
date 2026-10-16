@@ -10,7 +10,7 @@ Completed on **17 October 2026 (Asia/Kolkata)**, brought forward from the board 
 - [x] Loopback HTTP 200 and sanitized running-app screenshot captured and reviewed.
 - [x] Three runtime observations confirmed and documented in [runtime-baseline.md](runtime-baseline.md).
 - [x] Hosted application build/tests, source-image build, own-cluster deployment and runtime checks passed.
-- [x] Actual CI run/evidence reviewed; Markdown and JIRA checklist closeout prepared for the feature branch.
+- [x] Actual CI run/evidence reviewed; Markdown and JIRA checklist closeout published to the feature branch.
 
 Local image config: `sha256:79543af23e212f5def487f4daa27763943170f7bb268c46d0aace37920d7ae88`. Linux/amd64, Node v24.22.0, user 65532, port 3000. The local Ready pod's CRI reference resolves to this config ID; zero restarts were observed. See [local runtime evidence](../reports/sanitized/day2/runtime-baseline.json) and [cross-check](../reports/sanitized/day2/local-crosscheck.json).
 
@@ -55,3 +55,7 @@ The original Dockerfile retains mutable base tags/tool ranges; exact observed im
 Stop at Day 2. The next unstarted checkpoint is the [Day 3 JIRA backlog](daily-log.md#next-checkpoint-backlog--day-3-planned-for-18-october-2026). Day 4 acknowledgement and later live-AI budget/model decisions remain separate prerequisites.
 
 Operational learning: a changed local image tag requires a deployment-template change to replace old pods; private runner logs need selected diagnostic artifacts before cleanup if future root-cause analysis is to remain possible.
+
+## Publication verified
+
+Implementation `280514f` and reviewed evidence/Markdown closeout `204ae02` were normally pushed to `origin/feature-16-kick-start`. After closeout delivery, the working tree was clean and ahead/behind counts were `0 / 0`; private kubeconfig and artifact ZIPs remained ignored. The hosted run verifies implementation `280514f`; the later documentation/evidence-only commit does not change its tested code inputs. This receipt records that completed publication.
