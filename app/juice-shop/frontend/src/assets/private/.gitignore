@@ -1,0 +1,10 @@
+# Retain public assets already tracked by the pinned upstream release.
+!CopyShader.js
+!EffectComposer.js
+!MaskPass.js
+!OrbitControls.js
+!RenderPass.js
+!ShaderPass.js
+!dat.gui.min.js
+!stats.min.js
+!three.js
