@@ -1,0 +1,83 @@
+name: Baseline build and kind deployment
+
+on:
+  push:
+    branches: [feature-16-kick-start]
+    paths:
+      - .github/workflows/security.yml
+      - app/juice-shop/**
+      - infra/**
+      - scripts/**
+      - locks/**
+      - requirements-dev.txt
+  pull_request:
+    paths:
+      - .github/workflows/security.yml
+      - app/juice-shop/**
+      - infra/**
+      - scripts/**
+      - locks/**
+      - requirements-dev.txt
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: baseline-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  baseline:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      CI: "true"
+      NODE_OPTIONS: --max-old-space-size=4096
+      NG_BUILD_MAX_WORKERS: "2"
+      KUBECONFIG: ${{ github.workspace }}/reports/private/day2/kubeconfig
+    steps:
+      - name: Check out the reviewed commit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Select pinned Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24.22.0
+      - name: Select Python 3.10
+        uses: actions/setup-python@83679a892e2d95755f2dac6acb0bfd1e9ac5d548 # v6.1.0
+        with:
+          python-version: "3.10"
+      - name: Install pinned check dependencies
+        run: |
+          rm -rf reports/sanitized/day2
+          mkdir -p reports/private/day2 reports/sanitized/day2
+          python -m pip install -r requirements-dev.txt > reports/private/day2/python-install.log 2>&1
+          python -m pip check
+      - name: Build and run selected finite tests
+        run: python scripts/run-day1-checks.py
+      - name: Install verified kind and kubectl
+        run: bash scripts/install-ci-tools.sh
+      - name: Build the exact source image
+        run: bash scripts/build-image.sh > reports/private/day2/image-build.log 2>&1
+      - name: Deploy to this runner's own kind cluster
+        run: bash scripts/deploy.sh > reports/private/day2/deployment.log 2>&1
+      - name: Verify local runtime and capture safe evidence
+        run: python scripts/runtime-baseline.py
+      - name: Publish sanitized baseline evidence
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: baseline-evidence-${{ github.run_id }}
+          path: |
+            reports/sanitized/day2/
+            reports/sanitized/day1-latest.json
+          if-no-files-found: warn
+          retention-days: 7
+      - name: Clean up the ephemeral runner cluster
+        if: always()
+        run: |
+          if command -v kind >/dev/null; then
+            kind delete cluster --name pipelinefortress --kubeconfig "$KUBECONFIG"
+          fi

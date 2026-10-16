@@ -152,34 +152,34 @@ Per-ticket actual time was not independently timed; the planned estimates above 
 
 **Date and deadline:** 18 October 2026, Asia/Kolkata. The exact submission cutoff time is unconfirmed. After Day 1, the guide still allocates **45 focused hours to Days 2–10**; this **five-hour Day 2 plan does not complete that remaining scope**. The final report/AI/security requirements remain blocking gaps for a complete submission, and no complete submission is promised by this board.
 
-These are local Markdown planning IDs, not external JIRA issues. All 18 October tasks are **To Do** and unchecked. Planned total: **300 minutes / 5 hours**. Start only when the user resumes/requests this work; no cluster or workflow is created by writing this plan.
+These are local Markdown planning IDs, not external JIRA issues. The user requested execution on **17 October**, bringing this board forward from 18 October. Planned total: **300 minutes / 5 hours**. See the Day 2 execution entry below for verified results; pending items remain unchecked.
 
 | ID | Task | Status | Priority | Estimate | Dependency | Acceptance criteria |
 |---|---|---|---|---|---|---|
-| PF-D2-01 | Resume, recheck Day 1 evidence, and review submission gaps | To Do | Highest | 20 min | Day 1 delivery | Preserve changes, fetch/check branch, select project runtimes, recheck Docker/bridge filters after reboot, review recorded test skips, confirm cutoff time and actual deliverable gaps. Record unresolved coordinator/review decisions honestly. |
-| PF-D2-02 | Build the baseline image from pinned source | To Do | High | 50 min | PF-D2-01 | Inspect the upstream Dockerfile/build context and recorded locks; build `pipelinefortress:baseline` from `app/juice-shop/`. Verify image ID, source commit, architecture, and expected port; capture sanitized evidence. A downloaded prebuilt app image is not sufficient. |
-| PF-D2-03 | Author and validate owned lab manifests | To Do | High | 30 min | PF-D2-01 | Create `infra/kind.yaml` for one control-plane and namespace/deployment/ClusterIP service manifests under `infra/k8s/`. Use matching labels, verified port 3000, readiness probe, resource settings, the baseline tag and `IfNotPresent`. Validate YAML/schema; no public ingress or LoadBalancer. |
-| PF-D2-04 | Create the local kind lab and verify readiness | To Do | High | 60 min | PF-D2-02, PF-D2-03 | Use the recorded compatible node-image digest, create the named `pipelinefortress` cluster, load the exact source-built image, apply manifests, and verify node Ready, successful rollout, and ready pods. Inspect any failures privately and record actual results. |
-| PF-D2-05 | Verify loopback HTTP and document the runtime baseline | To Do | High | 50 min | PF-D2-04 | Forward the service on `127.0.0.1:3000` only, verify HTTP, capture a sanitized screenshot/workload status, and write at least three locally confirmed insecure behaviors with safe reproductions, expected behavior, risk, and evidence. Keep suspicions separate from confirmed observations. |
-| PF-D2-06 | Implement and run baseline GitHub Actions | To Do | High | 60 min | PF-D2-02, PF-D2-03 | Create root `.github/workflows/security.yml` for feature pushes/PRs with `contents: read`, verified action SHAs, timeouts, and a pinned supported runner. Use recorded app/runtime/lock paths, finite build/tests, and a separate ephemeral runner kind cluster with cleanup. Run the agreed workflow and record its actual URL/result; never target laptop localhost from hosted CI. |
+| PF-D2-01 | Resume, recheck Day 1 evidence, and review submission gaps | Done with cutoff/review questions open | Highest | 20 min | Day 1 delivery | Preserve changes, fetch/check branch, select project runtimes, recheck Docker/bridge filters after reboot, review recorded test skips, confirm cutoff time and actual deliverable gaps. Record unresolved coordinator/review decisions honestly. |
+| PF-D2-02 | Build the baseline image from pinned source | Done | High | 50 min | PF-D2-01 | Inspect the upstream Dockerfile/build context and recorded locks; build `pipelinefortress:baseline` from `app/juice-shop/`. Verify image ID, source commit, architecture, and expected port; capture sanitized evidence. A downloaded prebuilt app image is not sufficient. |
+| PF-D2-03 | Author and validate owned lab manifests | Done | High | 30 min | PF-D2-01 | Create `infra/kind.yaml` for one control-plane and namespace/deployment/ClusterIP service manifests under `infra/k8s/`. Use matching labels, verified port 3000, readiness probe, resource settings, the baseline tag and `IfNotPresent`. Validate YAML/schema; no public ingress or LoadBalancer. |
+| PF-D2-04 | Create the local kind lab and verify readiness | Done | High | 60 min | PF-D2-02, PF-D2-03 | Use the recorded compatible node-image digest, create the named `pipelinefortress` cluster, load the exact source-built image, apply manifests, and verify node Ready, successful rollout, and ready pods. Inspect any failures privately and record actual results. |
+| PF-D2-05 | Verify loopback HTTP and document the runtime baseline | In progress: screenshot | High | 50 min | PF-D2-04 | Forward the service on `127.0.0.1:3000` only, verify HTTP, capture a sanitized screenshot/workload status, and write at least three locally confirmed insecure behaviors with safe reproductions, expected behavior, risk, and evidence. Keep suspicions separate from confirmed observations. |
+| PF-D2-06 | Implement and run baseline GitHub Actions | In progress: hosted run | High | 60 min | PF-D2-02, PF-D2-03 | Create root `.github/workflows/security.yml` for feature pushes/PRs with `contents: read`, verified action SHAs, timeouts, and a pinned supported runner. Use recorded app/runtime/lock paths, finite build/tests, and a separate ephemeral runner kind cluster with cleanup. Run the agreed workflow and record its actual URL/result; never target laptop localhost from hosted CI. |
 | PF-D2-07 | Review evidence and prepare an honest submission status | To Do | Highest | 30 min | PF-D2-05, PF-D2-06 | Update versions, runtime report, evidence index, requirements, report outline, and this log. Project owner performs real manual review. Review the safe diff/publication scope and record all remaining mandatory gaps before any submission/tag. Do not label a Day 2-only result as a complete capstone or invent approval/run evidence. |
 
 ### 18 October working checklist
 
-- [ ] PF-D2-01 — environment and submission gap review recorded.
-- [ ] PF-D2-02 — exact baseline image built from pinned source and inspected.
-- [ ] PF-D2-03 — lab manifests authored and validated.
-- [ ] PF-D2-04 — owned kind node and app rollout Ready.
+- [x] PF-D2-01 — environment and submission gap review recorded.
+- [x] PF-D2-02 — exact baseline image built from pinned source and inspected.
+- [x] PF-D2-03 — lab manifests authored and validated.
+- [x] PF-D2-04 — owned kind node and app rollout Ready.
 - [ ] PF-D2-05 — loopback HTTP, sanitized screenshot, and three confirmed runtime observations recorded.
 - [ ] PF-D2-06 — baseline CI build/tests and runner deployment succeeded; run URL recorded.
 - [ ] PF-D2-07 — evidence, manual review notes, truthful submission status, and safe publication scope reviewed.
 
 ### Day 2 acceptance from the execution guide
 
-- [ ] Source-built image exists with recorded identity.
-- [ ] Local kind is Ready.
-- [ ] Application HTTP is reachable locally.
-- [ ] Confirmed runtime baseline report exists.
+- [x] Source-built image exists with recorded identity.
+- [x] Local kind is Ready.
+- [x] Application HTTP is reachable locally.
+- [x] Confirmed runtime baseline report exists.
 - [ ] CI build/test run succeeds.
 - [ ] Actual CI run URL is recorded.
 
@@ -195,3 +195,13 @@ These are local Markdown planning IDs, not external JIRA issues. All 18 October 
 - [ ] Day 10: fresh reproduction, evidence-backed 12-page rendered report, maturity assessment, disclosure, final audit, and oral-defense preparation.
 
 If deadline/capacity cannot accommodate the mandatory evidence, record the actual partial result and discuss acceptable assessment scope with the coordinator. Do not skip redaction, human review, or mandatory tools to create an unsupported completion claim. No external messages or deadline-extension requests are sent by this plan.
+
+## Day 2 execution started 17 October 2026
+
+- Request: start and complete the guide's Day 2 in the established workflow, ahead of the original 18 October board date.
+- Recheck: fetch succeeded on the correct branch; Day 1 evidence and recorded eight skips remain valid. Docker/bridge filters and project runtimes passed current checks. Submission cutoff and independent-review interpretation remain open external facts.
+- Actions: source image build exited 0; pinned kind/Kubernetes 1.37.0 lab created with a dedicated ignored kubeconfig; namespace/deployment/ClusterIP service passed server dry-run and rolled out Ready. The running image identity was matched through CRI.
+- Runtime: HTTP 200 home page, unauthenticated directory listing and metrics, plus malformed-search SQL/stack error disclosure confirmed using reads against the owned loopback target. Raw bodies/logs remain private; see [runtime baseline](runtime-baseline.md).
+- Screenshot: browser-control inventory had no browser and opening the in-app browser failed. User explicitly authorized isolated headless Playwright for the local screenshot; capture is in progress.
+- CI: authored SHA-pinned workflow, passed actionlint and shell/Python syntax checks; actual hosted execution remains pending publication.
+- Next: finish screenshot/tool checks, publish reviewed implementation to the feature branch to run CI, then record its actual outcome and remaining submission gaps.

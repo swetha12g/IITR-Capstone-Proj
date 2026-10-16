@@ -67,8 +67,9 @@ def main():
     }
     env = os.environ.copy()
     env.update({"CI": "true", "CYPRESS_INSTALL_BINARY": "0",
-                "npm_config_audit": "false", "npm_config_fund": "false",
-                "NODE_OPTIONS": "--max-old-space-size=8192", "NG_BUILD_MAX_WORKERS": "2"})
+                "npm_config_audit": "false", "npm_config_fund": "false"})
+    env.setdefault("NODE_OPTIONS", "--max-old-space-size=8192")
+    env.setdefault("NG_BUILD_MAX_WORKERS", "2")
 
     def save():
         text = json.dumps(report, indent=2) + "\n"
