@@ -160,7 +160,7 @@ These are local Markdown planning IDs, not external JIRA issues. The user reques
 | PF-D2-02 | Build the baseline image from pinned source | Done | High | 50 min | PF-D2-01 | Inspect the upstream Dockerfile/build context and recorded locks; build `pipelinefortress:baseline` from `app/juice-shop/`. Verify image ID, source commit, architecture, and expected port; capture sanitized evidence. A downloaded prebuilt app image is not sufficient. |
 | PF-D2-03 | Author and validate owned lab manifests | Done | High | 30 min | PF-D2-01 | Create `infra/kind.yaml` for one control-plane and namespace/deployment/ClusterIP service manifests under `infra/k8s/`. Use matching labels, verified port 3000, readiness probe, resource settings, the baseline tag and `IfNotPresent`. Validate YAML/schema; no public ingress or LoadBalancer. |
 | PF-D2-04 | Create the local kind lab and verify readiness | Done | High | 60 min | PF-D2-02, PF-D2-03 | Use the recorded compatible node-image digest, create the named `pipelinefortress` cluster, load the exact source-built image, apply manifests, and verify node Ready, successful rollout, and ready pods. Inspect any failures privately and record actual results. |
-| PF-D2-05 | Verify loopback HTTP and document the runtime baseline | In progress: screenshot | High | 50 min | PF-D2-04 | Forward the service on `127.0.0.1:3000` only, verify HTTP, capture a sanitized screenshot/workload status, and write at least three locally confirmed insecure behaviors with safe reproductions, expected behavior, risk, and evidence. Keep suspicions separate from confirmed observations. |
+| PF-D2-05 | Verify loopback HTTP and document the runtime baseline | Done | High | 50 min | PF-D2-04 | Forward the service on `127.0.0.1:3000` only, verify HTTP, capture a sanitized screenshot/workload status, and write at least three locally confirmed insecure behaviors with safe reproductions, expected behavior, risk, and evidence. Keep suspicions separate from confirmed observations. |
 | PF-D2-06 | Implement and run baseline GitHub Actions | In progress: hosted run | High | 60 min | PF-D2-02, PF-D2-03 | Create root `.github/workflows/security.yml` for feature pushes/PRs with `contents: read`, verified action SHAs, timeouts, and a pinned supported runner. Use recorded app/runtime/lock paths, finite build/tests, and a separate ephemeral runner kind cluster with cleanup. Run the agreed workflow and record its actual URL/result; never target laptop localhost from hosted CI. |
 | PF-D2-07 | Review evidence and prepare an honest submission status | To Do | Highest | 30 min | PF-D2-05, PF-D2-06 | Update versions, runtime report, evidence index, requirements, report outline, and this log. Project owner performs real manual review. Review the safe diff/publication scope and record all remaining mandatory gaps before any submission/tag. Do not label a Day 2-only result as a complete capstone or invent approval/run evidence. |
 
@@ -170,7 +170,7 @@ These are local Markdown planning IDs, not external JIRA issues. The user reques
 - [x] PF-D2-02 — exact baseline image built from pinned source and inspected.
 - [x] PF-D2-03 — lab manifests authored and validated.
 - [x] PF-D2-04 — owned kind node and app rollout Ready.
-- [ ] PF-D2-05 — loopback HTTP, sanitized screenshot, and three confirmed runtime observations recorded.
+- [x] PF-D2-05 — loopback HTTP, sanitized screenshot, and three confirmed runtime observations recorded.
 - [ ] PF-D2-06 — baseline CI build/tests and runner deployment succeeded; run URL recorded.
 - [ ] PF-D2-07 — evidence, manual review notes, truthful submission status, and safe publication scope reviewed.
 
@@ -202,6 +202,18 @@ If deadline/capacity cannot accommodate the mandatory evidence, record the actua
 - Recheck: fetch succeeded on the correct branch; Day 1 evidence and recorded eight skips remain valid. Docker/bridge filters and project runtimes passed current checks. Submission cutoff and independent-review interpretation remain open external facts.
 - Actions: source image build exited 0; pinned kind/Kubernetes 1.37.0 lab created with a dedicated ignored kubeconfig; namespace/deployment/ClusterIP service passed server dry-run and rolled out Ready. The running image identity was matched through CRI.
 - Runtime: HTTP 200 home page, unauthenticated directory listing and metrics, plus malformed-search SQL/stack error disclosure confirmed using reads against the owned loopback target. Raw bodies/logs remain private; see [runtime baseline](runtime-baseline.md).
-- Screenshot: browser-control inventory had no browser and opening the in-app browser failed. User explicitly authorized isolated headless Playwright for the local screenshot; capture is in progress.
-- CI: authored SHA-pinned workflow, passed actionlint and shell/Python syntax checks; actual hosted execution remains pending publication.
-- Next: finish screenshot/tool checks, publish reviewed implementation to the feature branch to run CI, then record its actual outcome and remaining submission gaps.
+- Screenshot: browser-control inventory had no browser and opening the in-app browser failed. User explicitly authorized isolated headless Playwright for the local screenshot; capture and image review passed. Non-loopback requests were blocked and no personal data was entered.
+- CI: authored SHA-pinned workflow, passed actionlint and shell/Python syntax checks; implementation commit `f9867e0` was reviewed and pushed normally; [hosted run 38954124002](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/38954124002) is in progress.
+- Next: record the actual hosted result, complete the evidence/checklist cross-check and publication, and preserve the remaining submission gaps.
+
+### Day 2 reviewer response — 17 October 2026
+
+- Request/outcome: the designated reviewer explicitly confirmed reviewing and accepting the local Day 2 evidence, including the runtime report and running-app screenshot.
+- Limitation: hosted CI was still pending at that confirmation; independent approving PR review is not claimed.
+- Next: finish the actual hosted run, cross-check all acceptance evidence, publish the final records and stop at the Day 2 boundary.
+
+### Day 2 reproduction correction
+
+- Review finding: replacing `pipelinefortress:baseline` in kind leaves an existing pod unchanged unless the deployment template changes.
+- Action: added an image-config-ID pod-template annotation in `scripts/deploy.sh`; changed image identity triggers a rollout. Syntax/actionlint checks passed; local rerun and hosted verification are required for the corrected helper.
+- The initial hosted run passed application build/tests and tool checksum verification. A new code push will supersede it under the workflow's concurrency policy; no cancelled/superseded result will be counted as final acceptance.
