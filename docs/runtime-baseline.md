@@ -39,3 +39,9 @@ kind delete cluster --name pipelinefortress \
 ```
 
 The local cluster is retained for subsequent project work. Hosted CI deletes its own cluster. No module persistence, shell startup or system Node changes are required here. Hardening/remediation, scanners and AI stages belong to later guide checkpoints and have not been claimed complete.
+
+## Running application screenshot
+
+![Owned Juice Shop baseline on loopback](../reports/sanitized/day2/juice-shop-running.png)
+
+[Capture metadata and SHA-256](../reports/sanitized/day2/screenshot.json). User authorized an isolated headless Playwright context after the browser-control tool reported no available browser. The fresh context blocked non-loopback network requests; no login, purchases or personal data entry occurred. The welcome overlay was dismissed; the non-binding cookie notice remains visible. Image review confirmed the product catalog with no personal identities or credentials.

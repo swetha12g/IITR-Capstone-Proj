@@ -1,6 +1,6 @@
 # Evidence index
 
-Raw installation/build/test output is retained under ignored `reports/private/`. Public records contain sanitized status, counts, identifiers, timestamps, and checksums only. No credentials, personal contact details, or raw findings belong here.
+Local raw installation/build/test output is retained under ignored `reports/private/`. Hosted runner private files are discarded after the job; only sanitized records and selected failure diagnostics are published. Public records contain sanitized status, counts, identifiers, timestamps, and checksums only. No credentials, personal contact details, or raw findings belong here.
 
 | ID | Date | Evidence | Verdict / limitation |
 |---|---|---|---|
@@ -43,3 +43,52 @@ Frontend: 123 test files / 1,372 tests passed. Server: 419 total, 417 passed, 2 
 | `day1-crosscheck.json` | `08739535f46438535d083125c2f23c844e91e61dacedf25f6fff13d7d315bfef` |
 
 The manifest includes relative private-log references and checksums, not raw output. Keep those raw logs ignored; their presence is not authorization to publish them.
+
+## Day 2 evidence — 17 October 2026
+
+| ID | Evidence | Verdict / limitation |
+|---|---|---|
+| IMAGE-20261017 | [Image build](../reports/sanitized/day2/image-build.json) | Original upstream Dockerfile/source build exited 0 in 430.05 seconds; actual image recorded |
+| KIND-20261017 | [Runtime and workload status](../reports/sanitized/day2/runtime-baseline.json) | Node/pod Ready, zero pod restarts at observation, ClusterIP service, exact running image config matched |
+| RUNTIME-20261017 | [Runtime baseline](runtime-baseline.md), status/hash manifest above | Home HTTP 200; three locally confirmed behaviors; no external scan or exploitation/data extraction claim |
+| VALIDATION-20261017 | [Validation](../reports/sanitized/day2/validation.json) | Official kind/kubectl checksums passed; actionlint, shell/Python syntax and Kubernetes server dry-run passed |
+
+Evidence timestamps use UTC; observations on 16 October after 18:30 UTC belong to 17 October in Asia/Kolkata. The hosted run uses its own image and cluster and will have separate evidence identifiers; do not equate its image digest with the laptop build.
+
+| ID | Evidence | Verdict / limitation |
+|---|---|---|
+| SCREENSHOT-20261017 | [Running app](../reports/sanitized/day2/juice-shop-running.png), [metadata](../reports/sanitized/day2/screenshot.json) | Isolated headless browser authorized by user; reviewed catalog screenshot, external requests blocked |
+| CI-20261017 | [Run 38954124002](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/38954124002), implementation `f9867e0` | Initial run superseded after deployment helper correction; build/tests passed before supersession; final CI below |
+
+Local final verification: [local-crosscheck.json](../reports/sanitized/day2/local-crosscheck.json). Repeated runtime checks passed with the same four HTTP statuses and zero restarts; the imported application source has no changes from the Day 1 pin. Private kubeconfig/responses remain ignored.
+
+| Local Day 2 artifact | SHA-256 |
+|---|---|
+| `image-build.json` | `6893213754bf3d0457974a29eda2ed9855f7e481ec4b22921634eff9f1ca623e` |
+| `runtime-baseline.json` | `51242b47f795343e341071167fc52f842060326d90f054d62dd62a634416d218` |
+| `validation.json` | `abe6c37c243db15e0b5ad1ddaad0dab2326459b7162a4b9af1ddae287b809378` |
+| `screenshot.json` | `c4ce99cdbc104baf3313c40889d4a637cac02dc01dcae29270adcfe8027e93bb` |
+| `juice-shop-running.png` | `834db620cb9fe9ee0fb6219a0b64cba80fe92302eb6b7c0e722a93ffe735c80a` |
+| `local-crosscheck.json` | `d2ec57fa6a4bd7c9605558c3ef6dde3228556831f1e6d5d81782149bf412e680` |
+
+Previous hosted verification: [run 38955433523](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/38955433523) for implementation `c1d78b9`; failed during deployment, with tests/image build passed and historical cause unconfirmed. This run is not accepted; final successful verification is below. The local image-ID annotation rollout and unchanged-image second apply both passed, followed by a passing runtime recheck on the replacement pod.
+
+## Final accepted Day 2 hosted evidence
+
+[Run 38957969793](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/38957969793) and job `117165524668` completed successfully for code `280514f`. The complete job passed, including runtime and cleanup. Downloaded artifact `12071418832` matched GitHub's SHA-256 digest before extracting only the two expected sanitized JSON records.
+
+| Evidence | Verdict |
+|---|---|
+| [CI receipt](../reports/sanitized/day2/ci-receipt.json) | Actual head/run/job/stage conclusions and artifact digest; prior failed/cancelled results remain visible |
+| [CI build/tests](../reports/sanitized/day2/ci/build-tests.json) | All six selected stages exited 0; locks unchanged; no new test count is inferred from hidden raw logs |
+| [CI runtime](../reports/sanitized/day2/ci/runtime-baseline.json) | Node/pod Ready, exact runner image matched, four checks passed: 200/200/200/500 |
+| [Earlier test-only artifact](../reports/sanitized/day2/ci-failed-run-build-tests.json) | Tests passed in a workflow that failed deployment; not a full acceptance result |
+
+Earlier private deployment output was lost, so historical root cause remains unconfirmed. A current successful run and added failure diagnostics do not retroactively establish that cause. Local manual review confirmation predates the hosted result; no independent approval is claimed.
+
+| Hosted evidence file | SHA-256 |
+|---|---|
+| `ci-receipt.json` | `06e18bc06f472c3557dfbe2f4cc3637dca943f73bc24c1c24677237d7e4cd318` |
+| `ci/build-tests.json` | `7c47396352895d3d20a1fe0e435148fbda68e198ef93a5d50b5d2544622c50a0` |
+| `ci/runtime-baseline.json` | `3c5ddc81ab3ef1cf377ae0e194ee5a99ae641dd4800be7bbef980f849a7f0af0` |
+| `ci-failed-run-build-tests.json` | `4299ba6549e542dbe0276f904a4ad881f17bd667d51ce5b6b3433dcffbb99f93` |

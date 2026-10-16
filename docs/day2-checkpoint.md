@@ -1,39 +1,40 @@
-# Day 2 checkpoint — source image, kind lab and baseline CI
+# Day 2 checkpoint — complete with recorded incident limitation
 
-Started on **17 October 2026 (Asia/Kolkata)** at the user's request, bringing forward the board originally planned for 18 October. This records the execution guide's Day 2 only; Days 3–10 and the full submission remain pending.
+Completed on **17 October 2026 (Asia/Kolkata)**, brought forward from the board originally planned for 18 October. All execution-guide Day 2 acceptance checks passed. Days 3–10 and the complete capstone submission remain pending.
 
-## Verified so far
+## Verified acceptance
 
-- Preserved the clean Day 1 delivery on `feature-16-kick-start`; authenticated fetch succeeded.
-- Rechecked Docker 27.3.1, kind 0.33.0, kubectl 1.37.0, project Node 24.22.0/npm 11.19.1 and Python dependency health. Docker reported no warnings. Bridge filters and IPv4 forwarding remain enabled.
-- Built `pipelinefortress:baseline` from the exact imported Juice Shop v20.3.0 source using its upstream Dockerfile; build exited 0. The pinned Kubernetes node image was downloaded successfully.
-- Authored one-node kind configuration, namespace, deployment and ClusterIP service; no public ingress. Kubernetes server dry-run passed; node and workload are Ready.
-- Authored and validated a SHA-pinned baseline Actions workflow. Implementation commit `f9867e0` was pushed normally. [Hosted run 38954124002](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/38954124002) is in progress; CI is not yet marked passed.
-
-## Execution contract
-
-`scripts/build-image.sh` uses the recorded dependency locks and original Dockerfile. `scripts/deploy.sh` uses a dedicated ignored kubeconfig under `reports/private/day2/`, loads the built image, validates manifests against the API, annotates the pod template with the exact image config ID and waits for readiness. Rebuilding the local tag therefore triggers a rollout rather than leaving an old pod running. `scripts/runtime-baseline.py` owns a temporary loopback port-forward and records only safe status/identifiers/hashes. Raw responses and logs remain ignored.
-
-The kind node digest comes from the [official kind 0.33.0 release](https://github.com/kubernetes-sigs/kind/releases/tag/v0.33.0): Kubernetes 1.37.0, matching the installed kubectl client. The hosted workflow creates and deletes its own cluster; it does not contact the laptop cluster.
-
-## Open acceptance
-
-- [x] Source image built.
-- [x] Local kind node and workload Ready.
-- [x] Loopback HTTP and sanitized screenshot captured; [capture metadata](../reports/sanitized/day2/screenshot.json).
+- [x] Environment/branch rechecked; authenticated fetch passed and local work preserved.
+- [x] Baseline image built from the pinned Juice Shop v20.3.0 source using its original Dockerfile.
+- [x] Owned kind/Kubernetes 1.37.0 node and Juice Shop deployment Ready; manifests passed Kubernetes server dry-run.
+- [x] Loopback HTTP 200 and sanitized running-app screenshot captured and reviewed.
 - [x] Three runtime observations confirmed and documented in [runtime-baseline.md](runtime-baseline.md).
-- [ ] Hosted baseline build/test/deployment succeeds; run URL recorded.
-- [ ] Final evidence/checklists reviewed and published.
+- [x] Hosted application build/tests, source-image build, own-cluster deployment and runtime checks passed.
+- [x] Actual CI run/evidence reviewed; Markdown and JIRA checklist closeout prepared for the feature branch.
 
-Submission cutoff time and coordinator interpretation of independent review remain unconfirmed. The project owner is the designated manual reviewer; this document does not invent a human approval.
+Local image config: `sha256:79543af23e212f5def487f4daa27763943170f7bb268c46d0aace37920d7ae88`. Linux/amd64, Node v24.22.0, user 65532, port 3000. The local Ready pod's CRI reference resolves to this config ID; zero restarts were observed. See [local runtime evidence](../reports/sanitized/day2/runtime-baseline.json) and [cross-check](../reports/sanitized/day2/local-crosscheck.json).
 
-## Manual review and delivery
+The designated project-owner reviewer explicitly accepted the local runtime report and screenshot. Hosted CI was still pending at that confirmation; no human approval of its eventual result or independent PR approval is implied.
 
-The designated project-owner reviewer explicitly confirmed review and acceptance of the **local** Day 2 evidence on 17 October. Hosted CI was pending at that confirmation, so no human review of its eventual result is implied. This records real local manual review, not independent PR approval. Implementation `f9867e0` was pushed to the requested feature branch to execute the agreed workflow; final documentation delivery follows the hosted result.
+## Hosted verification
 
-## Reproduce and stop
+[Successful run 38957969793](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/38957969793), job `117165524668`, verified code commit `280514f7bd4f58c9d4e93008f30e9bc4eb72bc90`. Run completed **17 October, 01:33 IST** (16 October, 20:03 UTC).
 
-From repository root, select the project environment and run:
+- All six selected install/build/frontend/server/API stages exited 0; dependency locks unchanged.
+- Official kind/kubectl checksum verification and early runner kind-startup check passed.
+- Source image build, manifest application, node/pod readiness and exact running-image comparison passed.
+- Home, directory listing and metrics returned 200; malformed-search disclosure returned the expected observed 500. All four checker predicates passed.
+- Sanitized artifact upload and ephemeral runner-cluster cleanup succeeded.
+
+CI image config: `sha256:4f89b7753b33075d6d158fb22f711e7707881d0a29edb2c3183a2064c0e5676c`. This is the runner's own image, separate from the laptop image. Artifact `12071418832` SHA-256 matched `fd1c109c1eddfcd13708fa0955d4a9a1f16e3a990ce79645acd5ffba19633f42` after download. Durable records: [CI receipt](../reports/sanitized/day2/ci-receipt.json), [build/tests](../reports/sanitized/day2/ci/build-tests.json), [runtime](../reports/sanitized/day2/ci/runtime-baseline.json).
+
+## Earlier failed job and investigation limit
+
+[Run 38955433523, job 117157402202](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/38955433523/job/117157402202) passed tests/image build but deployment exited 1. Its private deployment log was discarded with the runner; the available artifact contained only the passing test manifest. **Its exact root cause remains unconfirmed.** The current successful run proves current acceptance, not the historical cause. No timeout increase or skipped gate was used to obtain success.
+
+The workflow now checks kind startup before expensive builds, retains a failed owned node until diagnostics finish, publishes selected/redacted operational diagnostics on failure, and cleans up afterward. Synthetic contact/auth/token redaction checks passed. Kubeconfig contents, environment dumps, secret resources, raw application responses and raw private logs are excluded. Investigation status: **DONE_WITH_CONCERNS** for workflow recovery and evidence; historical root cause cannot be recovered from the retained first-run evidence.
+
+## Reproduce and access
 
 ```bash
 source scripts/dev-env.sh
@@ -43,22 +44,14 @@ bash scripts/deploy.sh
 python scripts/runtime-baseline.py
 ```
 
-The checker closes its temporary forward; the local cluster remains available for the next stage. Interactive access and explicit lab removal commands are in [runtime-baseline.md](runtime-baseline.md#reproduce-and-access). Hosted CI cleans up its own cluster in an always-run finalization step. Keep the kubeconfig and raw logs private.
+The deployment helper uses a dedicated ignored kubeconfig and loads the built image. Its pod-template image-config-ID annotation triggers a rollout when that image changes. A local rollout and subsequent unchanged-image apply passed, followed by another runtime identity check. The checker opens/closes its own loopback forward; interactive access and explicit lab-removal commands are in [runtime-baseline.md](runtime-baseline.md#reproduce-and-access). The local cluster is retained, with no port-forward left running by this session.
 
-## Remaining limits and next step
+The kind node is digest-pinned from the [official 0.33.0 release](https://github.com/kubernetes-sigs/kind/releases/tag/v0.33.0). Action SHAs and runner/runtime pins are in [security.yml](../.github/workflows/security.yml) and [versions.md](versions.md). No persistent bridge, shell startup or system Node changes were added.
 
-The upstream Dockerfile is retained for baseline evidence, including mutable base tags/tool ranges. The exact observed image is recorded; identical rebuild digests are not promised. The finite application suites retain eight upstream skips and do not cover Cypress E2E. No security scanners, AI calls, remediation PRs or final report are completed by Day 2.
+## Limits and next step
 
-Next is the guide's Day 3: pinned Semgrep, dependency and secrets scanning with bad/fixed gates, failure handling and sanitized evidence. Day 4 acknowledgement and later AI budget/model decisions remain separate prerequisites; no later-stage work is started here.
+The original Dockerfile retains mutable base tags/tool ranges; exact observed images are recorded and identical rebuild digests are not promised. Eight upstream Day 1 test skips remain; Cypress E2E is not claimed. Security scanners/gates, hardening, AI safeguards/evaluation, remediation PRs and the rendered 12-page report remain pending. Submission cutoff and coordinator/independent-review interpretation remain open external facts.
 
-### Deployment rerun correction
+Stop at Day 2. The next unstarted checkpoint is the [Day 3 JIRA backlog](daily-log.md#next-checkpoint-backlog--day-3-planned-for-18-october-2026). Day 4 acknowledgement and later live-AI budget/model decisions remain separate prerequisites.
 
-Final reproduction review identified that changing a local image tag does not itself replace existing pods. The deployment helper now writes the built image config ID into the pod template annotation, so changed images trigger a rollout and unchanged images remain stable. Local rollout succeeded; a second unchanged-image apply reported no patch change, and runtime verification passed on the replacement pod. The first hosted run passed build/tests; its final image/deployment result is superseded by the new verification run after this helper correction.
-
-Current corrected implementation: `c1d78b9`, pushed normally. Final hosted verification is [run 38955433523](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/38955433523); its result is still pending. The corrected run has passed the application build/tests and verified tool installation; source-image build and runner deployment/runtime remain in progress.
-
-## Hosted deployment failure — investigation active
-
-Corrected run `38955433523` failed in deployment (job `117157402202`) after application build/tests, checksum installation and source-image build succeeded. Cleanup succeeded. Its deployment output was redirected to an ignored runner file, and the available artifact contains only the passing test manifest; **the root cause is not established**. Day 2 CI/final acceptance remains unchecked.
-
-The next diagnostic run adds early retained kind-startup validation and publishes only selected/redacted operational messages, disk/node/pod status and filtered kubelet errors. Kubeconfig contents, environment dumps, secret resources, application responses and raw private logs are not published. A synthetic contact/auth/token canary check passed while preserving a useful disk-error message. The failure remains a failing workflow result; no timeout increase, retry-to-green or skipped gate is introduced.
+Operational learning: a changed local image tag requires a deployment-template change to replace old pods; private runner logs need selected diagnostic artifacts before cleanup if future root-cause analysis is to remain possible.

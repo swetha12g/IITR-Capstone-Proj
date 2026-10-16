@@ -161,8 +161,8 @@ These are local Markdown planning IDs, not external JIRA issues. The user reques
 | PF-D2-03 | Author and validate owned lab manifests | Done | High | 30 min | PF-D2-01 | Create `infra/kind.yaml` for one control-plane and namespace/deployment/ClusterIP service manifests under `infra/k8s/`. Use matching labels, verified port 3000, readiness probe, resource settings, the baseline tag and `IfNotPresent`. Validate YAML/schema; no public ingress or LoadBalancer. |
 | PF-D2-04 | Create the local kind lab and verify readiness | Done | High | 60 min | PF-D2-02, PF-D2-03 | Use the recorded compatible node-image digest, create the named `pipelinefortress` cluster, load the exact source-built image, apply manifests, and verify node Ready, successful rollout, and ready pods. Inspect any failures privately and record actual results. |
 | PF-D2-05 | Verify loopback HTTP and document the runtime baseline | Done | High | 50 min | PF-D2-04 | Forward the service on `127.0.0.1:3000` only, verify HTTP, capture a sanitized screenshot/workload status, and write at least three locally confirmed insecure behaviors with safe reproductions, expected behavior, risk, and evidence. Keep suspicions separate from confirmed observations. |
-| PF-D2-06 | Implement and run baseline GitHub Actions | In progress: hosted run | High | 60 min | PF-D2-02, PF-D2-03 | Create root `.github/workflows/security.yml` for feature pushes/PRs with `contents: read`, verified action SHAs, timeouts, and a pinned supported runner. Use recorded app/runtime/lock paths, finite build/tests, and a separate ephemeral runner kind cluster with cleanup. Run the agreed workflow and record its actual URL/result; never target laptop localhost from hosted CI. |
-| PF-D2-07 | Review evidence and prepare an honest submission status | In progress: final hosted evidence | Highest | 30 min | PF-D2-05, PF-D2-06 | Update versions, runtime report, evidence index, requirements, report outline, and this log. Project owner performs real manual review. Review the safe diff/publication scope and record all remaining mandatory gaps before any submission/tag. Do not label a Day 2-only result as a complete capstone or invent approval/run evidence. |
+| PF-D2-06 | Implement and run baseline GitHub Actions | Done; prior incident cause unconfirmed | High | 60 min | PF-D2-02, PF-D2-03 | Create root `.github/workflows/security.yml` for feature pushes/PRs with `contents: read`, verified action SHAs, timeouts, and a pinned supported runner. Use recorded app/runtime/lock paths, finite build/tests, and a separate ephemeral runner kind cluster with cleanup. Run the agreed workflow and record its actual URL/result; never target laptop localhost from hosted CI. |
+| PF-D2-07 | Review evidence and prepare an honest submission status | Done | Highest | 30 min | PF-D2-05, PF-D2-06 | Update versions, runtime report, evidence index, requirements, report outline, and this log. Project owner performs real manual review. Review the safe diff/publication scope and record all remaining mandatory gaps before any submission/tag. Do not label a Day 2-only result as a complete capstone or invent approval/run evidence. |
 
 ### 18 October working checklist
 
@@ -171,8 +171,8 @@ These are local Markdown planning IDs, not external JIRA issues. The user reques
 - [x] PF-D2-03 — lab manifests authored and validated.
 - [x] PF-D2-04 — owned kind node and app rollout Ready.
 - [x] PF-D2-05 — loopback HTTP, sanitized screenshot, and three confirmed runtime observations recorded.
-- [ ] PF-D2-06 — baseline CI build/tests and runner deployment succeeded; run URL recorded.
-- [ ] PF-D2-07 — evidence, manual review notes, truthful submission status, and safe publication scope reviewed.
+- [x] PF-D2-06 — baseline CI build/tests and runner deployment succeeded; run URL recorded.
+- [x] PF-D2-07 — evidence, manual review notes, truthful submission status, and safe publication scope reviewed.
 
 ### Day 2 acceptance from the execution guide
 
@@ -180,8 +180,8 @@ These are local Markdown planning IDs, not external JIRA issues. The user reques
 - [x] Local kind is Ready.
 - [x] Application HTTP is reachable locally.
 - [x] Confirmed runtime baseline report exists.
-- [ ] CI build/test run succeeds.
-- [ ] Actual CI run URL is recorded.
+- [x] CI build/test run succeeds.
+- [x] Actual CI run URL is recorded.
 
 ### Remaining mandatory submission gaps — not completed by this Day 2 plan
 
@@ -254,3 +254,16 @@ Corrected run `38955433523` passed application build/tests and official kind/kub
 - Action: added an early kind-startup diagnostic phase, retained failed owned nodes until cleanup, selected disk/node/pod/kubelet probes and redacted failure JSON. Synthetic privacy checks, actionlint and syntax checks passed. This is instrumentation, not an assumed root-cause fix or relaxed gate.
 - Investigation method: applied the local investigate skill. Its startup/freeze/learnings helpers are absent at their configured paths, so degraded local investigation is used without installing/upgrading the skill or changing settings. Helper restoration via `/gstack-upgrade` is separate from this task.
 - Next: publish the diagnostic change, capture the actual failure cause, apply a verified minimal fix and rerun full acceptance.
+
+### Diagnostic-run narrowing
+
+Run `38957969793` for instrumentation commit `280514f` passed early kind startup on the hosted runner, then proceeded to application build/tests. The earlier failure therefore cannot be labeled a general unsupported kind/Kubernetes combination. Post-build deployment diagnostics are pending; build-related resource changes are a hypothesis, not an established cause. The downloaded first failure artifact SHA-256 matched GitHub metadata; its six application stages all exited 0 with unchanged locks, retained separately as `reports/sanitized/day2/ci-failed-run-build-tests.json`.
+
+## Day 2 closeout — 17 October 2026
+
+- Outcome: **all seven PF-D2 tasks and all six guide acceptance checks passed**. [Run 38957969793](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/38957969793) completed successfully for `280514f`, including six application stages, verified tools, early kind startup, source image, own runner cluster, four runtime checks, artifact upload and cleanup.
+- Evidence: downloaded artifact `12071418832` matched its official SHA-256; validated build/test and runtime records are retained under `reports/sanitized/day2/ci/`, with a [CI receipt](../reports/sanitized/day2/ci-receipt.json). Local source/locks remained unchanged and private kubeconfig/logs remain untracked.
+- Review: actual local manual review was confirmed by the designated reviewer; engineering checks and actual hosted evidence passed. No independent PR approval or human review of the later hosted result is fabricated.
+- Incident limitation: first run was superseded/cancelled; second run failed during deployment with its private log lost. Exact historical cause remains unconfirmed. The new run passed with early startup validation and redacted future failure diagnostics; this is not presented as a proven historical root-cause fix.
+- Records: updated Day 1 handoff, Day 2 checkpoint, runtime/screenshot report, versions, requirements, evidence index, report outline, README and the JIRA ticks. The Day 3 board remains wholly unchecked.
+- Delivery: publish the reviewed Markdown and sanitized evidence closeout using a normal push to `feature-16-kick-start`; final remote verification follows. Stop at Day 2. The local cluster remains Ready; temporary port-forwards are closed. Days 3–10 and the full submission are not complete.

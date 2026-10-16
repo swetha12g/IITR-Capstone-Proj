@@ -1,5 +1,5 @@
 {
-  "observed_at_utc": "2026-10-16T19:15:39.917397+00:00",
+  "observed_at_utc": "2026-10-16T19:30:47.444383+00:00",
   "scope": "owned kind-pipelinefortress lab; loopback HTTP only; no login or mutating HTTP methods",
   "source_commit": "f189f521266f42c6bd05884468292000cee852ed",
   "image": {
@@ -20,7 +20,7 @@
   ],
   "pods": [
     {
-      "name": "juice-shop-748c96c4c5-bzvbl",
+      "name": "juice-shop-8577657d7b-trvmn",
       "ready": true,
       "containers": [
         {
@@ -51,7 +51,7 @@
       "http_status": 200,
       "confirmed": true,
       "response_bytes": 11285,
-      "sha256": "2b82b849b5cc67672ab8b6a232829168f7fe60df12d7932ae42d2fc84e3b0fe2",
+      "sha256": "2710b4dea4d43f0bafec2f3e3d0413f1c952e931d384e34cb806b1645bc3d751",
       "private_evidence": "reports/private/day2/unauthenticated-directory-listing.response"
     },
     {
@@ -60,8 +60,8 @@
       "path": "/metrics",
       "http_status": 200,
       "confirmed": true,
-      "response_bytes": 25335,
-      "sha256": "457a0e390ae03cb005b698dc0099e51718e055094389bc64643903b667119d05",
+      "response_bytes": 25263,
+      "sha256": "afe365314064ebc74bcb7c97b86d5741ec2f3db2652aaf810903f7ceabddece3",
       "private_evidence": "reports/private/day2/unauthenticated-metrics.response"
     },
     {

@@ -15,12 +15,16 @@ Updated: 17 October 2026. Individual execution scope is recorded in [scope.md](s
 | Private data excluded from publication candidates | Passed for reviewed publication scope | Ignore checks, complete source visibility, lock URL review, new-document privacy and whitespace checks passed. Source-only staging matched the pin plus one ignore override; no private files were staged. No full secrets-scanner verdict is claimed for upstream fixtures |
 | Submission/reviewer planning facts | Passed with external dependency noted | Submission 18 October 2026; project owner is manual reviewer; independent approval/coordinator acceptance remains separately pending |
 
+## Day 2 acceptance
+
+Source image, Ready local kind lab, loopback HTTP/screenshot, confirmed runtime baseline, hosted build/tests and actual run URL all passed. [Successful run 38957969793](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/38957969793), [CI receipt](../reports/sanitized/day2/ci-receipt.json), [Day 2 checkpoint](day2-checkpoint.md). Earlier deployment failure cause remains unconfirmed because its private log was discarded; later successful evidence is recorded separately. Local manual review was explicitly confirmed; independent PR approval is not claimed.
+
 ## Remaining project requirements
 
 | ID | Requirement | Planned stage | Status |
 |---|---|---|---|
 | PF-ENV | Environment, pinned source, build/test evidence | Day 1 | Passed locally; test skips recorded; user authorized publishing the reviewed packet |
-| PF-RUNTIME | Built source image, own kind deployment, local HTTP and confirmed runtime baseline | Day 2 | Pending |
+| PF-RUNTIME | Built source image, own kind deployment, local HTTP and confirmed runtime baseline | Day 2 | Passed locally and in hosted CI; reviewed screenshot and three confirmed observations recorded |
 | PF-SAST | Semgrep rules, source reports, known bad/fixed gate evidence | Day 3 | Pending |
 | PF-SCA | Trivy dependency findings and reviewed severity gates | Day 3 | Pending |
 | PF-SECRETS | Full-history and working-tree scans with safe canary evidence | Day 3 | Pending |

@@ -12,9 +12,9 @@ Verified on 17 October 2026. Build/test status is recorded in [evidence-index.md
 | Python | 3.10.12; project `.venv` |
 | pytest / jsonschema | 9.1.1 / 4.26.0; dependency and schema checks passed |
 | Docker | Client/server 27.3.1; daemon reachable; no warnings |
-| kind | v0.33.0; no cluster created |
+| kind | v0.33.0; owned `pipelinefortress` cluster created and Ready |
 | kubectl | v1.37.0; Kustomize v5.8.1; `~/.local/bin/kubectl` |
-| Planned Kubernetes | v1.37.0; documentation-compatible with the installed kind/kubectl; not deployed |
+| Kubernetes | v1.37.0 kubelet verified in the Ready kind node; kubectl matches |
 | Bridge configuration | `br_netfilter` loaded; IPv4 forwarding and both bridge-filtering sysctls equal 1 |
 | Juice Shop | v20.3.0, commit `f189f521266f42c6bd05884468292000cee852ed` |
 
@@ -69,3 +69,12 @@ python scripts/run-day1-checks.py
 The runner executes root and frontend `npm ci`, the explicit production frontend/server build, finite frontend coverage tests, server unit tests, and API integration tests. It captures exit codes and durations in sanitized manifests while retaining raw output under ignored `reports/private/day1/`.
 
 Cypress binary download is disabled for these selected suites; Cypress E2E tests are not claimed. No live LLM key is configured or required. Bridge module loading is temporary and must be rechecked after reboot.
+
+## Day 2 container and CI pins
+
+- Baseline image: Linux/amd64, Node v24.22.0 verified inside the running image; original upstream distroless runtime and user 65532 retained. Image identity and pod matching are in [runtime-baseline.json](../reports/sanitized/day2/runtime-baseline.json).
+- kind node: `kindest/node:v1.37.0@sha256:a1ed56cfb0e7b93589bdf97c8cd566405a265939e3620fc4f5de89adff580ae5`, from the [official release](https://github.com/kubernetes-sigs/kind/releases/tag/v0.33.0).
+- CI installer downloads kind 0.33.0 and kubectl 1.37.0 from official release endpoints and checks their official SHA-256 files; the exact installer passed locally in temporary storage, with no system replacement. See [validation.json](../reports/sanitized/day2/validation.json).
+- Actions are pinned to reviewed commit SHAs in [security.yml](../.github/workflows/security.yml): checkout 7.0.1, setup-node 7.0.0, setup-python 6.1.0 and upload-artifact 7.0.1; runner label `ubuntu-24.04`. The label is a supported OS release, not an immutable runner-machine snapshot.
+- actionlint 1.7.12 was downloaded to temporary storage, verified against the official checksum list, and passed workflow validation.
+- Original upstream Dockerfile uses mutable base tags and some ranged global tools. This baseline records the actual built image, rather than claiming byte-identical rebuilds. Digest/tool pinning and hardened image comparison are Day 4 work. Initial resolved base digests: `node:24@sha256:14078204b6bb268c107ceff6d3c43f45a888105e5c2b18b14c32b3409d93a1b0` and `gcr.io/distroless/nodejs24-debian13@sha256:9ddd3f7de61d8c62337cdcbeaceb621de5e0c955ccdc70f4c3586db74a8c278f`.

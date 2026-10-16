@@ -1,0 +1,16 @@
+{
+  "verified_at_utc": "2026-10-16T19:31:17.739447+00:00",
+  "local_http_and_runtime_checks_passed": true,
+  "screenshot_reviewed": true,
+  "screenshot_sha256": "834db620cb9fe9ee0fb6219a0b64cba80fe92302eb6b7c0e722a93ffe735c80a",
+  "manual_local_review": "Explicit user confirmation; hosted CI pending at confirmation",
+  "project_markdown_links_resolve": true,
+  "imported_source_unchanged_from_day1": true,
+  "private_evidence_ignored": true,
+  "limits": [
+    "Upstream Dockerfile uses mutable base/tool tags; exact observed image recorded",
+    "Eight upstream test skips remain; Cypress E2E not claimed",
+    "Days 3\u201310 and complete submission remain pending"
+  ],
+  "deployment_rerun": "Image-ID annotation changed template and rolled out; second apply patched (no change) and kept the new pod; runtime identity checks passed"
+}

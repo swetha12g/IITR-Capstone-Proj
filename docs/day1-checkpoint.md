@@ -178,3 +178,7 @@ git -C /home/popos/Capstone/IITR-Capstone-Proj fetch origin
 The earlier successful SSH greeting exited with status 1 because GitHub does not provide shell access; the fetch exited with status 0. Neither check required inspecting credential contents.
 
 To remove this repository's dedicated SSH selection and return to the previous default authentication, run `git config --local --unset core.sshCommand` from the repository.
+
+## Subsequent Day 2 state — 17 October 2026
+
+The user resumed Day 2 before the originally planned 18 October date. The historical no-cluster statements above describe Day 1 only. A source-built baseline image and owned kind lab now exist, the node/workload are Ready, and loopback HTTP plus three runtime observations are verified. Follow [day2-checkpoint.md](day2-checkpoint.md) for current deployment/CI acceptance; [daily-log.md](daily-log.md) records the request and execution. No persistent bridge settings, shell startup edits, or system Node replacement were added.
