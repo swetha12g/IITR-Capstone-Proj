@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "scope": "production and development dependency graphs; source and full-history/tree scans",
-  "status": "pending human contextual review; supersedes the production-only 183-entry proposal without automatically approving any entry",
+  "status": "approved by the designated project-owner reviewer; activated exactly in policies/baseline-exceptions.json",
   "exceptions": [
     {
       "fingerprint": "22b46f8658d4e69dc677023ad57a3f84e34368eca54132219d64c32d8afa496e",
@@ -16,7 +16,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned upstream training source finding; requires exact contextual review, no production-safety claim.",
       "baseline_file_sha256": "20c2d1c6b6bd85b489abb4c2ecbf054dcbc177f167eeffe268329f2979209504"
     },
@@ -33,7 +33,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned upstream training source finding; requires exact contextual review, no production-safety claim.",
       "baseline_file_sha256": "107ff063f641b01c6ece82177af8ce2b1eaa305d3d8ce4202ae74fd211fb7c53"
     },
@@ -50,7 +50,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned upstream training source finding; requires exact contextual review, no production-safety claim.",
       "baseline_file_sha256": "74a82592e7b1f28f7d628de1505ab3cdd9ecb9d9c3e22cc740717e0acf8818ca"
     },
@@ -67,7 +67,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned upstream training source finding; requires exact contextual review, no production-safety claim.",
       "baseline_file_sha256": "cf11d682edff6744bcb54339bce4b2dd6da5e80f9038facd7605df857b0a0b7b"
     },
@@ -84,7 +84,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned upstream training source finding; requires exact contextual review, no production-safety claim.",
       "baseline_file_sha256": "07251f3d0dd9f4c530da60e3911091d8ff1bded650f72c31cbee499093979b39"
     },
@@ -101,7 +101,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned upstream training source finding; requires exact contextual review, no production-safety claim.",
       "baseline_file_sha256": "ff6960cd5697c0c8312c02550185e8ca385ab6c60011a7939ae06c8eb2b181c9"
     },
@@ -118,7 +118,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned upstream training source finding; requires exact contextual review, no production-safety claim.",
       "baseline_file_sha256": "b48ecb634f38f033ce1331148a2a0c1dc24aecd3a01e72c773fd74b716cf17e1"
     },
@@ -135,7 +135,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned upstream training source finding; requires exact contextual review, no production-safety claim.",
       "baseline_file_sha256": "6e3272ef4065d080295d995a04964e8c5e6b1e06c4b4c8ebed3234286686ee5f"
     },
@@ -153,7 +153,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -171,7 +171,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact pinned training dependency finding in production or development graph; proposed visible lab-only risk, requiring contextual owner acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -189,7 +189,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -207,7 +207,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -225,7 +225,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -243,7 +243,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -261,7 +261,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "2cab8508e02d7ca0b74df30010cfefa1c98ce4e76708928726f80e090d931503"
     },
@@ -279,7 +279,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -297,7 +297,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -315,7 +315,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -333,7 +333,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -351,7 +351,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -369,7 +369,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -387,7 +387,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -405,7 +405,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -423,7 +423,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -441,7 +441,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -459,7 +459,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -477,7 +477,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -495,7 +495,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact pinned training dependency finding in production or development graph; proposed visible lab-only risk, requiring contextual owner acceptance.",
       "baseline_file_sha256": "2cab8508e02d7ca0b74df30010cfefa1c98ce4e76708928726f80e090d931503"
     },
@@ -513,7 +513,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -531,7 +531,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -549,7 +549,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -567,7 +567,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -585,7 +585,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -603,7 +603,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -621,7 +621,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact pinned training dependency finding in production or development graph; proposed visible lab-only risk, requiring contextual owner acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -639,7 +639,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -657,7 +657,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -675,7 +675,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -693,7 +693,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -711,7 +711,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -729,7 +729,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -747,7 +747,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -765,7 +765,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -783,7 +783,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -801,7 +801,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -819,7 +819,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -837,7 +837,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -855,7 +855,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -873,7 +873,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -891,7 +891,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
@@ -909,7 +909,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -927,7 +927,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -945,7 +945,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -963,7 +963,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -981,7 +981,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -999,7 +999,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1017,7 +1017,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1035,7 +1035,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1053,7 +1053,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1071,7 +1071,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1089,7 +1089,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1107,7 +1107,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1125,7 +1125,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1143,7 +1143,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1161,7 +1161,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1179,7 +1179,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1197,7 +1197,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1215,7 +1215,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1233,7 +1233,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1251,7 +1251,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1269,7 +1269,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1287,7 +1287,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1305,7 +1305,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1323,7 +1323,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1341,7 +1341,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1359,7 +1359,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1377,7 +1377,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1395,7 +1395,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1413,7 +1413,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1431,7 +1431,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1449,7 +1449,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1467,7 +1467,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1485,7 +1485,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1503,7 +1503,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1521,7 +1521,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1539,7 +1539,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1557,7 +1557,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1575,7 +1575,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1593,7 +1593,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1611,7 +1611,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1629,7 +1629,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1647,7 +1647,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1665,7 +1665,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1683,7 +1683,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1701,7 +1701,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1719,7 +1719,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1737,7 +1737,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1755,7 +1755,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1773,7 +1773,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1791,7 +1791,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1809,7 +1809,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1827,7 +1827,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1845,7 +1845,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1863,7 +1863,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1881,7 +1881,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1899,7 +1899,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1917,7 +1917,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1935,7 +1935,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1953,7 +1953,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1971,7 +1971,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -1989,7 +1989,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -2007,7 +2007,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -2025,7 +2025,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -2043,7 +2043,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -2061,7 +2061,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -2079,7 +2079,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -2097,7 +2097,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -2115,7 +2115,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": null
     },
@@ -2132,7 +2132,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
     },
@@ -2149,7 +2149,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "bdfb7d951677301fd286785caa42a005766a814c004a8b611cdc7c1d085b8eff"
     },
@@ -2166,7 +2166,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
     },
@@ -2183,7 +2183,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
     },
@@ -2200,7 +2200,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "c272d03459144fda794346f23f42575cb92c1709ff60e2744b28cd4fe9ab5010"
     },
@@ -2217,7 +2217,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "2ac74e053edf128b31d0596af6ff8e09b3966dacfb56b80dd7f7778bb8acf0ab"
     },
@@ -2234,7 +2234,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "8fab4d9f754ee3cfb135d1eca2aaab42c05f699c8d23ff454db42e3b9449832d"
     },
@@ -2251,7 +2251,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "303810c2000dbd92e383a368b5d9e2fab98bd3e9204a0d8b638069b45fda3353"
     },
@@ -2268,7 +2268,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "e91761b7382fa9fd4f1e738979abbeb7df0791c7b648297b7f2278bddae0fbc0"
     },
@@ -2285,7 +2285,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
     },
@@ -2302,7 +2302,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "cdb9b11f32eabf749c31c16e23c9e9d6695407df1f26bd7f62e378ff3ccb52db"
     },
@@ -2319,7 +2319,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "c272d03459144fda794346f23f42575cb92c1709ff60e2744b28cd4fe9ab5010"
     },
@@ -2336,7 +2336,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "c3496760cac6a5fde403bf739a8ab5e2536d2bbc57a6e3b6a0ac50b01a6e8b8d"
     },
@@ -2353,7 +2353,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "2bc31caf05eedf31c5e3c80efe6006f4acf7781a658a5e42e8321bebef60fe39"
     },
@@ -2370,7 +2370,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "901792f76f236022b0d498342a2dc027ccc089534f3d4ccc1cacd2cd34eadcb0"
     },
@@ -2387,7 +2387,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
     },
@@ -2404,7 +2404,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "906d755fbed0cc7d3cccb481bd399bd71e6ee5936c01bb73057e37a0c2c0a268"
     },
@@ -2421,7 +2421,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "cdb9b11f32eabf749c31c16e23c9e9d6695407df1f26bd7f62e378ff3ccb52db"
     },
@@ -2438,7 +2438,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "d0eeb8efd5bd781bb7a230fe60bebd662c6e6522bfc6c739d4636ac9a1e88cb1"
     },
@@ -2455,7 +2455,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "c60cd6996a40c261a84e7c59706d07bac10f7fe8ec4b9601a88ff291077afd14"
     },
@@ -2472,7 +2472,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "23df9d8bf127a9f35b09e7f322b21882e9c686e68db8003fb4baec3c6aefdb03"
     },
@@ -2489,7 +2489,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
     },
@@ -2506,7 +2506,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "42efaef6b66ed49bb4d6bda85c19d02862a2ff9edd209aacb6e223d9144cf7e1"
     },
@@ -2523,7 +2523,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
     },
@@ -2540,7 +2540,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "cf11d682edff6744bcb54339bce4b2dd6da5e80f9038facd7605df857b0a0b7b"
     },
@@ -2557,7 +2557,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "bac91432deb769a507fd03dede15f883e3d86094e898c9fc397b104a348cfd98"
     },
@@ -2574,7 +2574,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "bac91432deb769a507fd03dede15f883e3d86094e898c9fc397b104a348cfd98"
     },
@@ -2591,7 +2591,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "2bc31caf05eedf31c5e3c80efe6006f4acf7781a658a5e42e8321bebef60fe39"
     },
@@ -2608,7 +2608,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "c60cd6996a40c261a84e7c59706d07bac10f7fe8ec4b9601a88ff291077afd14"
     },
@@ -2625,7 +2625,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "e91761b7382fa9fd4f1e738979abbeb7df0791c7b648297b7f2278bddae0fbc0"
     },
@@ -2642,7 +2642,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "2bc31caf05eedf31c5e3c80efe6006f4acf7781a658a5e42e8321bebef60fe39"
     },
@@ -2659,7 +2659,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "901792f76f236022b0d498342a2dc027ccc089534f3d4ccc1cacd2cd34eadcb0"
     },
@@ -2676,7 +2676,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "e91761b7382fa9fd4f1e738979abbeb7df0791c7b648297b7f2278bddae0fbc0"
     },
@@ -2693,7 +2693,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "906d755fbed0cc7d3cccb481bd399bd71e6ee5936c01bb73057e37a0c2c0a268"
     },
@@ -2710,7 +2710,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "dcec2d1d66c13e659edc23cfe3d2fb3d3f8da25d666167995d94c01f7ccae617"
     },
@@ -2727,7 +2727,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "901792f76f236022b0d498342a2dc027ccc089534f3d4ccc1cacd2cd34eadcb0"
     },
@@ -2744,7 +2744,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "a23e302677748dbaaae2b2fb80cf6a8c04ae0fe14154bd91aad81519a4f4f274"
     },
@@ -2761,7 +2761,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "e91761b7382fa9fd4f1e738979abbeb7df0791c7b648297b7f2278bddae0fbc0"
     },
@@ -2778,7 +2778,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "52d3f5727c9a93a774d0d036aca167dcebd207a9ff4a089071696d47ce06802d"
     },
@@ -2795,7 +2795,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "906d755fbed0cc7d3cccb481bd399bd71e6ee5936c01bb73057e37a0c2c0a268"
     },
@@ -2812,7 +2812,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "bdfb7d951677301fd286785caa42a005766a814c004a8b611cdc7c1d085b8eff"
     },
@@ -2829,7 +2829,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "2ac74e053edf128b31d0596af6ff8e09b3966dacfb56b80dd7f7778bb8acf0ab"
     },
@@ -2846,7 +2846,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "303810c2000dbd92e383a368b5d9e2fab98bd3e9204a0d8b638069b45fda3353"
     },
@@ -2863,7 +2863,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "e91761b7382fa9fd4f1e738979abbeb7df0791c7b648297b7f2278bddae0fbc0"
     },
@@ -2880,7 +2880,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "dcec2d1d66c13e659edc23cfe3d2fb3d3f8da25d666167995d94c01f7ccae617"
     },
@@ -2897,7 +2897,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
     },
@@ -2914,7 +2914,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "dcec2d1d66c13e659edc23cfe3d2fb3d3f8da25d666167995d94c01f7ccae617"
     },
@@ -2931,7 +2931,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "901792f76f236022b0d498342a2dc027ccc089534f3d4ccc1cacd2cd34eadcb0"
     },
@@ -2948,7 +2948,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "901792f76f236022b0d498342a2dc027ccc089534f3d4ccc1cacd2cd34eadcb0"
     },
@@ -2965,7 +2965,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "906d755fbed0cc7d3cccb481bd399bd71e6ee5936c01bb73057e37a0c2c0a268"
     },
@@ -2982,7 +2982,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "aa63fed3a9038e2fb74d0fdaacd2ec6d3cdcf31bf45afe60d49e3ce8fa58836b"
     },
@@ -2999,7 +2999,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
     },
@@ -3016,7 +3016,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "a23e302677748dbaaae2b2fb80cf6a8c04ae0fe14154bd91aad81519a4f4f274"
     },
@@ -3033,7 +3033,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "d0eeb8efd5bd781bb7a230fe60bebd662c6e6522bfc6c739d4636ac9a1e88cb1"
     },
@@ -3050,7 +3050,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "901792f76f236022b0d498342a2dc027ccc089534f3d4ccc1cacd2cd34eadcb0"
     },
@@ -3067,7 +3067,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "dcec2d1d66c13e659edc23cfe3d2fb3d3f8da25d666167995d94c01f7ccae617"
     },
@@ -3084,7 +3084,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
     },
@@ -3101,7 +3101,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
     },
@@ -3118,7 +3118,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
     },
@@ -3135,7 +3135,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "55ed1a61905c5355e4b7b6b8d88000a56c81c25456a6452d763a8436e3d65100"
     },
@@ -3152,7 +3152,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "bdfb7d951677301fd286785caa42a005766a814c004a8b611cdc7c1d085b8eff"
     },
@@ -3169,7 +3169,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "e91761b7382fa9fd4f1e738979abbeb7df0791c7b648297b7f2278bddae0fbc0"
     },
@@ -3186,7 +3186,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
     },
@@ -3203,7 +3203,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "303810c2000dbd92e383a368b5d9e2fab98bd3e9204a0d8b638069b45fda3353"
     },
@@ -3220,7 +3220,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
     },
@@ -3237,7 +3237,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
     },
@@ -3254,7 +3254,7 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
     },
@@ -3271,9 +3271,17 @@
       "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
       "owner_role": "project-owner reviewer",
       "expires_on": "2026-10-25",
-      "review_status": "pending",
+      "review_status": "approved",
       "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
       "baseline_file_sha256": "23df9d8bf127a9f35b09e7f322b21882e9c686e68db8003fb4baec3c6aefdb03"
     }
-  ]
+  ],
+  "review": {
+    "reviewed_on": "2026-10-18",
+    "reviewer_role": "project-owner reviewer",
+    "method": "explicit acceptance of the current 186 exact entries in the user reply",
+    "scope": "owned study and experimental lab only; no production use",
+    "expires_at": "2026-10-25T00:00:00+05:30",
+    "remediation_claim": false
+  }
 }

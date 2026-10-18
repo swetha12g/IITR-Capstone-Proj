@@ -25,13 +25,13 @@ Source image, Ready local kind lab, loopback HTTP/screenshot, confirmed runtime 
 |---|---|---|---|
 | PF-ENV | Environment, pinned source, build/test evidence | Day 1 | Passed locally; test skips recorded; user authorized publishing the reviewed packet |
 | PF-RUNTIME | Built source image, own kind deployment, local HTTP and confirmed runtime baseline | Day 2 | Passed locally and in hosted CI; reviewed screenshot and three confirmed observations recorded |
-| PF-SAST | Semgrep rules, source reports, known bad/fixed gate evidence | Day 3 | Local/hosted execution and six-rule probes passed; exact baseline owner review pending |
-| PF-SCA | Trivy dependency findings and reviewed severity gates | Day 3 | Local/hosted production+development reports and real advisory probe passed; high/critical baseline owner review pending |
-| PF-SECRETS | Full-history and working-tree scans with safe canary evidence | Day 3 | Local/hosted history/tree scans and canary/history probes passed; exact baseline owner review pending |
+| PF-SAST | Semgrep rules, source reports, known bad/fixed gate evidence | Day 3 | Local/hosted execution and six-rule probes passed; 186 exact lab-only risks explicitly approved; fresh local gate passes |
+| PF-SCA | Trivy dependency findings and reviewed severity gates | Day 3 | Local/hosted production+development reports and real advisory probe passed; 42 high/critical dependency risks included in the exact owner approval |
+| PF-SECRETS | Full-history and working-tree scans with safe canary evidence | Day 3 | Local/hosted history/tree scans and canary/history probes passed; 186 exact lab-only risks explicitly approved; fresh local gate passes |
 | PF-IAC | Checkov built-in/custom policies and tested controls | Day 4 | Pending |
 | PF-IMAGE | Functional hardened image, exact-image scan, Syft SBOM, selected CIS mappings | Day 4 | Pending |
 | PF-DAST | Pinned ZAP baseline reaches the owned app; limitations recorded | Day 5 | Pending |
-| PF-GATES | All six stages, failures/skips fail closed, precise expiring exceptions | Days 3–5 | Source gate and 25 fail-closed contracts implemented; baseline review pending; full profile blocks on missing later stages |
+| PF-GATES | All six stages, failures/skips fail closed, precise expiring exceptions | Days 3–5 | Source gate and 25 fail-closed contracts implemented; 186 exact lab exceptions approved; full profile blocks on missing later stages |
 | PF-METRICS | Normalization, independent labels including misses, reproducible dashboard and detection metrics | Day 6 | Pending |
 | PF-REDACTION | Source-free allowlisted payloads, captured mock-body checks, refusal means zero calls | Day 7 | Pending |
 | PF-AI | Explicit budgeted live call after safeguards, grounding, FP/FN and cost/model disclosure | Day 8 | Pending |
@@ -41,6 +41,10 @@ Source image, Ready local kind lab, loopback HTTP/screenshot, confirmed runtime 
 
 The 80% detection target must be measured against a labeled introduced set; no success or grade is promised. Optional work waits for core acceptance. Upstream intentionally vulnerable infrastructure is not a deployment template for this project.
 
-## Day 3 current verdict — baseline review pending
+## Day 3 historical hosted verdict — before owner approval
 
 [Run 39108322664](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39108322664) verified scanner operation, 25 contracts, real probes and sanitized evidence. Its source gate correctly failed on 186 unapproved risks (zero operational errors); the application build/deployment job passed. [CI receipt](../reports/sanitized/day3/ci-receipt.json). Five PF-D3 tasks are verified; baseline owner acceptance remains open, so Day 3 and the full capstone are not declared complete.
+
+### Current owner decision
+
+The designated reviewer explicitly accepted the current 186 exact lab-only entries on 18 October, expiring 25 October at 00:00 IST. Fresh local gate passes with 221 findings visible, 186 accepted risks, zero blockers/errors; 25 contracts pass. Fresh hosted approved-policy confirmation is in progress. Accepted risks are not fixes; full-pipeline and Day 4 acknowledgement requirements remain open.

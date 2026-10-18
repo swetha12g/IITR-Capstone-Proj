@@ -186,3 +186,7 @@ The user resumed Day 2 before the originally planned 18 October date. The histor
 ## Subsequent Day 3 state — 18 October 2026
 
 Day 3 resumed at the user's request. Isolated pinned scanners and local source-gate/fixture tests now execute without changing system Node, shell startup or persistent bridge settings. Current scanner/gate status and remaining owner-review/hosted dependencies are in [day3-checkpoint.md](day3-checkpoint.md); request history remains in [daily-log.md](daily-log.md).
+
+### Day 3 exact-risk decision
+
+On 18 October the designated reviewer accepted the current 186 exact lab-only entries, expiring 25 October at 00:00 IST. Fresh local gate passes (221 visible / 186 accepted / zero blockers/errors); approved-policy hosted verification is being rerun. This changes no setup settings and is not remediation. Current handoff: [Day 3 checkpoint](day3-checkpoint.md).

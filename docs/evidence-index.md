@@ -123,18 +123,23 @@ Corrected hosted source scope: [run 39108322664](https://github.com/swetha12g/II
 | Current Day 3 record | SHA-256 |
 |---|---|
 | `baseline-review-proposals-production-only.json` | `43e6506041623aa0a54bf88ee5c0be3d290a732fb5596fa2f778317a2e20632f` |
-| `baseline-review-proposals.json` | `6a9b6c4f4b1429362ab5f16aedfa5199fcd2b4ec0c457a321533dc3e1a4d4db7` |
+| `baseline-review-proposals.json` | `18d6c661f2bd34a671b6dfabc85a92e272927ebadc316adaa162e0d837118ff0` |
 | `ci-receipt.json` | `fd012d8cee85748fe4676aebf0c9ff16023145f1e0ae5b04aacf5925d1456cd4` |
 | `database.json` | `235dece9b402f1f9694a677e554fb2b8d47973729176e0071550ca5e5eae2a15` |
 | `fixture-evidence.json` | `782cd5cab4cd3f9b3c9fcb47a6da08ec86b15b65ae3205f10894385418c1d470` |
-| `full-profile-not-ready.json` | `85ae6e3b2533db63f7860957a1ac696104bb38db7bf33f6629c5699505e170a2` |
-| `gate-summary.json` | `4b0890327af7889ffabde6907c8e84dd799c4804cc8ac417aab566511bb72444` |
-| `gate-tests.json` | `be544e60c7c110066ceedf0030cf142666028f9822d0099f5821d2a01b46cbf4` |
-| `publication-audit.json` | `8e4d456d575e8aa6b4627c1911bce20703e0f986fd79b895ced786e1e38b1eb4` |
-| `scan-execution.json` | `f444db05a2f5755b50b4f8035983e92beee0b728c177c378582eddeb8836eed6` |
+| `full-profile-not-ready.json` | `878c88be89d670340e508e86f72cfbca4e103779573cef0934b1e47cccf155a0` |
+| `gate-summary.json` | `8acc955dd26c44eedee05a70e3451024627799bd445689b25087b498bb561e67` |
+| `gate-tests.json` | `b480931551facbe01011a7dd37a01b02f616357e789545f0c565194302620096` |
+| `owner-review.json` | `08873d6547678cf00f6cb260c5178849b15dfa25bed88abb21ec2a4412fed713` |
+| `publication-audit.json` | `705b3240b701fe9eb88cfc6d09615f6bed253096b80173a80ae79580f13ecc3e` |
+| `scan-execution.json` | `5feb9728b942166cf91e9c917b518de12b4bd4dc47c35e75ab05416650bbf0d8` |
 | `secret-provenance.json` | `f6a56d1bb80dbbdcb3c8eeb9550e63fc0d7e87127c3645ed1ef04142085c3f3f` |
 | `tools-verification.json` | `f53caa03494bf94cc18692f24a323da7709ef983491707b82e2a006e8e4294ad` |
 
 [Final publication audit](../reports/sanitized/day3/publication-audit.json) rescanned the current tracked/non-ignored tree: the same 68 baseline secret-location fingerprints (69 raw report rows), zero new fingerprints. Raw output remained private. This verifies publication candidates, not owner acceptance of those existing risks.
 
 Stage counts: 11 SAST, 74 dependency, 68 history and 68 tree identities = 221; blockers 8 + 42 + 68 + 68 = 186. Secret reports have 69 raw rows each; de-duplication is by exact rule/path/line/commit identity and current-file content binding. No risk fingerprint or scope changed in this count-label correction.
+
+## Current approved-policy verification — 18 October 2026
+
+The pending-review descriptions above are historical. The designated reviewer has now explicitly accepted the current 186 exact lab-only entries; [approval receipt](../reports/sanitized/day3/owner-review.json), [active policy](../policies/baseline-exceptions.json). Fresh local gate passes with 221 visible findings, 186 accepted risks and zero blockers/errors. Fresh hosted verification follows. Historical failed-run evidence is retained. Acceptance expires 25 October at 00:00 IST and is not a fix.

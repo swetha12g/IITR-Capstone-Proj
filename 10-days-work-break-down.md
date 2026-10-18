@@ -326,9 +326,9 @@ Create synthetic fixtures, not real secrets: a Semgrep-detectable unsafe pattern
 
 Also test scanner crash, invalid JSON, missing report and expired exception. These must fail or block the aggregate status. Save sanitized evidence for failing and passing runs.
 
-**Day 3 acceptance:** [x] three scanners execute; [x] JSON validated; [ ] precise baseline exceptions reviewed; [x] bad/fixed demonstrations; [x] operational-error tests; [x] no secret in reviewed public logs/artifacts.
+**Day 3 acceptance:** [x] three scanners execute; [x] JSON validated; [x] precise baseline exceptions reviewed; [x] bad/fixed demonstrations; [x] operational-error tests; [x] no secret in reviewed public logs/artifacts.
 
-**Execution on 18 October 2026:** local scanner/gate/fixture evidence is recorded in [docs/day3-checkpoint.md](docs/day3-checkpoint.md), synchronized with the PF-D3 board in [docs/daily-log.md](docs/daily-log.md). Corrected hosted source checks and artifact/privacy verification passed; owner review of 186 exact baseline risks remains pending and the Day 3 gate correctly blocks those unaccepted findings. Five PF-D3 tasks are verified; the baseline-owner review task remains open. The overall workflow correctly fails its risk gate, and the complete six-stage gate is not claimed.
+**Execution on 18 October 2026:** [Day 3 checkpoint](docs/day3-checkpoint.md) and [daily JIRA board](docs/daily-log.md) record verified scanners, 25 contracts and real scanner probes. The designated reviewer accepted the current 186 exact lab-only exceptions until 25 October at 00:00 IST. Fresh local gate: 221 visible findings, 186 accepted risks, zero blockers/errors. Approval-policy hosted verification is being rerun. Acceptance is not a fix; actual remediation needs before/after evidence. The full profile still blocks missing later stages.
 **Suggested commit:** `feat: add source security scans and regression gates`.
 
 ## Day 4 — IaC, secure image and SBOM

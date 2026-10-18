@@ -185,7 +185,7 @@ These are local Markdown planning IDs, not external JIRA issues. The user reques
 
 ### Remaining mandatory submission gaps — not completed by this Day 2 plan
 
-- [ ] Day 3: Semgrep, dependency and secrets scans with bad/fixed gates and failure handling.
+- [x] Day 3: Semgrep, dependency and secrets scans, bad/fixed probes, fail-closed contracts and exact owner review (fresh approved-policy CI being verified).
 - [ ] Day 4: Checkov custom policies, functional image/IaC hardening, exact-image scan, and Syft SBOM; required acknowledgement before this stage.
 - [ ] Day 5: ZAP baseline and all six mandatory jobs with a fail-closed aggregate gate.
 - [ ] Day 6: normalization, independent ground-truth labels including misses, and a recomputable metrics dashboard.
@@ -228,14 +228,14 @@ Day 2 was brought forward to 17 October. Execution started on **18 October 2026*
 |---|---|---|---|---|---|
 | PF-D3-01 | Verify and pin official Semgrep, Trivy and Gitleaks tools; configure reviewed rules | Done: local and hosted verification | High | 120 min | Official versions/checksums and supported CLI flags recorded; meaningful JS/TS rules and narrow generated/vendor exclusions; application source remains in scope |
 | PF-D3-02 | Run source, dependency, full-history and working-tree scans | Done: local and hosted verification | High | 45 min | Private machine-readable output; timestamps/exit codes captured; full Git history fetched in CI; distinguish findings from scanner execution errors |
-| PF-D3-03 | Triage baseline and define exact expiring exceptions | Pending owner review: 186 exact entries | High | 15 min | Rule/advisory, component/path fingerprint, reason, owner role, expiry and baseline commit; no blanket application suppression |
+| PF-D3-03 | Triage baseline and define exact expiring exceptions | Done: 186 exact lab-only entries approved | High | 15 min | Rule/advisory, component/path fingerprint, reason, owner role, expiry and baseline commit; no blanket application suppression |
 | PF-D3-04 | Implement scan wrapper and fail-closed gate policy | Done: local and hosted verification | Highest | 60 min | Explicit severity mappings; invalid/missing JSON, crashes, mandatory skips and expired exceptions block; collect all reports without blanket passing error suppression |
 | PF-D3-05 | Prove bad/fixed behavior with isolated synthetic fixtures | Done: local and hosted verification | High | 30 min | Unsafe source pattern, verified advisory fixture and token-shaped canary detected; repaired/removed fixtures pass relevant gates; no real credential or seeded deployed feature |
 | PF-D3-06 | Run hosted checks and review sanitized evidence | Done: verified evidence; policy gate blocked | High | 30 min | Actual run URL/results, policy tests, JSON validation and baseline risk visible; no raw secret matches in public output; update requirements/report/evidence |
 
 - [x] PF-D3-01 — official tool pins and reviewed scanner configuration.
 - [x] PF-D3-02 — three scanners execute with valid private reports, full history and working-tree coverage.
-- [ ] PF-D3-03 — precise reviewed baseline exceptions.
+- [x] PF-D3-03 — 186 exact reviewed lab exceptions; expiry 25 October 00:00 IST.
 - [x] PF-D3-04 — fail-closed operational-error and expiry tests.
 - [x] PF-D3-05 — real scanner detection of synthetic bad/fixed fixtures.
 - [x] PF-D3-06 — actual hosted evidence and safe Markdown closeout.
@@ -315,3 +315,10 @@ Run `39108322664` / source job `117618870374` verified the corrected production/
 ### Final count-label and publication verification
 
 Corrected a prose counting error: the two de-duplications belong to the secret scans (69 raw rows / 68 locations each), not dependencies (74 raw / 74 distinct in the expanded scope). Total 221 and blocking 186 are unchanged, as are every proposal fingerprint and content binding. The publication audit confirms the same 68 tree-location fingerprints and zero new locations. The checksum-index check was scoped to the Day 3 section to avoid colliding with a same-named Day 2 receipt; all current hashes matched. Closeout `7c876e0` was normally pushed and verified clean at `0 / 0`; this correction preserves the pending owner-review item.
+
+## Exact baseline review received — 18 October 2026
+
+- Request: keep the project for study/experimentation, fix findings and proceed; the designated reviewer explicitly accepted the **current 186 exact lab-only exceptions** in the updated packet.
+- Action: activated only those reviewed fingerprints/severities/content bindings, expiring **25 October 2026 at 00:00 IST**. The older 183-entry proposal remains superseded. New/changed findings and scanner failures still block. No personal contact details are recorded.
+- Verification: fresh local scans, policy contracts and hosted confirmation are being rerun; no new successful gate is claimed yet. Acceptance is a time-limited risk decision, **not remediation**. Actual hardening/fixes will have separate before/after evidence in the guide's next stages.
+- Next: close Day 3 after actual verification. Day 4 requires the guide's Responsible AI Use and Lab Conduct acknowledgement; completion/date has been requested, with any signed record kept private.

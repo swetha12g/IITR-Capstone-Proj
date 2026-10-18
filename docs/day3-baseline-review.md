@@ -1,6 +1,6 @@
-# Day 3 baseline risk review — pending owner decision
+# Day 3 baseline risk review — exact lab exceptions approved
 
-Date: 18 October 2026, Asia/Kolkata. The production Day 3 gate currently **blocks**; no exceptions are active.
+Date: 18 October 2026, Asia/Kolkata. The designated project-owner reviewer explicitly accepted the current **186 exact lab-only exceptions** on this date. They are now active until **25 October 2026 at 00:00 IST**; verification is being rerun. This is acceptance of visible risk, not a finding fix.
 
 The actual scans produced 221 distinct metadata fingerprints, of which **186 block**: 8 SAST high candidates, 42 distinct high/critical dependency findings, and 68 distinct history plus 68 distinct working-tree suspected-credential locations (69 raw rows in each secret scan). Trivy includes production **and development** dependencies: 74 raw rows represent 74 distinct dependency findings. Scanner matches are not automatically confirmed exploitability or real credentials.
 
@@ -109,4 +109,4 @@ Exact line/commit fingerprints for both scans remain in the JSON proposal; group
 
 ## Review status
 
-Pending explicit contextual review by the designated project-owner reviewer. Technical provenance analysis by the assistant is not human approval. The active exception file remains empty until that review is received. Day 4 and later stages remain unimplemented.
+The designated project-owner reviewer explicitly accepted the current 186-entry packet on 18 October 2026. [Approval receipt](../reports/sanitized/day3/owner-review.json) and [active policy](../policies/baseline-exceptions.json) record the exact scope and expiry. This user decision supersedes the pending state above; all entries remain visible as accepted baseline risk. The request to fix findings continues separately through measured remediation; no source or dependency fix is claimed by this approval. Day 4 and later stages remain unimplemented.
