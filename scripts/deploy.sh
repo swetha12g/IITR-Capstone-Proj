@@ -30,5 +30,5 @@ PY
 kubectl --context kind-pipelinefortress -n pipelinefortress patch deployment juice-shop \
   --type=merge --patch "$pipelinefortress_patch"
 kubectl --context kind-pipelinefortress -n pipelinefortress rollout status deployment/juice-shop --timeout=300s
-kubectl --context kind-pipelinefortress -n pipelinefortress wait --for=condition=Ready pods \
-  -l app.kubernetes.io/name=juice-shop --timeout=180s
+# Do not take a second label-wide pod snapshot: it can include retiring pods
+# from the previous ReplicaSet. Runtime checks verify live pods and image IDs.

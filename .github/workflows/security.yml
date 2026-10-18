@@ -12,6 +12,7 @@ on:
       - requirements-dev.txt
       - policies/**
       - tests/day3/**
+      - tests/runtime/**
       - .semgrepignore
       - .gitignore
   pull_request:
@@ -24,6 +25,7 @@ on:
       - requirements-dev.txt
       - policies/**
       - tests/day3/**
+      - tests/runtime/**
       - .semgrepignore
       - .gitignore
   workflow_dispatch:
@@ -115,7 +117,9 @@ jobs:
           python -m pip install -r requirements-dev.txt > reports/private/day2/python-install.log 2>&1
           python -m pip check
       - name: Build and run selected finite tests
-        run: python scripts/run-day1-checks.py
+        run: |
+          python -m unittest discover -s tests/runtime -v
+          python scripts/run-day1-checks.py
       - name: Build the exact source image
         run: bash scripts/build-image.sh > reports/private/day2/image-build.log 2>&1
       - name: Deploy to this runner's own kind cluster

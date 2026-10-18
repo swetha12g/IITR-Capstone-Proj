@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
   "scope": "application",
-  "run_id": "20261018T081108092545Z",
-  "target_commit": "772fda667749894dd8a2b6760ec62f6b02d19cfa",
+  "run_id": "20261018T082835283163Z",
+  "target_commit": "c88ec1f7ea05b9a7be3877d52408505fcb86f549",
   "full_history": true,
   "dependency_scope": "production-and-development",
-  "started_at_utc": "2026-10-18T08:11:08.096125+00:00",
-  "finished_at_utc": "2026-10-18T08:11:13.858947+00:00",
+  "started_at_utc": "2026-10-18T08:28:35.287201+00:00",
+  "finished_at_utc": "2026-10-18T08:28:41.254644+00:00",
   "stages": [
     {
       "stage": "sast",
       "execution": "findings",
       "exit_code": 1,
-      "duration_seconds": 3.77,
-      "sha256": "03ec67f5e3cc42760b0f23d931b9523296f21ba8fb597714e6ec561bf33ef2e5",
+      "duration_seconds": 3.93,
+      "sha256": "87fe80c0f76fc9387e46f5b166c6b753938c73f7550b55280f89e15570782d3f",
       "log_sha256": "5b32b498af475979ddfdd9ac9d9f84e6d964e2175125975081cf2498f554de42"
     },
     {
@@ -21,24 +21,24 @@
       "execution": "findings",
       "exit_code": 20,
       "duration_seconds": 0.16,
-      "sha256": "da64cb30084b8bb7a0a7cf47838c83ae0b993436802abd2432dd2b6096119dca",
-      "log_sha256": "54d8db2bca2590a882e499129d3f2d4388c40ea3c5b351dc5cf806c2632c7d24"
+      "sha256": "6499be0535ab1df9c84caaffedc3a1f1e62a8e1e8dd45ffada1ebb66bdd047b4",
+      "log_sha256": "ed58786b17bee53819ca2d7399441caaeac01919cb0110e12580ecbaaa85437f"
     },
     {
       "stage": "secrets-history",
       "execution": "findings",
       "exit_code": 20,
       "duration_seconds": 0.92,
-      "sha256": "b075d21c28ebf6afbdbbdb09bd705b386c751710b6bf98f0a8393ea3442640ab",
-      "log_sha256": "ffba462f5bd9d49528f8f17d6f54cbafb63d5f8ee9fe5568c28d4a7e29f32c54"
+      "sha256": "b72b9a2388e5e8543824332ad3943d425f0c0ee5ce9bb44fe7ad376f8e1f453d",
+      "log_sha256": "1787659289931a17409b61c2b78e11b364ddc9a75392f4f319c41afbf1dafd78"
     },
     {
       "stage": "secrets-tree",
       "execution": "findings",
       "exit_code": 20,
-      "duration_seconds": 0.77,
-      "sha256": "a6e183570cea2ec24009ba73afae7b38df86fd2e73a831fb88d738a6d1c45473",
-      "log_sha256": "498f5076d9f3e4a39726f8d671f40186cadde0379705f96ec1c6115521908dd0"
+      "duration_seconds": 0.82,
+      "sha256": "13d155cdf06aa459492b2c3959b4b03e32c228e712fac2d0dda93f36f58948d4",
+      "log_sha256": "ad4a7ef5acd0b631b88aea07b53d18d51d3dc88d168572f6f372608d20fc5a97"
     }
   ],
   "lock_inputs": {

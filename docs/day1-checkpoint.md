@@ -190,3 +190,7 @@ Day 3 resumed at the user's request. Isolated pinned scanners and local source-g
 ### Day 3 exact-risk decision
 
 On 18 October the designated reviewer accepted the current 186 exact lab-only entries, expiring 25 October at 00:00 IST. Fresh local gate passes (221 visible / 186 accepted / zero blockers/errors); approved-policy hosted verification is being rerun. This changes no setup settings and is not remediation. Current handoff: [Day 3 checkpoint](day3-checkpoint.md).
+
+### Acknowledgement assistance
+
+The user requested assistance because the Day 4 program acknowledgement is not completed. Its LMS page link is needed to identify the actual steps; no completion/signature is recorded on the user's behalf. Day 3 verification continues, with Day 4 entry pending under the guide.

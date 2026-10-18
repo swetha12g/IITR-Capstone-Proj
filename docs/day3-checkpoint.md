@@ -1,4 +1,4 @@
-# Day 3 checkpoint — owner review accepted, local gate passes
+# Day 3 checkpoint — exact approval and hosted source gate pass
 
 Updated **18 October 2026 (Asia/Kolkata)**; synchronized with [execution guide](../10-days-work-break-down.md) and [daily JIRA board](daily-log.md).
 
@@ -10,7 +10,7 @@ Updated **18 October 2026 (Asia/Kolkata)**; synchronized with [execution guide](
 - [x] Real scanner bad/fixed/history demonstrations verified.
 - [x] All 25 fail-closed contracts pass, including expiry and content changes.
 - [x] Previous hosted evidence/privacy cross-check verified.
-- [ ] Fresh hosted gate after enabling the approved exceptions.
+- [x] Fresh hosted source gate after enabling the approved exceptions.
 
 ## Verified current result
 
@@ -26,7 +26,7 @@ Unique stage counts: **11 + 74 + 68 + 68 = 221**; approved blocking identities: 
 
 - Production-only run [39107551251](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39107551251), code `1dad4b7`: expected 183-risk gate rejection, application baseline passed. Superseded by development coverage correction.
 - Corrected run [39108322664](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39108322664), code `421f8eb`: tools, 25 contracts, live probes and all scans passed. Gate correctly failed on **186 then-unapproved risks**, zero operational errors; the application build/tests/image/deployment/runtime/cleanup passed. Downloaded source/baseline artifacts matched official ZIP SHA-256. All 221 CI identities/content bindings matched local evidence, with published metadata/log privacy checked. [Historical source gate](../reports/sanitized/day3/ci/39108322664/gate-summary.json). That historical failure remains unchanged.
-- Fresh approval-policy commit and hosted verification follow; no new CI success is assumed.
+- Approval-policy commit `c88ec1f`: [run 39110505372](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39110505372), source job `117625451381` **passed**. Verified downloaded artifact `12130745314` ZIP SHA-256 `85c2a6d575759246afc00576dfb2ec176755a93a80dfb8ab805d324bdc5f03f3`: 25 contracts pass, actual probes pass, all 221 identities/content bindings equal local evidence, 186 accepted risks, zero blockers/errors. The parallel baseline failed after a successful rollout: the redundant label-wide wait timed out on retiring pod snapshots. Its final diagnostics showed the live pod `1/1 Running`. A narrow deployment/runtime selection fix passed five regression cases and a fresh local redeploy with all four runtime checks; hosted correction is being prepared.
 
 ## Reproduce
 
@@ -49,4 +49,4 @@ The complete `full` profile still blocks on missing IaC, container and DAST repo
 
 ## Next step and limitations
 
-Finish the fresh hosted gate and synchronize final acceptance records. Day 4 has not started: the guide requires Responsible AI Use and Lab Conduct acknowledgement before that stage; completion/date has been requested and any signed record stays private. The full profile still rejects missing IaC, container and DAST stages. No production readiness, independent GitHub approval, full capstone, live-AI result or rendered final report is claimed. System Node, shell startup, global Git configuration, persistent bridge settings, imported source and recorded app locks remain unchanged.
+Verify the narrow rollout correction in hosted CI and synchronize final acceptance records. Day 4 has not started: the guide requires Responsible AI Use and Lab Conduct acknowledgement before that stage; the user reported it is not completed and requested assistance. The program/LMS page link has been requested to help; no signature or completion is fabricated and any signed record stays private. The full profile still rejects missing IaC, container and DAST stages. No production readiness, independent GitHub approval, full capstone, live-AI result or rendered final report is claimed. System Node, shell startup, global Git configuration, persistent bridge settings, imported source and recorded app locks remain unchanged.

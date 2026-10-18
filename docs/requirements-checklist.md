@@ -37,14 +37,14 @@ Source image, Ready local kind lab, loopback HTTP/screenshot, confirmed runtime 
 | PF-AI | Explicit budgeted live call after safeguards, grounding, FP/FN and cost/model disclosure | Day 8 | Pending |
 | PF-PRS | Three genuine AI-assisted fixes, before/after tests, real independent human review | Day 9 | Pending |
 | PF-REPORT | 12-page evidence-based report, maturity assessment, fresh reproduction, defense | Day 10 | Pending |
-| PF-ETHICS | Lab-only scope, confidentiality, acknowledgement before Day 4, GenAI disclosure | Every stage | In progress; acknowledgement pending |
+| PF-ETHICS | Lab-only scope, confidentiality, acknowledgement before Day 4, GenAI disclosure | Every stage | In progress; acknowledgement not completed, assistance requested; LMS page link needed |
 
 The 80% detection target must be measured against a labeled introduced set; no success or grade is promised. Optional work waits for core acceptance. Upstream intentionally vulnerable infrastructure is not a deployment template for this project.
 
 ## Day 3 historical hosted verdict — before owner approval
 
-[Run 39108322664](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39108322664) verified scanner operation, 25 contracts, real probes and sanitized evidence. Its source gate correctly failed on 186 unapproved risks (zero operational errors); the application build/deployment job passed. [CI receipt](../reports/sanitized/day3/ci-receipt.json). Five PF-D3 tasks are verified; baseline owner acceptance remains open, so Day 3 and the full capstone are not declared complete.
+[Run 39108322664](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39108322664) verified scanner operation, 25 contracts, real probes and sanitized evidence. Its source gate correctly failed on 186 unapproved risks (zero operational errors); the application build/deployment job passed. [Historical CI receipt](../reports/sanitized/day3/ci/39108322664/receipt.json). At that observation five PF-D3 tasks were verified and baseline owner acceptance remained open. The current explicit owner decision is recorded below; full capstone acceptance remains pending.
 
 ### Current owner decision
 
-The designated reviewer explicitly accepted the current 186 exact lab-only entries on 18 October, expiring 25 October at 00:00 IST. Fresh local gate passes with 221 findings visible, 186 accepted risks, zero blockers/errors; 25 contracts pass. Fresh hosted approved-policy confirmation is in progress. Accepted risks are not fixes; full-pipeline and Day 4 acknowledgement requirements remain open.
+The designated reviewer explicitly accepted the current 186 exact lab-only entries on 18 October, expiring 25 October at 00:00 IST. Fresh local gate passes with 221 findings visible, 186 accepted risks, zero blockers/errors; 25 contracts pass. Fresh hosted approved-policy source confirmation passed in run `39110505372`, matching all 221 local identities/content bindings; its parallel baseline hit a post-rollout pod-wait race; a narrow correction passed local redeploy/runtime and awaits hosted confirmation. Accepted risks are not fixes; full-pipeline and Day 4 acknowledgement requirements remain open.

@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "run_id": 39110505372,
+  "run_url": "https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39110505372",
+  "head_sha": "c88ec1f7ea05b9a7be3877d52408505fcb86f549",
+  "status": "completed",
+  "conclusion": "failure",
+  "observed_verdict": "source gate passed with 186 exact reviewed lab risks; baseline failed a redundant post-rollout pod wait after successful rollout",
+  "owner_approval_received": true,
+  "active_exception_count": 186,
+  "source_findings": 221,
+  "blocking_findings": 0,
+  "scanner_operational_errors": 0,
+  "dependency_scope": "production-and-development",
+  "tests": {
+    "gate_contracts": 25,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "jobs": [
+    {
+      "id": 117625451381,
+      "name": "source-security",
+      "conclusion": "success"
+    },
+    {
+      "id": 117625451581,
+      "name": "baseline",
+      "conclusion": "failure",
+      "failed_step": "Deploy to this runner's own kind cluster",
+      "runtime_step": "skipped",
+      "cleanup": "success"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 12130745314,
+      "name": "source-security-evidence-39110505372",
+      "sha256": "85c2a6d575759246afc00576dfb2ec176755a93a80dfb8ab805d324bdc5f03f3",
+      "download_sha256_verified": true
+    },
+    {
+      "id": 12130591695,
+      "name": "baseline-evidence-39110505372",
+      "sha256": "29b030fe996738326ed80ba58cb5b2fb885b8b3d53ab93ffb02c6b9da3f4935d",
+      "download_sha256_verified": true
+    }
+  ],
+  "source_publication_privacy_checked": true,
+  "ci_identities_and_content_hashes_match_local": true,
+  "full_pipeline_profile": "blocked: IaC/container/DAST are unimplemented",
+  "limitations": [
+    "Approved lab risk is not remediation or production readiness",
+    "Baseline post-rollout pod wait failed; five regression cases and fresh local redeploy/runtime passed a narrow correction, hosted confirmation pending",
+    "Full IaC/container/DAST stages are unimplemented",
+    "Day 4 acknowledgement is not completed; assistance requested and no personal attestation fabricated",
+    "No live LLM API call or app/dependency fix claimed"
+  ],
+  "raw_report_rows": {
+    "sast": 11,
+    "sca": 74,
+    "secrets-history": 69,
+    "secrets-tree": 69
+  },
+  "distinct_locations_by_stage": {
+    "sast": 11,
+    "sca": 74,
+    "secrets-history": 68,
+    "secrets-tree": 68
+  },
+  "blocking_locations_by_stage": {
+    "sast": 8,
+    "sca": 42,
+    "secrets-history": 68,
+    "secrets-tree": 68
+  },
+  "accepted_risk_count": 186
+}

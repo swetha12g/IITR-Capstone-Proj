@@ -34,17 +34,30 @@ def request(path):
         return response.status, response.read(4 * 1024 * 1024)
 
 
+def current_ready_pods(items, expected_image_id):
+    """Retiring pods cannot serve the completed rollout's readiness check."""
+    pods = [p for p in items if not p["metadata"].get("deletionTimestamp")]
+    if not pods:
+        raise ValueError("No live application pod")
+    for pod in pods:
+        if pod["metadata"].get("annotations", {}).get("pipelinefortress/image-config-id") != expected_image_id:
+            raise ValueError("Live pod does not belong to the expected image rollout")
+        if not any(c["type"] == "Ready" and c["status"] == "True"
+                   for c in pod.get("status", {}).get("conditions", [])):
+            raise ValueError("Live application pod is not Ready")
+    return pods
+
+
 def main():
     PRIVATE.mkdir(parents=True, exist_ok=True)
     PUBLIC.mkdir(parents=True, exist_ok=True)
     image = data(["docker", "image", "inspect", "pipelinefortress:baseline"])[0]
     nodes = data(KUBE + ["get", "nodes", "-o", "json"])["items"]
-    pods = data(APP + ["get", "pods", "-l", "app.kubernetes.io/name=juice-shop", "-o", "json"])["items"]
+    observed_pods = data(APP + ["get", "pods", "-l", "app.kubernetes.io/name=juice-shop", "-o", "json"])["items"]
+    pods = current_ready_pods(observed_pods, image["Id"])
     service = data(APP + ["get", "service", "juice-shop", "-o", "json"])
     assert nodes and all(any(c["type"] == "Ready" and c["status"] == "True"
                             for c in n["status"]["conditions"]) for n in nodes)
-    assert pods and all(any(c["type"] == "Ready" and c["status"] == "True"
-                           for c in p["status"]["conditions"]) for p in pods)
     assert service["spec"]["type"] == "ClusterIP"
     manifest = {
         "observed_at_utc": datetime.now(timezone.utc).isoformat(),
@@ -60,6 +73,7 @@ def main():
                                   "restarts": c["restartCount"]}
                                  for c in p["status"]["containerStatuses"]]} for p in pods],
         "service_type": service["spec"]["type"], "checks": [],
+        "ignored_terminating_pods": len(observed_pods) - len(pods),
     }
     for raw_pod, pod in zip(pods, manifest["pods"]):
         node_name = raw_pod["spec"]["nodeName"]

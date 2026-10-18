@@ -185,7 +185,7 @@ These are local Markdown planning IDs, not external JIRA issues. The user reques
 
 ### Remaining mandatory submission gaps — not completed by this Day 2 plan
 
-- [x] Day 3: Semgrep, dependency and secrets scans, bad/fixed probes, fail-closed contracts and exact owner review (fresh approved-policy CI being verified).
+- [x] Day 3: Semgrep, dependency and secrets scans, bad/fixed probes, fail-closed contracts and exact owner review (approved-policy source CI passed; parallel baseline rerun in progress).
 - [ ] Day 4: Checkov custom policies, functional image/IaC hardening, exact-image scan, and Syft SBOM; required acknowledgement before this stage.
 - [ ] Day 5: ZAP baseline and all six mandatory jobs with a fail-closed aggregate gate.
 - [ ] Day 6: normalization, independent ground-truth labels including misses, and a recomputable metrics dashboard.
@@ -231,7 +231,7 @@ Day 2 was brought forward to 17 October. Execution started on **18 October 2026*
 | PF-D3-03 | Triage baseline and define exact expiring exceptions | Done: 186 exact lab-only entries approved | High | 15 min | Rule/advisory, component/path fingerprint, reason, owner role, expiry and baseline commit; no blanket application suppression |
 | PF-D3-04 | Implement scan wrapper and fail-closed gate policy | Done: local and hosted verification | Highest | 60 min | Explicit severity mappings; invalid/missing JSON, crashes, mandatory skips and expired exceptions block; collect all reports without blanket passing error suppression |
 | PF-D3-05 | Prove bad/fixed behavior with isolated synthetic fixtures | Done: local and hosted verification | High | 30 min | Unsafe source pattern, verified advisory fixture and token-shaped canary detected; repaired/removed fixtures pass relevant gates; no real credential or seeded deployed feature |
-| PF-D3-06 | Run hosted checks and review sanitized evidence | Done: verified evidence; policy gate blocked | High | 30 min | Actual run URL/results, policy tests, JSON validation and baseline risk visible; no raw secret matches in public output; update requirements/report/evidence |
+| PF-D3-06 | Run hosted checks and review sanitized evidence | Done: approved source gate passes; baseline rerun in progress | High | 30 min | Actual run URL/results, policy tests, JSON validation and baseline risk visible; no raw secret matches in public output; update requirements/report/evidence |
 
 - [x] PF-D3-01 — official tool pins and reviewed scanner configuration.
 - [x] PF-D3-02 — three scanners execute with valid private reports, full history and working-tree coverage.
@@ -322,3 +322,44 @@ Corrected a prose counting error: the two de-duplications belong to the secret s
 - Action: activated only those reviewed fingerprints/severities/content bindings, expiring **25 October 2026 at 00:00 IST**. The older 183-entry proposal remains superseded. New/changed findings and scanner failures still block. No personal contact details are recorded.
 - Verification: fresh local scans, policy contracts and hosted confirmation are being rerun; no new successful gate is claimed yet. Acceptance is a time-limited risk decision, **not remediation**. Actual hardening/fixes will have separate before/after evidence in the guide's next stages.
 - Next: close Day 3 after actual verification. Day 4 requires the guide's Responsible AI Use and Lab Conduct acknowledgement; completion/date has been requested, with any signed record kept private.
+
+### Approved-policy hosted source gate — 18 October 2026
+
+Commit `c88ec1f` / [run 39110505372](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39110505372), source job `117625451381`, passed tools, all 25 contracts, real scanner probes, full collection and the approved source gate. The downloaded artifact ZIP matched its official hash; all 221 identities/content bindings match local data, with 186 accepted risks, zero blockers and zero operational errors. Metadata/privacy checks passed. Parallel application baseline is still running; its final result is not assumed. Day 4 acknowledgement remains unconfirmed, so hardening has not begun.
+
+## Next stage — Day 4 hardening checklist (planned, not started)
+
+The request to fix findings continues here in the guide's sequence. These are Markdown planning IDs, not external JIRA issues. No risk is marked fixed by accepting an exception. Start only after the guide's acknowledgement entry condition is confirmed; signed material remains private.
+
+| ID | Planned task | Status | Evidence needed |
+|---|---|---|---|
+| PF-D4-00 | Confirm Responsible AI Use and Lab Conduct acknowledgement completion/date | Not completed; assistance requested | Completion/date only; keep signed record private |
+| PF-D4-01 | Pin and run Checkov with a custom immutable-image policy | To do | Official tool verification, built-in/custom pass/fail fixtures and actual custom-check ID |
+| PF-D4-02 | Map applicable controls and document gaps | To do | Chosen CIS version, applicable check mapping and explicit remaining controls |
+| PF-D4-03 | Build a functional hardened image | To do | Supported base digest, minimal runtime, non-root permissions, clean build context and functional checks |
+| PF-D4-04 | Apply/test Kubernetes hardening in the owned local lab | To do | Before/after security contexts, service-account token, resources/probes, writable-path/read-only-root tests |
+| PF-D4-05 | Scan and inventory the exact hardened image | To do | Trivy results, Syft CycloneDX schema/package verification, image identity, SBOM hash and DB timestamp |
+| PF-D4-06 | Compare baseline and hardening results, update gate/evidence | To do | Actual removed/remaining findings, regressions/runtime, exact residual-risk review; no automatic expansion of the 186 approvals |
+
+- [ ] PF-D4-00 — acknowledgement entry condition.
+- [ ] PF-D4-01 — Checkov built-in/custom fixtures.
+- [ ] PF-D4-02 — mapped controls/gaps.
+- [ ] PF-D4-03 — functional hardened image.
+- [ ] PF-D4-04 — tested Kubernetes hardening.
+- [ ] PF-D4-05 — same-image scan/SBOM.
+- [ ] PF-D4-06 — measured before/after evidence and gate.
+
+Three focused AI-assisted remediation PRs remain a separate Day 9 requirement; source-free AI safeguards, provider/model/budget and genuine review evidence must precede that claim. No live model call, new local cluster or application source patch was made during this approval closeout. Hosted CI uses its own ephemeral cluster.
+
+### Acknowledgement assistance requested — 18 October 2026
+
+- Request: the user reported being unable to complete the program acknowledgement and asked the assistant to handle it.
+- Outcome: technical work can be delegated, but no personal attestation/signature or completion date is fabricated. The guide's Day 4 entry condition remains **not completed**. Requested the program/LMS page link to help locate the actual steps; no credential or signed document was requested.
+- Action: continue closing verified Day 3 work and its hosted run. Day 4 implementation remains unstarted until the actual acknowledgement requirement is satisfied.
+
+### Hosted deployment wait race and local correction
+
+- Run `39110505372` source job passed the approved Day 3 gate. Its baseline build/tests and image build passed, but deployment returned exit 1 at the **post-rollout label-wide pod wait**. Retained diagnostics explicitly show successful rollout and a remaining `1/1 Running` pod; the wait retained retired pod identities. This is a new observed failure, not proof of the earlier Day 2 incident's cause.
+- Fix: retain the deployment rollout wait, remove the redundant all-matching-pod wait, and require every live pod in runtime verification to be Ready and annotated for the expected image. Ignore only pods with a deletion timestamp; empty, all-retiring, unready or wrong-image live sets still fail. Existing CRI/Docker config comparison and HTTP checks remain.
+- Verification: five new regression cases pass; shell/Python/workflow validation passes; fresh local redeploy and all four existing runtime observations pass. [Local evidence](../reports/sanitized/day3/rollout-fix-local.json). Hosted correction is next; no green overall workflow is claimed yet.
+- Original source/baseline artifact ZIP hashes were verified. Only actual failure diagnostics and passing build/test evidence are promoted; runtime was skipped in the failed hosted job. No application source or app lock changed.

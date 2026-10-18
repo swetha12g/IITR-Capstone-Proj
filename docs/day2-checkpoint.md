@@ -59,3 +59,9 @@ Operational learning: a changed local image tag requires a deployment-template c
 ## Publication verified
 
 Implementation `280514f` and reviewed evidence/Markdown closeout `204ae02` were normally pushed to `origin/feature-16-kick-start`. After closeout delivery, the working tree was clean and ahead/behind counts were `0 / 0`; private kubeconfig and artifact ZIPs remained ignored. The hosted run verifies implementation `280514f`; the later documentation/evidence-only commit does not change its tested code inputs. This receipt records that completed publication.
+
+## Subsequent hosted rollout-wait correction — 18 October 2026
+
+Day 3 approval run `39110505372` passed source gates/build/tests/image but failed a redundant pod wait after deployment rollout had succeeded. Retained diagnostics showed the remaining pod Ready. The helper now waits for rollout only; runtime verification checks live pods against the expected image annotation and actual CRI config ID, excluding only terminating pods. Five regression cases plus a fresh local redeploy/four runtime checks pass; hosted correction is pending. This new evidence does not establish the cause of the earlier incident whose private log was unavailable. [Day 3 checkpoint](day3-checkpoint.md).
+
+Official semantics checked: [rollout status](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_rollout/kubectl_rollout_status/) watches deployment rollout completion; [kubectl wait](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_wait/) waits on each selected resource. The root-cause conclusion above is from this run's diagnostics, not a claim that the documentation reproduces this incident.

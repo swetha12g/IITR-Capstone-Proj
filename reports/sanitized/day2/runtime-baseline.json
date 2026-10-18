@@ -1,5 +1,5 @@
 {
-  "observed_at_utc": "2026-10-16T19:30:47.444383+00:00",
+  "observed_at_utc": "2026-10-18T08:28:00.313396+00:00",
   "scope": "owned kind-pipelinefortress lab; loopback HTTP only; no login or mutating HTTP methods",
   "source_commit": "f189f521266f42c6bd05884468292000cee852ed",
   "image": {
@@ -60,8 +60,8 @@
       "path": "/metrics",
       "http_status": 200,
       "confirmed": true,
-      "response_bytes": 25263,
-      "sha256": "afe365314064ebc74bcb7c97b86d5741ec2f3db2652aaf810903f7ceabddece3",
+      "response_bytes": 26108,
+      "sha256": "860eeb5de844ee37be5706274a91c034c7f6472145270e9735a359f2e6a78f3c",
       "private_evidence": "reports/private/day2/unauthenticated-metrics.response"
     },
     {
@@ -75,5 +75,6 @@
       "private_evidence": "reports/private/day2/sql-error-disclosure.response"
     }
   ],
+  "ignored_terminating_pods": 0,
   "passed": true
 }

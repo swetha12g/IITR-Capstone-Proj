@@ -328,7 +328,7 @@ Also test scanner crash, invalid JSON, missing report and expired exception. The
 
 **Day 3 acceptance:** [x] three scanners execute; [x] JSON validated; [x] precise baseline exceptions reviewed; [x] bad/fixed demonstrations; [x] operational-error tests; [x] no secret in reviewed public logs/artifacts.
 
-**Execution on 18 October 2026:** [Day 3 checkpoint](docs/day3-checkpoint.md) and [daily JIRA board](docs/daily-log.md) record verified scanners, 25 contracts and real scanner probes. The designated reviewer accepted the current 186 exact lab-only exceptions until 25 October at 00:00 IST. Fresh local gate: 221 visible findings, 186 accepted risks, zero blockers/errors. Approval-policy hosted verification is being rerun. Acceptance is not a fix; actual remediation needs before/after evidence. The full profile still blocks missing later stages.
+**Execution on 18 October 2026:** [Day 3 checkpoint](docs/day3-checkpoint.md) and [daily JIRA board](docs/daily-log.md) record verified scanners, 25 contracts and real scanner probes. The designated reviewer accepted the current 186 exact lab-only exceptions until 25 October at 00:00 IST. Fresh local gate: 221 visible findings, 186 accepted risks, zero blockers/errors. Approved-policy hosted source verification passed in run `39110505372`; the parallel baseline hit a post-rollout pod-wait race; a narrow correction passed local redeploy/runtime and awaits hosted confirmation. Acceptance is not a fix; actual remediation needs before/after evidence. The full profile still blocks missing later stages.
 **Suggested commit:** `feat: add source security scans and regression gates`.
 
 ## Day 4 — IaC, secure image and SBOM

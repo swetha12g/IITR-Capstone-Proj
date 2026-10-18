@@ -1,0 +1,20 @@
+{
+  "tools": {
+    "semgrep": {
+      "version": "1.181.0",
+      "distribution_hash_verified": true
+    },
+    "trivy": {
+      "version": "0.76.0",
+      "distribution_hash_verified": true
+    },
+    "gitleaks": {
+      "version": "8.30.1",
+      "distribution_hash_verified": true
+    }
+  },
+  "semgrep_hashed_distributions": 66,
+  "platform": "linux-x86_64",
+  "python": "3.10",
+  "system_installation": false
+}
