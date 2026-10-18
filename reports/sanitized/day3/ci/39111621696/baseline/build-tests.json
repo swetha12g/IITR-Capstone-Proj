@@ -1,0 +1,101 @@
+{
+  "run_id": "20261018T083022Z",
+  "source_commit": "f189f521266f42c6bd05884468292000cee852ed",
+  "node_version": "v24.22.0",
+  "npm_version": "11.19.1",
+  "selected_steps": [
+    "install-server",
+    "install-frontend",
+    "build",
+    "test-frontend",
+    "test-server",
+    "test-api"
+  ],
+  "steps": [
+    {
+      "step": "install-server",
+      "command": [
+        "npm",
+        "ci",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "started_at_utc": "2026-10-18T08:30:22.858040+00:00",
+      "duration_seconds": 111.28,
+      "exit_code": 0,
+      "log_reference": "reports/private/day1/20261018T083022Z/install-server.log",
+      "log_sha256": "09b39c92e8511f61c68957775876bfdff102606878a222786f1655956db93510"
+    },
+    {
+      "step": "install-frontend",
+      "command": [
+        "npm",
+        "--prefix",
+        "frontend",
+        "ci",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "started_at_utc": "2026-10-18T08:32:14.136741+00:00",
+      "duration_seconds": 13.65,
+      "exit_code": 0,
+      "log_reference": "reports/private/day1/20261018T083022Z/install-frontend.log",
+      "log_sha256": "4e6acf51300a1ae0a282084a469edbe44148072f3b9c77cdf30e83da16d0c784"
+    },
+    {
+      "step": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "started_at_utc": "2026-10-18T08:32:27.791260+00:00",
+      "duration_seconds": 31.79,
+      "exit_code": 0,
+      "log_reference": "reports/private/day1/20261018T083022Z/build.log",
+      "log_sha256": "042c5ba379cbc32cb61ef5889a9d0df09f637e00a542928691b0de55a8dbb4b4"
+    },
+    {
+      "step": "test-frontend",
+      "command": [
+        "npm",
+        "run",
+        "test:frontend:coverage"
+      ],
+      "started_at_utc": "2026-10-18T08:32:59.577742+00:00",
+      "duration_seconds": 83.24,
+      "exit_code": 0,
+      "log_reference": "reports/private/day1/20261018T083022Z/test-frontend.log",
+      "log_sha256": "1d8166f2e29de87955e286a09ee2ac7e03b213a59fc9183152161f3f08ec3afe"
+    },
+    {
+      "step": "test-server",
+      "command": [
+        "npm",
+        "run",
+        "test:server"
+      ],
+      "started_at_utc": "2026-10-18T08:34:22.821976+00:00",
+      "duration_seconds": 26.64,
+      "exit_code": 0,
+      "log_reference": "reports/private/day1/20261018T083022Z/test-server.log",
+      "log_sha256": "cafa0b000d519576560062a30225521e2922a9f4ea7471fec0363f929ed05b73"
+    },
+    {
+      "step": "test-api",
+      "command": [
+        "npm",
+        "run",
+        "test:api"
+      ],
+      "started_at_utc": "2026-10-18T08:34:49.467633+00:00",
+      "duration_seconds": 160.3,
+      "exit_code": 0,
+      "log_reference": "reports/private/day1/20261018T083022Z/test-api.log",
+      "log_sha256": "a3eac2578cd0d7ace02e9c4fe8000708ac1e0ea9b8461eb78c7672b582b8e723"
+    }
+  ],
+  "status": "passed",
+  "locks_unchanged": true,
+  "finished_at_utc": "2026-10-18T08:37:29.773817+00:00"
+}

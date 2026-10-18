@@ -185,7 +185,7 @@ These are local Markdown planning IDs, not external JIRA issues. The user reques
 
 ### Remaining mandatory submission gaps — not completed by this Day 2 plan
 
-- [x] Day 3: Semgrep, dependency and secrets scans, bad/fixed probes, fail-closed contracts and exact owner review (approved-policy source CI passed; parallel baseline rerun in progress).
+- [x] Day 3: Semgrep, dependency and secrets scans, bad/fixed probes, fail-closed contracts and exact owner review (approved-policy source and corrected baseline CI passed).
 - [ ] Day 4: Checkov custom policies, functional image/IaC hardening, exact-image scan, and Syft SBOM; required acknowledgement before this stage.
 - [ ] Day 5: ZAP baseline and all six mandatory jobs with a fail-closed aggregate gate.
 - [ ] Day 6: normalization, independent ground-truth labels including misses, and a recomputable metrics dashboard.
@@ -231,7 +231,7 @@ Day 2 was brought forward to 17 October. Execution started on **18 October 2026*
 | PF-D3-03 | Triage baseline and define exact expiring exceptions | Done: 186 exact lab-only entries approved | High | 15 min | Rule/advisory, component/path fingerprint, reason, owner role, expiry and baseline commit; no blanket application suppression |
 | PF-D3-04 | Implement scan wrapper and fail-closed gate policy | Done: local and hosted verification | Highest | 60 min | Explicit severity mappings; invalid/missing JSON, crashes, mandatory skips and expired exceptions block; collect all reports without blanket passing error suppression |
 | PF-D3-05 | Prove bad/fixed behavior with isolated synthetic fixtures | Done: local and hosted verification | High | 30 min | Unsafe source pattern, verified advisory fixture and token-shaped canary detected; repaired/removed fixtures pass relevant gates; no real credential or seeded deployed feature |
-| PF-D3-06 | Run hosted checks and review sanitized evidence | Done: approved source gate passes; baseline rerun in progress | High | 30 min | Actual run URL/results, policy tests, JSON validation and baseline risk visible; no raw secret matches in public output; update requirements/report/evidence |
+| PF-D3-06 | Run hosted checks and review sanitized evidence | Done: source gate and corrected baseline CI passed | High | 30 min | Actual run URL/results, policy tests, JSON validation and baseline risk visible; no raw secret matches in public output; update requirements/report/evidence |
 
 - [x] PF-D3-01 — official tool pins and reviewed scanner configuration.
 - [x] PF-D3-02 — three scanners execute with valid private reports, full history and working-tree coverage.
@@ -363,3 +363,15 @@ Three focused AI-assisted remediation PRs remain a separate Day 9 requirement; s
 - Fix: retain the deployment rollout wait, remove the redundant all-matching-pod wait, and require every live pod in runtime verification to be Ready and annotated for the expected image. Ignore only pods with a deletion timestamp; empty, all-retiring, unready or wrong-image live sets still fail. Existing CRI/Docker config comparison and HTTP checks remain.
 - Verification: five new regression cases pass; shell/Python/workflow validation passes; fresh local redeploy and all four existing runtime observations pass. [Local evidence](../reports/sanitized/day3/rollout-fix-local.json). Hosted correction is next; no green overall workflow is claimed yet.
 - Original source/baseline artifact ZIP hashes were verified. Only actual failure diagnostics and passing build/test evidence are promoted; runtime was skipped in the failed hosted job. No application source or app lock changed.
+
+### Rollout correction hosted source verification
+
+Commit `d68686a` / [run 39111621696](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39111621696), source job `117628806917`, passed. Artifact `12130199437` matched official ZIP SHA-256 `7e96dff369e214e2c3dd5def98413015a92d278d785a01fc70e949541d3362b7`; all 221 identities/content bindings match local evidence with 186 exact accepted risks and zero blockers/errors. Source-log/artifact privacy checks passed. Baseline job `117628807146` is running the selected application tests; the workflow includes all five new rollout regression cases. Deployment/runtime correction is not yet claimed verified in CI.
+
+## Day 3 completed — 18 October 2026
+
+- Outcome: **all six PF-D3 tasks are complete**. [Run 39111621696](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39111621696), code `d68686a`, passed both jobs: 25 gate contracts, five rollout regressions, actual scanner fixtures/collection/gate, six application install/build/test stages, source image, deployment, runtime and cleanup. Both downloaded artifact ZIP hashes were verified; source identities/content bindings match local data and job-log/artifact privacy checks passed.
+- Gate: **221 visible findings, 186 exact approved lab risks, zero blockers/errors**. Approval expires **25 October 2026 at 00:00 IST**; new/changed findings, expiry or scanner failures block. These findings are not marked fixed.
+- Actual fix: removed the redundant pod-snapshot wait after rollout; runtime requires live pods Ready and bound to the expected image annotation plus actual CRI/Docker config. The successful hosted run encountered **one terminating pod**, ignored it correctly and passed all four runtime checks. Retained the prior failed-run evidence and the earlier Day 2 incident's unconfirmed-cause limitation.
+- Records: synchronized guide/JIRA ticks, setup handoff, Day 2/3 checkpoints, exact review record, versions, requirements, report outline, README and checksum/evidence links. Implementation `d68686a` is published on `feature-16-kick-start`; this closeout carries the final evidence records. Imported source/app locks and system settings remain unchanged.
+- Next/blocker: Day 4 hardening checklist remains **unchecked and unstarted**. The program acknowledgement is not completed; the user requested help and its LMS page link is needed. No personal attestation/signature is fabricated. Full IaC/image/DAST gates, AI work, three remediation PRs and rendered final report remain pending.

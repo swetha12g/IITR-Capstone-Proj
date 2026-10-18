@@ -1,4 +1,4 @@
-# Day 3 checkpoint — exact approval and hosted source gate pass
+# Day 3 checkpoint — complete with exact lab-risk acceptance
 
 Updated **18 October 2026 (Asia/Kolkata)**; synchronized with [execution guide](../10-days-work-break-down.md) and [daily JIRA board](daily-log.md).
 
@@ -9,7 +9,7 @@ Updated **18 October 2026 (Asia/Kolkata)**; synchronized with [execution guide](
 - [x] Designated project-owner reviewer explicitly accepted the current 186 exact lab-only entries.
 - [x] Real scanner bad/fixed/history demonstrations verified.
 - [x] All 25 fail-closed contracts pass, including expiry and content changes.
-- [x] Previous hosted evidence/privacy cross-check verified.
+- [x] Hosted evidence/privacy cross-check verified.
 - [x] Fresh hosted source gate after enabling the approved exceptions.
 
 ## Verified current result
@@ -26,7 +26,7 @@ Unique stage counts: **11 + 74 + 68 + 68 = 221**; approved blocking identities: 
 
 - Production-only run [39107551251](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39107551251), code `1dad4b7`: expected 183-risk gate rejection, application baseline passed. Superseded by development coverage correction.
 - Corrected run [39108322664](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39108322664), code `421f8eb`: tools, 25 contracts, live probes and all scans passed. Gate correctly failed on **186 then-unapproved risks**, zero operational errors; the application build/tests/image/deployment/runtime/cleanup passed. Downloaded source/baseline artifacts matched official ZIP SHA-256. All 221 CI identities/content bindings matched local evidence, with published metadata/log privacy checked. [Historical source gate](../reports/sanitized/day3/ci/39108322664/gate-summary.json). That historical failure remains unchanged.
-- Approval-policy commit `c88ec1f`: [run 39110505372](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39110505372), source job `117625451381` **passed**. Verified downloaded artifact `12130745314` ZIP SHA-256 `85c2a6d575759246afc00576dfb2ec176755a93a80dfb8ab805d324bdc5f03f3`: 25 contracts pass, actual probes pass, all 221 identities/content bindings equal local evidence, 186 accepted risks, zero blockers/errors. The parallel baseline failed after a successful rollout: the redundant label-wide wait timed out on retiring pod snapshots. Its final diagnostics showed the live pod `1/1 Running`. A narrow deployment/runtime selection fix passed five regression cases and a fresh local redeploy with all four runtime checks; hosted correction is being prepared.
+- Approval-policy commit `c88ec1f`: [run 39110505372](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39110505372), source job `117625451381` **passed**. Verified downloaded artifact `12130745314` ZIP SHA-256 `85c2a6d575759246afc00576dfb2ec176755a93a80dfb8ab805d324bdc5f03f3`: 25 contracts pass, actual probes pass, all 221 identities/content bindings equal local evidence, 186 accepted risks, zero blockers/errors. The parallel baseline failed after a successful rollout: the redundant label-wide wait timed out on retiring pod snapshots. Its final diagnostics showed the live pod `1/1 Running`. A narrow deployment/runtime selection fix passed five regression cases and a fresh local redeploy with all four runtime checks; hosted correction is in [run 39111621696](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39111621696), code `d68686a`. Its source job `117628806917` passed, with the same exact 221 identities and 186 approvals; the corrected baseline job also passed deployment, runtime and cleanup; final evidence is below.
 
 ## Reproduce
 
@@ -49,4 +49,12 @@ The complete `full` profile still blocks on missing IaC, container and DAST repo
 
 ## Next step and limitations
 
-Verify the narrow rollout correction in hosted CI and synchronize final acceptance records. Day 4 has not started: the guide requires Responsible AI Use and Lab Conduct acknowledgement before that stage; the user reported it is not completed and requested assistance. The program/LMS page link has been requested to help; no signature or completion is fabricated and any signed record stays private. The full profile still rejects missing IaC, container and DAST stages. No production readiness, independent GitHub approval, full capstone, live-AI result or rendered final report is claimed. System Node, shell startup, global Git configuration, persistent bridge settings, imported source and recorded app locks remain unchanged.
+Day 3 is complete for its defined source-scan/gate scope; all six PF-D3 tasks are checked. Day 4 has not started: the guide requires Responsible AI Use and Lab Conduct acknowledgement before that stage; the user reported it is not completed and requested assistance. The program/LMS page link has been requested to help; no signature or completion is fabricated and any signed record stays private. The full profile still rejects missing IaC, container and DAST stages. No production readiness, independent GitHub approval, full capstone, live-AI result or rendered final report is claimed. System Node, shell startup, global Git configuration, persistent bridge settings, imported source and recorded app locks remain unchanged.
+
+## Final verified closeout — 18 October 2026
+
+[Run 39111621696](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39111621696), code `d68686a`, completed **success**. Source job `117628806917` and baseline job `117628807146` both passed. Source: 25 contracts, actual scanner probes, production/development collection and the gate (221 visible / 186 exact accepted / zero blockers/errors). Baseline: five rollout regression cases, six application install/build/test stages, source image, kind deployment, actual image identity, four runtime checks and cleanup all passed. **One terminating pod was present and correctly excluded in the successful hosted runtime check**; every live pod was Ready and matched the expected image. This directly exercises the correction, without weakening readiness or hiding a live-pod failure.
+
+Downloaded source artifact `12130199437` matched ZIP SHA-256 `7e96dff369e214e2c3dd5def98413015a92d278d785a01fc70e949541d3362b7`; baseline artifact `12130564571` matched `dba4c58132054b52235643f998d85dcb189eda274adbc25e869089f77b307a4a`. Source identities/content bindings match local evidence; both job logs and published metadata passed privacy checks. [Receipt](../reports/sanitized/day3/ci-receipt.json), [source gate](../reports/sanitized/day3/ci/39111621696/gate-summary.json), [baseline tests](../reports/sanitized/day3/ci/39111621696/baseline/build-tests.json), [runtime](../reports/sanitized/day3/ci/39111621696/baseline/runtime-baseline.json). Earlier failed runs remain historical, with their original conclusions preserved.
+
+The accepted 186 risks have **not** been fixed by this closeout. The actual code fix is the deployment/runtime readiness race. Image/Kubernetes hardening and security remediation remain separate work; Day 4 is not started because the required program acknowledgement is not completed. The user requested help, and its LMS page link is needed. No personal attestation or signature is fabricated.

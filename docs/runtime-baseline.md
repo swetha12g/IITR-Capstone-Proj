@@ -45,3 +45,7 @@ The local cluster is retained for subsequent project work. Hosted CI deletes its
 ![Owned Juice Shop baseline on loopback](../reports/sanitized/day2/juice-shop-running.png)
 
 [Capture metadata and SHA-256](../reports/sanitized/day2/screenshot.json). User authorized an isolated headless Playwright context after the browser-control tool reported no available browser. The fresh context blocked non-loopback network requests; no login, purchases or personal data entry occurred. The welcome overlay was dismissed; the non-binding cookie notice remains visible. Image review confirmed the product catalog with no personal identities or credentials.
+
+## Subsequent runtime verification — 18 October 2026
+
+Fresh local redeploy and hosted run `39111621696` passed the four existing loopback observations and exact CRI/Docker image-config checks. Runtime selection now excludes only pods with a deletion timestamp; every live pod must be Ready and carry the expected image annotation. The successful hosted run included one terminating pod, directly exercising the correction. [Hosted runtime evidence](../reports/sanitized/day3/ci/39111621696/baseline/runtime-baseline.json). These observations remain visible training risks, not fixes.

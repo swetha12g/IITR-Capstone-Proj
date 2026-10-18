@@ -1,62 +1,192 @@
 {
   "schema_version": 1,
-  "run_id": 39110505372,
-  "run_url": "https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39110505372",
-  "head_sha": "c88ec1f7ea05b9a7be3877d52408505fcb86f549",
+  "run_id": 39111621696,
+  "run_url": "https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39111621696",
+  "head_sha": "d68686a761c13e5b5f0276f71dfbeca8a8999c40",
   "status": "completed",
-  "conclusion": "failure",
-  "observed_verdict": "source gate passed with 186 exact reviewed lab risks; baseline failed a redundant post-rollout pod wait after successful rollout",
+  "conclusion": "success",
+  "observed_verdict": "Day 3 approved source gate and application baseline passed; full six-stage pipeline remains incomplete",
   "owner_approval_received": true,
   "active_exception_count": 186,
   "source_findings": 221,
+  "accepted_risk_count": 186,
   "blocking_findings": 0,
   "scanner_operational_errors": 0,
   "dependency_scope": "production-and-development",
   "tests": {
     "gate_contracts": 25,
+    "rollout_regressions": 5,
     "failures": 0,
     "errors": 0,
-    "skipped": 0
+    "skipped": 0,
+    "application_stages_exited_zero": 6,
+    "application_test_count": "not inferred from sanitized manifests"
   },
   "jobs": [
     {
-      "id": 117625451381,
+      "id": 117628806917,
       "name": "source-security",
-      "conclusion": "success"
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check out full repository history",
+          "conclusion": "success"
+        },
+        {
+          "name": "Select pinned scanner Python",
+          "conclusion": "success"
+        },
+        {
+          "name": "Prepare fresh evidence directory",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install verified pinned scanners",
+          "conclusion": "success"
+        },
+        {
+          "name": "Prove fail-closed gate contracts",
+          "conclusion": "success"
+        },
+        {
+          "name": "Prove actual scanner bad and fixed behavior",
+          "conclusion": "success"
+        },
+        {
+          "name": "Collect all application scanner reports",
+          "conclusion": "success"
+        },
+        {
+          "name": "Evaluate mandatory Day 3 source gates",
+          "conclusion": "success"
+        },
+        {
+          "name": "Upload only sanitized source evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Select pinned scanner Python",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Check out full repository history",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
     },
     {
-      "id": 117625451581,
+      "id": 117628807146,
       "name": "baseline",
-      "conclusion": "failure",
-      "failed_step": "Deploy to this runner's own kind cluster",
-      "runtime_step": "skipped",
-      "cleanup": "success"
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check out the reviewed commit",
+          "conclusion": "success"
+        },
+        {
+          "name": "Select pinned Node",
+          "conclusion": "success"
+        },
+        {
+          "name": "Select Python 3.10",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install verified kind and kubectl",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check runner kind startup before expensive builds",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install pinned check dependencies",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build and run selected finite tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build the exact source image",
+          "conclusion": "success"
+        },
+        {
+          "name": "Deploy to this runner's own kind cluster",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify local runtime and capture safe evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Publish sanitized baseline evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Clean up the ephemeral runner cluster",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Select Python 3.10",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Select pinned Node",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Check out the reviewed commit",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
     }
   ],
   "artifacts": [
     {
-      "id": 12130745314,
-      "name": "source-security-evidence-39110505372",
-      "sha256": "85c2a6d575759246afc00576dfb2ec176755a93a80dfb8ab805d324bdc5f03f3",
+      "id": 12130564571,
+      "name": "baseline-evidence-39111621696",
+      "sha256": "dba4c58132054b52235643f998d85dcb189eda274adbc25e869089f77b307a4a",
       "download_sha256_verified": true
     },
     {
-      "id": 12130591695,
-      "name": "baseline-evidence-39110505372",
-      "sha256": "29b030fe996738326ed80ba58cb5b2fb885b8b3d53ab93ffb02c6b9da3f4935d",
+      "id": 12130199437,
+      "name": "source-security-evidence-39111621696",
+      "sha256": "7e96dff369e214e2c3dd5def98413015a92d278d785a01fc70e949541d3362b7",
       "download_sha256_verified": true
     }
   ],
   "source_publication_privacy_checked": true,
+  "baseline_log_privacy_checked": true,
   "ci_identities_and_content_hashes_match_local": true,
   "full_pipeline_profile": "blocked: IaC/container/DAST are unimplemented",
-  "limitations": [
-    "Approved lab risk is not remediation or production readiness",
-    "Baseline post-rollout pod wait failed; five regression cases and fresh local redeploy/runtime passed a narrow correction, hosted confirmation pending",
-    "Full IaC/container/DAST stages are unimplemented",
-    "Day 4 acknowledgement is not completed; assistance requested and no personal attestation fabricated",
-    "No live LLM API call or app/dependency fix claimed"
-  ],
+  "rollout_correction": {
+    "prior_failed_run": 39110505372,
+    "prior_failed_job": 117625451581,
+    "observed_cause": "redundant label-wide pod wait retained retiring pod identities after successful deployment rollout",
+    "correction": "retain rollout status; runtime validates only live Ready pods for the expected image annotation and actual CRI/Docker image config",
+    "terminating_pods_ignored_in_successful_ci": 1,
+    "current_image_identity_verified": true,
+    "http_checks_passed": 4,
+    "cleanup": "success",
+    "historical_day2_incident_cause": "still unconfirmed; its private log was unavailable"
+  },
   "raw_report_rows": {
     "sast": 11,
     "sca": 74,
@@ -69,11 +199,11 @@
     "secrets-history": 68,
     "secrets-tree": 68
   },
-  "blocking_locations_by_stage": {
-    "sast": 8,
-    "sca": 42,
-    "secrets-history": 68,
-    "secrets-tree": 68
-  },
-  "accepted_risk_count": 186
+  "limitations": [
+    "186 accepted lab risks remain visible; acceptance is not remediation or production readiness",
+    "Exceptions expire 25 October 2026 at 00:00 IST; new/changed findings and scanner failures still block",
+    "Day 4 acknowledgement not completed; user requested help and the program/LMS page link is needed",
+    "IaC/container/DAST, AI triage, three remediation PRs and final rendered report remain pending",
+    "No live LLM call, independent approving review or application/dependency security fix claimed"
+  ]
 }

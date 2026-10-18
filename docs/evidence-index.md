@@ -65,7 +65,7 @@ Local final verification: [local-crosscheck.json](../reports/sanitized/day2/loca
 | Local Day 2 artifact | SHA-256 |
 |---|---|
 | `image-build.json` | `6893213754bf3d0457974a29eda2ed9855f7e481ec4b22921634eff9f1ca623e` |
-| `runtime-baseline.json` | `51242b47f795343e341071167fc52f842060326d90f054d62dd62a634416d218` |
+| `runtime-baseline.json` | `eb63ed807c6a06debfe8dcf9e0ab8c4daf5b0434e6722d77767e8771a826a350` |
 | `validation.json` | `abe6c37c243db15e0b5ad1ddaad0dab2326459b7162a4b9af1ddae287b809378` |
 | `screenshot.json` | `c4ce99cdbc104baf3313c40889d4a637cac02dc01dcae29270adcfe8027e93bb` |
 | `juice-shop-running.png` | `834db620cb9fe9ee0fb6219a0b64cba80fe92302eb6b7c0e722a93ffe735c80a` |
@@ -124,23 +124,41 @@ Corrected hosted source scope: [run 39108322664](https://github.com/swetha12g/II
 |---|---|
 | `baseline-review-proposals-production-only.json` | `43e6506041623aa0a54bf88ee5c0be3d290a732fb5596fa2f778317a2e20632f` |
 | `baseline-review-proposals.json` | `18d6c661f2bd34a671b6dfabc85a92e272927ebadc316adaa162e0d837118ff0` |
-| `ci-receipt.json` | `ceb3988b2289d9f7487ae8c62234bf330794216293cac53e93decf809632b51e` |
+| `ci-receipt.json` | `b0ed4e9513b972a60d0eb4fd6d9c551629ecbd75a89ef47e7141d0710c2089ff` |
 | `database.json` | `235dece9b402f1f9694a677e554fb2b8d47973729176e0071550ca5e5eae2a15` |
 | `fixture-evidence.json` | `782cd5cab4cd3f9b3c9fcb47a6da08ec86b15b65ae3205f10894385418c1d470` |
 | `full-profile-not-ready.json` | `878c88be89d670340e508e86f72cfbca4e103779573cef0934b1e47cccf155a0` |
 | `gate-summary.json` | `8acc955dd26c44eedee05a70e3451024627799bd445689b25087b498bb561e67` |
 | `gate-tests.json` | `b480931551facbe01011a7dd37a01b02f616357e789545f0c565194302620096` |
 | `owner-review.json` | `08873d6547678cf00f6cb260c5178849b15dfa25bed88abb21ec2a4412fed713` |
-| `publication-audit.json` | `705b3240b701fe9eb88cfc6d09615f6bed253096b80173a80ae79580f13ecc3e` |
+| `publication-audit.json` | `734f1e4e589d173929f28f9bf220e15b2d1083ff9aa7a0ede33da516db0ae233` |
 | `rollout-fix-local.json` | `eb63ed807c6a06debfe8dcf9e0ab8c4daf5b0434e6722d77767e8771a826a350` |
-| `scan-execution.json` | `7338ecf09fd882d15266bc304790c3da695e3ec96590829fd9f184e6fcd9dc02` |
+| `scan-execution.json` | `953d43ba3c8e5f589a65b6b9064a4d6da995521344eeb8df82c0accd42d5bf8c` |
 | `secret-provenance.json` | `f6a56d1bb80dbbdcb3c8eeb9550e63fc0d7e87127c3645ed1ef04142085c3f3f` |
 | `tools-verification.json` | `f53caa03494bf94cc18692f24a323da7709ef983491707b82e2a006e8e4294ad` |
 
 [Final publication audit](../reports/sanitized/day3/publication-audit.json) rescanned the current tracked/non-ignored tree: the same 68 baseline secret-location fingerprints (69 raw report rows), zero new fingerprints. Raw output remained private. This verifies publication candidates, not owner acceptance of those existing risks.
 
-Stage counts: 11 SAST, 74 dependency, 68 history and 68 tree identities = 221; blockers 8 + 42 + 68 + 68 = 186. Secret reports have 69 raw rows each; de-duplication is by exact rule/path/line/commit identity and current-file content binding. No risk fingerprint or scope changed in this count-label correction.
+Stage counts: 11 SAST, 74 dependency, 68 history and 68 tree identities = 221; identities that would block without approval are 8 + 42 + 68 + 68 = 186, now exactly accepted for the lab. Secret reports have 69 raw rows each; de-duplication is by exact rule/path/line/commit identity and current-file content binding. No risk fingerprint or scope changed in this count-label correction.
 
 ## Current approved-policy verification — 18 October 2026
 
-The pending-review descriptions above are historical. The designated reviewer has now explicitly accepted the current 186 exact lab-only entries; [approval receipt](../reports/sanitized/day3/owner-review.json), [active policy](../policies/baseline-exceptions.json). Fresh local gate passes with 221 visible findings, 186 accepted risks and zero blockers/errors. Fresh hosted source verification passed in run `39110505372`, matching all 221 local identities/content bindings. [Gate](../reports/sanitized/day3/ci/39110505372/gate-summary.json), [25 contracts](../reports/sanitized/day3/ci/39110505372/gate-tests.json), [probes](../reports/sanitized/day3/ci/39110505372/fixture-evidence.json), [collection](../reports/sanitized/day3/ci/39110505372/scan-execution.json), [tools](../reports/sanitized/day3/ci/39110505372/tools-verification.json). The source artifact ZIP SHA-256 matched `85c2a6d575759246afc00576dfb2ec176755a93a80dfb8ab805d324bdc5f03f3`; source-job logs and artifact metadata passed privacy checks. The parallel baseline hit a post-rollout pod-wait race; a narrow correction passed local redeploy/runtime and awaits hosted confirmation. Historical failed-run evidence is retained. Acceptance expires 25 October at 00:00 IST and is not a fix.
+Day 3 is complete for its defined source-scan/gate scope. The designated reviewer explicitly accepted the current 186 exact lab-only entries; [approval receipt](../reports/sanitized/day3/owner-review.json), [active policy](../policies/baseline-exceptions.json). Local and hosted gates pass with **221 visible findings / 186 accepted risks / zero blockers and operational errors**. Approval expires **25 October at 00:00 IST**; acceptance is not a fix.
+
+[Run 39111621696](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39111621696), code `d68686a`, passed both source and baseline jobs, 25 gate contracts, five rollout regressions, six application stages, deployment/image identity, four runtime observations and cleanup. Source ZIP SHA-256 `7e96dff369e214e2c3dd5def98413015a92d278d785a01fc70e949541d3362b7` and baseline ZIP SHA-256 `dba4c58132054b52235643f998d85dcb189eda274adbc25e869089f77b307a4a` were verified. All source identities/content bindings match local data, and both job logs/artifact metadata passed privacy checks. One terminating pod was present in the successful runtime check, verifying the readiness-race correction while live-pod/image/HTTP checks remained enforced. [Current CI receipt](../reports/sanitized/day3/ci-receipt.json).
+
+The prior approval run's source gate passed but its post-rollout pod wait failed; [historical receipt](../reports/sanitized/day3/ci/39110505372/receipt.json), [retained diagnostics](../reports/sanitized/day3/ci/39110505372/baseline/deployment-failure.json). It is not relabeled green. The original Day 2 incident's unavailable log still prevents a historical root-cause claim. Day 4 is unstarted pending actual program acknowledgement; the user requested help and the LMS page link is needed. Full six-stage/AI/report acceptance remains open.
+
+
+| Current hosted Day 3 evidence (relative to `reports/sanitized/day3/ci/39111621696/`) | SHA-256 |
+|---|---|
+| [baseline/build-tests.json](../reports/sanitized/day3/ci/39111621696/baseline/build-tests.json) | `97ee296dcd41adbe04c7715f3ba602ee0c09a46d3f0d5a166c1f2ea8f06fe5a9` |
+| [baseline/runtime-baseline.json](../reports/sanitized/day3/ci/39111621696/baseline/runtime-baseline.json) | `ccbcdf80aac7137f43f47b2775e3541f5ad011fa1ee9e2536c19123bbf10cbc0` |
+| [fixture-evidence.json](../reports/sanitized/day3/ci/39111621696/fixture-evidence.json) | `119a8503921bd6cdf97e007627585622182ebfb0d3938f300d977c9b6a80e40f` |
+| [gate-summary.json](../reports/sanitized/day3/ci/39111621696/gate-summary.json) | `8acc955dd26c44eedee05a70e3451024627799bd445689b25087b498bb561e67` |
+| [gate-tests.json](../reports/sanitized/day3/ci/39111621696/gate-tests.json) | `4272d3ebf77d1e4ec200f8333d0fbe589ff4488641340d33ec94ce624f4d26ee` |
+| [receipt.json](../reports/sanitized/day3/ci/39111621696/receipt.json) | `b0ed4e9513b972a60d0eb4fd6d9c551629ecbd75a89ef47e7141d0710c2089ff` |
+| [scan-execution.json](../reports/sanitized/day3/ci/39111621696/scan-execution.json) | `7a9000d1c4cb226fe98c1665b5d38bedfd52d03325d8f3fd1077ae873fa40e56` |
+| [tools-verification.json](../reports/sanitized/day3/ci/39111621696/tools-verification.json) | `f53caa03494bf94cc18692f24a323da7709ef983491707b82e2a006e8e4294ad` |
+
+Active exact policy SHA-256: `ec0f59810986dd92d89bdaf73c11ae9aa460f7feeb87036ea320004f60fac78c`.
