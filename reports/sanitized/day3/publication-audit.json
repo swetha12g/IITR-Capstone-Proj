@@ -1,0 +1,9 @@
+{
+  "observed_at_utc": "2026-10-18T07:53:26.452756+00:00",
+  "working_tree_files": 1555,
+  "known_baseline_matches": 68,
+  "new_secret_fingerprints": 0,
+  "raw_reports_remain_private": true,
+  "actual_owner_approval_received": false,
+  "scope": "final tracked and non-ignored untracked publication candidates; no ignored private files copied"
+}

@@ -326,9 +326,9 @@ Create synthetic fixtures, not real secrets: a Semgrep-detectable unsafe pattern
 
 Also test scanner crash, invalid JSON, missing report and expired exception. These must fail or block the aggregate status. Save sanitized evidence for failing and passing runs.
 
-**Day 3 acceptance:** [x] three scanners execute; [x] JSON validated; [ ] precise baseline exceptions reviewed; [x] bad/fixed demonstrations; [x] operational-error tests; [ ] no secret in public logs (hosted check pending).
+**Day 3 acceptance:** [x] three scanners execute; [x] JSON validated; [ ] precise baseline exceptions reviewed; [x] bad/fixed demonstrations; [x] operational-error tests; [x] no secret in reviewed public logs/artifacts.
 
-**Execution on 18 October 2026:** local scanner/gate/fixture evidence is recorded in [docs/day3-checkpoint.md](docs/day3-checkpoint.md), synchronized with the PF-D3 board in [docs/daily-log.md](docs/daily-log.md). Exact baseline risk review and hosted verification remain pending; the Day 3 gate currently blocks unaccepted findings. The complete six-stage gate is not claimed.
+**Execution on 18 October 2026:** local scanner/gate/fixture evidence is recorded in [docs/day3-checkpoint.md](docs/day3-checkpoint.md), synchronized with the PF-D3 board in [docs/daily-log.md](docs/daily-log.md). Corrected hosted source checks and artifact/privacy verification passed; owner review of 186 exact baseline risks remains pending and the Day 3 gate correctly blocks those unaccepted findings. Five PF-D3 tasks are verified; the baseline-owner review task remains open. The overall workflow correctly fails its risk gate, and the complete six-stage gate is not claimed.
 **Suggested commit:** `feat: add source security scans and regression gates`.
 
 ## Day 4 — IaC, secure image and SBOM

@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "run_id": 39108322664,
+  "run_url": "https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39108322664",
+  "head_sha": "421f8eb09f941639ab4c66fbedd9716acb520bf7",
+  "status": "completed",
+  "conclusion": "failure",
+  "observed_verdict": "blocked by 186 unapproved baseline risks; not a scanner or application build failure",
+  "owner_approval_received": false,
+  "active_exception_count": 0,
+  "source_findings": 221,
+  "blocking_findings": 186,
+  "scanner_operational_errors": 0,
+  "dependency_scope": "production-and-development",
+  "tests": {
+    "gate_contracts": 25,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "jobs": [
+    {
+      "id": 117618870178,
+      "name": "baseline",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check out the reviewed commit",
+          "conclusion": "success"
+        },
+        {
+          "name": "Select pinned Node",
+          "conclusion": "success"
+        },
+        {
+          "name": "Select Python 3.10",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install verified kind and kubectl",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check runner kind startup before expensive builds",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install pinned check dependencies",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build and run selected finite tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build the exact source image",
+          "conclusion": "success"
+        },
+        {
+          "name": "Deploy to this runner's own kind cluster",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify local runtime and capture safe evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Publish sanitized baseline evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Clean up the ephemeral runner cluster",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Select Python 3.10",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Select pinned Node",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Check out the reviewed commit",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 117618870374,
+      "name": "source-security",
+      "conclusion": "failure",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check out full repository history",
+          "conclusion": "success"
+        },
+        {
+          "name": "Select pinned scanner Python",
+          "conclusion": "success"
+        },
+        {
+          "name": "Prepare fresh evidence directory",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install verified pinned scanners",
+          "conclusion": "success"
+        },
+        {
+          "name": "Prove fail-closed gate contracts",
+          "conclusion": "success"
+        },
+        {
+          "name": "Prove actual scanner bad and fixed behavior",
+          "conclusion": "success"
+        },
+        {
+          "name": "Collect all application scanner reports",
+          "conclusion": "success"
+        },
+        {
+          "name": "Evaluate mandatory Day 3 source gates",
+          "conclusion": "failure"
+        },
+        {
+          "name": "Upload only sanitized source evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Select pinned scanner Python",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Post Check out full repository history",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 12129582563,
+      "name": "baseline-evidence-39108322664",
+      "sha256": "176447fe97a142930d7fba8abeaba90675b2dda905990387dc89bb7b2b309580",
+      "archive_checksum_verified": true
+    },
+    {
+      "id": 12129287626,
+      "name": "source-security-evidence-39108322664",
+      "sha256": "16a6749e2cf91180a5b2cbccee34dde19146875949a3d302b37d95a3b7faa5e9",
+      "archive_checksum_verified": true
+    }
+  ],
+  "source_publication_privacy_checked": true,
+  "ci_identities_and_content_hashes_match_local": true,
+  "full_pipeline_profile": "blocked: IaC/container/DAST are unimplemented",
+  "limitations": [
+    "No owner baseline approval has been received; the policy gate correctly fails",
+    "The initial 183-entry production-only proposal/run is superseded by the 186-entry production-and-development scope",
+    "These are scanner matches and accepted-risk proposals, not confirmed exploitability, credential safety or production readiness",
+    "Day 4 and later stages have not started; no live LLM API was called"
+  ]
+}

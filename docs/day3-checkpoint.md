@@ -5,11 +5,11 @@ Started **18 October 2026 (Asia/Kolkata)**, synchronized with [the execution gui
 ## Current acceptance
 
 - [x] Three pinned scanners execute; full-history and working-tree secret scans run.
-- [x] Reports, finding/operational exit codes and coverage are validated locally.
+- [x] Reports, finding/operational exit codes and coverage are validated locally and in CI.
 - [ ] Exact expiring baseline risks accepted by the designated reviewer.
 - [x] Real scanner bad/fixed demonstrations pass expected outcomes.
 - [x] Missing/invalid reports, crashes, timeouts, skips and expired exceptions fail closed.
-- [ ] Final hosted evidence/privacy cross-check for the corrected dependency scope.
+- [x] Hosted source evidence/privacy cross-check for the corrected dependency scope.
 
 ## Current verified local results
 
@@ -29,7 +29,7 @@ Actual scanner fixtures detected all six source patterns, `CVE-2021-23337` in lo
 
 Initial code `1dad4b7` was normally pushed. [Run 39107551251](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39107551251), source job `117616578672`, passed verified tool installation, 24 then-current contracts, actual fixtures and collection. Its gate correctly failed on 183 unapproved risks, with no operational error. The parallel baseline job passed its application build/tests, image, cluster deployment, runtime and cleanup. That run used Trivy's production-only default and is **not final verification of the expanded source scope**.
 
-Downloaded artifact `12128659514` matched SHA-256 `94cbf4f7b27904c430d575ba4c4508bbe7dd9f0af4554524f2594e5d830af5bd`; all 217 then-current identities and bindings matched local evidence. It contained no raw match/contact fields or generated canary. [Historical CI record](../reports/sanitized/day3/ci/gate-summary.json). The development-dependency omission was then corrected locally, adding three high findings and a coverage contract test; a fresh hosted verification is required.
+Downloaded artifact `12128659514` matched SHA-256 `94cbf4f7b27904c430d575ba4c4508bbe7dd9f0af4554524f2594e5d830af5bd`; all 217 then-current identities and bindings matched local evidence. It contained no raw match/contact fields or generated canary. [Historical CI record](../reports/sanitized/day3/ci/gate-summary.json). The development-dependency omission was then corrected locally, adding three high findings and a coverage contract test; the corrected scope was verified by the later run below.
 
 ## Reproduce
 
@@ -48,3 +48,19 @@ Collection captures each stage separately and continues after findings/errors. S
 The tree scan copies tracked and non-ignored untracked files, refusing symlinks instead of following external paths. Tools use isolated HOME/settings/Docker configuration; ignored private reports/environments/dependency trees and credential files are not copied. Full history uses all fetched refs; CI checkout uses `fetch-depth: 0`.
 
 The complete `full` profile still blocks on missing IaC, container and DAST reports. This Day 3 gate is not full capstone acceptance or production safety. Day 4 acknowledgement and later live-AI budget/model prerequisites remain separate; Day 4 has not started.
+
+## Corrected hosted source result
+
+[Run 39108322664](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39108322664), code `421f8eb`, source job `117618870374`, passed scanner installation, **25** contracts, live bad/fixed fixtures and all collection with production/development coverage. Its gate correctly exited 1 on **186 unapproved risks**, zero operational errors; the gate is not reported as passing. The parallel baseline job completed successfully, including application build/tests, image deployment, runtime and cleanup.
+
+Downloaded artifact `12129287626` matched SHA-256 `16a6749e2cf91180a5b2cbccee34dde19146875949a3d302b37d95a3b7faa5e9`. All **221** finding identities and content bindings match local evidence. [Current CI gate](../reports/sanitized/day3/ci/39108322664/gate-summary.json), [tests](../reports/sanitized/day3/ci/39108322664/gate-tests.json), [execution](../reports/sanitized/day3/ci/39108322664/scan-execution.json). Sanitized artifacts and the full source-job log passed checks for raw match/contact fields, credential-shaped canaries and private-key headers.
+
+Remaining Day 3 acceptance dependency: the designated project-owner reviewer must decide on the current **186-entry** packet. No response or elapsed time is treated as approval; active exceptions remain empty. The guide calls for reviewed mappings/precise risk exceptions and states that completion claims need actual tests, artifacts and human review; the reviewer role is recorded in [scope.md](scope.md).
+
+## Technical closeout and remaining decision
+
+The complete run concluded **failure**, solely because the source policy gate rejected 186 unapproved risks. The baseline application job passed; source installation, scans, 25 tests, live probes and sanitized evidence checks passed. Both source and baseline artifact ZIP hashes were verified after download; [CI receipt](../reports/sanitized/day3/ci-receipt.json), [baseline build/tests](../reports/sanitized/day3/ci/39108322664/baseline/build-tests.json), [baseline runtime](../reports/sanitized/day3/ci/39108322664/baseline/runtime-baseline.json).
+
+Five of six PF-D3 tasks are verified; PF-D3-03 remains pending the designated owner's explicit decision on [the 186-entry packet](day3-baseline-review.md). The active exception list is empty. No human acceptance is invented and no failing gate is waived. Day 3 is **not claimed complete** while this review is pending. No independent approval, production safety, full six-stage pipeline, rendered final report or live-AI result is claimed. Day 4 remains unstarted.
+
+Implementation `421f8eb` is published to `feature-16-kick-start`; documentation/evidence closeout follows with the review item still open. No application source/recorded app locks, shell startup, global Git settings or persistent bridge settings changed.

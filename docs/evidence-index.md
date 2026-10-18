@@ -108,8 +108,31 @@ Actual scanner output is kept under ignored `reports/private/day3/`; public reco
 | [Actual scanner fixtures](../reports/sanitized/day3/fixture-evidence.json) | Bad inputs blocked; repaired clean inputs passed; history retained its synthetic canary and stayed blocked |
 | [Full-profile rejection](../reports/sanitized/day3/full-profile-not-ready.json) | Missing IaC/container/DAST stages block; Day 3 is not complete six-stage acceptance |
 
-Hosted verification and baseline owner review are pending. There is no fabricated approval, full-pipeline success or production-readiness verdict.
+Hosted verification is recorded below; baseline owner review remains pending. There is no fabricated approval, full-pipeline success or production-readiness verdict.
 
 First production-only Day 3 hosted source job `117616578672` in [run 39107551251](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39107551251) passed installation, 24 contract tests, actual fixtures and collection. The gate then correctly failed on 183 unapproved risks, zero operational errors. [Downloaded CI gate](../reports/sanitized/day3/ci/gate-summary.json), [tests](../reports/sanitized/day3/ci/gate-tests.json), [fixtures](../reports/sanitized/day3/ci/fixture-evidence.json), [execution](../reports/sanitized/day3/ci/scan-execution.json), [tools](../reports/sanitized/day3/ci/tools-verification.json). Artifact digest matched `94cbf4f7b27904c430d575ba4c4508bbe7dd9f0af4554524f2594e5d830af5bd`; all 217 identities and content bindings matched local evidence, with no raw match/contact fields or canary. Owner baseline review is pending.
 
-Dependency scope correction: the mandatory collection now includes development dependencies, adding three high findings. Corrected local evidence has 221 distinct identities, 186 blockers and 25 passing contracts. The first production-only packet/artifact is historical; its 183 entries cannot authorize additional findings. A new hosted run will verify this corrected scope. The parallel baseline job in the first run completed successfully.
+Dependency scope correction: the mandatory collection now includes development dependencies, adding three high findings. Corrected local evidence has 221 distinct identities, 186 blockers and 25 passing contracts. The first production-only packet/artifact is historical; its 183 entries cannot authorize additional findings. The corrected hosted run below verified this expanded scope. The parallel baseline job in the first run completed successfully.
+
+Corrected hosted source scope: [run 39108322664](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39108322664), source job `117618870374`, code `421f8eb`. [Gate](../reports/sanitized/day3/ci/39108322664/gate-summary.json), [25 passing contracts](../reports/sanitized/day3/ci/39108322664/gate-tests.json), [fixtures](../reports/sanitized/day3/ci/39108322664/fixture-evidence.json), [execution](../reports/sanitized/day3/ci/39108322664/scan-execution.json), [tools](../reports/sanitized/day3/ci/39108322664/tools-verification.json). Actual gate failure is 186 unapproved risks, zero operational errors. Artifact `12129287626` matched digest `16a6749e2cf91180a5b2cbccee34dde19146875949a3d302b37d95a3b7faa5e9`; all 221 identities/file hashes match local data, with no forbidden raw/contact/canary fields in published evidence/logs. Owner review remains pending.
+
+## Day 3 final technical verdict
+
+[Run 39108322664](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39108322664) completed with source-gate **failure on 186 unapproved risks**, zero scanner operational errors. Its baseline application job passed. [Receipt](../reports/sanitized/day3/ci-receipt.json), [baseline build/tests](../reports/sanitized/day3/ci/39108322664/baseline/build-tests.json), [baseline runtime](../reports/sanitized/day3/ci/39108322664/baseline/runtime-baseline.json). Source artifact SHA-256: `16a6749e2cf91180a5b2cbccee34dde19146875949a3d302b37d95a3b7faa5e9`; baseline artifact SHA-256: `176447fe97a142930d7fba8abeaba90675b2dda905990387dc89bb7b2b309580`. Both downloaded ZIPs were checked. No owner approval is recorded and no exception is enabled; Day 3 remains open for that decision.
+
+| Current Day 3 record | SHA-256 |
+|---|---|
+| `baseline-review-proposals-production-only.json` | `43e6506041623aa0a54bf88ee5c0be3d290a732fb5596fa2f778317a2e20632f` |
+| `baseline-review-proposals.json` | `6a9b6c4f4b1429362ab5f16aedfa5199fcd2b4ec0c457a321533dc3e1a4d4db7` |
+| `ci-receipt.json` | `0b81cf3146312200d546e3e6862b6b0c4ed14b1f528d5c23fc215ed9152bbef7` |
+| `database.json` | `235dece9b402f1f9694a677e554fb2b8d47973729176e0071550ca5e5eae2a15` |
+| `fixture-evidence.json` | `782cd5cab4cd3f9b3c9fcb47a6da08ec86b15b65ae3205f10894385418c1d470` |
+| `full-profile-not-ready.json` | `85ae6e3b2533db63f7860957a1ac696104bb38db7bf33f6629c5699505e170a2` |
+| `gate-summary.json` | `4b0890327af7889ffabde6907c8e84dd799c4804cc8ac417aab566511bb72444` |
+| `gate-tests.json` | `be544e60c7c110066ceedf0030cf142666028f9822d0099f5821d2a01b46cbf4` |
+| `publication-audit.json` | `8e4d456d575e8aa6b4627c1911bce20703e0f986fd79b895ced786e1e38b1eb4` |
+| `scan-execution.json` | `f444db05a2f5755b50b4f8035983e92beee0b728c177c378582eddeb8836eed6` |
+| `secret-provenance.json` | `f6a56d1bb80dbbdcb3c8eeb9550e63fc0d7e87127c3645ed1ef04142085c3f3f` |
+| `tools-verification.json` | `f53caa03494bf94cc18692f24a323da7709ef983491707b82e2a006e8e4294ad` |
+
+[Final publication audit](../reports/sanitized/day3/publication-audit.json) rescanned the current tracked/non-ignored tree: the same 69 baseline secret fingerprints, zero new fingerprints. Raw output remained private. This verifies publication candidates, not owner acceptance of those existing risks.

@@ -4,7 +4,7 @@ PipelineFortress — Secure CI/CD with GenAI-Assisted Triage.
 
 The detailed execution roadmap is available in [docs/PipelineFortress_Detailed_Roadmap.pdf](docs/PipelineFortress_Detailed_Roadmap.pdf).
 
-Status as of 17 October 2026: Day 1 setup and pinned Juice Shop baseline build/tests passed. Selected tests: 2,334 passed, 8 upstream skips, 0 failures; lint passed. Day 2 source image and local kind deployment now pass runtime checks; [hosted CI passed](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/38957969793). Day 2 is complete, with the earlier deployment incident limitation recorded in its checkpoint. The six-stage security pipeline, AI triage, and final assessment remain pending.
+Status as of 18 October 2026: Day 1 setup and pinned Juice Shop baseline build/tests passed. Selected tests: 2,334 passed, 8 upstream skips, 0 failures; lint passed. Day 2 source image and local kind deployment now pass runtime checks; [hosted CI passed](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/38957969793). Day 2 is complete, with the earlier deployment incident limitation recorded in its checkpoint. The six-stage security pipeline, AI triage, and final assessment remain pending.
 
 - [Execution guide](10-days-work-break-down.md)
 - [Day 1 checkpoint](docs/day1-checkpoint.md)
@@ -24,4 +24,4 @@ python scripts/run-day1-checks.py
 
 The runner uses the pinned imported source and recorded dependency locks. It keeps raw output in ignored private evidence and writes sanitized status manifests. It does not create a cluster or run live LLM calls. Juice Shop is an intentionally vulnerable lab target; a successful baseline build is not a production-safety claim.
 
-Day 3 resumed on 18 October 2026. Pinned source/dependency/secret scans, bad/fixed probes and 25 gate-contract tests pass locally. The application gate remains blocked on exact baseline risk review; hosted verification is being prepared. See [Day 3 checkpoint](docs/day3-checkpoint.md) and [baseline review](docs/day3-baseline-review.md).
+Day 3 resumed on 18 October 2026. Pinned source/dependency/secret scans, bad/fixed probes and 25 gate-contract tests are verified locally and in CI. Hosted source verification passed tool installation, scans, tests and live probes; the policy gate correctly fails on 186 unapproved baseline risks. The application build/deployment job passed. Day 3 owner review remains open. See [Day 3 checkpoint](docs/day3-checkpoint.md) and [baseline review](docs/day3-baseline-review.md).

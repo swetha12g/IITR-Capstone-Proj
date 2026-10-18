@@ -226,19 +226,19 @@ Day 2 was brought forward to 17 October. Execution started on **18 October 2026*
 
 | ID | Task | Status | Priority | Estimate | Acceptance criteria |
 |---|---|---|---|---|---|
-| PF-D3-01 | Verify and pin official Semgrep, Trivy and Gitleaks tools; configure reviewed rules | Done locally | High | 120 min | Official versions/checksums and supported CLI flags recorded; meaningful JS/TS rules and narrow generated/vendor exclusions; application source remains in scope |
-| PF-D3-02 | Run source, dependency, full-history and working-tree scans | Done locally | High | 45 min | Private machine-readable output; timestamps/exit codes captured; full Git history fetched in CI; distinguish findings from scanner execution errors |
-| PF-D3-03 | Triage baseline and define exact expiring exceptions | Pending owner review | High | 15 min | Rule/advisory, component/path fingerprint, reason, owner role, expiry and baseline commit; no blanket application suppression |
-| PF-D3-04 | Implement scan wrapper and fail-closed gate policy | Done locally | Highest | 60 min | Explicit severity mappings; invalid/missing JSON, crashes, mandatory skips and expired exceptions block; collect all reports without blanket passing error suppression |
-| PF-D3-05 | Prove bad/fixed behavior with isolated synthetic fixtures | Done locally | High | 30 min | Unsafe source pattern, verified advisory fixture and token-shaped canary detected; repaired/removed fixtures pass relevant gates; no real credential or seeded deployed feature |
-| PF-D3-06 | Run hosted checks and review sanitized evidence | In progress | High | 30 min | Actual run URL/results, policy tests, JSON validation and baseline risk visible; no raw secret matches in public output; update requirements/report/evidence |
+| PF-D3-01 | Verify and pin official Semgrep, Trivy and Gitleaks tools; configure reviewed rules | Done: local and hosted verification | High | 120 min | Official versions/checksums and supported CLI flags recorded; meaningful JS/TS rules and narrow generated/vendor exclusions; application source remains in scope |
+| PF-D3-02 | Run source, dependency, full-history and working-tree scans | Done: local and hosted verification | High | 45 min | Private machine-readable output; timestamps/exit codes captured; full Git history fetched in CI; distinguish findings from scanner execution errors |
+| PF-D3-03 | Triage baseline and define exact expiring exceptions | Pending owner review: 186 exact entries | High | 15 min | Rule/advisory, component/path fingerprint, reason, owner role, expiry and baseline commit; no blanket application suppression |
+| PF-D3-04 | Implement scan wrapper and fail-closed gate policy | Done: local and hosted verification | Highest | 60 min | Explicit severity mappings; invalid/missing JSON, crashes, mandatory skips and expired exceptions block; collect all reports without blanket passing error suppression |
+| PF-D3-05 | Prove bad/fixed behavior with isolated synthetic fixtures | Done: local and hosted verification | High | 30 min | Unsafe source pattern, verified advisory fixture and token-shaped canary detected; repaired/removed fixtures pass relevant gates; no real credential or seeded deployed feature |
+| PF-D3-06 | Run hosted checks and review sanitized evidence | Done: verified evidence; policy gate blocked | High | 30 min | Actual run URL/results, policy tests, JSON validation and baseline risk visible; no raw secret matches in public output; update requirements/report/evidence |
 
 - [x] PF-D3-01 — official tool pins and reviewed scanner configuration.
 - [x] PF-D3-02 — three scanners execute with valid private reports, full history and working-tree coverage.
 - [ ] PF-D3-03 — precise reviewed baseline exceptions.
 - [x] PF-D3-04 — fail-closed operational-error and expiry tests.
 - [x] PF-D3-05 — real scanner detection of synthetic bad/fixed fixtures.
-- [ ] PF-D3-06 — actual hosted evidence and safe Markdown closeout.
+- [x] PF-D3-06 — actual hosted evidence and safe Markdown closeout.
 
 Entry dependency: accepted Day 2 baseline. The user resumed Day 3 on 18 October; task states below will follow actual verification. Day 4 acknowledgement and later live-AI configuration/budget remain separate requirements.
 
@@ -299,3 +299,15 @@ Run `38957969793` for instrumentation commit `280514f` passed early kind startup
 - First hosted source evidence remains valid for its recorded production-only scope, not final corrected-scope acceptance. Next: publish/reverify the coverage correction and await the designated owner's decision on the current packet.
 
 The first run's parallel baseline job `117616578703` completed successfully, including deployment/runtime and cleanup. Source-gate rejection was its only failed stage. The expanded dependency scope still requires a new hosted source verification; owner review remains pending.
+
+### Corrected hosted source evidence — owner decision pending
+
+Run `39108322664` / source job `117618870374` verified the corrected production/development scope: tools, 25 contracts, real fixtures and collection succeeded. The gate rejected exactly 186 unapproved risks with zero operational errors. Downloaded artifact `12129287626` matched its official SHA-256; all 221 identities/content bindings matched local evidence, and artifact/log privacy checks passed. The parallel baseline job is still running. Owner approval of the current packet has not been received; no exception is enabled and Day 3 is not claimed complete.
+
+## Day 3 technical closeout — 18 October 2026
+
+- Five planned PF-D3 tasks are verified locally and in hosted CI. PF-D3-03 remains open: the designated owner has not approved the current 186 exact baseline-risk proposals. No response or elapsed time is approval; active exceptions remain empty. The earlier 183-entry request is superseded.
+- Corrected [run 39108322664](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39108322664) for `421f8eb` concluded **failure solely at the expected source policy gate**: 221 findings, 186 unapproved blockers, zero operational errors. Tools, 25 contracts, live bad/fixed/history probes and collection passed. Production and development dependencies were both included.
+- Parallel baseline job `117618870178` passed all application install/build/test stages, source image, owned kind deployment, runtime and cleanup. Source job `117618870374` uploaded sanitized evidence after its risk rejection. Both artifact ZIP hashes matched official metadata; source identities/content hashes matched local data, and source artifact/log privacy checks passed.
+- Updated guide checkboxes, Day 3/review documents, Day 1 handoff, versions, requirements, evidence index, README and report outline. Implementation was normally pushed; final documentation/evidence delivery is being verified. Imported source/app locks and private-data exclusions were preserved.
+- Remaining action: project-owner reviewer decides on [the current 186-entry packet](day3-baseline-review.md). Approval would enable only those exact content/severity/commit-bound lab exceptions until 25 October at 00:00 IST; new/changed risks and operational errors still block. Rejection keeps the gate blocked. Day 3 is not declared complete and Day 4 has not started.
