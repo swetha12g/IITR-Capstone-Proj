@@ -182,3 +182,7 @@ To remove this repository's dedicated SSH selection and return to the previous d
 ## Subsequent Day 2 state — 17 October 2026
 
 The user resumed Day 2 before the originally planned 18 October date. The historical no-cluster statements above describe Day 1 only. A source-built baseline image and owned kind lab now exist, the node/workload are Ready, and loopback HTTP plus three runtime observations are verified. Follow [day2-checkpoint.md](day2-checkpoint.md) for current deployment/CI acceptance; [daily-log.md](daily-log.md) records the request and execution. No persistent bridge settings, shell startup edits, or system Node replacement were added.
+
+## Subsequent Day 3 state — 18 October 2026
+
+Day 3 resumed at the user's request. Isolated pinned scanners and local source-gate/fixture tests now execute without changing system Node, shell startup or persistent bridge settings. Current scanner/gate status and remaining owner-review/hosted dependencies are in [day3-checkpoint.md](day3-checkpoint.md); request history remains in [daily-log.md](daily-log.md).

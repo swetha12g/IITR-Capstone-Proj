@@ -12,6 +12,7 @@ api-traces/
 
 # Python environments and caches
 .venv/
+.tools/
 venv/
 __pycache__/
 *.py[cod]

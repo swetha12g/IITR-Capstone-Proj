@@ -78,3 +78,15 @@ Cypress binary download is disabled for these selected suites; Cypress E2E tests
 - Actions are pinned to reviewed commit SHAs in [security.yml](../.github/workflows/security.yml): checkout 7.0.1, setup-node 7.0.0, setup-python 6.1.0 and upload-artifact 7.0.1; runner label `ubuntu-24.04`. The label is a supported OS release, not an immutable runner-machine snapshot.
 - actionlint 1.7.12 was downloaded to temporary storage, verified against the official checksum list, and passed workflow validation.
 - Original upstream Dockerfile uses mutable base tags and some ranged global tools. This baseline records the actual built image, rather than claiming byte-identical rebuilds. Digest/tool pinning and hardened image comparison are Day 4 work. Initial resolved base digests: `node:24@sha256:14078204b6bb268c107ceff6d3c43f45a888105e5c2b18b14c32b3409d93a1b0` and `gcr.io/distroless/nodejs24-debian13@sha256:9ddd3f7de61d8c62337cdcbeaceb621de5e0c955ccdc70f4c3586db74a8c278f`.
+
+## Day 3 scanner environment — 18 October 2026
+
+| Tool | Pin | Integrity / isolation |
+|---|---|---|
+| Semgrep CE | 1.181.0 | Official PyPI wheel digest matched; all 66 resolved distributions pinned with hashes in [requirements](../locks/scanners/semgrep-requirements.txt); separate Python 3.10 environment |
+| Trivy | 0.76.0 | Official Linux archive checksum verified; project-local binary and DB cache |
+| Gitleaks | 8.30.1 | Official Linux archive checksum verified; default rules extended without suppressions; separate full-history/tree scans |
+
+Exact archive URLs/hashes and platform requirements are in [tools.json](../locks/scanners/tools.json). Bootstrap verification is recorded in [tools-verification.json](../reports/sanitized/day3/tools-verification.json). No scanner replaces system tools. HOME/settings/Docker config are isolated during scanner execution; no account login or Semgrep telemetry/remote rule fetch is used. Trivy's vulnerability DB is updated separately; the local [DB metadata and digest](../reports/sanitized/day3/database.json) records this run, not an immutable future DB result.
+
+Official references: [Semgrep CLI](https://docs.semgrep.dev/cli-reference), [PyPI release](https://pypi.org/project/semgrep/1.181.0/), [Trivy release](https://github.com/aquasecurity/trivy/releases/tag/v0.76.0), [Trivy exit-code configuration](https://trivy.dev/docs/latest/configuration/others/), [Gitleaks release/CLI](https://github.com/gitleaks/gitleaks/tree/v8.30.1). Finding exits are explicit; scanner errors remain blocking.

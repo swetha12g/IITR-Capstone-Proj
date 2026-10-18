@@ -222,25 +222,25 @@ If deadline/capacity cannot accommodate the mandatory evidence, record the actua
 
 ## Next checkpoint backlog — Day 3, planned for 18 October 2026
 
-Day 2 was brought forward to 17 October. This is the next **unstarted** JIRA-style Markdown board, based on the guide's Day 3; no external JIRA issues or scanner installations are created by this plan. Target timebox: 300 minutes. The remaining Days 3–10 still total approximately 40 focused hours, so this board is not a promise of a complete submission on 18 October. Exact cutoff/coordinator interpretation remains unresolved.
+Day 2 was brought forward to 17 October. Execution started on **18 October 2026** at the user's request. This is the JIRA-style Markdown board, based on the guide's Day 3; no external JIRA issues or scanner installations are created by this plan. Target timebox: 300 minutes. The remaining Days 3–10 still total approximately 40 focused hours, so this board is not a promise of a complete submission on 18 October. Exact cutoff/coordinator interpretation remains unresolved.
 
 | ID | Task | Status | Priority | Estimate | Acceptance criteria |
 |---|---|---|---|---|---|
-| PF-D3-01 | Verify and pin official Semgrep, Trivy and Gitleaks tools; configure reviewed rules | To Do | High | 120 min | Official versions/checksums and supported CLI flags recorded; meaningful JS/TS rules and narrow generated/vendor exclusions; application source remains in scope |
-| PF-D3-02 | Run source, dependency, full-history and working-tree scans | To Do | High | 45 min | Private machine-readable output; timestamps/exit codes captured; full Git history fetched in CI; distinguish findings from scanner execution errors |
-| PF-D3-03 | Triage baseline and define exact expiring exceptions | To Do | High | 15 min | Rule/advisory, component/path fingerprint, reason, owner role, expiry and baseline commit; no blanket application suppression |
-| PF-D3-04 | Implement scan wrapper and fail-closed gate policy | To Do | Highest | 60 min | Explicit severity mappings; invalid/missing JSON, crashes, mandatory skips and expired exceptions block; collect all reports without blanket passing error suppression |
-| PF-D3-05 | Prove bad/fixed behavior with isolated synthetic fixtures | To Do | High | 30 min | Unsafe source pattern, verified advisory fixture and token-shaped canary detected; repaired/removed fixtures pass relevant gates; no real credential or seeded deployed feature |
-| PF-D3-06 | Run hosted checks and review sanitized evidence | To Do | High | 30 min | Actual run URL/results, policy tests, JSON validation and baseline risk visible; no raw secret matches in public output; update requirements/report/evidence |
+| PF-D3-01 | Verify and pin official Semgrep, Trivy and Gitleaks tools; configure reviewed rules | Done locally | High | 120 min | Official versions/checksums and supported CLI flags recorded; meaningful JS/TS rules and narrow generated/vendor exclusions; application source remains in scope |
+| PF-D3-02 | Run source, dependency, full-history and working-tree scans | Done locally | High | 45 min | Private machine-readable output; timestamps/exit codes captured; full Git history fetched in CI; distinguish findings from scanner execution errors |
+| PF-D3-03 | Triage baseline and define exact expiring exceptions | Pending owner review | High | 15 min | Rule/advisory, component/path fingerprint, reason, owner role, expiry and baseline commit; no blanket application suppression |
+| PF-D3-04 | Implement scan wrapper and fail-closed gate policy | Done locally | Highest | 60 min | Explicit severity mappings; invalid/missing JSON, crashes, mandatory skips and expired exceptions block; collect all reports without blanket passing error suppression |
+| PF-D3-05 | Prove bad/fixed behavior with isolated synthetic fixtures | Done locally | High | 30 min | Unsafe source pattern, verified advisory fixture and token-shaped canary detected; repaired/removed fixtures pass relevant gates; no real credential or seeded deployed feature |
+| PF-D3-06 | Run hosted checks and review sanitized evidence | In progress | High | 30 min | Actual run URL/results, policy tests, JSON validation and baseline risk visible; no raw secret matches in public output; update requirements/report/evidence |
 
-- [ ] PF-D3-01 — official tool pins and reviewed scanner configuration.
-- [ ] PF-D3-02 — three scanners execute with valid private reports, full history and working-tree coverage.
+- [x] PF-D3-01 — official tool pins and reviewed scanner configuration.
+- [x] PF-D3-02 — three scanners execute with valid private reports, full history and working-tree coverage.
 - [ ] PF-D3-03 — precise reviewed baseline exceptions.
-- [ ] PF-D3-04 — fail-closed operational-error and expiry tests.
-- [ ] PF-D3-05 — real scanner detection of synthetic bad/fixed fixtures.
+- [x] PF-D3-04 — fail-closed operational-error and expiry tests.
+- [x] PF-D3-05 — real scanner detection of synthetic bad/fixed fixtures.
 - [ ] PF-D3-06 — actual hosted evidence and safe Markdown closeout.
 
-Entry dependency: accepted Day 2 baseline. This backlog is a next step, not execution of Day 3 or permission to start it while this session stops at Day 2. Day 4 acknowledgement and later live-AI configuration/budget remain separate requirements.
+Entry dependency: accepted Day 2 baseline. The user resumed Day 3 on 18 October; task states below will follow actual verification. Day 4 acknowledgement and later live-AI configuration/budget remain separate requirements.
 
 ### Hosted verification progress
 
@@ -267,3 +267,19 @@ Run `38957969793` for instrumentation commit `280514f` passed early kind startup
 - Incident limitation: first run was superseded/cancelled; second run failed during deployment with its private log lost. Exact historical cause remains unconfirmed. The new run passed with early startup validation and redacted future failure diagnostics; this is not presented as a proven historical root-cause fix.
 - Records: updated Day 1 handoff, Day 2 checkpoint, runtime/screenshot report, versions, requirements, evidence index, report outline, README and the JIRA ticks. The Day 3 board remains wholly unchecked.
 - Delivery verified: reviewed Markdown/sanitized evidence closeout `204ae02` was normally pushed to `origin/feature-16-kick-start`. Working tree was clean and ahead/behind counts were `0 / 0` at verification; private kubeconfig/artifact ZIPs remained ignored. This receipt follows that completed delivery. Stop at Day 2. The local cluster remains Ready; temporary port-forwards are closed. Days 3–10 and the full submission are not complete.
+
+## Day 3 execution — 18 October 2026
+
+- Request: continue the Day 3 activities planned in this log and `10-days-work-break-down.md`, keeping both records synchronized.
+- Recheck: clean feature branch preserved; fetch succeeded and branch matched origin. Full Git history and project runtimes verified; sufficient disk available.
+- Actions: checked official scanner releases and CLI documentation; preparing isolated checksum-verified tools and reviewed source rules.
+- Boundary: scan repository/application inputs only; keep raw findings private, avoid credential files, preserve imported source, and distinguish findings from scanner failures. Day 4 and live AI are not started.
+- Next: run all three scanners, triage exact fingerprints, implement/test fail-closed gates and synthetic bad/fixed probes, then verify hosted evidence and update acceptance honestly.
+
+### Day 3 local scanner/gate verification
+
+- Official tool checksums and a 66-distribution Semgrep hash lock passed; all scanners run in ignored project-local tools. No system installation or imported app changes.
+- Actual reports: Semgrep 11 matches / 643 files / zero parser errors after 12 exact teaching-fragment exclusions; Trivy 70 raw dependency rows, 68 distinct identities; Gitleaks 69 history + 69 tree matches. Source-import provenance matched all 24 secret-match files without publishing match values.
+- Gate: 217 distinct findings, 183 blocking before review, zero scanner/report operational errors. Prepared [review packet](day3-baseline-review.md) and exact expiring proposals. Owner decision is pending; active exceptions remain empty.
+- Verification: 24 fail-closed/metadata-privacy contract tests passed; real scanner bad/fixed fixtures passed their expected outcomes; a separate history probe stayed blocked after tree removal. No raw secret, real credential validation or deployed fixture was used.
+- Next: verify the hosted workflow and record its actual result; retain a blocking production gate until the designated reviewer accepts exact baseline risk or issues are remediated. Day 4 remains unstarted.

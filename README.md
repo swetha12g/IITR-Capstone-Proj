@@ -23,3 +23,5 @@ python scripts/run-day1-checks.py
 ```
 
 The runner uses the pinned imported source and recorded dependency locks. It keeps raw output in ignored private evidence and writes sanitized status manifests. It does not create a cluster or run live LLM calls. Juice Shop is an intentionally vulnerable lab target; a successful baseline build is not a production-safety claim.
+
+Day 3 resumed on 18 October 2026. Pinned source/dependency/secret scans, bad/fixed probes and 24 gate-contract tests pass locally. The application gate remains blocked on exact baseline risk review; hosted verification is being prepared. See [Day 3 checkpoint](docs/day3-checkpoint.md) and [baseline review](docs/day3-baseline-review.md).

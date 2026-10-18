@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "platform": "linux-x86_64",
+  "python": "3.10",
+  "semgrep": {
+    "version": "1.181.0",
+    "wheel_url": "https://files.pythonhosted.org/packages/b0/1d/aed54e9cea5491f0dd54286126216f97ef817a356734d3c9d5e40c124c34/semgrep-1.181.0-cp310.cp311.cp312.cp313.cp314.py310.py311.py312.py313.py314-none-manylinux_2_34_x86_64.whl",
+    "wheel_sha256": "c142ec04a2ed144970cb0a92f6877651dd3c088505eec737bb7f4db7ae5f0ffa",
+    "requirements": "locks/scanners/semgrep-requirements.txt",
+    "requirements_sha256": "7cabba6835024b3b5156b4f9323c9c2bff6b07ef9ae93959c56082aba58304ce"
+  },
+  "trivy": {
+    "version": "0.76.0",
+    "url": "https://github.com/aquasecurity/trivy/releases/download/v0.76.0/trivy_0.76.0_Linux-64bit.tar.gz",
+    "archive": "trivy_0.76.0_Linux-64bit.tar.gz",
+    "sha256": "e24b1c51293c1b15e4ba8d45bbc7891ba053f90278ec2698f3562c993e145fe7",
+    "checksum_url": "https://github.com/aquasecurity/trivy/releases/download/v0.76.0/trivy_0.76.0_checksums.txt"
+  },
+  "gitleaks": {
+    "version": "8.30.1",
+    "archive": "gitleaks_8.30.1_linux_x64.tar.gz",
+    "sha256": "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb",
+    "url": "https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz",
+    "checksum_url": "https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_checksums.txt"
+  }
+}

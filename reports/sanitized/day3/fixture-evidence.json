@@ -1,0 +1,19 @@
+{
+  "observed_at_utc": "2026-10-18T07:22:38.810202+00:00",
+  "scope": "isolated synthetic fixtures only; no source executed or real credential used",
+  "bad": {
+    "gate_passed": false,
+    "all_six_source_rules_detected": true,
+    "advisory_detected": "CVE-2021-23337",
+    "secret_rule_detected": "github-pat"
+  },
+  "fixed": {
+    "gate_passed": true,
+    "findings": 0,
+    "lodash_version": "4.18.1"
+  },
+  "history_persists_after_working_tree_fix": true,
+  "synthetic_canary_absent_from_safe_outputs": true,
+  "advisory_reference": "https://github.com/advisories/GHSA-35jh-r3h4-6jhm",
+  "fixture_exception_approval": "none required or used; clean history in bad/fixed pair, separate history-retention probe remains blocked"
+}

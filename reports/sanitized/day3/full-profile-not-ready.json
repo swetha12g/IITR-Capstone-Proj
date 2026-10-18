@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "profile": "full",
+  "evaluated_on": "2026-10-18",
+  "passed": false,
+  "operational_errors": [
+    {
+      "stage": "iac",
+      "code": "mandatory-stage-missing"
+    },
+    {
+      "stage": "container",
+      "code": "mandatory-stage-missing"
+    },
+    {
+      "stage": "dast",
+      "code": "mandatory-stage-missing"
+    }
+  ],
+  "scope": "application",
+  "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+  "severity_counts": {
+    "MEDIUM": 30,
+    "HIGH": 172,
+    "CRITICAL": 11,
+    "LOW": 4
+  },
+  "blocking_count": 183,
+  "accepted_risk_count": 0,
+  "distinct_finding_count": 217,
+  "finding_details_reference": "gate-summary.json"
+}

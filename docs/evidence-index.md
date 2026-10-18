@@ -92,3 +92,20 @@ Earlier private deployment output was lost, so historical root cause remains unc
 | `ci/build-tests.json` | `7c47396352895d3d20a1fe0e435148fbda68e198ef93a5d50b5d2544622c50a0` |
 | `ci/runtime-baseline.json` | `3c5ddc81ab3ef1cf377ae0e194ee5a99ae641dd4800be7bbef980f849a7f0af0` |
 | `ci-failed-run-build-tests.json` | `4299ba6549e542dbe0276f904a4ad881f17bd667d51ce5b6b3433dcffbb99f93` |
+
+## Day 3 local evidence — 18 October 2026
+
+Actual scanner output is kept under ignored `reports/private/day3/`; public records contain only allowlisted identifiers, paths, hashes, counts and decisions. No raw matched lines, secret values, author contacts or credential files are included.
+
+| Evidence | Verified outcome / limitation |
+|---|---|
+| [Tools](../reports/sanitized/day3/tools-verification.json), [pins](../locks/scanners/tools.json), [DB snapshot](../reports/sanitized/day3/database.json) | Official distribution hashes verified; 66 Python distribution hashes locked; DB timestamp/hash retained |
+| [Collection](../reports/sanitized/day3/scan-execution.json) | Semgrep/Trivy/history/tree scans executed; finding codes distinct from operational errors |
+| [Gate summary](../reports/sanitized/day3/gate-summary.json) | 217 distinct findings, 183 blockers, no operational errors; no exceptions automatically accepted |
+| [Review proposals](../reports/sanitized/day3/baseline-review-proposals.json), [review packet](day3-baseline-review.md) | Exact path/rule/component/commit fingerprints and file bindings; pending reviewer decision |
+| [Secret provenance](../reports/sanitized/day3/secret-provenance.json) | All 24 match files equal the pinned public upstream blobs; does not establish credential safety |
+| [Contract tests](../reports/sanitized/day3/gate-tests.json) | 24 passed, zero failed/skipped; synthetic contract evidence, not detection metrics |
+| [Actual scanner fixtures](../reports/sanitized/day3/fixture-evidence.json) | Bad inputs blocked; repaired clean inputs passed; history retained its synthetic canary and stayed blocked |
+| [Full-profile rejection](../reports/sanitized/day3/full-profile-not-ready.json) | Missing IaC/container/DAST stages block; Day 3 is not complete six-stage acceptance |
+
+Hosted verification and baseline owner review are pending. There is no fabricated approval, full-pipeline success or production-readiness verdict.
