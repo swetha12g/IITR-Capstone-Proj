@@ -129,6 +129,7 @@ def evaluate(manifest_path, policy_path, profile="day3", as_of=None, allow_fixtu
         scope = manifest.get("scope")
         require(scope == "application" or (scope == "synthetic-fixture" and allow_fixture), "non-application-scan")
         result["scope"] = scope
+        require(manifest.get("dependency_scope") == "production-and-development" or "sca" not in stages, "development-dependency-coverage-unconfirmed")
         require(manifest.get("full_history") is True or "secrets-history" not in stages, "shallow-history")
         observed = {}
         for entry in manifest["stages"]:

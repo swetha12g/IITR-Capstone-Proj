@@ -101,11 +101,15 @@ Actual scanner output is kept under ignored `reports/private/day3/`; public reco
 |---|---|
 | [Tools](../reports/sanitized/day3/tools-verification.json), [pins](../locks/scanners/tools.json), [DB snapshot](../reports/sanitized/day3/database.json) | Official distribution hashes verified; 66 Python distribution hashes locked; DB timestamp/hash retained |
 | [Collection](../reports/sanitized/day3/scan-execution.json) | Semgrep/Trivy/history/tree scans executed; finding codes distinct from operational errors |
-| [Gate summary](../reports/sanitized/day3/gate-summary.json) | 217 distinct findings, 183 blockers, no operational errors; no exceptions automatically accepted |
+| [Gate summary](../reports/sanitized/day3/gate-summary.json) | 221 distinct findings, 186 blockers, no operational errors; production and development dependencies included; no exceptions automatically accepted |
 | [Review proposals](../reports/sanitized/day3/baseline-review-proposals.json), [review packet](day3-baseline-review.md) | Exact path/rule/component/commit fingerprints and file bindings; pending reviewer decision |
 | [Secret provenance](../reports/sanitized/day3/secret-provenance.json) | All 24 match files equal the pinned public upstream blobs; does not establish credential safety |
-| [Contract tests](../reports/sanitized/day3/gate-tests.json) | 24 passed, zero failed/skipped; synthetic contract evidence, not detection metrics |
+| [Contract tests](../reports/sanitized/day3/gate-tests.json) | 25 passed, zero failed/skipped; synthetic contract evidence, not detection metrics |
 | [Actual scanner fixtures](../reports/sanitized/day3/fixture-evidence.json) | Bad inputs blocked; repaired clean inputs passed; history retained its synthetic canary and stayed blocked |
 | [Full-profile rejection](../reports/sanitized/day3/full-profile-not-ready.json) | Missing IaC/container/DAST stages block; Day 3 is not complete six-stage acceptance |
 
 Hosted verification and baseline owner review are pending. There is no fabricated approval, full-pipeline success or production-readiness verdict.
+
+First production-only Day 3 hosted source job `117616578672` in [run 39107551251](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39107551251) passed installation, 24 contract tests, actual fixtures and collection. The gate then correctly failed on 183 unapproved risks, zero operational errors. [Downloaded CI gate](../reports/sanitized/day3/ci/gate-summary.json), [tests](../reports/sanitized/day3/ci/gate-tests.json), [fixtures](../reports/sanitized/day3/ci/fixture-evidence.json), [execution](../reports/sanitized/day3/ci/scan-execution.json), [tools](../reports/sanitized/day3/ci/tools-verification.json). Artifact digest matched `94cbf4f7b27904c430d575ba4c4508bbe7dd9f0af4554524f2594e5d830af5bd`; all 217 identities and content bindings matched local evidence, with no raw match/contact fields or canary. Owner baseline review is pending.
+
+Dependency scope correction: the mandatory collection now includes development dependencies, adding three high findings. Corrected local evidence has 221 distinct identities, 186 blockers and 25 passing contracts. The first production-only packet/artifact is historical; its 183 entries cannot authorize additional findings. A new hosted run will verify this corrected scope. The parallel baseline job in the first run completed successfully.

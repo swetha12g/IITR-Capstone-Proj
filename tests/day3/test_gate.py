@@ -35,7 +35,7 @@ class GateContract(unittest.TestCase):
         self.exception_path = self.root / "baseline-exceptions.json"
         self.exception_path.write_text(json.dumps({"schema_version": 1, "exceptions": []}))
         self.manifest = {"schema_version": 1, "scope": "synthetic-fixture", "source_root": str(self.root),
-                         "full_history": True, "stages": []}
+                         "full_history": True, "dependency_scope": "production-and-development", "stages": []}
         self.manifest_path = self.root / "manifest.json"
         self.reports = {
             "sast": {"version": "1.181.0", "results": [], "errors": [], "paths": {"scanned": ["source.ts"]}},
@@ -186,6 +186,10 @@ class GateContract(unittest.TestCase):
 
     def test_shallow_history_blocks(self):
         self.manifest["full_history"] = False
+        self.assertFalse(self.evaluate()["passed"])
+
+    def test_development_dependency_coverage_must_be_declared(self):
+        self.manifest.pop("dependency_scope")
         self.assertFalse(self.evaluate()["passed"])
 
     def test_unknown_severity_blocks(self):

@@ -1,5 +1,5 @@
 {
-  "observed_at_utc": "2026-10-18T07:22:38.810202+00:00",
+  "observed_at_utc": "2026-10-18T07:34:35.069547+00:00",
   "scope": "isolated synthetic fixtures only; no source executed or real credential used",
   "bad": {
     "gate_passed": false,

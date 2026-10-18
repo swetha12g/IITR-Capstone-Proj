@@ -62,7 +62,8 @@ def run_case(root, repo, label):
         target = private / "working-tree" / name
         target.parent.mkdir(exist_ok=True)
         shutil.copyfile(repo / name, target)
-    manifest = {"schema_version": 1, "scope": "synthetic-fixture", "source_root": str(repo), "full_history": True, "stages": []}
+    manifest = {"schema_version": 1, "scope": "synthetic-fixture", "source_root": str(repo), "full_history": True,
+                "dependency_scope": "production-and-development", "stages": []}
     for stage, command, code in scans.commands(private, repo, repo, fixture=True):
         manifest["stages"].append(scans.collect(stage, command, private / (stage + ".json"), private, env, code))
     path = private / "manifest.json"

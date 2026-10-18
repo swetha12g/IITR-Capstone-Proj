@@ -20,13 +20,13 @@
   "scope": "application",
   "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
   "severity_counts": {
-    "MEDIUM": 30,
-    "HIGH": 172,
+    "MEDIUM": 31,
+    "HIGH": 175,
     "CRITICAL": 11,
     "LOW": 4
   },
-  "blocking_count": 183,
+  "blocking_count": 186,
   "accepted_risk_count": 0,
-  "distinct_finding_count": 217,
+  "distinct_finding_count": 221,
   "finding_details_reference": "gate-summary.json"
 }

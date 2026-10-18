@@ -283,3 +283,19 @@ Run `38957969793` for instrumentation commit `280514f` passed early kind startup
 - Gate: 217 distinct findings, 183 blocking before review, zero scanner/report operational errors. Prepared [review packet](day3-baseline-review.md) and exact expiring proposals. Owner decision is pending; active exceptions remain empty.
 - Verification: 24 fail-closed/metadata-privacy contract tests passed; real scanner bad/fixed fixtures passed their expected outcomes; a separate history probe stayed blocked after tree removal. No raw secret, real credential validation or deployed fixture was used.
 - Next: verify the hosted workflow and record its actual result; retain a blocking production gate until the designated reviewer accepts exact baseline risk or issues are remediated. Day 4 remains unstarted.
+
+### Day 3 hosted source result
+
+- Published implementation `1dad4b7`; [run 39107551251](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39107551251) is running the baseline job. Source job `117616578672` completed tool verification, 24 tests, actual scanner fixtures and all scan collection successfully.
+- Its gate correctly failed on 183 unapproved baseline risks, with zero operational errors; this is not a successful production gate. Owner approval is still pending and the active exception list remains empty.
+- Downloaded source artifact `12128659514`; official ZIP checksum matched. All 217 fingerprints and file bindings matched local reports; no generated canary, raw match values/lines or contact fields appeared in sanitized records.
+- Next: finish the parallel baseline run, retain actual hosted results and await the designated owner's exact baseline review. No Day 4 work is started.
+
+### Day 3 development-dependency coverage correction
+
+- Found that the first Trivy command followed its production-only default. Corrected collection to include development dependencies and made that scope mandatory in the gate manifest; added a regression contract.
+- Corrected local result: Semgrep 11, Trivy 74 raw / 72 distinct findings, Gitleaks 69 history + 69 tree matches; 221 distinct findings total, 186 blockers, zero operational errors. All 25 contract tests and real scanner fixtures pass their expected outcomes.
+- The previous 183-entry packet is archived and superseded by [186 exact proposals](../reports/sanitized/day3/baseline-review-proposals.json). Three additional high findings require acceptance of the updated packet; no earlier approval can silently widen to them. Owner review is still pending and active exceptions remain empty.
+- First hosted source evidence remains valid for its recorded production-only scope, not final corrected-scope acceptance. Next: publish/reverify the coverage correction and await the designated owner's decision on the current packet.
+
+The first run's parallel baseline job `117616578703` completed successfully, including deployment/runtime and cleanup. Source-gate rejection was its only failed stage. The expanded dependency scope still requires a new hosted source verification; owner review remains pending.

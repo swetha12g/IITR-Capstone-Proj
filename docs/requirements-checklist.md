@@ -31,7 +31,7 @@ Source image, Ready local kind lab, loopback HTTP/screenshot, confirmed runtime 
 | PF-IAC | Checkov built-in/custom policies and tested controls | Day 4 | Pending |
 | PF-IMAGE | Functional hardened image, exact-image scan, Syft SBOM, selected CIS mappings | Day 4 | Pending |
 | PF-DAST | Pinned ZAP baseline reaches the owned app; limitations recorded | Day 5 | Pending |
-| PF-GATES | All six stages, failures/skips fail closed, precise expiring exceptions | Days 3–5 | Source gate and 24 fail-closed contracts implemented; baseline review pending; full profile blocks on missing later stages |
+| PF-GATES | All six stages, failures/skips fail closed, precise expiring exceptions | Days 3–5 | Source gate and 25 fail-closed contracts implemented; baseline review pending; full profile blocks on missing later stages |
 | PF-METRICS | Normalization, independent labels including misses, reproducible dashboard and detection metrics | Day 6 | Pending |
 | PF-REDACTION | Source-free allowlisted payloads, captured mock-body checks, refusal means zero calls | Day 7 | Pending |
 | PF-AI | Explicit budgeted live call after safeguards, grounding, FP/FN and cost/model disclosure | Day 8 | Pending |

@@ -1,6 +1,7 @@
 {
   "schema_version": 1,
-  "status": "pending human contextual review; not loaded by the gate",
+  "scope": "production and development dependency graphs; source and full-history/tree scans",
+  "status": "pending human contextual review; supersedes the production-only 183-entry proposal without automatically approving any entry",
   "exceptions": [
     {
       "fingerprint": "22b46f8658d4e69dc677023ad57a3f84e34368eca54132219d64c32d8afa496e",
@@ -154,6 +155,24 @@
       "expires_on": "2026-10-25",
       "review_status": "pending",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "0b2ba4852296222cf9fd5978ef986555b7d2f3f0d1a82832f8452991524bef36",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-55849",
+        "path": "package-lock.json",
+        "component": "@cyclonedx/cyclonedx-npm",
+        "version": "4.2.1"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "pending",
+      "reason": "Exact pinned training dependency finding in production or development graph; proposed visible lab-only risk, requiring contextual owner acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
     {
@@ -463,6 +482,24 @@
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
     {
+      "fingerprint": "5b5fcfcce185bbcd9dc04d70007ce6a83de1dd8d742be2df8b9f1eaa5a083767",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-93687",
+        "path": "frontend/package-lock.json",
+        "component": "braces",
+        "version": "3.0.3"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "pending",
+      "reason": "Exact pinned training dependency finding in production or development graph; proposed visible lab-only risk, requiring contextual owner acceptance.",
+      "baseline_file_sha256": "2cab8508e02d7ca0b74df30010cfefa1c98ce4e76708928726f80e090d931503"
+    },
+    {
       "fingerprint": "6062feaf2c9b59103da1126f06e8ec04fcd0f0495d748710c3fe02d7d233821c",
       "stage": "sca",
       "identity": {
@@ -568,6 +605,24 @@
       "expires_on": "2026-10-25",
       "review_status": "pending",
       "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "9a93beaf63c62be7bb8033a0419791c911879519bf2bbc67d07d23ba157ac367",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-71538",
+        "path": "package-lock.json",
+        "component": "@cyclonedx/cyclonedx-npm",
+        "version": "4.2.1"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "pending",
+      "reason": "Exact pinned training dependency finding in production or development graph; proposed visible lab-only risk, requiring contextual owner acceptance.",
       "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
     },
     {

@@ -94,7 +94,7 @@ def commands(private, target, history_repo, fixture=False):
     semgrep.append(str(target))
     trivy = [str(TOOLS / "trivy"), "fs", "--scanners", "vuln", "--exit-code", "20", "--format", "json",
              "--output", str(private / "sca.json"), "--cache-dir", str(TOOLS / "trivy-cache"),
-             "--ignorefile", os.devnull, "--list-all-pkgs", "--timeout", "15m"]
+             "--ignorefile", os.devnull, "--list-all-pkgs", "--include-dev-deps", "--timeout", "15m"]
     for name in ["node_modules", "build", "dist", "coverage", ".angular"]:
         trivy += ["--skip-dirs", "**/" + name]
     trivy.append(str(target))
@@ -127,7 +127,7 @@ def main():
     manifest = {"schema_version": 1, "scope": "application", "run_id": private.name,
                 "started_at_utc": datetime.now(timezone.utc).isoformat(),
                 "target_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
-                "full_history": not shallow, "lock_inputs": lock_inputs, "stages": []}
+                "full_history": not shallow, "dependency_scope": "production-and-development", "lock_inputs": lock_inputs, "stages": []}
     path = private / "manifest.json"
     path.write_text(json.dumps(manifest, indent=2) + "\n")
     for stage, command, finding_code in commands(private, ROOT / "app/juice-shop", ROOT):
@@ -143,7 +143,7 @@ def main():
     manifest["finished_at_utc"] = datetime.now(timezone.utc).isoformat()
     path.write_text(json.dumps(manifest, indent=2) + "\n")
     # This summary deliberately excludes commands, raw logs, source, and matches.
-    safe = {k: manifest[k] for k in ["schema_version", "scope", "run_id", "target_commit", "full_history", "started_at_utc", "finished_at_utc"]}
+    safe = {k: manifest[k] for k in ["schema_version", "scope", "run_id", "target_commit", "full_history", "dependency_scope", "started_at_utc", "finished_at_utc"]}
     safe["stages"] = [{k: s.get(k) for k in ["stage", "execution", "exit_code", "duration_seconds", "sha256", "log_sha256"]} for s in manifest["stages"]]
     safe["lock_inputs"] = lock_inputs
     public = ROOT / "reports/sanitized/day3"

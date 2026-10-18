@@ -2,11 +2,15 @@
 
 Date: 18 October 2026, Asia/Kolkata. The production Day 3 gate currently **blocks**; no exceptions are active.
 
-The actual scans produced 217 distinct metadata fingerprints, of which **183 block**: 8 SAST high candidates, 37 distinct high/critical dependency findings, and 69 history plus 69 working-tree suspected-credential matches. Trivy raw output has 70 rows; two duplicate package/advisory identities collapse to 68 distinct dependency findings. Scanner matches are not automatically confirmed exploitability or real credentials.
+The actual scans produced 221 distinct metadata fingerprints, of which **186 block**: 8 SAST high candidates, 42 distinct high/critical dependency findings, and 69 history plus 69 working-tree suspected-credential matches. Trivy includes production **and development** dependencies: 74 raw rows collapse to 74 distinct dependency findings. Scanner matches are not automatically confirmed exploitability or real credentials.
+
+## Coverage correction
+
+The first 183-entry packet used Trivy's production-only default. That review request is superseded by this packet after explicitly enabling development dependency analysis. No additional package code is installed or executed. Existing finding identities remain present, with additional risks requiring their own owner acceptance.
 
 ## Proposed decision
 
-Review [all 183 exact proposed entries](../reports/sanitized/day3/baseline-review-proposals.json). Accepting them would permit only those exact recorded identities/severities as visible baseline risk in this owned intentionally vulnerable lab, expiring **25 October 2026 at 00:00 IST**. New fingerprints, changed source/lock-file bytes at the same path/line, changed severity, expired/unreviewed exceptions or scanner/report failures remain blocking. Current-file exceptions are additionally bound to SHA-256; historical findings remain bound to their immutable Git commit. The 183 finding fingerprints and scope are unchanged by this stricter binding. No wildcard, folder-wide suppression or finding deletion is proposed.
+Review [all 186 exact proposed entries](../reports/sanitized/day3/baseline-review-proposals.json). Accepting them would permit only those exact recorded identities/severities as visible baseline risk in this owned intentionally vulnerable lab, expiring **25 October 2026 at 00:00 IST**. New fingerprints, changed source/lock-file bytes at the same path/line, changed severity, expired/unreviewed exceptions or scanner/report failures remain blocking. Current-file exceptions are additionally bound to SHA-256; historical findings remain bound to their immutable Git commit. The earlier production-only 183-entry proposal is retained as a superseded historical packet. Any approval referring only to those 183 entries cannot approve additional findings. No wildcard, folder-wide suppression or finding deletion is proposed.
 
 Every secret-match path is byte-identical to the public upstream pin, and every history match was introduced by the source-import commit; see [provenance proof](../reports/sanitized/day3/secret-provenance.json). This excludes newly added home/local credential material from these observed matches, but **does not prove that a published credential is safe**. No match values, raw lines, personal contact details or real credential validation are included. The upstream training Terraform files are scanned as source only and are not used to deploy the owned lab.
 
@@ -28,6 +32,7 @@ Every secret-match path is byte-identical to the public upstream pin, and every 
 | Advisory | Lock target | Component | Version | Severity |
 |---|---|---|---|---|
 | CVE-2026-26960 | `package-lock.json` | tar | 6.2.1 | HIGH |
+| CVE-2026-55849 | `package-lock.json` | @cyclonedx/cyclonedx-npm | 4.2.1 | HIGH |
 | CVE-2026-27904 | `package-lock.json` | minimatch | 3.0.5 | HIGH |
 | CVE-2026-106445 | `package-lock.json` | handlebars | 4.7.9 | CRITICAL |
 | CVE-2026-23950 | `package-lock.json` | tar | 6.2.1 | HIGH |
@@ -45,12 +50,14 @@ Every secret-match path is byte-identical to the public upstream pin, and every 
 | CVE-2026-73566 | `package-lock.json` | tar | 6.2.1 | HIGH |
 | CVE-2016-1000223 | `package-lock.json` | jws | 0.2.6 | HIGH |
 | CVE-2026-26996 | `package-lock.json` | minimatch | 3.0.5 | HIGH |
+| CVE-2026-93687 | `frontend/package-lock.json` | braces | 3.0.3 | HIGH |
 | NSWG-ECO-428 | `package-lock.json` | base64url | 0.0.6 | HIGH |
 | CVE-2022-23539 | `package-lock.json` | jsonwebtoken | 0.4.0 | HIGH |
 | CVE-2026-59873 | `package-lock.json` | tar | 6.2.1 | CRITICAL |
 | CVE-2026-29786 | `package-lock.json` | tar | 6.2.1 | HIGH |
 | CVE-2017-18214 | `package-lock.json` | moment | 2.0.0 | HIGH |
 | CVE-2026-31802 | `package-lock.json` | tar | 6.2.1 | HIGH |
+| CVE-2026-71538 | `package-lock.json` | @cyclonedx/cyclonedx-npm | 4.2.1 | HIGH |
 | CVE-2026-23745 | `package-lock.json` | tar | 6.2.1 | HIGH |
 | CVE-2026-101894 | `package-lock.json` | decompress | 4.2.1 | CRITICAL |
 | CVE-2019-10744 | `package-lock.json` | lodash | 2.4.2 | CRITICAL |

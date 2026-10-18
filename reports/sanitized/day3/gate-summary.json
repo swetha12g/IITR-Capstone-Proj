@@ -139,6 +139,17 @@
     },
     {
       "stage": "sca",
+      "rule": "CVE-2026-55849",
+      "path": "package-lock.json",
+      "component": "@cyclonedx/cyclonedx-npm",
+      "version": "4.2.1",
+      "severity": "HIGH",
+      "fingerprint": "0b2ba4852296222cf9fd5978ef986555b7d2f3f0d1a82832f8452991524bef36",
+      "content_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c",
+      "disposition": "blocking"
+    },
+    {
+      "stage": "sca",
       "rule": "CVE-2026-27904",
       "path": "package-lock.json",
       "component": "minimatch",
@@ -436,6 +447,17 @@
     },
     {
       "stage": "sca",
+      "rule": "CVE-2026-93687",
+      "path": "frontend/package-lock.json",
+      "component": "braces",
+      "version": "3.0.3",
+      "severity": "HIGH",
+      "fingerprint": "5b5fcfcce185bbcd9dc04d70007ce6a83de1dd8d742be2df8b9f1eaa5a083767",
+      "content_sha256": "2cab8508e02d7ca0b74df30010cfefa1c98ce4e76708928726f80e090d931503",
+      "disposition": "blocking"
+    },
+    {
+      "stage": "sca",
       "rule": "CVE-2016-1000237",
       "path": "package-lock.json",
       "component": "sanitize-html",
@@ -623,12 +645,34 @@
     },
     {
       "stage": "sca",
+      "rule": "CVE-2026-104844",
+      "path": "frontend/package-lock.json",
+      "component": "postcss-selector-parser",
+      "version": "6.1.4",
+      "severity": "MEDIUM",
+      "fingerprint": "925de05c1f4599647fff15154cab5c0a274588ba20746933f0ef8dda7a479f4d",
+      "content_sha256": "2cab8508e02d7ca0b74df30010cfefa1c98ce4e76708928726f80e090d931503",
+      "disposition": "visible-nonblocking"
+    },
+    {
+      "stage": "sca",
       "rule": "CVE-2026-31802",
       "path": "package-lock.json",
       "component": "tar",
       "version": "6.2.1",
       "severity": "HIGH",
       "fingerprint": "942b1ecad5627e0f18770ad9f0dcb5dfc4f876112a9fae1bbe1e1c1a72f1dab5",
+      "content_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c",
+      "disposition": "blocking"
+    },
+    {
+      "stage": "sca",
+      "rule": "CVE-2026-71538",
+      "path": "package-lock.json",
+      "component": "@cyclonedx/cyclonedx-npm",
+      "version": "4.2.1",
+      "severity": "HIGH",
+      "fingerprint": "9a93beaf63c62be7bb8033a0419791c911879519bf2bbc67d07d23ba157ac367",
       "content_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c",
       "disposition": "blocking"
     },
@@ -2249,11 +2293,11 @@
   "scope": "application",
   "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
   "severity_counts": {
-    "MEDIUM": 30,
-    "HIGH": 172,
+    "MEDIUM": 31,
+    "HIGH": 175,
     "CRITICAL": 11,
     "LOW": 4
   },
-  "blocking_count": 183,
+  "blocking_count": 186,
   "accepted_risk_count": 0
 }
