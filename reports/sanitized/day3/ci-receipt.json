@@ -176,5 +176,23 @@
     "The initial 183-entry production-only proposal/run is superseded by the 186-entry production-and-development scope",
     "These are scanner matches and accepted-risk proposals, not confirmed exploitability, credential safety or production readiness",
     "Day 4 and later stages have not started; no live LLM API was called"
-  ]
+  ],
+  "raw_report_rows": {
+    "sast": 11,
+    "sca": 74,
+    "secrets-history": 69,
+    "secrets-tree": 69
+  },
+  "distinct_locations_by_stage": {
+    "sast": 11,
+    "sca": 74,
+    "secrets-history": 68,
+    "secrets-tree": 68
+  },
+  "blocking_locations_by_stage": {
+    "sast": 8,
+    "sca": 42,
+    "secrets-history": 68,
+    "secrets-tree": 68
+  }
 }

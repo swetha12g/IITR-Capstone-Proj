@@ -279,7 +279,7 @@ Run `38957969793` for instrumentation commit `280514f` passed early kind startup
 ### Day 3 local scanner/gate verification
 
 - Official tool checksums and a 66-distribution Semgrep hash lock passed; all scanners run in ignored project-local tools. No system installation or imported app changes.
-- Actual reports: Semgrep 11 matches / 643 files / zero parser errors after 12 exact teaching-fragment exclusions; Trivy 70 raw dependency rows, 68 distinct identities; Gitleaks 69 history + 69 tree matches. Source-import provenance matched all 24 secret-match files without publishing match values.
+- Actual reports: Semgrep 11 matches / 643 files / zero parser errors after 12 exact teaching-fragment exclusions; Trivy 70 raw/distinct dependency findings; Gitleaks 69 raw rows per history/tree scan, 68 distinct locations each. Source-import provenance matched all 24 secret-match files without publishing match values.
 - Gate: 217 distinct findings, 183 blocking before review, zero scanner/report operational errors. Prepared [review packet](day3-baseline-review.md) and exact expiring proposals. Owner decision is pending; active exceptions remain empty.
 - Verification: 24 fail-closed/metadata-privacy contract tests passed; real scanner bad/fixed fixtures passed their expected outcomes; a separate history probe stayed blocked after tree removal. No raw secret, real credential validation or deployed fixture was used.
 - Next: verify the hosted workflow and record its actual result; retain a blocking production gate until the designated reviewer accepts exact baseline risk or issues are remediated. Day 4 remains unstarted.
@@ -294,7 +294,7 @@ Run `38957969793` for instrumentation commit `280514f` passed early kind startup
 ### Day 3 development-dependency coverage correction
 
 - Found that the first Trivy command followed its production-only default. Corrected collection to include development dependencies and made that scope mandatory in the gate manifest; added a regression contract.
-- Corrected local result: Semgrep 11, Trivy 74 raw / 72 distinct findings, Gitleaks 69 history + 69 tree matches; 221 distinct findings total, 186 blockers, zero operational errors. All 25 contract tests and real scanner fixtures pass their expected outcomes.
+- Corrected local result: Semgrep 11, Trivy 74 raw/distinct findings, Gitleaks 69 raw rows per history/tree scan with 68 distinct locations each; 221 distinct findings total, 186 blockers, zero operational errors. All 25 contract tests and real scanner fixtures pass their expected outcomes.
 - The previous 183-entry packet is archived and superseded by [186 exact proposals](../reports/sanitized/day3/baseline-review-proposals.json). Three additional high findings require acceptance of the updated packet; no earlier approval can silently widen to them. Owner review is still pending and active exceptions remain empty.
 - First hosted source evidence remains valid for its recorded production-only scope, not final corrected-scope acceptance. Next: publish/reverify the coverage correction and await the designated owner's decision on the current packet.
 
@@ -311,3 +311,7 @@ Run `39108322664` / source job `117618870374` verified the corrected production/
 - Parallel baseline job `117618870178` passed all application install/build/test stages, source image, owned kind deployment, runtime and cleanup. Source job `117618870374` uploaded sanitized evidence after its risk rejection. Both artifact ZIP hashes matched official metadata; source identities/content hashes matched local data, and source artifact/log privacy checks passed.
 - Updated guide checkboxes, Day 3/review documents, Day 1 handoff, versions, requirements, evidence index, README and report outline. Implementation was normally pushed; final documentation/evidence delivery is being verified. Imported source/app locks and private-data exclusions were preserved.
 - Remaining action: project-owner reviewer decides on [the current 186-entry packet](day3-baseline-review.md). Approval would enable only those exact content/severity/commit-bound lab exceptions until 25 October at 00:00 IST; new/changed risks and operational errors still block. Rejection keeps the gate blocked. Day 3 is not declared complete and Day 4 has not started.
+
+### Final count-label and publication verification
+
+Corrected a prose counting error: the two de-duplications belong to the secret scans (69 raw rows / 68 locations each), not dependencies (74 raw / 74 distinct in the expanded scope). Total 221 and blocking 186 are unchanged, as are every proposal fingerprint and content binding. The publication audit confirms the same 68 tree-location fingerprints and zero new locations. The checksum-index check was scoped to the Day 3 section to avoid colliding with a same-named Day 2 receipt; all current hashes matched. Closeout `7c876e0` was normally pushed and verified clean at `0 / 0`; this correction preserves the pending owner-review item.

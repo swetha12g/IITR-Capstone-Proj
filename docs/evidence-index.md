@@ -124,7 +124,7 @@ Corrected hosted source scope: [run 39108322664](https://github.com/swetha12g/II
 |---|---|
 | `baseline-review-proposals-production-only.json` | `43e6506041623aa0a54bf88ee5c0be3d290a732fb5596fa2f778317a2e20632f` |
 | `baseline-review-proposals.json` | `6a9b6c4f4b1429362ab5f16aedfa5199fcd2b4ec0c457a321533dc3e1a4d4db7` |
-| `ci-receipt.json` | `0b81cf3146312200d546e3e6862b6b0c4ed14b1f528d5c23fc215ed9152bbef7` |
+| `ci-receipt.json` | `fd012d8cee85748fe4676aebf0c9ff16023145f1e0ae5b04aacf5925d1456cd4` |
 | `database.json` | `235dece9b402f1f9694a677e554fb2b8d47973729176e0071550ca5e5eae2a15` |
 | `fixture-evidence.json` | `782cd5cab4cd3f9b3c9fcb47a6da08ec86b15b65ae3205f10894385418c1d470` |
 | `full-profile-not-ready.json` | `85ae6e3b2533db63f7860957a1ac696104bb38db7bf33f6629c5699505e170a2` |
@@ -135,4 +135,6 @@ Corrected hosted source scope: [run 39108322664](https://github.com/swetha12g/II
 | `secret-provenance.json` | `f6a56d1bb80dbbdcb3c8eeb9550e63fc0d7e87127c3645ed1ef04142085c3f3f` |
 | `tools-verification.json` | `f53caa03494bf94cc18692f24a323da7709ef983491707b82e2a006e8e4294ad` |
 
-[Final publication audit](../reports/sanitized/day3/publication-audit.json) rescanned the current tracked/non-ignored tree: the same 69 baseline secret fingerprints, zero new fingerprints. Raw output remained private. This verifies publication candidates, not owner acceptance of those existing risks.
+[Final publication audit](../reports/sanitized/day3/publication-audit.json) rescanned the current tracked/non-ignored tree: the same 68 baseline secret-location fingerprints (69 raw report rows), zero new fingerprints. Raw output remained private. This verifies publication candidates, not owner acceptance of those existing risks.
+
+Stage counts: 11 SAST, 74 dependency, 68 history and 68 tree identities = 221; blockers 8 + 42 + 68 + 68 = 186. Secret reports have 69 raw rows each; de-duplication is by exact rule/path/line/commit identity and current-file content binding. No risk fingerprint or scope changed in this count-label correction.

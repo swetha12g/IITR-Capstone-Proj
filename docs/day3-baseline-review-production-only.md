@@ -6,7 +6,7 @@ Historical 183-entry proposal only; current review is [day3-baseline-review.md](
 
 Date: 18 October 2026, Asia/Kolkata. The production Day 3 gate currently **blocks**; no exceptions are active.
 
-The actual scans produced 217 distinct metadata fingerprints, of which **183 block**: 8 SAST high candidates, 37 distinct high/critical dependency findings, and 69 history plus 69 working-tree suspected-credential matches. Trivy raw output has 70 rows; two duplicate package/advisory identities collapse to 68 distinct dependency findings. Scanner matches are not automatically confirmed exploitability or real credentials.
+The actual scans produced 217 distinct metadata fingerprints, of which **183 block**: 8 SAST high candidates, 39 distinct high/critical dependency findings, and 68 distinct history plus 68 distinct working-tree suspected-credential locations (69 raw rows in each secret scan). Trivy has 70 raw/distinct dependency findings. Each secret scan has one repeated rule/file/line identity, producing 68 distinct locations from 69 raw rows; content hashes or immutable commits bind the location to its exact baseline contents. Scanner matches are not automatically confirmed exploitability or real credentials.
 
 ## Proposed decision
 

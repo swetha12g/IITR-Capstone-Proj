@@ -17,7 +17,7 @@ Semgrep CE 1.181.0, Trivy 0.76.0 and Gitleaks 8.30.1 are isolated under ignored 
 
 Semgrep scanned 643 JavaScript/TypeScript files, producing 11 matches and zero parser errors. Twelve exact upstream lesson fragments that are not standalone TypeScript units are excluded with file hashes/reasons in [coverage exclusions](../policies/semgrep/coverage-exclusions.json); other source and tests remain included. Rules are local with telemetry/version checks disabled and no account or remote rule fetch.
 
-Trivy explicitly scans **production and development** dependencies from both recorded lockfiles. It reports 74 raw rows (42 high/critical), collapsing two duplicate identities to 72 distinct dependency findings. Gitleaks reports 69 history and 69 working-tree matches; all 24 match files equal the public upstream pin, with history introductions in the verified source-import commit. This establishes provenance, not credential safety. No match values, raw lines or author contacts are published.
+Trivy explicitly scans **production and development** dependencies from both recorded lockfiles. It reports 74 raw/distinct dependency findings (42 high/critical). Gitleaks reports 69 raw rows per history/tree scan, representing 68 distinct locations in each; all 24 match files equal the public upstream pin, with history introductions in the verified source-import commit. This establishes provenance, not credential safety. No match values, raw lines or author contacts are published.
 
 The current gate has **221 distinct findings and 186 blocking risks**, with zero operational errors. [Gate result](../reports/sanitized/day3/gate-summary.json), [current owner review packet](day3-baseline-review.md), [186 exact proposals](../reports/sanitized/day3/baseline-review-proposals.json). **Active exceptions remain empty.** The earlier 183-entry production-only request is superseded; any approval naming only those entries cannot authorize the additional findings.
 
@@ -64,3 +64,9 @@ The complete run concluded **failure**, solely because the source policy gate re
 Five of six PF-D3 tasks are verified; PF-D3-03 remains pending the designated owner's explicit decision on [the 186-entry packet](day3-baseline-review.md). The active exception list is empty. No human acceptance is invented and no failing gate is waived. Day 3 is **not claimed complete** while this review is pending. No independent approval, production safety, full six-stage pipeline, rendered final report or live-AI result is claimed. Day 4 remains unstarted.
 
 Implementation `421f8eb` is published to `feature-16-kick-start`; documentation/evidence closeout follows with the review item still open. No application source/recorded app locks, shell startup, global Git settings or persistent bridge settings changed.
+
+### Count-label correction and publication
+
+The authoritative JSON has 11 SAST + 74 dependency + 68 history + 68 tree identities = 221. Blocking identities are 8 + 42 + 68 + 68 = 186. Each secret scanner report has 69 raw rows, with one repeated location identity; the dependency report has no such duplicate. Earlier prose assigned the two duplicates to the wrong stage; those labels are corrected. The 186 proposal fingerprints, content bindings and approval scope did not change.
+
+Documentation/evidence closeout `7c876e0` was normally pushed; ahead/behind counts were `0 / 0` and the tree was clean at delivery verification. A final count/receipt correction follows, with no tested code change and no baseline approval invented.
