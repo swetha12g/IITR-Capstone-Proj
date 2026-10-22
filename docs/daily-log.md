@@ -480,3 +480,9 @@ Commit `d68686a` / [run 39111621696](https://github.com/swetha12g/IITR-Capstone-
 - Request: continue the project. Preserved the OpenAI-only and no-new-purchase decision; no further live calls or ledger reset.
 - Local verification: the cold-image fixture bug is fixed by acquiring the pinned image before the short permission probe. Different-UID access and both selected bad/fixed ZAP header checks pass; all 62 current contracts pass.
 - Hosted run `39808260517` is retained as failed: SAST produced an incomplete report, and the new short permission probe timed out while implicitly pulling a cold scanner image. Added source-free SAST error-category diagnostics; invalid reports remain errors. A repaired hosted run and final evidence/report refresh are next.
+
+### SAST timeout diagnosed and corrected
+
+- The safe hosted diagnostics identify `Timeout`, with 643 scanned files and 11 findings, rather than a clean complete report. Installed/official Semgrep documentation confirms the default per-rule/file budget is five seconds.
+- Increased the explicit budget to 60 seconds and disabled timeout-based file skipping, while retaining strict errors, the unchanged coverage/rules and the 900-second process cap. Local scan completes with 643 files, 11 findings and zero errors; all 25 source gate contracts and 62 current contracts pass. [CLI reference](https://docs.semgrep.dev/cli-reference).
+- The second fresh full-history reproduction at `1e0115c` passed all stages in 286.23 seconds, including 156.59 seconds of application checks, with no build/test reuse or API calls; the temporary cluster was deleted. The earlier 6ef16a0 snapshot is retained separately. The current hosted code is being reverified after the resource-budget correction.
