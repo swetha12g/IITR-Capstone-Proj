@@ -456,3 +456,9 @@ Commit `d68686a` / [run 39111621696](https://github.com/swetha12g/IITR-Capstone-
 - Published integration commit `37ff4c1` and created three independent focused draft remediation PRs; see the review ledger. No approval, reviewer message or merge occurred.
 - The first hosted SCA job exposed a real clean-checkout bug: retained locks were not restored before the standalone scan. Added missing-lock restoration while preserving/refusing changed local locks, removed stale stage receipts before collection and added two regression tests. All 62 current tests pass.
 - Fresh clone bootstrap encountered a stalled default-IP download; IPv4 access returned HTTP200, so bootstrap downloads now select IPv4. This is a download transport correction, not a host-network setting change. Fresh execution remains in progress.
+
+### Controlled DAST correction evidence
+
+- The isolated bad/fixed header fixture passed actual pinned ZAP scans in a container with no external network. Both selected alerts (10021 and 10038) appear before and disappear after adding the headers. Other passive warnings remain visible; this is not a clean-security claim. Both containers were removed.
+- Added the same verification and current contract tests to hosted execution; fresh reproduction also runs the fixture. CI clears checked-in stage receipts before collecting new evidence, preventing stale uploaded results after early failures. Documentation/evidence-only pushes do not restart expensive full scans.
+- The fresh owned reproduction cluster reached Ready with all system pods Ready and no restarts. The original cluster was not modified. Full fresh application/scanner execution is in progress.

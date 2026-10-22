@@ -13,6 +13,7 @@ python scripts/install-scanners.py > reports/private/reproduction/source-tools.l
 python scripts/install-day4-tools.py > reports/private/reproduction/day4-tools.log 2>&1
 python -m pytest tests/triage tests/redaction -q > reports/private/reproduction/contracts.log 2>&1
 python scripts/verify-day4-policies.py > reports/private/reproduction/policy-fixtures.log 2>&1
+python scripts/verify-dast-fixtures.py > reports/private/reproduction/dast-fixtures.log 2>&1
 
 # A unique owned cluster avoids relying on or deleting the original study lab.
 export PIPELINEFORTRESS_CLUSTER="pipelinefortress-repro-$$"
