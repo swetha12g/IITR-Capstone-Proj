@@ -33,6 +33,9 @@ def main():
     run_id = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
     private = ROOT / 'reports/private/day5' / ('dast-' + run_id)
     private.mkdir(parents=True)
+    # Hosted runners need not share ZAP's UID1000. Grant the mounted workdir
+    # group access and add that exact group to the scanner, retaining its UID.
+    private.chmod(0o770)
     public = ROOT / 'reports/sanitized/day5'
     public.mkdir(parents=True, exist_ok=True)
     env = os.environ.copy()
@@ -57,6 +60,7 @@ def main():
     # Shares only the owned node's private network namespace, with no published
     # scanner ports or host-network API. Bind ZAP API to loopback as well.
     command = ['docker', 'run', '--rm', '--name', name, '--network', 'container:' + NODE,
+               '--group-add', str(private.stat().st_gid),
                '--memory', '2g', '--cpus', '2', '--pids-limit', '256', '-e', 'JAVA_OPTS=-Xmx1536m',
                '-v', str(private) + ':/zap/wrk:rw', pin['image'], 'zap-baseline.py', '--autooff',
                '-t', target, '-P', '18087', '-m', '1', '-T', '5', '-D', '10', '-c', '/zap/wrk/rules.conf',
@@ -74,11 +78,16 @@ def main():
         subprocess.run(['docker', 'rm', '-f', name], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     report = private / 'zap.json'
     urls = private / 'urls.json'
+    log_text = (private / 'execution.log').read_text(errors='replace')
     summary = {'schema_version': 1, 'run_id': run_id, 'observed_at_utc': datetime.now(timezone.utc).isoformat(),
                'stage': 'dast', 'exit_code': code, 'execution': 'complete' if code in {0, 1, 2} else 'error',
                'duration_seconds': round(time.monotonic() - started, 2), 'image_config_id': built['Id'],
                'scanner_image': pin['image'], 'policy_sha256': sha(private / 'rules.conf'),
                'scope': 'owned kind Ready pod; unauthenticated traditional crawl and passive scan only',
+               'diagnostics': {'report_present': report.is_file(), 'route_log_present': urls.is_file(),
+                               'permission_denied_seen': 'Permission denied' in log_text,
+                               'api_connection_error_seen': 'Failed to connect to ZAP' in log_text,
+                               'out_of_memory_seen': 'OutOfMemoryError' in log_text},
                'cleanup_container_removed': subprocess.check_output(['docker', 'ps', '-aq', '--filter', 'name=^/' + name + '$']).strip() == b''}
     if report.is_file() and urls.is_file():
         data = json.loads(report.read_text())

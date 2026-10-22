@@ -97,6 +97,21 @@ def architecture():
     return drawing
 
 
+def severity_chart(counts):
+    drawing = Drawing(WIDTH, 140)
+    maximum = max(counts.values())
+    palette = ['#a94442', '#bd732b', '#b49b42', '#237d88', '#728b9c']
+    for index, severity in enumerate(['CRITICAL', 'HIGH', 'MEDIUM', 'LOW', 'INFO']):
+        y = 116 - 25 * index
+        value = counts.get(severity, 0)
+        drawing.add(String(0, y + 4, severity, fontName='Helvetica', fontSize=8.5, fillColor=NAVY))
+        drawing.add(Rect(82, y, (WIDTH - 125) * value / maximum, 15,
+                         fillColor=colors.HexColor(palette[index]), strokeColor=None))
+        drawing.add(String(90 + (WIDTH - 125) * value / maximum, y + 4, str(value),
+                           fontName='Helvetica-Bold', fontSize=9, fillColor=NAVY))
+    return drawing
+
+
 def main():
     metrics = read('reports/sanitized/dashboard/index.json')
     pipeline = read('reports/sanitized/pipeline/aggregate.json')
@@ -109,6 +124,7 @@ def main():
     prs = read('reports/sanitized/day9/pr-receipt.json', {'prs': []})
     risks = read('reports/sanitized/deferred-risks.json')
     checks = read('reports/sanitized/day7/redaction-tests.json')
+    hosted = read('reports/sanitized/delivery/ci-receipt.json', {})
     detection = metrics['detection']
 
     heading(1, 'PipelineFortress')
@@ -152,6 +168,7 @@ def main():
     p('The complete local run is ' + pipeline['run_id'] + '. Its aggregate verdict is ' + pipeline['verdict'] + ', with ' + str(len(pipeline['operational_errors'])) + ' operational errors. The stage receipts retain raw report hashes and exact image linkage.')
     p('That execution took ' + str(pipeline['duration_seconds']) + ' seconds after explicit reuse of a freshly verified build/test. The application check stages took 144.17 seconds separately; these observations do not establish a pipeline percentile or include every bootstrap/download cost.')
     p('The hosted workflow defines six scan jobs, build/test and one final aggregate job. It uses read-only PR permissions, pinned action SHAs, full history for secrets, an integrity-checked image archive between jobs and cleanup of its own staging cluster. Skipped jobs, malformed/missing receipts, scanner errors and mixed identities cannot pass the execution check.')
+    p('Hosted verification: ' + hosted.get('status', 'not yet recorded') + '; conclusion: ' + str(hosted.get('conclusion', 'not yet recorded')) + '. Run: ' + hosted.get('url', 'see the delivery evidence index'), small=True)
 
     heading(6, 'Hardening and software inventory')
     table([['Measure', 'Baseline', 'Hardened'], ['Failed Kubernetes checks', 15, 1], ['Failed Dockerfile checks', 2, 0],
@@ -168,6 +185,7 @@ def main():
            ['Isolation / cleanup', 'Owned node network namespace; loopback API; scanner container removed']], [170, WIDTH - 170])
     p('The scan uses a traditional unauthenticated crawler and passive checks. It does not establish full single-page-app navigation, login/role coverage, active attack coverage, business-logic correctness or endpoint completeness. Passive alert-instance limits are retained as scanner coverage limits.')
     p('Early scanner-start attempts exposed loopback IPv6 and API Host-header allowlist mismatches. The corrections allow only the local API client and retain diagnostics. Successful scanning is supported by recorded app routes and report hashes, rather than a container exit code alone.')
+    p('A different-UID container probe reproduces the hosted workdir write failure, then verifies the group-access repair. The scanner retains its own UID; only the owned mounted workdir receives group write access. Selected header failures are also detected before and absent after repair in isolated fixtures.', small=True)
     p('HTTP findings remain visible in normalization and the deferred register. The security result is not rewritten as clean merely because assignment execution continues.')
 
     heading(8, 'Detection evaluation and dashboard')
@@ -176,6 +194,11 @@ def main():
     p('The curated set combines deliberately unsafe and repaired source, advisory, canary, configuration, image and response-header cases. It includes a real scanner miss: the six authored SAST pattern rules do not detect an unprotected synthetic export route. That fixture is never executed against a real service.')
     p('The measured 93.3% fixture recall exceeds the scenario target on this small set. Labels were curated after the broader study work and are not independently human reviewed. The result is not an estimate of all real-world vulnerabilities, a blinded benchmark or evidence that remaining app defects were found.')
     p('The dashboard recomputes from normalized evidence and labels, exports JSON/CSV, separates observations from underlying issues and displays known misses. Empty denominators are N/A. It does not present percentiles from one timing observation. Current global underlying issue count is ' + str(metrics['counts']['unique_issues']) + '.')
+    sub('Deferred underlying issues by severity')
+    story.append(severity_chart(risks['by_severity']))
+    markdown.append('| Severity | Underlying issues |\n|---|---|')
+    markdown.extend('| ' + severity + ' | ' + str(risks['by_severity'].get(severity, 0)) + ' |' for severity in ['CRITICAL', 'HIGH', 'MEDIUM', 'LOW', 'INFO'])
+    markdown.append('')
 
     heading(9, 'AI safeguards and honest live status')
     table([['Boundary', 'Implemented evidence'], ['Input construction', 'Exact field allowlist; synthetic IDs and aliases; independent scanner-derived version catalog'],
@@ -201,7 +224,7 @@ def main():
 
     heading(11, 'Reproduction and maturity self-assessment')
     p('Reproduction bootstraps project-local Python/pip/Node and verified scanner/tool distributions, runs the selected application suites, rebuilds the image, scans all stages, deploys into a uniquely named temporary kind cluster, runs passive DAST, normalizes, checks mock AI safeguards and regenerates the dashboard. Live API usage is excluded from reproduction by default.')
-    p('Fresh-directory result: ' + reproduction.get('verdict', 'not yet recorded') + '. The script deletes only its own temporary cluster and retains sanitized execution evidence. The original study cluster is a separate resource.')
+    p('Fresh-directory result: ' + reproduction.get('verdict', 'not yet recorded') + ', commit ' + reproduction.get('project_commit', 'unrecorded')[:7] + '. Temporary-cluster cleanup verified: ' + str(reproduction.get('cleanup_verified', False)) + '. This is a fresh project directory on the same Docker host with standard caches, not a fresh-machine test. The later isolated DAST fixture was verified separately. The original study cluster is a separate resource.')
     sub('OWASP SAMM v2 lens')
     table([['Practice', 'Baseline', 'Current lab evidence / limit'], ['Secure Build', 'Manual setup and selected tests', 'Repeatable pinned build, dependency inventory and automation; mature production prevention not claimed'],
            ['Security Testing', 'Runtime observations', 'Six scanner stages and negative controls; known misses and limited DAST coverage retained'], ['Defect Management', 'Findings not consolidated', 'Deduplicated register, labels and focused proposals; real human reviews still required'],

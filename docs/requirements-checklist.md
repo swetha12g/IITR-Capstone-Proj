@@ -19,7 +19,7 @@ Updated: 22 October 2026. Individual execution scope is recorded in [scope.md](s
 
 Source image, Ready local kind lab, loopback HTTP/screenshot, confirmed runtime baseline, hosted build/tests and actual run URL all passed. [Successful run 38957969793](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/38957969793), [CI receipt](../reports/sanitized/day2/ci-receipt.json), [Day 2 checkpoint](day2-checkpoint.md). Earlier deployment failure cause remains unconfirmed because its private log was discarded; later successful evidence is recorded separately. Local manual review was explicitly confirmed; independent PR approval is not claimed.
 
-## Remaining project requirements
+## Project requirements
 
 | ID | Requirement | Planned stage | Status |
 |---|---|---|---|
@@ -35,9 +35,11 @@ Source image, Ready local kind lab, loopback HTTP/screenshot, confirmed runtime 
 | PF-METRICS | Normalization, independent labels including misses, reproducible dashboard and detection metrics | Day 6 | Normalization and dashboard generated; TP14/FP0/FN1/TN6 on 21 post-hoc cases; independent labeling remains open |
 | PF-REDACTION | Source-free allowlisted payloads, captured mock-body checks, refusal means zero calls | Day 7 | Captured-body and zero-call refusal tests pass; independent version grounding and current code/prompt proof retained |
 | PF-AI | Explicit budgeted live call after safeguards, grounding, FP/FN and cost/model disclosure | Day 8 | Client and mock complete; model lookup HTTP200; all three generation attempts HTTP429. Successful live evaluation/usage unavailable; no new spending |
-| PF-PRS | Three genuine AI-assisted fixes, before/after tests, real independent human review | Day 9 | Three coding-assistant proposals pass actual before/after scanner and runtime checks; PR creation and genuine independent review pending |
-| PF-REPORT | 12-page evidence-based report, maturity assessment, fresh reproduction, defense | Day 10 | Twelve-page PDF authored and rendered; reproduction tooling and defense guide authored; fresh clone execution/publication pending |
+| PF-PRS | Three genuine AI-assisted fixes, before/after tests, real independent human review | Day 9 | Three independent coding-assistant draft PRs published; actual before/after scanner/runtime checks and 62 contracts pass; genuine independent review pending |
+| PF-REPORT | 12-page evidence-based report, maturity assessment, fresh reproduction, defense | Day 10 | Twelve-page PDF rendered/inspected; full fresh-clone pipeline passed with owned cluster cleanup; defense guide authored; final hosted/evidence refresh in progress |
 | PF-ETHICS | Lab-only scope, confidentiality, acknowledgement before Day 4, GenAI disclosure | Every stage | User confirmed signing on 22 October before resumed implementation; signing date unspecified; no signed material stored; ongoing lab/privacy/AI safeguards still apply |
+
+Day 3 strict source-approval counts refer to the historical dated run; the current study profile retains updated DB findings without widening those exact approvals. Successful live AI, independent labels/review and the oral assessment remain separate evidence requirements.
 
 The 80% detection target must be measured against a labeled introduced set; no success or grade is promised. Optional work waits for core acceptance. Upstream intentionally vulnerable infrastructure is not a deployment template for this project.
 

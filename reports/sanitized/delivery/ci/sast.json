@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "stage": "sast",
+  "execution": "complete",
+  "run_id": "39805306325",
+  "commit": "bc5a05457a66fab15209fd90d054713e3e708803",
+  "observed_at_utc": "2026-10-22T15:30:51.723451+00:00",
+  "reports": [
+    {
+      "scanner_stage": "sast",
+      "exit_code": 1,
+      "sha256": "5ffcac48e3a87209b1a08ffa4d37f4273dc1a3e305aaffc2815f1b2612557cfd"
+    }
+  ],
+  "findings_by_severity": {
+    "HIGH": 8,
+    "MEDIUM": 3
+  },
+  "finding_fingerprints": [
+    "2c576731ca7e9d1d22ee1f55bf3519758719fe8025a8ec8853a00b40ea65af9d",
+    "2dc7d278d9557c90e69a51d4059f7e9851d4de93fce8527c7ff738fa0bab355f",
+    "3da866e435d2cbb13d29c387fe3cd990697a778705b42e05186513cc1f7a45b7",
+    "4e217e466ddcc7c506286d696d194f731f694769d0176893f02caace20bdf97f",
+    "6adfc7cb9b6f4a18a96b8947b3d84fab59b95f74dd54f3749827abff1d3dd32b",
+    "73e83e259761f43821311caaa6113bab1112343d13df0b155281ea7501a46566",
+    "74846619ce2719229242291f34a49f40d1d2fdc0c3bf6b0f737319e0e221eb30",
+    "75710d3de1bffd444078c16713e91db602985307935632be44260d1c7136d28b",
+    "a4837010a1c7e3aa030a14be3deac97ab8cad6baae3f9528a87ebe36d28ed4b7",
+    "d6baa8d003e5ee1ba9b15e2dbabbc621c116d6ec79daf445c74e15cfd8ff8ee3",
+    "e0ad75bd6e74e9a0211661ed34c998c000457d6b9b9c2f60996c8a17691a23ad"
+  ],
+  "profile": "study-lab",
+  "deferred_findings": 11,
+  "duration_seconds": 6.69
+}

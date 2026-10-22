@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "run_id": 39805306325,
+  "url": "https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39805306325",
+  "commit": "bc5a05457a66fab15209fd90d054713e3e708803",
+  "status": "completed",
+  "conclusion": "failure",
+  "jobs": [
+    {
+      "id": 119917273244,
+      "name": "sca",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 119917273775,
+      "name": "secrets",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 119917273784,
+      "name": "iac",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 119917273913,
+      "name": "sast",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 119917274261,
+      "name": "build-test",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 119922191068,
+      "name": "container",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 119922191529,
+      "name": "dast",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "id": 119924452632,
+      "name": "aggregate",
+      "status": "completed",
+      "conclusion": "failure"
+    }
+  ],
+  "failure": "DAST runtime checks passed; scanner exited3 and report files were absent, so no DAST stage receipt was published and aggregate failed. Cross-UID workdir diagnosis and correction in progress.",
+  "claim": "Failure retained; not relabeled as a successful hosted run"
+}
