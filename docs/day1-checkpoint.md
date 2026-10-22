@@ -212,3 +212,5 @@ The acknowledgement is confirmed and the study project has resumed through Days 
 No new API purchase/top-up or billing change is authorized. OpenAI only is configured; three HTTP429 generation attempts exhausted the automatic request cap. Continue local work without further paid retries. Independent human review and a successful live evaluation remain open evidence requirements.
 
 Fresh-directory reproduction has now passed all application, scanner, runtime, mock and dashboard stages at commit `6ef16a0`; its uniquely owned temporary cluster was deleted and cleanup verified. Three separate draft PRs are published, and genuine review remains pending. No additional API purchase or call occurred during reproduction. [Receipt](../reports/sanitized/reproduction/run.json).
+
+Continuation confirmed on 22 October. No new OpenAI generation request, purchase/top-up or billing change is made. Current delivery verification includes the explicit pinned-image prefetch correction for hosted DAST and source-free diagnostics for incomplete SAST reports. Earlier failed hosted runs remain failed; final hosted validation is still being completed.
