@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 import importlib.util
 import json
 from pathlib import Path
+import re
 import shutil
 import subprocess
 import sys
@@ -53,6 +54,15 @@ def main():
         if entry['execution'] == 'error':
             raise RuntimeError('scanner execution failed')
         reports.append((stage, private / (stage + '.json'), entry['exit_code']))
+        if stage == 'sast':
+            data = json.loads((private / 'sast.json').read_text())
+            # Classify incomplete scans without publishing paths/messages/code.
+            error_types = []
+            for error in data.get('errors', []):
+                category = error.get('type', '') if isinstance(error, dict) else ''
+                error_types.append(category if isinstance(category, str) and re.fullmatch(r'[A-Za-z][A-Za-z0-9_]{0,70}', category) else 'unclassified')
+            print(json.dumps({'stage': 'sast', 'scanned_files': len(data.get('paths', {}).get('scanned', [])),
+                              'finding_count': len(data.get('results', [])), 'error_types': error_types}), flush=True)
     receipt = publish(args.stage, reports, duration_seconds=round(time.monotonic() - started, 2))
     print(json.dumps({'stage': args.stage, 'execution': receipt['execution'], 'findings': receipt['findings_by_severity']}))
 
