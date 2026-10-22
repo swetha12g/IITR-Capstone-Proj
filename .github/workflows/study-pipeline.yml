@@ -3,6 +3,21 @@ name: Complete six-stage study pipeline
   push:
     branches:
     - feature-16-kick-start
+    paths:
+    - .github/workflows/study-pipeline.yml
+    - app/juice-shop/**
+    - infra/**
+    - scripts/**
+    - locks/**
+    - policies/**
+    - triage/**
+    - metrics/**
+    - prompts/**
+    - tests/**
+    - requirements-dev.txt
+    - .gitignore
+    - .gitattributes
+    - .semgrepignore
   pull_request: {}
   workflow_dispatch: {}
 permissions:
@@ -26,10 +41,13 @@ jobs:
         persist-credentials: false
         fetch-depth: 0
     - &id002
+      name: Clear checked-in execution receipts
+      run: python -c "from pathlib import Path; [p.unlink(missing_ok=True) for p in Path('reports/sanitized/pipeline').glob('*.json')]"
+    - &id003
       uses: actions/setup-python@83679a892e2d95755f2dac6acb0bfd1e9ac5d548
       with:
         python-version: '3.10'
-    - &id003
+    - &id004
       name: Install project check dependencies
       run: 'mkdir -p reports/private/pipeline
 
@@ -39,6 +57,8 @@ jobs:
     - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
       with:
         node-version: 24.22.0
+    - name: Verify evidence, AI boundary and patch contracts
+      run: python -m pytest tests/triage tests/redaction -q
     - name: Build and test the pinned application
       run: python scripts/run-day1-checks.py --offline
     - name: Build allowlisted hardened image
@@ -71,6 +91,7 @@ jobs:
     - *id001
     - *id002
     - *id003
+    - *id004
     - name: Install verified source scanners
       run: python scripts/install-scanners.py
     - name: Execute sast and retain all findings
@@ -90,6 +111,7 @@ jobs:
     - *id001
     - *id002
     - *id003
+    - *id004
     - name: Install verified source scanners
       run: python scripts/install-scanners.py
     - name: Execute sca and retain all findings
@@ -109,6 +131,7 @@ jobs:
     - *id001
     - *id002
     - *id003
+    - *id004
     - name: Install verified source scanners
       run: python scripts/install-scanners.py
     - name: Execute secrets and retain all findings
@@ -128,6 +151,7 @@ jobs:
     - *id001
     - *id002
     - *id003
+    - *id004
     - name: Install verified IaC and SBOM tools
       run: python scripts/install-day4-tools.py
     - name: Prove custom policy behavior
@@ -149,6 +173,7 @@ jobs:
     - *id001
     - *id002
     - *id003
+    - *id004
     - name: Download exact built image
       uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
       with:
@@ -179,6 +204,7 @@ jobs:
     - *id001
     - *id002
     - *id003
+    - *id004
     - name: Download exact built image
       uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
       with:
@@ -188,6 +214,8 @@ jobs:
       run: python scripts/image-transfer.py import
     - name: Install kind and kubectl
       run: bash scripts/install-ci-tools.sh
+    - name: Prove passive header checks on isolated bad/fixed fixtures
+      run: python scripts/verify-dast-fixtures.py
     - name: Create owned ephemeral staging
       run: 'mkdir -p reports/private/day2
 
@@ -231,6 +259,7 @@ jobs:
     steps:
     - *id001
     - *id002
+    - *id003
     - name: Retrieve only sanitized receipts
       uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
       with:

@@ -17,6 +17,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--stage', choices=['iac', 'container', 'dast', 'build-test'], required=True)
     args = parser.parse_args()
+    (ROOT / 'reports/sanitized/pipeline' / (args.stage + '.json')).unlink(missing_ok=True)
     private = ROOT / 'reports/private/pipeline' / (args.stage + '-' + datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ'))
     private.mkdir(parents=True)
     started = time.monotonic()
