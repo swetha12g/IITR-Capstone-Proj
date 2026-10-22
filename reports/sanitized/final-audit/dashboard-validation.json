@@ -1,5 +1,5 @@
 {
-  "observed_at_utc": "2026-10-22T20:23:24.381796+00:00",
+  "observed_at_utc": "2026-10-22T20:35:50.281515+00:00",
   "renderer": "installed headless Chrome; isolated profile; external DNS/background networking disabled",
   "viewports": [
     {
@@ -8,19 +8,21 @@
       "scrollWidth": 1425,
       "height": 2606,
       "title": "PipelineFortress study evidence",
+      "scopeLabelsPresent": true,
       "horizontal_overflow": false
     },
     {
       "viewport": "mobile",
       "width": 390,
       "scrollWidth": 390,
-      "height": 4018,
+      "height": 4045,
       "title": "PipelineFortress study evidence",
+      "scopeLabelsPresent": true,
       "horizontal_overflow": false
     }
   ],
   "desktop_and_mobile_visually_inspected": true,
-  "source_html_sha256": "63dd4d36d02c9b2aaee5b2ab05ec8de766308d9a0601a7d822a94b2f94a47066",
+  "source_html_sha256": "180d17f38397c3d9d4642e03c68791d14047146a029a8d624dfadf72f27b962a",
   "timing_samples": 1,
   "first_finding_receipt_seconds": 4.65,
   "pipeline_seconds": 93.19,
@@ -30,5 +32,8 @@
   "fresh_checkout_build_test_reused": false,
   "final_probe_stalled_before_viewport_setup": true,
   "owned_probe_terminated": true,
-  "bounded_retry_passed": true
+  "bounded_retry_passed": true,
+  "final_scope_caption_verified_by_browser_dom": true,
+  "final_pixel_capture_timed_out": true,
+  "visual_snapshot_scope": "Desktop/mobile metrics and layout inspected before final timing-caption wording; final caption verified by browser DOM at both widths"
 }

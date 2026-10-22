@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "scope": "post-hoc curated fixture/control set; not independent real-world coverage or an exhaustive benchmark",
+  "labels_independently_human_reviewed": false,
+  "counts": {
+    "observations": 251,
+    "unique_issues": 180,
+    "by_stage": {
+      "sast": 11,
+      "sca": 23,
+      "secrets-history": 68,
+      "secrets-tree": 65,
+      "iac": 1,
+      "container": 41,
+      "dast": 42
+    }
+  },
+  "critical_issues": 0,
+  "stage_observations": {
+    "sast": {
+      "MEDIUM": 3,
+      "HIGH": 8
+    },
+    "sca": {
+      "MEDIUM": 9,
+      "LOW": 4,
+      "HIGH": 10
+    },
+    "secrets": {
+      "HIGH": 133
+    },
+    "iac": {
+      "HIGH": 1
+    },
+    "container": {
+      "MEDIUM": 26,
+      "LOW": 10,
+      "HIGH": 5
+    },
+    "dast": {
+      "MEDIUM": 10,
+      "LOW": 16,
+      "INFO": 16
+    }
+  },
+  "detection": {
+    "TP": 14,
+    "FP": 0,
+    "FN": 1,
+    "TN": 6,
+    "precision": 1.0,
+    "recall": 0.9333333333333333,
+    "f1": 0.9655172413793104,
+    "sample_size": 21,
+    "introduced_known_issues": 15,
+    "caught_known_issues": 14,
+    "missed_known_issues": 1,
+    "fixture_target_80_percent_met": true
+  },
+  "detection_by_stage": {
+    "sast": {
+      "TP": 6,
+      "FP": 0,
+      "FN": 1,
+      "TN": 1,
+      "precision": 1.0,
+      "recall": 0.8571428571428571,
+      "f1": 0.923076923076923,
+      "sample_size": 8,
+      "introduced_known_issues": 7,
+      "caught_known_issues": 6,
+      "missed_known_issues": 1,
+      "fixture_target_80_percent_met": true
+    },
+    "sca": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "TN": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sample_size": 2,
+      "introduced_known_issues": 1,
+      "caught_known_issues": 1,
+      "missed_known_issues": 0,
+      "fixture_target_80_percent_met": true
+    },
+    "secrets": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "TN": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sample_size": 2,
+      "introduced_known_issues": 1,
+      "caught_known_issues": 1,
+      "missed_known_issues": 0,
+      "fixture_target_80_percent_met": true
+    },
+    "iac": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 0,
+      "TN": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sample_size": 3,
+      "introduced_known_issues": 2,
+      "caught_known_issues": 2,
+      "missed_known_issues": 0,
+      "fixture_target_80_percent_met": true
+    },
+    "container": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 0,
+      "TN": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sample_size": 3,
+      "introduced_known_issues": 2,
+      "caught_known_issues": 2,
+      "missed_known_issues": 0,
+      "fixture_target_80_percent_met": true
+    },
+    "dast": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 0,
+      "TN": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sample_size": 3,
+      "introduced_known_issues": 2,
+      "caught_known_issues": 2,
+      "missed_known_issues": 0,
+      "fixture_target_80_percent_met": true
+    }
+  },
+  "stage_durations": [
+    {
+      "stage": "sast",
+      "seconds": 4.44,
+      "observations": 1
+    },
+    {
+      "stage": "sca",
+      "seconds": 0.17,
+      "observations": 1
+    },
+    {
+      "stage": "secrets",
+      "seconds": 2.24,
+      "observations": 1
+    },
+    {
+      "stage": "iac",
+      "seconds": 2.85,
+      "observations": 1
+    },
+    {
+      "stage": "container",
+      "seconds": 11.59,
+      "observations": 1
+    },
+    {
+      "stage": "dast",
+      "seconds": 56.23,
+      "observations": 1
+    }
+  ],
+  "timing_note": "One observation per available stage; no percentile or end-to-end timing inferred from separate runs.",
+  "pipeline_timing": {
+    "pipeline_seconds": 93.19,
+    "first_actionable_seconds": 4.65,
+    "observations": 1,
+    "build_test_reused": true,
+    "scope": "Local sequential pipeline only; bootstrap/download and cluster creation excluded. One observation; no percentiles."
+  },
+  "fresh_reproduction_timing": {
+    "pipeline_seconds": 274.71,
+    "first_actionable_seconds": 169.0,
+    "observations": 1,
+    "build_test_reused": false,
+    "scope": "Local sequential pipeline only; bootstrap/download and cluster creation excluded. One observation; no percentiles."
+  },
+  "hosted_verification": {
+    "run_id": 39842575944,
+    "url": "https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39842575944",
+    "conclusion": "success",
+    "critical_observations": 0,
+    "contract_tests": {
+      "tests": 76,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "ai_status": {
+    "successful_live_receipt": false,
+    "live_error": "openai-http-429",
+    "mock_findings": 20,
+    "actual_invoice_cost_usd": null,
+    "independent_evaluation": "pending"
+  },
+  "pr_review": {
+    "published_proposals": 3,
+    "recorded_reviews": 0,
+    "first_review_correctness": null,
+    "scope": "Recorded PR receipt; independent review pending"
+  },
+  "image_comparison": {
+    "iac_removed": 16,
+    "iac_added": 0,
+    "container_removed": 1,
+    "container_added": 0,
+    "container_retained": 100,
+    "image_size_reduction_bytes": 6397599
+  },
+  "image_vulnerabilities": {
+    "baseline": {
+      "CRITICAL": 11,
+      "HIGH": 27,
+      "LOW": 11,
+      "MEDIUM": 51,
+      "UNKNOWN": 1
+    },
+    "hardened": {
+      "CRITICAL": 11,
+      "HIGH": 27,
+      "LOW": 11,
+      "MEDIUM": 51
+    }
+  },
+  "sbom_components": 2658,
+  "current_container_image_id": "sha256:483df66c5bdfb2d47a740243a6db215e6abe43637a3bf23863ebc857997a59d0",
+  "database_updated_at": "2026-10-22T07:10:52.423530461Z",
+  "database_scope": "historical Day 4 comparison",
+  "deferred_day4_findings": 39,
+  "production_readiness_claimed": false
+}

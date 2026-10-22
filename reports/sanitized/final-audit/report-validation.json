@@ -28,8 +28,9 @@
       "sha256": "8325212c3afa46d99733ff45335c0a134c19e9d35ffd7747f95991465d2cf1c6"
     },
     {
-      "file": "reports/sanitized/dashboard/index.json",
-      "sha256": "8351ffd935ffc8e00f969601fbfc8f43af5e2d650643077a9b9b87f885114945"
+      "file": "reports/sanitized/final-audit/report-input-dashboard.json",
+      "sha256": "8351ffd935ffc8e00f969601fbfc8f43af5e2d650643077a9b9b87f885114945",
+      "original_file_at_generation": "reports/sanitized/dashboard/index.json"
     },
     {
       "file": "reports/sanitized/deferred-risks.json",
