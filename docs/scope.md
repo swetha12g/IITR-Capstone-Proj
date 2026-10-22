@@ -1,6 +1,6 @@
 # PipelineFortress operating scope
 
-Updated: 17 October 2026.
+Updated: 22 October 2026; earlier planning dates remain historical.
 
 | Decision | Recorded choice | Evidence / remaining dependency |
 |---|---|---|
@@ -14,7 +14,7 @@ Updated: 17 October 2026.
 | Submission date | 18 October 2026 | Confirmed by the user on 17 October; exact cutoff time not supplied |
 | Manual reviewer | Project owner | Confirmed by the user; retain genuine manual review notes for each proposed change |
 | Independent PR approval / coordinator role | Pending where required | An author cannot approve their own GitHub PR; manual self-review is distinct from an independent approving review. Confirm acceptable individual-assessment evidence with the coordinator |
-| API provider/model and spend cap | Pending | Day 1 uses no live LLM API; later live work waits for safeguards and explicit configuration |
+| API provider/model and spend cap | OpenAI GPT-6 Luna, existing credit only; three-request/$1 upper bounds | No purchase/top-up; all three generation attempts HTTP429, cap exhausted; successful live evaluation remains open |
 | Assessment repository acceptance | Existing project repository plus a separate upstream fork | If the assessed repository itself must be the fork, confirm this arrangement with the coordinator |
 
 The separate fork exists and allows the local source/build checkpoint to proceed. The submission date and manual reviewer role are confirmed. Coordinator interpretation and independent PR approval, if required, remain visible dependencies; they do not authorize external messaging or fabricated approvals. The deadline is one calendar day after this execution date, while the six-stage pipeline, AI safeguards/evaluation, remediation PRs, and final report remain unimplemented. No claim is made that the full ten-day scope can be completed by that date.
@@ -24,3 +24,7 @@ Do not publish private reports, user identifiers, credentials, source snippets i
 Optional Falco and policy explanation features wait until core requirements pass. Follow [requirements-checklist.md](requirements-checklist.md) for acceptance status.
 
 Review reference: [GitHub required-review documentation](https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/approving-a-pull-request-with-required-reviews) distinguishes author self-review from an approving PR review.
+
+## Current operating decision
+
+The acknowledgement is confirmed. The user directed completing the study implementation before fixing vulnerabilities; every critical/high issue alias is retained for later remediation. Operational failures and missing evidence are still reported honestly. Current implementation, draft PRs and report status are in [project-completion.md](project-completion.md). Successful live AI evaluation and genuine independent review remain distinct from implementation completion. See [AI evaluation limits](ai-evaluation.md).

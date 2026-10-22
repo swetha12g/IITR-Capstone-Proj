@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "stage": "build-test",
+  "execution": "complete",
+  "run_id": "39805306325",
+  "commit": "bc5a05457a66fab15209fd90d054713e3e708803",
+  "observed_at_utc": "2026-10-22T15:38:49.203977+00:00",
+  "reports": [],
+  "findings_by_severity": {},
+  "finding_fingerprints": [],
+  "profile": "study-lab",
+  "deferred_findings": 0,
+  "image_config_id": "sha256:4b6335c51d5141f4d385b540785feb8c4aecaaa61851af9607a126b90f9f3c54",
+  "app_evidence_sha256": "37cd957a20176df405cb567b5f4fb559b328f0ac4f776012b0b2ccccf781530a",
+  "build_evidence_sha256": "63cce1525d1385e2d5603662619dc6865b3188b39836c7cfe3a095b9993fa0bc",
+  "app_test_profile": "offline-local",
+  "external_availability_suite": "not-selected",
+  "duration_seconds": 395.97,
+  "duration_scope": "application check stages only; image build is not timed here"
+}
