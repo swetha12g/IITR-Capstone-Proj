@@ -15,6 +15,8 @@ import time
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from triage.test_results import parse_test_totals
 APP = ROOT / "app/juice-shop"
 STEPS = {
     "install-server": ["npm", "ci", "--no-audit", "--no-fund"],
@@ -111,6 +113,11 @@ def main():
             "exit_code": code, "log_reference": str(log_path.relative_to(ROOT)),
             "log_sha256": sha256(log_path),
         })
+        if step.startswith('test-'):
+            totals = parse_test_totals(log_path.read_text(), 'vitest' if step == 'test-frontend' else 'node')
+            report['steps'][-1]['test_totals'] = totals
+            if totals['failed'] or totals['cancelled'] or totals['todo'] or not totals['passed']:
+                report['steps'][-1]['exit_code'] = code = code or 1
         save()
         print(f"Finished {step}: exit {code}.", flush=True)
         if code and step in {"install-server", "install-frontend", "build"}:

@@ -234,3 +234,5 @@ Final repair handoff reviewed after midnight on 23 October IST: zero critical fi
 ### Hosted critical-repair publication in progress — 23 October 2026 IST
 
 Commit/push and hosted CI publication are now explicitly authorized. The zero-critical local snapshot above is complete; the new Actions Summary will report the actual hosted run rather than reuse its success. New hosted verification and report publication are in progress; no additional API usage or purchase is required.
+
+Critical repairs are committed as `8ac412e`. The [Actions Summary implementation](actions-summary.md) is locally verified (76 contracts and actionlint); pushing and hosted verification are next. The earlier uncommitted local verification receipt remains an accurate historical snapshot and is not relabeled as hosted evidence.
