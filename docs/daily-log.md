@@ -497,3 +497,18 @@ Commit `d68686a` / [run 39111621696](https://github.com/swetha12g/IITR-Capstone-
 - A clean-PATH check exposed that activating the Python environment twice removed the newly bootstrapped Kubernetes tools from PATH, allowing the earlier local runs to fall back to the same pinned user-local tools. The earlier results remain valid same-host runs, not fresh-machine proof.
 - Activate once with the project-local Node selection, then prepend the project-local kind/kubectl directory. The clean-PATH check now resolves all three tools inside this repository. A full clean-PATH run verifies that the script does not depend on user-local executables.
 - Report timing text now distinguishes full execution from explicit build/test reuse using the actual receipt. No scanner coverage/rules, application source, API policy or exact risk approvals changed.
+
+### Continuation completed — local and hosted delivery verification
+
+- Request: continue the remaining project. Kept the study deferral, OpenAI-only credential choice and no-new-purchase/no-further-attempt decisions.
+- Verification: final code `bef6664` passed a full clean-PATH reproduction in 252.36 pipeline seconds, without build/test reuse; all 2,326 selected application tests passed with seven upstream skips, plus 62 current and 25 source contracts. Nine external availability tests are excluded. The owned cluster was deleted.
+- Hosted run `39821125926` passed all eight jobs. Downloaded aggregate artifact 12444872806 matched GitHub's SHA-256, recomputed aggregate matched, all seven receipts bound one revision/run and the build/container/DAST image ID matched. Prior failures and the earlier full pass remain historical evidence.
+- All three separate draft remediation PR workflows are green; each has one focused file diff and zero independent reviews. No reviewer messages, automatic merges or fabricated approvals occurred.
+- Current dashboard: 371 normalized observations / 234 underlying issues (11 critical, 109 high), all deferred. One passive medium alert-instance differs from the historical fresh-directory snapshot; no remediation is inferred. Refreshed current state, reproduction scope, report inputs and evidence receipts.
+- Remaining: successful live AI (three HTTP429 attempts exhausted the cap), independent labels/human PR reviews and oral assessment. Final report rendering, publication privacy checks and the documentation/evidence push are recorded below when performed.
+
+### Final packet checks
+
+- Regenerated the report from final hosted/local evidence; exactly twelve pages contain text, and every page was rendered and visually inspected with no clipping or overflow found. Current report counts and timings agree with the latest local dataset.
+- actionlint, changed-JSON parsing, linked-evidence hashes, 19 changed Markdown link checks, local/hosted aggregate recomputation and whitespace checks pass. Imported source, dependency locks and exact source approvals remain unchanged. Publication Gitleaks finds zero in the reviewed candidate snapshot; private files/tools/environments are excluded.
+- [Validation record](../reports/sanitized/delivery/validation.json) binds the final PDF and verified code revision. The refreshed delivery packet is ready for the authorized documentation/evidence publication; no additional API calls or purchases occurred. Remaining external assessment evidence is listed in the current completion record.

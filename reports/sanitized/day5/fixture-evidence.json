@@ -1,6 +1,6 @@
 {
   "scanner_image": "ghcr.io/zaproxy/zaproxy@sha256:5ccfff9a411743ab2615136a2edd7416bec9ce41572fa94e935df38c14adb2b6",
-  "observed_at_utc": "2026-10-22T15:59:46.319877+00:00",
+  "observed_at_utc": "2026-10-22T17:14:53.638522+00:00",
   "passed": true,
   "cases": [
     {
@@ -13,10 +13,10 @@
       ],
       "different_uid_write_before_exit": 1,
       "different_uid_write_after_exit": 0,
-      "report_sha256": "c4201b848a4ccff77b10f20883db577e2759963f30a074cc9e2c1dd6514c081c",
+      "report_sha256": "06df70b5f056da29419923b95d4758c58550e628cfca34f7de01804166e59e17",
       "cleanup_verified": true,
       "network": "none; fixture and scanner share container loopback only",
-      "duration_seconds": 15.94
+      "duration_seconds": 15.87
     },
     {
       "case": "fixed",
@@ -25,10 +25,10 @@
       "selected_alert_ids": [],
       "different_uid_write_before_exit": 1,
       "different_uid_write_after_exit": 0,
-      "report_sha256": "9ad34b6e6a6c38f0903031d5bee1daee4c048e3bb918ac4b5dafa0f198657b7f",
+      "report_sha256": "368e005d55396d8c7e6fadf97c7872ad746a70705a764d04f47eddc6631192c3",
       "cleanup_verified": true,
       "network": "none; fixture and scanner share container loopback only",
-      "duration_seconds": 15.73
+      "duration_seconds": 14.85
     }
   ]
 }

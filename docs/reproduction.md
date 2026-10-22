@@ -14,6 +14,18 @@ No external AI credential, live API call, purchase or top-up is part of reproduc
 
 For report generation, create a separate environment with `locks/report-requirements.txt`, then run `python scripts/generate-report.py` and render every page with Poppler. PDF tooling is not needed to run the security pipeline.
 
-## Verified fresh-directory run
+## Verified fresh-directory runs
 
-Commit `6ef16a09d9c60ab5b78136f3430590fcefba8d7a`, run `20261022T152803854522Z`: PASS_WITH_DEFERRED_RISKS, zero operational errors and verified temporary-cluster removal. The full pipeline commands took 268.94 seconds, including all six fresh application stages (154.47 seconds). Bootstrap/download/setup time is additional. This used a new full-history directory and project-local tool environments on the same Docker host with standard caches; it is not a fresh-machine result. The later isolated DAST header fixture at `bc5a054` was verified separately and is included in the latest reproduction script. [Bound evidence](../reports/sanitized/reproduction/run.json).
+The latest full run at commit `1e0115c14c85fd28332d85151b7ec560b8837c91`, run `20261022T155913232877Z`, passed with deferred risks and zero operational errors. The full pipeline commands took 286.23 seconds, including a freshly executed 156.59-second application sequence; bootstrap/download/setup time is additional. All scanner stages, different-UID write probes, bad/fixed DAST fixtures, workload checks, mock triage and dashboard completed. Cleanup verified removal of the uniquely owned temporary cluster. [Bound receipt](../reports/sanitized/reproduction/run.json).
+
+This uses a new full-history directory and tool environments on the same Docker host with standard caches; it is not a fresh-machine result. Earlier Python activation could remove the repository's Kubernetes-tool PATH entry and fall back to the same pinned user-local versions. The later clean-PATH run below verifies the correction. Initial package-index unavailability was retained privately; retry succeeded with unchanged hash-pinned distributions. Later code separates cold image acquisition from the short permission probe and increases SAST's bounded per-rule/file time. Final hosted verification passes with those corrections.
+
+The earlier full run at `6ef16a0` passed in 268.94 seconds and is retained under [historical reproduction evidence](../reports/sanitized/reproduction/history/6ef16a0/run.json). No live API calls, purchases, billing changes or original-cluster changes occurred in either run.
+
+## Verified clean-PATH run
+
+At `bef666437f60416fed4d5bceed675c2a6d8513af`, `env PATH=/usr/bin:/bin /bin/bash scripts/reproduce.sh` passed from the existing project directory. Node, kind and kubectl resolve within this repository after environment activation. This is a portability check on the same host, not a third fresh-directory or fresh-machine claim.
+
+Run `20261022T171521035420Z` completed the full pipeline in 252.36 seconds, without build/test reuse; application steps total 158.45 seconds (the enclosing application command took 158.72 seconds). All six scanner stages, 62 current contracts, different-UID and bad/fixed DAST fixtures, mock triage and dashboard passed; temporary-cluster cleanup was verified. [Receipt](../reports/sanitized/reproduction/clean-path-run.json), [aggregate](../reports/sanitized/pipeline/aggregate.json). Setup/download/cluster-creation time is additional.
+
+Its dashboard has 371 observations / 234 underlying issues; the historical fresh-directory results have 372 / 235. A medium passive alert-instance variation explains the difference; no fix is inferred. Final [hosted run 39821125926](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39821125926) also passed all eight jobs at the same code revision, with downloaded artifact integrity and aggregate recomputation verified.

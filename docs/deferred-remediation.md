@@ -2,7 +2,7 @@
 
 The user directed continuing the complete study assignment on 22 October 2026 and fixing findings later. These are visible open risks, not false positives or completed fixes. Scanner execution errors are handled separately.
 
-Current unique underlying issues: **235**. 11 critical, 109 high, 70 medium, 29 low, 16 info.
+Current unique underlying issues: **234**. 11 critical, 109 high, 69 medium, 29 low, 16 info.
 
 Full safe register: [deferred-risks.json](../reports/sanitized/deferred-risks.json). Private normalized evidence maps aliases back to exact rules, advisories, packages and locations. No secret match or private path is copied here.
 

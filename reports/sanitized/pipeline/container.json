@@ -2,14 +2,14 @@
   "schema_version": 1,
   "stage": "container",
   "execution": "complete",
-  "run_id": "20261022T145253045022Z",
-  "commit": "993f1df104f309ce71c3babe22a5cc7e7205a31b",
-  "observed_at_utc": "2026-10-22T14:53:13.820208+00:00",
+  "run_id": "20261022T171521035420Z",
+  "commit": "bef666437f60416fed4d5bceed675c2a6d8513af",
+  "observed_at_utc": "2026-10-22T17:18:21.488511+00:00",
   "reports": [
     {
       "scanner_stage": "container",
       "exit_code": 20,
-      "sha256": "7fba444683ead377a17e364efc7a5aa35d874c9ec8fccc8dbd6c1b1d3a8ee579"
+      "sha256": "a2688dd673d91cf7349063cc1b0a2bf174eb4cd7e4bd61f9101f46eb35759f70"
     }
   ],
   "findings_by_severity": {
@@ -132,7 +132,7 @@
       "express": "4.22.3",
       "sqlite3": "5.1.7"
     },
-    "sha256": "eb37605299dd47f92db68a8a333a8cbc184ccafe65cbaec643ee13f7641066c3"
+    "sha256": "66d926e0a123d278dd8bd62398415b55443a1051cd296c950e67e64c62ad292a"
   },
-  "duration_seconds": 10.09
+  "duration_seconds": 10.37
 }

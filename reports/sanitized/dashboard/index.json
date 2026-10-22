@@ -3,8 +3,8 @@
   "scope": "post-hoc curated fixture/control set; not independent real-world coverage or an exhaustive benchmark",
   "labels_independently_human_reviewed": false,
   "counts": {
-    "observations": 372,
-    "unique_issues": 235,
+    "observations": 371,
+    "unique_issues": 234,
     "by_stage": {
       "sast": 11,
       "sca": 82,
@@ -12,7 +12,7 @@
       "secrets-tree": 68,
       "iac": 1,
       "container": 100,
-      "dast": 42
+      "dast": 41
     }
   },
   "stage_observations": {
@@ -39,8 +39,8 @@
       "CRITICAL": 11
     },
     "dast": {
+      "MEDIUM": 9,
       "LOW": 16,
-      "MEDIUM": 10,
       "INFO": 16
     }
   },
@@ -147,32 +147,32 @@
   "stage_durations": [
     {
       "stage": "sast",
-      "seconds": 4.04,
+      "seconds": 4.59,
       "observations": 1
     },
     {
       "stage": "sca",
-      "seconds": 0.17,
+      "seconds": 0.22,
       "observations": 1
     },
     {
       "stage": "secrets",
-      "seconds": 2.3,
+      "seconds": 2.35,
       "observations": 1
     },
     {
       "stage": "iac",
-      "seconds": 3.76,
+      "seconds": 3.3,
       "observations": 1
     },
     {
       "stage": "container",
-      "seconds": 10.09,
+      "seconds": 10.37,
       "observations": 1
     },
     {
       "stage": "dast",
-      "seconds": 91.25,
+      "seconds": 57.4,
       "observations": 1
     }
   ],

@@ -4,7 +4,7 @@
 **Repository:** https://github.com/swetha12g/IITR-Capstone-Proj  
 **Working branch:** `feature-16-kick-start`  
 **Planning date:** 16 October 2026  
-**Status:** execution guide; project implementation and successful runs are not yet claimed.
+**Status:** original execution guide. Implementation and local/hosted runs are now verified; [current completion state](docs/project-completion.md) distinguishes delivered work from remaining assessment dependencies. The acceptance boxes below retain the original plan rather than serving as the current status ledger.
 
 This guide replaces the three-week calendar in [the detailed roadmap](docs/PipelineFortress_Detailed_Roadmap.pdf) with ten working days. It retains all mandatory technical requirements. Budget **50 focused hours: approximately five hours per day**, including integration and troubleshooting allowance above the assignment's 35–40-hour estimate. Installation failures or unfamiliar tools may require additional time. Day 1 means the day you begin; dates are intentionally not assumed.
 

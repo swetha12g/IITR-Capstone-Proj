@@ -2,9 +2,9 @@
   "schema_version": 1,
   "stage": "iac",
   "execution": "complete",
-  "run_id": "39805306325",
-  "commit": "bc5a05457a66fab15209fd90d054713e3e708803",
-  "observed_at_utc": "2026-10-22T15:31:25.772298+00:00",
+  "run_id": "39821125926",
+  "commit": "bef666437f60416fed4d5bceed675c2a6d8513af",
+  "observed_at_utc": "2026-10-22T17:17:12.094801+00:00",
   "reports": [
     {
       "scanner_stage": "iac",
@@ -14,7 +14,7 @@
     {
       "scanner_stage": "iac",
       "exit_code": 0,
-      "sha256": "7e9cd297494a771431b11b4b24c1aa7f61a8ab08181e0361acfe8aa390af5927"
+      "sha256": "40e05b7fd1ed5515c539856cdd953876951f77e56a9386ec322263cfc4c2d230"
     }
   ],
   "findings_by_severity": {
@@ -25,5 +25,5 @@
   ],
   "profile": "study-lab",
   "deferred_findings": 1,
-  "duration_seconds": 5.76
+  "duration_seconds": 4.79
 }

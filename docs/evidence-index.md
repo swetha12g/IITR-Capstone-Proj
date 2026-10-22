@@ -171,9 +171,9 @@ Acknowledgement was confirmed before resumed work. Collection at repository HEAD
 |---|---|---|
 | [tools-verification.json](../reports/sanitized/day4/tools-verification.json) | Pinned isolated Checkov/Syft | `4135be334089347843ee17fef22edb270688617fd248fccd12abc7e2869d5229` |
 | [policy-fixtures.json](../reports/sanitized/day4/policy-fixtures.json) | Eight actual CLI fixtures passed | `fb169aa211235fcbad7b990328d018df87cf28ab192ad6dcc745f7990685d821` |
-| [image-build.json](../reports/sanitized/day4/image-build.json) | Allowlisted source-built hardened image | `a3238442400a25676097aa93ad2d21c979da19020e8f93f66ceb20fe56a81a1d` |
+| [image-build.json](../reports/sanitized/day4/image-build.json) | Allowlisted source-built hardened image | `d5e2553507fdc420d34872a0e37430d2476b3cfa3893c5a8636fac8423d879e5` |
 | [runtime-docker.json](../reports/sanitized/day4/runtime-docker.json) | Seven functional checks and runtime controls passed | `6b435530ac780564790cd20227a16eacd516466d16cd5dc699957a9d4ae46220` |
-| [runtime-kubernetes.json](../reports/sanitized/day4/runtime-kubernetes.json) | Ready workload; exact image and seven checks passed | `4692c07d5afca3d61b69ff32e8fe45d046e2c4cae0aeb8a9ab67f241123fe06c` |
+| [runtime-kubernetes.json](../reports/sanitized/day4/runtime-kubernetes.json) | Ready workload; exact image and seven checks passed | `79de945b2997f4967df1168517ce018f7d70b0640532034ff27fbfdfa87ffd8d` |
 | [deployment.json](../reports/sanitized/day4/deployment.json) | Local manifest/config identities verified | `f3c67478f77bf83a7fa4faf6b4a897d4c76e1bcb9c1b9ddd642a1635d5b03be7` |
 | [scan-execution.json](../reports/sanitized/day4/scan-execution.json) | Seven comparison stages; one frozen DB | `ba1a025bed099d0833ab033cd709f35da053762adb5694fe0ff7ef69892afa2d` |
 | [gate-summary.json](../reports/sanitized/day4/gate-summary.json) | Study execution passed; 39 findings deferred | `7dfeff0a40b58e8892a69e14953883883a1b51e98ee20752ed60fa04d999394b` |
@@ -181,20 +181,29 @@ Acknowledgement was confirmed before resumed work. Collection at repository HEAD
 
 Collection run `20261022T151417042900Z`; SBOM has 2,748 CycloneDX 1.6 components. Kubernetes/Dockerfile failures fell from 17 to one; image identities from 101 to 100 with no new identities. The 38 high/critical image findings and NetworkPolicy gap remain deferred. Raw reports/SBOM stay ignored. The later fresh cluster was healthy; this does not claim recovery of historical unready system pods in the original lab.
 
-## Days 5–10 study evidence — current local snapshot
+## Days 5–10 final delivery evidence — 22 October 2026
 
-The user directed continued assignment execution with vulnerabilities deferred. This supersedes earlier acceptance pauses. The original exact source-exception policy remains unchanged; the automatic six-stage study workflow is separate from the manual historical strict workflow. [Current status](project-completion.md) records all remaining dependencies.
+The user directed completing the study assignment with vulnerabilities deferred. This supersedes earlier security-acceptance pauses. Exact historical source approvals are unchanged; scanner errors, skipped jobs, missing reports and mixed identities remain execution failures. [Current state](project-completion.md) distinguishes implementation delivery from remaining assessment requirements.
 
 | Evidence | Result | SHA-256 |
 |---|---|---|
-| [Local six-stage execution](../reports/sanitized/pipeline/aggregate.json) | All stages complete; findings deferred; zero execution errors | `ecd4986b325616f6dea33347d64d054af2a8c8c769f3a60160fff0071f1e8833` |
-| [Passive ZAP](../reports/sanitized/day5/dast.json) | 121 URLs, route proof and scanner cleanup | `a89cfd3f938d97df327cacede6b5161e3f0cbdc421df4080452fffa75bb8aecb` |
-| [Dashboard inputs/results](../reports/sanitized/dashboard/index.json) | Post-hoc labeled metrics and normalized counts | `84a366f5486f43762fd895e81496c4a25ce806801016895b0368ea9bc5cbe71a` |
-| [Current contract proof](../reports/sanitized/day7/redaction-tests.json) | 62 tests passed; current boundary hash | `62be8f6c95189e51422bb7362fae00141a27048af26525c8c6a01ed7b863e6f7` |
+| [Local full pipeline](../reports/sanitized/pipeline/aggregate.json) | All six scans and build/test complete; 252.36 seconds without build/test reuse; zero operational errors | `88e1a999700511df1a5e6e594b64dfc28675e74ce5699d9e519e690a4cd16395` |
+| [Hosted run receipt](../reports/sanitized/delivery/ci-receipt.json) | All eight jobs passed at bef6664 in run 39821125926 | `e14a9b0aa0c2f08c0bce0729873d62eaed5bd07c3322ecbc6862c6225d970eb7` |
+| [Downloaded artifact verification](../reports/sanitized/delivery/artifact-verification.json) | Official ZIP digest, recomputed aggregate, run/revision and exact image linkage verified | `1e9ca3da0e848633463c1171c463eb476e48b92a0a475335c927334869867038` |
+| [Prior full hosted pass](../reports/sanitized/delivery/historical/39818760193/artifact-verification.json) | Independent preserved success at 61b064f | `359ba82b5d4eeda817afed14eba306fe57dd4752d45d9187246a16cc45439dda` |
+| [Passive ZAP](../reports/sanitized/day5/dast.json) | 121 URLs, route proof and scanner cleanup | `f9417f878505ce1229a0add55cf5f74ddaffaf04a07fe7b35b12868718aec793` |
+| [DAST controls](../reports/sanitized/day5/fixture-evidence.json) | Real different-UID access probes and selected bad/fixed header detections pass | `e3321d93ea09361e7b85b8cb5c02ac4d7aad3b9c12292e731c5b8ccc9120d707` |
+| [Dashboard inputs/results](../reports/sanitized/dashboard/index.json) | 371 observations / 234 underlying issues; post-hoc fixture metrics | `927126932f4e5960d815b773c0eb7637ca46c799535838923daf5992d9623d39` |
+| [Deferred register](../reports/sanitized/deferred-risks.json) | All issues retained, including 11 critical and 109 high | `8de6c42f962cfbc8063792128a97f3ed767f985d7b49bfc8df5a73afb149ac21` |
+| [Current contract proof](../reports/sanitized/day7/redaction-tests.json) | 62 tests passed; final boundary/prompt hash | `f2515ac7bbd77c5a7ec1c76fd02bd48ce346b0f5d398ffdd98b4ab37d5c1180b` |
+| [Source contract proof](../reports/sanitized/day3/gate-tests.json) | 25 fail-closed contracts passed | `53ee452b94682debcca0e0c96f2e8548ed4c5b448b065c08f2a5ee9af3109c2f` |
 | [Real OpenAI failure](../reports/sanitized/day8/triage-live-error.json) | HTTP429; no successful live result or billing change | `d9f67208a0f2cd9835dc6752479627032a4d0eb478a962196f04ca0c2a61dddb` |
 | [Three focused proposals](../reports/sanitized/day9/proposals.json) | Actual selected-check and runtime before/after evidence | `3530cd44eaefeecde02df661bc02eb72c78a3a9b4f71176511b9957434b989e4` |
-| [Bootstrap](../reports/sanitized/reproduction/bootstrap.json) | Verified project-local tools; no system packages changed | `18d290df956a2ee1d04af70831854de68f174947e4f129144c8d11ef451a95fc` |
+| [Published draft PRs](../reports/sanitized/day9/pr-receipt.json) | Three green hosted workflows; one-file diffs; independent review pending | `3ed4b17b57df9f8d046283f59d853b2d1547c7bb410b6301d1aa515fe0fd55c5` |
+| [Fresh-directory receipt](../reports/sanitized/reproduction/run.json) | Full 1e0115c pipeline passed; 286.23 seconds; cleanup verified | `50909e46bc99a70c93844894000373f0f86d962feaf5a82c305c89ed4952b600` |
+| [Clean-PATH receipt](../reports/sanitized/reproduction/clean-path-run.json) | Full bef6664 execution; repository-local tools; cleanup verified | `eb3f8d1d01945792476423c0741360f25283f977f1d882fccc11d7df8d4e80f7` |
+| [Final report](../output/pdf/PipelineFortress_Study_Report.pdf) | Twelve pages rendered and visually inspected | `dc7bfb3621eed3fc211707f3dfaf8e80c356fcd9b00dfd8fb9a689a65f21b024` |
 
-Fresh clone `6ef16a0` passed all application/pipeline/runtime/mock stages and cleanup: [reproduction receipt](../reports/sanitized/reproduction/run.json), [fresh aggregate](../reports/sanitized/reproduction/pipeline/aggregate.json). It uses the same host Docker/download caches, not a fresh machine. [Controlled bad/fixed DAST proof](../reports/sanitized/day5/fixture-evidence.json) is separate and passed both selected header checks. [Published draft PRs](../reports/sanitized/day9/pr-receipt.json) each retain one focused file diff; genuine review remains pending.
+Fresh-directory runs at 6ef16a0 and 1e0115c share host caches; they are not fresh-machine tests. The later clean-PATH run verifies the Kubernetes-tool selection correction in the existing project directory. Historical fresh datasets have 372 normalized observations / 235 issues; the current local dataset has one fewer passive medium alert instance. No fix is inferred from crawl variation. [Reproduction scope](reproduction.md).
 
-Hosted verdict and downloaded artifact verification are recorded in [the delivery receipt](../reports/sanitized/delivery/ci-receipt.json). Full hosted completion is not claimed while jobs remain in progress. The twelve-page report and its checksum will be indexed with final delivery validation.
+[Hosted run 39821125926](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39821125926) and the three remediation PR workflows passed. All earlier failed runs remain historical failures. Successful live AI, independent labels/human review and oral assessment remain open; no provider retry or purchase was made. [Final validation record](../reports/sanitized/delivery/validation.json) records the publication checks and report identity.

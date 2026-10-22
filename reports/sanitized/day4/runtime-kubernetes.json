@@ -1,5 +1,5 @@
 {
-  "observed_at_utc": "2026-10-22T14:53:14.854653+00:00",
+  "observed_at_utc": "2026-10-22T17:18:33.359765+00:00",
   "mode": "kubernetes",
   "image_config_id": "sha256:3eb3e0ff60e5fba12f014e5fcc9f6086fa7f366139d52a4bce44e598a3e860e9",
   "image_size_bytes": 345391667,
@@ -14,7 +14,7 @@
       "id": "products",
       "http_status": 200,
       "passed": true,
-      "response_sha256": "4e67c5aa3bb8d20091bebd6e4317f9386aa55a2d6b0ed6f254a5414bce9a40e4"
+      "response_sha256": "e2b9dae25e9f8f1b4f0b719e7b448718cf674e890727782968ec56c21b3e589d"
     },
     {
       "id": "languages",
@@ -32,13 +32,13 @@
       "id": "training-directory-listing",
       "http_status": 200,
       "passed": true,
-      "response_sha256": "84a4df824fbfed008008963fe435fcec637bdea413726140b88ca097a446d2f0"
+      "response_sha256": "2b08e327f53e8988544edd6cac5e85aed45b359adae97ee07735b808a1035c6e"
     },
     {
       "id": "training-metrics",
       "http_status": 200,
       "passed": true,
-      "response_sha256": "799f6fcf31122c401460cecb984864a1e9468e5e1960ce944d696d8eebae79a9"
+      "response_sha256": "6329bae1cb016829ec4f1bd66f06b5b237d86c3d0a643adb444a3091d5baf36e"
     },
     {
       "id": "training-sql-error",

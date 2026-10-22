@@ -17,41 +17,41 @@
   "receipts": [
     {
       "stage": "build-test",
-      "sha256": "6e8701eb38fe920f16d94ada7c0ade9d92881063f046cc7185e73d3a60228260"
+      "sha256": "dff521e4441fd6b8aafa4c27b2c04a0bf8c934441ccd12ed736a44e686b10471"
     },
     {
       "stage": "container",
-      "sha256": "863c1410d6c14144adc684944be32918aa62d83c9d8392f6298ce030d8a5cc83"
+      "sha256": "322538426748d728760b4ac7ad8ff3ad40be4fef57391c0eeac7af82efac53cc"
     },
     {
       "stage": "dast",
-      "sha256": "15df0062c7937ec023f34f07b151ef2d9156b312984243a7cb687ee5f08d356e"
+      "sha256": "b26f6e3d5d79816c930f558d89540a7d05003928475c3ec1c62f939cc29fcf6a"
     },
     {
       "stage": "iac",
-      "sha256": "c82e237c4be185e59b037e2f8f5f6532e1a98a6152ae9fc17cc1456bf09d19c8"
+      "sha256": "6150994a305c3b9fbf983652a6f5e2456f447172495743c20283176273836227"
     },
     {
       "stage": "sast",
-      "sha256": "dd740b6963f271ced3bea4f2f69bbec484eac81a75f1d3a3fadbde49780dfcb4"
+      "sha256": "6a42712e8d736d7bf925517fccbc84a69fa68d071f08a9bba3499099521093d7"
     },
     {
       "stage": "sca",
-      "sha256": "aca13935049bbe3a31d32b93ab7de55e580b23e2a33e2655c99e8079dbe484da"
+      "sha256": "ca1e4741580c05db59b67d493ab501e60ac79624af4994afd44940526874c52b"
     },
     {
       "stage": "secrets",
-      "sha256": "414f11577f52c6f05ed5567ecfb45c6268514bdf056da2be7b0df783607b4e48"
+      "sha256": "c10e9b7aa6a7471fac364487009f2b9b698da8e5532eafe2922714ad7ea9f1e1"
     }
   ],
-  "run_id": "20261022T152803854522Z",
-  "duration_seconds": 268.94,
+  "run_id": "20261022T155913232877Z",
+  "duration_seconds": 286.23,
   "build_test_reused": false,
   "execution_steps": [
     {
       "step": "application",
       "exit_code": 0,
-      "duration_seconds": 154.47
+      "duration_seconds": 156.73
     },
     {
       "step": "build-image",
@@ -66,32 +66,32 @@
     {
       "step": "sast",
       "exit_code": 0,
-      "duration_seconds": 4.19
+      "duration_seconds": 4.04
     },
     {
       "step": "sca",
       "exit_code": 0,
-      "duration_seconds": 21.52
+      "duration_seconds": 39.27
     },
     {
       "step": "secrets",
       "exit_code": 0,
-      "duration_seconds": 2.28
+      "duration_seconds": 2.19
     },
     {
       "step": "iac",
       "exit_code": 0,
-      "duration_seconds": 2.84
+      "duration_seconds": 3.24
     },
     {
       "step": "container",
       "exit_code": 0,
-      "duration_seconds": 12.65
+      "duration_seconds": 13.05
     },
     {
       "step": "deploy",
       "exit_code": 0,
-      "duration_seconds": 11.44
+      "duration_seconds": 12.09
     },
     {
       "step": "runtime",
@@ -101,7 +101,7 @@
     {
       "step": "zap",
       "exit_code": 0,
-      "duration_seconds": 56.48
+      "duration_seconds": 52.52
     },
     {
       "step": "dast",

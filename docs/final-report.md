@@ -8,7 +8,7 @@ Secure CI/CD with GenAI-assisted triage. CAP-DSE-3W individual study implementat
 
 | Six security stages | Application tests | Underlying issues |
 |---|---|---|
-| Executed locally | 2,326 passed / 7 skipped | 235 open and deferred |
+| Executed locally | 2,326 passed / 7 skipped | 234 open and deferred |
 
 
 ### Outcome and operating decision
@@ -80,15 +80,15 @@ The active hardened workload is Ready with zero restarts at verification. Earlie
 | SECRETS | 136 | Complete; findings deferred |
 | IAC | 1 | Complete; findings deferred |
 | CONTAINER | 100 | Complete; findings deferred |
-| DAST | 42 | Complete; findings deferred |
+| DAST | 41 | Complete; findings deferred |
 
-The complete local run is 20261022T145253045022Z. Its aggregate verdict is PASS_WITH_DEFERRED_RISKS, with 0 operational errors. The stage receipts retain raw report hashes and exact image linkage.
+The complete local run is 20261022T171521035420Z. Its aggregate verdict is PASS_WITH_DEFERRED_RISKS, with 0 operational errors. The stage receipts retain raw report hashes and exact image linkage.
 
-That execution took 115.75 seconds after explicit reuse of a freshly verified build/test. The application check stages took 144.17 seconds separately; these observations do not establish a pipeline percentile or include every bootstrap/download cost.
+That full execution took 252.36 seconds, including all application check stages, image build, scans and owned runtime checks. Build/test results were not reused. Bootstrap/download/cluster-creation costs are additional; no percentile is inferred.
 
 The hosted workflow defines six scan jobs, build/test and one final aggregate job. It uses read-only PR permissions, pinned action SHAs, full history for secrets, an integrity-checked image archive between jobs and cleanup of its own staging cluster. Skipped jobs, malformed/missing receipts, scanner errors and mixed identities cannot pass the execution check.
 
-Hosted verification: completed; conclusion: failure. Run: https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39805306325
+Hosted verification: completed; conclusion: success. Run: https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39821125926
 
 
 ## 6. Hardening and software inventory
@@ -143,7 +143,7 @@ The curated set combines deliberately unsafe and repaired source, advisory, cana
 
 The measured 93.3% fixture recall exceeds the scenario target on this small set. Labels were curated after the broader study work and are not independently human reviewed. The result is not an estimate of all real-world vulnerabilities, a blinded benchmark or evidence that remaining app defects were found.
 
-The dashboard recomputes from normalized evidence and labels, exports JSON/CSV, separates observations from underlying issues and displays known misses. Empty denominators are N/A. It does not present percentiles from one timing observation. Current global underlying issue count is 235.
+The dashboard recomputes from normalized evidence and labels, exports JSON/CSV, separates observations from underlying issues and displays known misses. Empty denominators are N/A. It does not present percentiles from one timing observation. Current global underlying issue count is 234.
 
 
 ### Deferred underlying issues by severity
@@ -152,7 +152,7 @@ The dashboard recomputes from normalized evidence and labels, exports JSON/CSV, 
 |---|---|
 | CRITICAL | 11 |
 | HIGH | 109 |
-| MEDIUM | 70 |
+| MEDIUM | 69 |
 | LOW | 29 |
 | INFO | 16 |
 
@@ -195,7 +195,7 @@ Draft PR links recorded: 3. Genuine review/first-review correctness is pending u
 
 Reproduction bootstraps project-local Python/pip/Node and verified scanner/tool distributions, runs the selected application suites, rebuilds the image, scans all stages, deploys into a uniquely named temporary kind cluster, runs passive DAST, normalizes, checks mock AI safeguards and regenerates the dashboard. Live API usage is excluded from reproduction by default.
 
-Fresh-directory result: PASS_WITH_DEFERRED_RISKS, commit 6ef16a0. Temporary-cluster cleanup verified: True. This is a fresh project directory on the same Docker host with standard caches, not a fresh-machine test. The later isolated DAST fixture was verified separately. The original study cluster is a separate resource.
+Fresh-directory result: PASS_WITH_DEFERRED_RISKS, commit 1e0115c. Temporary-cluster cleanup verified: True. This is a fresh project directory on the same Docker host with standard caches, not a fresh-machine test. The later isolated DAST fixture was verified separately. The original study cluster is a separate resource.
 
 
 ### OWASP SAMM v2 lens
@@ -214,7 +214,7 @@ SAMM uses maturity activities across three levels and fifteen practices. Selecte
 
 The target is the owned local training application and ephemeral CI/reproduction labs. The acknowledgement was confirmed before Day 4 implementation resumed. Signed material, API credentials, raw scanner matches, private paths and the complete SBOM remain outside public artifacts.
 
-The current deferred register contains 235 underlying issues, including 11 critical and 109 high. Deferral is an explicit study decision, not remediation. Later work should prioritize compatible dependency fixes, tested traffic isolation, genuine-secret response if ever confirmed and human-reviewed behavior-preserving changes.
+The current deferred register contains 234 underlying issues, including 11 critical and 109 high. Deferral is an explicit study decision, not remediation. Later work should prioritize compatible dependency fixes, tested traffic isolation, genuine-secret response if ever confirmed and human-reviewed behavior-preserving changes.
 
 GenAI disclosure: the Codex coding assistant authored implementation, tests, documentation and bounded proposals. OpenAI GPT-6 Luna is the configured external triage model; unsuccessful live attempts and mock results are separated. Human review and remaining assessment dependencies are not invented.
 

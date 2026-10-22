@@ -39,8 +39,8 @@
       "CRITICAL": 11
     },
     "dast": {
-      "MEDIUM": 10,
       "LOW": 16,
+      "MEDIUM": 10,
       "INFO": 16
     }
   },
@@ -147,32 +147,32 @@
   "stage_durations": [
     {
       "stage": "sast",
-      "seconds": 4.14,
+      "seconds": 3.99,
       "observations": 1
     },
     {
       "stage": "sca",
-      "seconds": 21.42,
+      "seconds": 39.19,
       "observations": 1
     },
     {
       "stage": "secrets",
-      "seconds": 2.23,
+      "seconds": 2.13,
       "observations": 1
     },
     {
       "stage": "iac",
-      "seconds": 2.75,
+      "seconds": 3.15,
       "observations": 1
     },
     {
       "stage": "container",
-      "seconds": 12.57,
+      "seconds": 13.0,
       "observations": 1
     },
     {
       "stage": "dast",
-      "seconds": 56.28,
+      "seconds": 52.29,
       "observations": 1
     }
   ],

@@ -1,0 +1,160 @@
+{
+  "run_id": "20261022T171521Z",
+  "source_commit": "f189f521266f42c6bd05884468292000cee852ed",
+  "node_version": "v24.22.0",
+  "npm_version": "11.19.1",
+  "selected_steps": [
+    "install-server",
+    "install-frontend",
+    "build",
+    "test-frontend",
+    "test-server",
+    "test-api"
+  ],
+  "steps": [
+    {
+      "step": "install-server",
+      "command": [
+        "npm",
+        "ci",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "started_at_utc": "2026-10-22T17:15:21.223058+00:00",
+      "duration_seconds": 102.18,
+      "exit_code": 0,
+      "log_reference": "reports/private/day1/20261022T171521Z/install-server.log",
+      "log_sha256": "99c462b18fd39a0c516a64f0a06651301cc0ba98d5616d3e4d99702bc7b1243b"
+    },
+    {
+      "step": "install-frontend",
+      "command": [
+        "npm",
+        "--prefix",
+        "frontend",
+        "ci",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "started_at_utc": "2026-10-22T17:17:03.408744+00:00",
+      "duration_seconds": 4.84,
+      "exit_code": 0,
+      "log_reference": "reports/private/day1/20261022T171521Z/install-frontend.log",
+      "log_sha256": "dc526652870ca66cc1447e46c4e643b87fcf0413e27cd9d83a29f6a087d504d0"
+    },
+    {
+      "step": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "started_at_utc": "2026-10-22T17:17:08.252441+00:00",
+      "duration_seconds": 10.83,
+      "exit_code": 0,
+      "log_reference": "reports/private/day1/20261022T171521Z/build.log",
+      "log_sha256": "3345765862c624cd350d3b6ca571d94051636cf530a0a284f8a96481fe376d3c"
+    },
+    {
+      "step": "test-frontend",
+      "command": [
+        "npm",
+        "run",
+        "test:frontend:coverage"
+      ],
+      "started_at_utc": "2026-10-22T17:17:19.085493+00:00",
+      "duration_seconds": 22.05,
+      "exit_code": 0,
+      "log_reference": "reports/private/day1/20261022T171521Z/test-frontend.log",
+      "log_sha256": "6f395c41fd2113ba9c3062539fc11aa3a90bfafe9b3de821308e582afe252847"
+    },
+    {
+      "step": "test-server",
+      "command": [
+        "npm",
+        "run",
+        "test:server"
+      ],
+      "started_at_utc": "2026-10-22T17:17:41.143881+00:00",
+      "duration_seconds": 3.04,
+      "exit_code": 0,
+      "log_reference": "reports/private/day1/20261022T171521Z/test-server.log",
+      "log_sha256": "dfd59f3869f11800aa45aae99335334b8a7c15f6f4d3af21cbac1616d8f48847"
+    },
+    {
+      "step": "test-api",
+      "command": [
+        "node",
+        "--import",
+        "./test/api/helpers/test-env.mjs",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-force-exit",
+        "test/api/2fa.test.ts",
+        "test/api/address.test.ts",
+        "test/api/administration.test.ts",
+        "test/api/angular-dist.test.ts",
+        "test/api/api.test.ts",
+        "test/api/authenticated-users.test.ts",
+        "test/api/b2b-order.test.ts",
+        "test/api/basket-item.test.ts",
+        "test/api/basket.test.ts",
+        "test/api/challenge.test.ts",
+        "test/api/chat.test.ts",
+        "test/api/checkKeys.test.ts",
+        "test/api/complaint.test.ts",
+        "test/api/country-mapping.test.ts",
+        "test/api/data-export.test.ts",
+        "test/api/delivery.test.ts",
+        "test/api/deluxe.test.ts",
+        "test/api/erasure-request.test.ts",
+        "test/api/feedback.test.ts",
+        "test/api/file-serving.test.ts",
+        "test/api/file-upload.test.ts",
+        "test/api/ftp-folder.test.ts",
+        "test/api/http.test.ts",
+        "test/api/languages.test.ts",
+        "test/api/logfile-server.test.ts",
+        "test/api/login.test.ts",
+        "test/api/memory.test.ts",
+        "test/api/metrics.test.ts",
+        "test/api/nftMint.test.ts",
+        "test/api/order-history.test.ts",
+        "test/api/password.test.ts",
+        "test/api/payment.test.ts",
+        "test/api/privacy-request.test.ts",
+        "test/api/product-review.test.ts",
+        "test/api/product.test.ts",
+        "test/api/profile-image-upload.test.ts",
+        "test/api/promotion-video.test.ts",
+        "test/api/quantity.test.ts",
+        "test/api/quarantine-server.test.ts",
+        "test/api/recycle.test.ts",
+        "test/api/redirect.test.ts",
+        "test/api/repeat-notification.test.ts",
+        "test/api/search.test.ts",
+        "test/api/security-answer.test.ts",
+        "test/api/security-question.test.ts",
+        "test/api/socket.test.ts",
+        "test/api/track-result.test.ts",
+        "test/api/user-profile.test.ts",
+        "test/api/user.test.ts",
+        "test/api/vuln-code-fixes.test.ts",
+        "test/api/vuln-code-snippet.test.ts",
+        "test/api/wallet.test.ts",
+        "test/api/web3Wallet.test.ts"
+      ],
+      "started_at_utc": "2026-10-22T17:17:44.191170+00:00",
+      "duration_seconds": 15.51,
+      "exit_code": 0,
+      "log_reference": "reports/private/day1/20261022T171521Z/test-api.log",
+      "log_sha256": "f8621226c91554106afb19bce9744653d7ad3d027df0915ebace75563f7575fb"
+    }
+  ],
+  "status": "passed",
+  "profile": "offline-local",
+  "external_availability_suite": "not-selected",
+  "locks_unchanged": true,
+  "finished_at_utc": "2026-10-22T17:17:59.706563+00:00"
+}

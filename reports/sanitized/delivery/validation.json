@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-22T17:34:53.321218+00:00",
+  "tested_code_revision": "bef666437f60416fed4d5bceed675c2a6d8513af",
+  "scope": "Final study implementation and sanitized delivery packet; not full assessment acceptance",
+  "application": {
+    "profile": "offline-local",
+    "passed": 2326,
+    "skipped": 7,
+    "failures": 0,
+    "external_availability_tests_not_selected": 9
+  },
+  "contracts": {
+    "current_tests_passed": 62,
+    "source_tests_passed": 25,
+    "current_test_log_sha256": "cc25b45327e23cf36b2a85224bfe9070abb8664189c03d169ed3ab019b1961f5"
+  },
+  "local_pipeline": {
+    "run_id": "20261022T171521035420Z",
+    "duration_seconds": 252.36,
+    "build_test_reused": false,
+    "verdict": "PASS_WITH_DEFERRED_RISKS",
+    "operational_errors": [],
+    "clean_path": true,
+    "owned_cluster_cleanup_verified": true
+  },
+  "hosted": {
+    "run_id": 39821125926,
+    "artifact_id": 12444872806,
+    "archive_sha256": "e6ea72b130770393af1d5e8420b468a1dbfc591910c0ac33be9067e1c041f666",
+    "archive_digest_verified": true,
+    "recomputed_aggregate_matches": true,
+    "verdict": "PASS_WITH_DEFERRED_RISKS",
+    "operational_errors": [],
+    "commit": "bef666437f60416fed4d5bceed675c2a6d8513af",
+    "deferred_observations": 379,
+    "image_config_id": "sha256:4082c176c1ae6ac6f545e777c90d7d03b3e32fe43ff38c43f570faabd41bae0e",
+    "commit_matches_tested_revision": true
+  },
+  "remediation_prs": {
+    "count": 3,
+    "all_hosted_workflows_successful": true,
+    "all_draft": true,
+    "all_single_file_diff": true,
+    "independent_review_count": 0,
+    "merged": false
+  },
+  "report": {
+    "file": "output/pdf/PipelineFortress_Study_Report.pdf",
+    "pages": 12,
+    "sha256": "dc7bfb3621eed3fc211707f3dfaf8e80c356fcd9b00dfd8fb9a689a65f21b024",
+    "all_pages_rendered_and_visually_checked": true
+  },
+  "checks": {
+    "actionlint_passed": true,
+    "changed_json_parse_passed": true,
+    "markdown_links_passed": true,
+    "git_diff_check_passed": true,
+    "source_dependency_locks_and_exact_approvals_unchanged": true,
+    "gitleaks_publication_findings": 0,
+    "scanner_version": "8.30.1",
+    "publication_scope": "all changed/new publication candidates relative to 993f1df, plus extracted PDF text; private/tool/environment artifacts excluded"
+  },
+  "limitations": [
+    "All vulnerabilities deferred for the study; production readiness is not claimed",
+    "Three OpenAI HTTP429 attempts; cap exhausted; successful live AI and actual returned usage unavailable",
+    "Labels are post-hoc and lack independent human review",
+    "No independent PR approval or oral assessment",
+    "Same-host caches shared; clean-PATH check is in the existing directory; not a fresh-machine claim",
+    "No browser surface available for dashboard visual inspection"
+  ],
+  "additional_api_requests": 0,
+  "purchases_topups_or_billing_changes": false
+}
