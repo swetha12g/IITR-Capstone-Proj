@@ -450,3 +450,9 @@ Commit `d68686a` / [run 39111621696](https://github.com/swetha12g/IITR-Capstone-
 - Request reaffirmed: no additional API credit purchase. No purchase, top-up or billing change was made; the three real HTTP429 attempts exhaust automatic retries. Continue local work.
 - Verification: project-local bootstrap passed; fresh-catalog tests verify current hash-bound evidence without historical private state and reject tampered raw data. All 60 current tests pass. actionlint and Bash syntax checks pass.
 - Actions: generated a twelve-page study PDF, rendered every page and inspected page order/overflow; authored reproduction, genuine-review ledger and defense notes. The automatic study workflow defers findings while retaining execution errors; the strict historical workflow is manual. Fresh clone execution and draft PR publication remain in progress.
+
+### Publication and clean-checkout regression
+
+- Published integration commit `37ff4c1` and created three independent focused draft remediation PRs; see the review ledger. No approval, reviewer message or merge occurred.
+- The first hosted SCA job exposed a real clean-checkout bug: retained locks were not restored before the standalone scan. Added missing-lock restoration while preserving/refusing changed local locks, removed stale stage receipts before collection and added two regression tests. All 62 current tests pass.
+- Fresh clone bootstrap encountered a stalled default-IP download; IPv4 access returned HTTP200, so bootstrap downloads now select IPv4. This is a download transport correction, not a host-network setting change. Fresh execution remains in progress.

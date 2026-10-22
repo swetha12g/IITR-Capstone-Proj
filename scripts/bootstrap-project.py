@@ -23,7 +23,7 @@ def main():
     with (private / 'bootstrap.log').open('ab') as log:
         def download(pin, destination):
             if not destination.is_file() or hashlib.sha256(destination.read_bytes()).hexdigest() != pin['sha256']:
-                subprocess.run(['curl', '--fail', '--silent', '--show-error', '--location', '--connect-timeout', '20', '--max-time', '240',
+                subprocess.run(['curl', '--ipv4', '--fail', '--silent', '--show-error', '--location', '--connect-timeout', '20', '--max-time', '240',
                                 pin['url'], '-o', str(destination)], check=True, stdout=log, stderr=subprocess.STDOUT)
             if hashlib.sha256(destination.read_bytes()).hexdigest() != pin['sha256']:
                 raise ValueError('bootstrap distribution hash mismatch')
