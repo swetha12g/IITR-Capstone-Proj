@@ -290,5 +290,8 @@ jobs:
           reports/sanitized/pipeline/
           reports/sanitized/actions-summary.md
           output/pdf/PipelineFortress_Study_Report.pdf
+          reports/sanitized/dashboard/index.html
+          reports/sanitized/dashboard/index.json
+          reports/sanitized/dashboard/index.csv
         if-no-files-found: error
         retention-days: 14

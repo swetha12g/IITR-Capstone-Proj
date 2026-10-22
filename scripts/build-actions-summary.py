@@ -123,7 +123,7 @@ def report(directory, *, run_id, commit, repository, needs):
               f'[Evidence index]({source}docs/evidence-index.md) · '
               f'[Dashboard snapshot source]({source}reports/sanitized/dashboard/index.html)', '',
               '## 6 · Download & audit trail', '',
-              f'Download **aggregate-study-evidence** from [this run’s artifacts]({run}#artifacts): this exact Markdown poster, all seven sanitized stage receipts, aggregate JSON, and the twelve-page study PDF. The PDF and dashboard are the checked-in pre-hosted local snapshot; this Actions Summary records the fresh hosted execution.', '',
+              f'Download **aggregate-study-evidence** from [this run’s artifacts]({run}#artifacts): this exact Markdown poster, all seven sanitized stage receipts, aggregate JSON, the twelve-page study PDF, and the dashboard HTML/JSON/CSV. The PDF and dashboard are checked-in evidence snapshots with their own run scopes; this Actions Summary records the fresh hosted execution.', '',
               '<details>', '<summary>Commit, image, source tree and receipt hashes</summary>', '',
               f'- Run: `{run_id}`', f'- Commit: `{commit}`',
               '- Source tree: `' + safe_hash(build.get('project_tree_sha256')) + '`',

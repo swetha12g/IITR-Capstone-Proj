@@ -1,0 +1,116 @@
+{
+  "observed_at_utc": "2026-10-22T20:18:00.406332+00:00",
+  "mode": "kubernetes",
+  "image_config_id": "sha256:483df66c5bdfb2d47a740243a6db215e6abe43637a3bf23863ebc857997a59d0",
+  "image_size_bytes": 356314500,
+  "checks": [
+    {
+      "id": "http-home",
+      "http_status": 200,
+      "passed": true,
+      "response_sha256": "7c6f95782553529abc32cf969eb83c650281de0a5418be8b5f1cf9372dd32a45"
+    },
+    {
+      "id": "products",
+      "http_status": 200,
+      "passed": true,
+      "response_sha256": "9b00efc4e1c28019118630478cade273db7bb765713d84ebe71f3a7f7318e91f"
+    },
+    {
+      "id": "languages",
+      "http_status": 200,
+      "passed": true,
+      "response_sha256": "495e7822f0049ed1fef94dbc590435b7bc1ec0146829ce1641ba34cd599aef1b"
+    },
+    {
+      "id": "coding-challenge",
+      "http_status": 200,
+      "passed": true,
+      "response_sha256": "c20411967a0aad7e503c7eb8d83d6346ba5dcceaaa92b97ae912a8210ad69e8d"
+    },
+    {
+      "id": "training-directory-listing",
+      "http_status": 200,
+      "passed": true,
+      "response_sha256": "d35c0368f849e02b2cae16cb297d43781974f53d0960efe9c4717de04a46a1bc"
+    },
+    {
+      "id": "training-metrics",
+      "http_status": 200,
+      "passed": true,
+      "response_sha256": "fb24f730834b8f405726120ff33a41d5e67175899333b9632e364ee38532996d"
+    },
+    {
+      "id": "training-sql-error",
+      "http_status": 500,
+      "passed": true,
+      "response_sha256": "ab786d4c67b44a133e1449596df68717ddfbb00bb87032f0aeca77a254a3c289"
+    }
+  ],
+  "enforcement": {
+    "pod_security_context": {
+      "fsGroup": 65532,
+      "fsGroupChangePolicy": "OnRootMismatch",
+      "runAsGroup": 65532,
+      "runAsNonRoot": true,
+      "runAsUser": 65532,
+      "seccompProfile": {
+        "type": "RuntimeDefault"
+      }
+    },
+    "container_security_context": {
+      "allowPrivilegeEscalation": false,
+      "capabilities": {
+        "drop": [
+          "ALL"
+        ]
+      },
+      "readOnlyRootFilesystem": true
+    },
+    "resources": {
+      "limits": {
+        "cpu": "1",
+        "ephemeral-storage": "512Mi",
+        "memory": "768Mi"
+      },
+      "requests": {
+        "cpu": "250m",
+        "ephemeral-storage": "128Mi",
+        "memory": "256Mi"
+      }
+    },
+    "automountServiceAccountToken": false,
+    "cri_manifest_reference": "docker.io/library/import-2026-10-22@sha256:9e3aa88e12365ecf45f3d5483638ee280ce857a226a1ee8da25cd3e62a115159",
+    "cri_config_id": "sha256:483df66c5bdfb2d47a740243a6db215e6abe43637a3bf23863ebc857997a59d0",
+    "restarts": 0
+  },
+  "controls": {
+    "uid": 65532,
+    "gid": 65532,
+    "process": {
+      "Uid": "65532\t65532\t65532\t65532",
+      "Gid": "65532\t65532\t65532\t65532",
+      "CapEff": "0000000000000000",
+      "CapBnd": "0000000000000000",
+      "NoNewPrivs": "1",
+      "Seccomp": "2"
+    },
+    "readonly": [
+      "/juice-shop",
+      "/juice-shop/build",
+      "/opt/juice-shop-seed"
+    ],
+    "writable": [
+      "data",
+      "ftp",
+      "i18n",
+      "frontend/dist",
+      "uploads",
+      "logs",
+      ".well-known"
+    ],
+    "service_account_token_absent": true,
+    "shell_and_npm_absent": true
+  },
+  "passed": true
+}

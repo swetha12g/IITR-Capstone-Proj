@@ -8,7 +8,7 @@ Status on 23 October 2026: **critical repairs are committed and pushed; local an
 
 The refreshed dashboard records 180 underlying issues: zero critical and 91 high; high/lower findings remain deferred. A new gate fails if a critical finding returns. Repairs are committed as `8ac412e` and the Actions report as `1616f14`. [Fresh hosted CI and the one-stop report](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39842575944) passed all eight jobs, with zero critical findings. The detailed Summary and downloadable report packet are published and checksum-verified; the earlier hosted pass predates this repair. See [current completion state](docs/project-completion.md) for publication and remaining assessment work.
 
-The twelve-page report and three infrastructure draft PRs are delivered. Successful live OpenAI evaluation and genuine independent review remain open; the three bounded generation attempts returned HTTP429. No additional API call or purchase occurred during this repair.
+The twelve-page report now includes accepted hosted repair proof and a fresh repaired checkout. The dashboard displays measured timing and API/review status; desktop/mobile visual checks pass. Three infrastructure draft PRs are delivered. Successful live OpenAI evaluation and genuine independent review remain open; the three bounded generation attempts returned HTTP429. No additional API call or purchase occurred during this repair.
 
 - [Dashboard](reports/sanitized/dashboard/index.html)
 - [Twelve-page study report](output/pdf/PipelineFortress_Study_Report.pdf)

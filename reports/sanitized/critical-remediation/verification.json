@@ -120,11 +120,13 @@
     "No production-readiness or exhaustive vulnerability absence claim"
   ],
   "report": {
-    "file": "output/pdf/PipelineFortress_Study_Report.pdf",
+    "file": "output/pdf/history/1616f14/PipelineFortress_Study_Report.pdf",
     "pages": 12,
     "sha256": "4d3c34febab430dbbed9b897d625b7955d08edc2f195214de5e03c1f5a4ecf9d",
     "all_pages_rendered_and_visually_checked": true,
-    "historical_report_preserved": "output/pdf/history/c7f25d9/PipelineFortress_Study_Report.pdf"
+    "historical_report_preserved": "output/pdf/history/c7f25d9/PipelineFortress_Study_Report.pdf",
+    "superseded_by": "reports/sanitized/final-audit/report-validation.json",
+    "original_file_at_measurement": "output/pdf/PipelineFortress_Study_Report.pdf"
   },
   "publication_review": {
     "gitleaks_matches": 10,

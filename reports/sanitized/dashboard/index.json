@@ -176,6 +176,45 @@
     }
   ],
   "timing_note": "One observation per available stage; no percentile or end-to-end timing inferred from separate runs.",
+  "pipeline_timing": {
+    "pipeline_seconds": 93.19,
+    "first_actionable_seconds": 4.65,
+    "observations": 1,
+    "build_test_reused": true,
+    "scope": "Local sequential pipeline only; bootstrap/download and cluster creation excluded. One observation; no percentiles."
+  },
+  "fresh_reproduction_timing": {
+    "pipeline_seconds": 274.71,
+    "first_actionable_seconds": 169.0,
+    "observations": 1,
+    "build_test_reused": false,
+    "scope": "Local sequential pipeline only; bootstrap/download and cluster creation excluded. One observation; no percentiles."
+  },
+  "hosted_verification": {
+    "run_id": 39842575944,
+    "url": "https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39842575944",
+    "conclusion": "success",
+    "critical_observations": 0,
+    "contract_tests": {
+      "tests": 76,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "ai_status": {
+    "successful_live_receipt": false,
+    "live_error": "openai-http-429",
+    "mock_findings": 20,
+    "actual_invoice_cost_usd": null,
+    "independent_evaluation": "pending"
+  },
+  "pr_review": {
+    "published_proposals": 3,
+    "recorded_reviews": 0,
+    "first_review_correctness": null,
+    "scope": "Recorded PR receipt; independent review pending"
+  },
   "image_comparison": {
     "iac_removed": 16,
     "iac_added": 0,

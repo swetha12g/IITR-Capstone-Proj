@@ -1,8 +1,8 @@
 # Requirements and acceptance checklist
 
-Updated: 22 October 2026. Individual execution scope is recorded in [scope.md](scope.md).
+Updated: 23 October 2026. Individual execution scope is recorded in [scope.md](scope.md).
 
-Current critical-remediation variant: zero critical findings in fresh source/image scans, 2,332 selected application passes / six skips, 64 current contracts, 25 source contracts, and verified Docker/temporary-Kubernetes/owned-study deployment. Source and root lock are intentionally modified; changes remain uncommitted with no new hosted run. Earlier Day 1–4 statements below retain their historical scope. [Current repair proof](critical-remediation.md).
+Current critical-remediation variant: zero critical findings in fresh source/image scans, 2,332 selected application passes / six skips, 79 current local contracts, 76 in accepted hosted repair run 39842575944, 25 source contracts, and verified Docker/temporary-Kubernetes/owned-study deployment. Critical repairs are committed/pushed; the repaired b20b9b1 fresh checkout also passed all stages with cleanup. Earlier Day 1–4 statements below retain their historical scope. [Current repair proof](critical-remediation.md).
 
 ## Day 1 acceptance
 
@@ -33,7 +33,7 @@ Source image, Ready local kind lab, loopback HTTP/screenshot, confirmed runtime 
 | PF-IAC | Checkov built-in/custom policies and tested controls | Day 4 | Local evidence verified: eight actual CLI fixtures; Kubernetes failures 15→1, Dockerfile failures 2→0; NetworkPolicy control is deferred under the study profile |
 | PF-IMAGE | Functional hardened image, exact-image scan, Syft SBOM, selected CIS mappings | Day 4 | Local build, seven Docker/seven Kubernetes checks, exact-image scans and 2,658-component current schema-validated SBOM verified; zero critical / five high image findings after repair; historical Day 4 comparison retained |
 | PF-DAST | Pinned ZAP baseline reaches the owned app; limitations recorded | Day 5 | Real pinned passive run reached 121 URLs; route and cleanup proof retained |
-| PF-GATES | All six stages, failures/skips fail closed, precise expiring exceptions | Days 3–5 / critical repair | All seven current local receipts and aggregate pass with zero critical; 64 contracts and CLI controls verify critical blocking and project-tree binding. Earlier hosted baseline passed; new hosted verification remains pending |
+| PF-GATES | All six stages, failures/skips fail closed, precise expiring exceptions | Days 3–5 / critical repair | All seven current local receipts and aggregate pass with zero critical; 79 current local contracts and CLI controls verify critical blocking, tree/timing binding and truthful Summary publication. Repair hosted run 39842575944 passed all eight jobs; updated report/dashboard validation is recorded separately |
 | PF-METRICS | Normalization, independent labels including misses, reproducible dashboard and detection metrics | Day 6 | Current dashboard: 180 issues / zero critical / 91 high; TP14/FP0/FN1/TN6 on 21 post-hoc cases; independent labeling remains open |
 | PF-REDACTION | Source-free allowlisted payloads, captured mock-body checks, refusal means zero calls | Day 7 | Captured-body and zero-call refusal tests pass; independent version grounding and current code/prompt proof retained |
 | PF-AI | Explicit budgeted live call after safeguards, grounding, FP/FN and cost/model disclosure | Day 8 | Client and mock complete; model lookup HTTP200; all three generation attempts HTTP429. Successful live evaluation/usage unavailable; no new spending |
@@ -56,3 +56,5 @@ The designated reviewer explicitly accepted the current 186 exact lab-only entri
 ## Critical repair publication verified — 23 October 2026 IST
 
 [Hosted run 39842575944](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39842575944) passed all eight jobs on `1616f14`: zero critical, 2,332 selected application passes / six skips, 76 contract passes, lint/snippet checks, schema-valid SBOM, seven runtime checks and passive DAST/cleanup. Detailed Summary and ten-file artifact are published and checksum-verified; [receipt](../reports/sanitized/critical-remediation/ci/verification.json). Earlier new-CI-pending statements describe the preceding local snapshot. High/lower findings and genuine live AI/independent review/oral evidence remain pending as specified above. No new API usage or purchase occurred.
+
+[Requirement-by-requirement Days 5–10 audit](completion-audit.md) records the verified fresh repaired checkout, complete dashboard displays and twelve-page render, while retaining the unfulfilled external assessment evidence.
