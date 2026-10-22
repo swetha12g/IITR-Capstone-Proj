@@ -88,7 +88,8 @@ def commands(private, target, history_repo, fixture=False):
     semgrep = [str(TOOLS / "semgrep/bin/semgrep"), "scan", "--config", str(ROOT / "policies/semgrep/source.yml"),
                "--metrics=off", "--disable-version-check", "--disable-nosem", "--no-git-ignore",
                "--project-root", str(target if fixture else ROOT),
-               "--error", "--strict", "--jobs", "2", "--json-output", str(private / "sast.json")]
+               "--error", "--strict", "--jobs", "2", "--timeout", "60", "--timeout-threshold", "0",
+               "--json-output", str(private / "sast.json")]
     for name in ["node_modules", "build", "dist", "coverage", ".angular"]:
         semgrep += ["--exclude", "**/" + name + "/**"]
     semgrep.append(str(target))
