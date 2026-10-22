@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "run_id": "20261022T171835762549Z",
-  "observed_at_utc": "2026-10-22T17:19:33.271905+00:00",
+  "run_id": "20261022T181425186359Z",
+  "observed_at_utc": "2026-10-22T18:15:21.558106+00:00",
   "stage": "dast",
   "exit_code": 1,
   "execution": "complete",
-  "duration_seconds": 57.4,
-  "image_config_id": "sha256:3eb3e0ff60e5fba12f014e5fcc9f6086fa7f366139d52a4bce44e598a3e860e9",
+  "duration_seconds": 56.23,
+  "image_config_id": "sha256:483df66c5bdfb2d47a740243a6db215e6abe43637a3bf23863ebc857997a59d0",
   "scanner_image": "ghcr.io/zaproxy/zaproxy@sha256:5ccfff9a411743ab2615136a2edd7416bec9ce41572fa94e935df38c14adb2b6",
   "policy_sha256": "80641b4ef12f6ac39a7b5800d5d77bdc47dff553d55ba938e8891cd6c211436e",
   "scope": "owned kind Ready pod; unauthenticated traditional crawl and passive scan only",
@@ -18,7 +18,7 @@
     "out_of_memory_seen": false
   },
   "cleanup_container_removed": true,
-  "report_sha256": "c447d6a195adaabddd3494f441c76c11d02c14ac7dd82159d1e97e5d46a0f8f2",
+  "report_sha256": "95495b6bd7adbebe643f99832aca4e36caf81aa00b89678645cacca89367bb2b",
   "urls_sha256": "29d3a46c67abe79a02c24fdb6583f0a64b009e164e961c4fddb83e78c60e89aa",
   "urls_reached": 121,
   "seeded_routes_reached": {

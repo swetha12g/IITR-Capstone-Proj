@@ -2,6 +2,8 @@
 
 Verified: 17 October 2026.
 
+**Later adaptation — 22 October:** At the user's request, the current working copy now includes critical-vulnerability remediation: dependency upgrades/replacements, an updated root lock, typed database queries and stricter JWT verification. The exact-match import statements below describe the original import, not this modified variant. The original license, upstream base identity, earlier evidence and frontend lock are preserved. See [critical remediation](critical-remediation.md) for changes and verification.
+
 | Item | Value |
 |---|---|
 | Official upstream | <https://github.com/juice-shop/juice-shop> |

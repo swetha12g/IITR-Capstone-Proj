@@ -29,6 +29,26 @@ def test_study_findings_do_not_block(tmp_path):
     assert verdict['security_scan_stages'] == 6
 
 
+def test_critical_findings_block_without_hiding_counts(tmp_path):
+    receipts(tmp_path)
+    mutate(tmp_path, 'sca', lambda d: d.update(findings_by_severity={'HIGH': 1, 'CRITICAL': 1}))
+    verdict = aggregate(tmp_path)
+    assert verdict['verdict'] == 'FAIL_CRITICAL'
+    assert verdict['security_blockers'] == ['critical-vulnerabilities-remain']
+    assert verdict['critical_observations'] == 1
+    assert verdict['findings_by_severity']['HIGH'] == 7
+    assert not verdict['operational_errors']
+
+
+def test_mixed_project_tree_cannot_pass(tmp_path):
+    receipts(tmp_path)
+    for stage in REQUIRED:
+        mutate(tmp_path, stage, lambda d: d.update(project_tree_sha256='e' * 64))
+    assert aggregate(tmp_path)['verdict'] == 'PASS_WITH_DEFERRED_RISKS'
+    mutate(tmp_path, 'sca', lambda d: d.update(project_tree_sha256='f' * 64))
+    assert 'mixed-or-invalid-project-tree' in aggregate(tmp_path)['operational_errors']
+
+
 @pytest.mark.parametrize('case', ['missing', 'skipped', 'mixed-commit', 'mixed-run', 'mixed-image',
                                   'malformed-count', 'missing-report', 'bad-hash', 'error-exit', 'missing-coverage', 'missing-cleanup'])
 def test_incomplete_execution_never_passes(tmp_path, case):

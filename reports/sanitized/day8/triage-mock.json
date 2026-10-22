@@ -1,9 +1,9 @@
 {
-  "observed_at_utc": "2026-10-22T17:19:33.541547+00:00",
+  "observed_at_utc": "2026-10-22T18:15:21.925417+00:00",
   "model": "gpt-6-luna",
   "prompt_version": "pf-triage-v1",
-  "request_sha256": "1572fa9bda767cc188942b9ebf78d2ab44554c812efc21fb1c8e42a4d960d35b",
-  "response_sha256": "01c88ebd353906249665b503517a393eeb81e7af8212d96b28ee010061914cd9",
+  "request_sha256": "1546fde20cd14f8ea52b17d4a183fbcba7859a31a1b2847963331d906c4c8c60",
+  "response_sha256": "b13b9a922c014a9e8ff2b500a1407ce37371ecc7136adbed4c6cc21940575c85",
   "findings": 20,
   "validation": "passed",
   "duration_seconds": 0.002,

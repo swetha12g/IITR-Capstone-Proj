@@ -1,5 +1,7 @@
 # Day 4 checkpoint — updated 22 October 2026
 
+**Historical comparison:** The counts below describe the original hardening stage before the later critical-remediation request. Current source/image scans have zero critical findings; current runtime/build receipts refer to the remediated image. The frozen Day 4 comparison remains historical. See [critical remediation](critical-remediation.md).
+
 **Current status: hardening verified locally; vulnerabilities deferred for continued study execution.** Days 1–3 have historical local/hosted evidence. On 22 October the user confirmed signing the Responsible AI acknowledgement and explicitly requested resumption, clearing the entry condition in the [execution guide](../10-days-work-break-down.md#day-4--iac-secure-image-and-sbom). Actual signing date was not supplied; no signature or signed record is stored here. The historical strict gate identifies 39 residual findings. The later user-directed study profile passes execution while deferring these findings; operational errors remain errors. See [current completion state](project-completion.md) for Days 5–10.
 
 ## Historical preflight — 19 October

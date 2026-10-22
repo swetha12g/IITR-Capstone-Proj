@@ -2,6 +2,8 @@
 
 Updated: 22 October 2026. Individual execution scope is recorded in [scope.md](scope.md).
 
+Current critical-remediation variant: zero critical findings in fresh source/image scans, 2,332 selected application passes / six skips, 64 current contracts, 25 source contracts, and verified Docker/temporary-Kubernetes/owned-study deployment. Source and root lock are intentionally modified; changes remain uncommitted with no new hosted run. Earlier Day 1–4 statements below retain their historical scope. [Current repair proof](critical-remediation.md).
+
 ## Day 1 acceptance
 
 | Requirement | Status | Evidence / limitation |
@@ -26,13 +28,13 @@ Source image, Ready local kind lab, loopback HTTP/screenshot, confirmed runtime 
 | PF-ENV | Environment, pinned source, build/test evidence | Day 1 | Passed locally; test skips recorded; user authorized publishing the reviewed packet |
 | PF-RUNTIME | Built source image, own kind deployment, local HTTP and confirmed runtime baseline | Day 2 | Passed locally and in hosted CI; reviewed screenshot and three confirmed observations recorded |
 | PF-SAST | Semgrep rules, source reports, known bad/fixed gate evidence | Day 3 | Local/hosted execution and six-rule probes passed; 186 exact lab-only risks explicitly approved; fresh local gate passes |
-| PF-SCA | Trivy dependency findings and reviewed severity gates | Day 3 | Local/hosted production+development reports and real advisory probe passed; 42 high/critical dependency risks included in the exact owner approval |
+| PF-SCA | Trivy dependency findings and reviewed severity gates | Day 3 / critical repair | Current source scan includes development dependencies: zero critical, ten high. Root lock updated for remediation; earlier exact source approvals remain historical and unchanged |
 | PF-SECRETS | Full-history and working-tree scans with safe canary evidence | Day 3 | Local/hosted history/tree scans and canary/history probes passed; 186 exact lab-only risks explicitly approved; fresh local gate passes |
 | PF-IAC | Checkov built-in/custom policies and tested controls | Day 4 | Local evidence verified: eight actual CLI fixtures; Kubernetes failures 15→1, Dockerfile failures 2→0; NetworkPolicy control is deferred under the study profile |
-| PF-IMAGE | Functional hardened image, exact-image scan, Syft SBOM, selected CIS mappings | Day 4 | Local build, seven Docker/seven Kubernetes checks, exact-image scans and 2,748-component schema-validated SBOM verified; 38 high/critical findings are deferred under the study profile |
+| PF-IMAGE | Functional hardened image, exact-image scan, Syft SBOM, selected CIS mappings | Day 4 | Local build, seven Docker/seven Kubernetes checks, exact-image scans and 2,658-component current schema-validated SBOM verified; zero critical / five high image findings after repair; historical Day 4 comparison retained |
 | PF-DAST | Pinned ZAP baseline reaches the owned app; limitations recorded | Day 5 | Real pinned passive run reached 121 URLs; route and cleanup proof retained |
-| PF-GATES | All six stages, failures/skips fail closed, precise expiring exceptions | Days 3–5 | Seven mandatory receipts and aggregate pass locally and in hosted run 39821125926; downloaded archive digest and recomputed aggregate verified. All 62 current contracts pass. Findings are deferred; strict historical policy retained |
-| PF-METRICS | Normalization, independent labels including misses, reproducible dashboard and detection metrics | Day 6 | Normalization and dashboard generated; TP14/FP0/FN1/TN6 on 21 post-hoc cases; independent labeling remains open |
+| PF-GATES | All six stages, failures/skips fail closed, precise expiring exceptions | Days 3–5 / critical repair | All seven current local receipts and aggregate pass with zero critical; 64 contracts and CLI controls verify critical blocking and project-tree binding. Earlier hosted baseline passed; new hosted verification remains pending |
+| PF-METRICS | Normalization, independent labels including misses, reproducible dashboard and detection metrics | Day 6 | Current dashboard: 180 issues / zero critical / 91 high; TP14/FP0/FN1/TN6 on 21 post-hoc cases; independent labeling remains open |
 | PF-REDACTION | Source-free allowlisted payloads, captured mock-body checks, refusal means zero calls | Day 7 | Captured-body and zero-call refusal tests pass; independent version grounding and current code/prompt proof retained |
 | PF-AI | Explicit budgeted live call after safeguards, grounding, FP/FN and cost/model disclosure | Day 8 | Client and mock complete; model lookup HTTP200; all three generation attempts HTTP429. Successful live evaluation/usage unavailable; no new spending |
 | PF-PRS | Three genuine AI-assisted fixes, before/after tests, real independent human review | Day 9 | Three separate coding-assistant draft PRs published, with green hosted workflows; actual before/after scanner/runtime checks and 62 contracts pass; independent human review pending |

@@ -1,35 +1,39 @@
-# Assignment implementation and delivery state
+# Current implementation and acceptance state
 
-Updated 22 October 2026. Days 1–10 implementation is delivered. The study pipeline passes locally and in hosted CI. The user directed completing the assignment implementation and recording vulnerabilities for later repair; [the deferred register](deferred-remediation.md) retains every critical/high issue alias. Successful live AI evaluation, independent labels/review and the oral assessment remain unfulfilled evidence requirements.
+Updated 22 October 2026. The ten-day implementation and the subsequent critical-remediation request are complete locally. **Fresh source and exact-image scans now have zero critical findings**, down from 11. The existing owned study deployment runs the verified image. [Critical repair evidence](critical-remediation.md), [verification receipt](../reports/sanitized/critical-remediation/verification.json).
 
-| Stage | Verified outcome | Remaining limitation |
-|---|---|---|
-| Days 1–4 | Pinned source, application checks, six scanner integrations, hardened source-built image, exact-image comparison and validated 2,748-component SBOM | Training defects and the NetworkPolicy gap remain deferred; selected CIS mappings are not a full benchmark |
-| Day 5 | All six scans, build/test and aggregate pass locally and in hosted CI; exact run/revision/image linkage, 121 crawled URLs, expected routes and owned-resource cleanup verified | Passive unauthenticated DAST has limited coverage |
-| Day 6 | Dashboard and JSON/CSV contain 371 normalized observations / 234 underlying issues; 21 curated cases give TP14/FP0/FN1/TN6 | Labels are post-hoc and not independently human reviewed; 93.3% fixture recall is not general detection coverage |
-| Day 7 | All 62 current contracts pass, including actual serialized mock request bodies, zero-call refusals, grounding, receipt validation and bounded patches | Mock checks establish implementation behavior, not live model accuracy |
-| Day 8 | OpenAI-only bounded client implemented; existing credential passed read-only model lookup | Three generation attempts returned HTTP429. No successful live triage, token usage or invoice cost is claimed; no more automatic attempts or purchases |
-| Day 9 | Three focused Codex-authored draft PRs have real before/after Checkov and Ready/HTTP evidence; all three hosted workflows pass | Zero independent reviews; first-review correctness is unmeasured; PRs remain unmerged |
-| Day 10 | Two fresh-directory reproductions and a later clean-PATH full run pass; temporary clusters removed; twelve-page report and defense guide generated | Same Docker host/caches were shared; no fresh-machine claim or completed oral assessment |
+| Work | Verified current state |
+|---|---|
+| Security pipeline | All six scans, build/test and aggregate pass locally; critical findings now fail the gate |
+| Application | 2,332 passed, six upstream skips, zero selected failures; nine external availability tests excluded |
+| Contracts | 64 pipeline/safeguard and 25 source-gate contracts pass; lint and snippet consistency pass |
+| Runtime | Seven Docker, seven temporary Kubernetes and seven existing-owned-lab checks pass; image identities agree |
+| Data and dashboard | 251 observations / 180 underlying issues; 0 critical, 91 high, 45 medium, 28 low and 16 informational |
+| Supply chain | Patched dependencies and two replacements; schema-valid 2,658-component SBOM; root lock updated |
+| Report | Current twelve-page PDF regenerated, rendered and inspected; pre-remediation PDF retained in history |
+| Review proposals | Three earlier focused infrastructure draft PRs exist; their hosted workflows passed; independent review is pending |
 
-## Final execution evidence
+Local run `20261022T181348556832Z` passed in 93.19 seconds after explicit reuse of a fresh full application sequence (143.51 seconds) and rebuilt exact image. Setup/cluster startup are additional. New receipts bind the modified project tree as well as the base commit; the implementation changes are **uncommitted and not pushed**, based on `895ee08`. No new hosted CI pass is claimed for this repair. [Current aggregate](../reports/sanitized/pipeline/aggregate.json).
 
-[Hosted run 39821125926](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39821125926) passed all eight jobs at code revision `bef666437f60416fed4d5bceed675c2a6d8513af`. The downloaded aggregate ZIP matches GitHub's SHA-256; recomputing the aggregate from all seven mandatory receipts exactly matches the downloaded result. Every receipt binds the same run/revision, and build/container/DAST share one image ID. Verdict: `PASS_WITH_DEFERRED_RISKS`, zero operational errors. [Run receipt](../reports/sanitized/delivery/ci-receipt.json), [artifact verification](../reports/sanitized/delivery/artifact-verification.json). The earlier complete hosted pass at `61b064f` is retained under delivery history. Earlier failures remain failed historical evidence.
+The original 11 critical issue identities are retained in the before receipt. Fixes replace unpatched MarsDB/archive-extraction paths, upgrade affected dependencies and harden JWT/query handling. Exploit-success assertions now assert rejection; no suppression or severity downgrade was used. High and lower issues remain in [the deferred register](deferred-remediation.md). The root lock and source now differ from the upstream pin at the user's request; frontend lock, license and exact historical source approvals are unchanged.
 
-The latest full local pipeline is `20261022T171521035420Z` at `bef6664`: **252.36 seconds**, including a newly executed application sequence; no build/test reuse. It starts with PATH restricted to `/usr/bin:/bin` and resolves kind, kubectl and Node from this repository. All scanner, control, fixture, mock-triage and dashboard steps pass, and its uniquely owned cluster is removed. Bootstrap/download/cluster-startup time is additional. [Clean-PATH proof](../reports/sanitized/reproduction/clean-path-run.json), [local aggregate](../reports/sanitized/pipeline/aggregate.json).
+The owned study deployment is updated to the verified image, and the uniquely owned temporary cluster is deleted. Historical original-cluster system-pod readiness limitations are not claimed resolved. No host kernel settings, unrelated workloads, provider requests or billing settings were changed.
 
-The offline application profile has **2,326 passed, seven upstream skips and zero failures**: 1,372 frontend, 417 server and 537 API tests pass. Nine independent internet-resource availability tests are explicitly not selected. An earlier online run's six DNS-dependent failures remain recorded. Application source, retained dependency locks and the exact historical source-exception policy are unchanged. Twenty-five source-gate contracts also pass.
+## Remaining assessment work
 
-Fresh full-history directories at `6ef16a0` and `1e0115c` passed full pipelines in 268.94 and 286.23 seconds respectively, including new application checks, with cleanup verified. They share host Docker/download caches. Their earlier PATH behavior could fall back to the same pinned user-local Kubernetes tools; the subsequent clean-PATH run verifies the corrected repository-local selection. [Reproduction scope and receipts](reproduction.md).
+| Day | Remaining evidence |
+|---|---|
+| 6 | Genuine independent human validation of detection labels and metrics; the 21-case fixture evaluation remains post-hoc |
+| 8 | A successful live OpenAI evaluation; all three generation attempts returned HTTP429 and the existing cap remains exhausted |
+| 9 | Human review of the three draft PRs and these new critical fixes; no fabricated approval or automatic merge |
+| 10 | Oral-defense rehearsal/assessment and confirmation of actual submission/coordinator acceptance |
 
-## Findings, proposals and assessment dependencies
+Publishing the new critical changes and running hosted CI on that revision remain separate from the completed local repair. No additional API purchase or automatic live attempt is planned. A passing zero-critical scan does not establish absence of all vulnerabilities or production readiness.
 
-The latest dashboard has **11 critical, 109 high, 69 medium, 29 low and 16 informational underlying issues**, all deferred. Its 371 normalized observations differ from the 372/235 historical fresh-directory snapshot by one passive medium alert instance; this is crawl variation, not a verified fix. Raw cross-stage counts (378 locally and 379 in hosted CI) additionally include repeated observations. None of these counts implies remediation.
+## Historical delivery and reproduction
 
-[PF-001](https://github.com/swetha12g/IITR-Capstone-Proj/pull/1), [PF-002](https://github.com/swetha12g/IITR-Capstone-Proj/pull/2) and [PF-003](https://github.com/swetha12g/IITR-Capstone-Proj/pull/3) each retain one focused manifest diff. All three hosted workflows pass. They disable service-account token mounting, explicitly require non-root execution and add a liveness probe to the legacy baseline. The baseline already ran non-root. Coding-assistant authorship is disclosed; the unavailable external API is not credited with generating the plans. [Review ledger](reviews.md), [PR receipt](../reports/sanitized/day9/pr-receipt.json).
+[Hosted run 39821125926](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39821125926) passed all eight jobs at `bef6664` before critical remediation; its downloaded ZIP digest, recomputed aggregate and image linkage were verified. Delivery packet `c7f25d9` and publication record `895ee08` were pushed and verified at that time. [Historical CI receipt](../reports/sanitized/delivery/ci-receipt.json), [publication receipt](../reports/sanitized/delivery/publication.json).
 
-The Responsible AI acknowledgement was confirmed before resumed Day 4 implementation. OpenAI remains the only selected provider. The three-request application cap is exhausted after HTTP429 responses; no retry, ledger reset, purchase, top-up or billing change is performed. Independent human labels/reviews and the oral assessment require genuine external participation; they are not fabricated to claim full rubric acceptance.
+Earlier full-history fresh directories at `6ef16a0` and `1e0115c` passed with shared host caches and cleanup. A clean-PATH run at `bef6664` verified repository-local tool selection. These predate the critical fixes; the new repair was verified in the existing directory with an owned temporary cluster. No fresh-machine claim is made. [Reproduction scope](reproduction.md).
 
-The [twelve-page PDF](../output/pdf/PipelineFortress_Study_Report.pdf), [Markdown report](final-report.md), [dashboard](../reports/sanitized/dashboard/index.html), [evidence index](evidence-index.md) and [defense guide](defense.md) form the delivery packet. PDF pages are rendered and visually checked; no browser surface was available for a dashboard UI inspection. Data, formula and HTML generation checks pass. The original lab's historical system-pod readiness issue is not claimed resolved by successful temporary clusters. No host kernel settings or unrelated workloads were changed during this continuation.
-
-Delivery packet `c7f25d9` is published on the integration branch; local/remote revision agreement and a clean working tree were verified. It contains only documentation, sanitized evidence and the PDF after tested code `bef6664`. [Publication receipt](../reports/sanitized/delivery/publication.json). The follow-up publication record does not change implementation or claim new scanner runs.
+The [current report](../output/pdf/PipelineFortress_Study_Report.pdf), [dashboard](../reports/sanitized/dashboard/index.html), [evidence index](evidence-index.md) and [defense guide](defense.md) are available. Dashboard data/HTML checks pass; no browser UI inspection or complete legacy Cypress challenge-suite pass is claimed.

@@ -126,14 +126,16 @@ def main():
     checks = read('reports/sanitized/day7/redaction-tests.json')
     hosted = read('reports/sanitized/delivery/ci-receipt.json', {})
     application = read('reports/sanitized/day1-latest.json')
+    remediation = read('reports/sanitized/critical-remediation/verification.json', {})
+    app_counts = remediation.get('application', {'passed': 2326, 'skipped': 7, 'frontend_passed': 1372, 'server_passed': 417, 'api_passed': 537})
     detection = metrics['detection']
 
     heading(1, 'PipelineFortress')
     p('Secure CI/CD with GenAI-assisted triage. CAP-DSE-3W individual study implementation and evidence report.')
-    table([['Six security stages', 'Application tests', 'Underlying issues'], ['Executed locally', '2,326 passed / 7 skipped', str(metrics['counts']['unique_issues']) + ' open and deferred']], [WIDTH / 3] * 3)
+    table([['Six security stages', 'Application tests', 'Underlying issues'], ['Executed locally', str(app_counts['passed']) + ' passed / ' + str(app_counts['skipped']) + ' skipped', str(metrics['counts']['unique_issues']) + ' open and deferred']], [WIDTH / 3] * 3)
     sub('Outcome and operating decision')
     p('The owned lab now executes SAST, dependency, secret, IaC, image and passive runtime scans. A hardened source-built image is linked through deployment, container inventory and scan evidence. Source-free normalization, mock triage, refusal tests and bounded local patch templates are implemented.')
-    p('On 22 October the project owner directed completing the study assignment before later vulnerability remediation. The study profile therefore records security findings and continues. It does not convert findings into fixes or authorize production promotion.')
+    p('The project owner subsequently requested fixing all critical findings. Current source and image scans report zero critical findings after dependency replacement and authentication/query hardening. A new zero-critical gate rejects regressions; lower severities remain visible and deferred. Production readiness is not claimed.')
     sub('Completion boundary')
     p('Local pipeline execution and the three example proposal regressions are verified. Successful live API triage remains unverified: the selected OpenAI credential passed model lookup but three bounded generation attempts returned HTTP429. Genuine human review is recorded only when received. Hosted and fresh-directory status are shown explicitly later in this report.')
     p('This report is an evidence snapshot, not an assertion that every assessment dependency has been fulfilled.', small=True)
@@ -146,13 +148,13 @@ def main():
     p('Validated operations map to fixed local templates. A human review step is separate from generation, scanner success and author self-review. No automatic merge is implemented.')
 
     heading(3, 'Environment and application verification')
-    table([['Component', 'Verified configuration'], ['Target', 'OWASP Juice Shop 20.3.0; immutable imported source; original license retained'],
+    table([['Component', 'Verified configuration'], ['Target', 'OWASP Juice Shop 20.3.0; pinned upstream base with documented critical-remediation modifications; original license retained'],
            ['Node / Python', 'Build Node 24.22.0; runtime 24.22.1; isolated Python 3.10'], ['Scanners', 'Semgrep 1.181.0; Trivy 0.76.0; Gitleaks 8.30.1'],
            ['IaC / inventory / runtime', 'Checkov 3.3.30; Syft 1.55.0; ZAP 2.17.0'], ['Kubernetes lab', 'kind 0.33.0; Kubernetes/kubectl 1.37.0'],
            ['Installation boundary', 'Project/user-local tools; scanner distributions and base images pinned']], [130, WIDTH - 130])
-    p('The fresh offline application profile passes root/frontend installation, explicit production build, frontend tests, server tests and local API tests. Counts are 1,372 frontend, 417 server and 537 API tests passed, with seven upstream skips and zero selected failures.')
+    p('The fresh offline application profile passes root/frontend installation, explicit production build, frontend tests, server tests and local API tests. Counts are ' + str(app_counts['frontend_passed']) + ' frontend, ' + str(app_counts['server_passed']) + ' server and ' + str(app_counts['api_passed']) + ' API tests passed, with ' + str(app_counts['skipped']) + ' upstream skips and zero selected failures.')
     p('A separate online attempt retained six failures from external-service DNS lookup errors. The offline profile excludes the entire nine-test internet-resource availability suite. It does not suppress a local application test failure. Historical online baseline counts remain separate.')
-    p('Application source and both retained dependency locks are preserved. Supported runtimes, lock comparisons and exact image identity are checked rather than inferred from a tag.')
+    p('The historical upstream import remains traceable. The current remediation variant updates the root dependency lock, replaces unsafe dependencies and hardens JWT and database queries; the frontend lock is preserved. Runtime input hashes and local project-tree hashes bind the changed source and exact image. These local changes have not yet been verified in hosted CI.')
 
     heading(4, 'Observed runtime baseline')
     table([['Observation', 'Hardened runtime result', 'Interpretation'], ['Home / products / languages', 'HTTP200; data present', 'Application remains usable'],
@@ -172,14 +174,14 @@ def main():
     else:
         p('That full execution took ' + str(pipeline['duration_seconds']) + ' seconds, including all application check stages, image build, scans and owned runtime checks. Build/test results were not reused. Bootstrap/download/cluster-creation costs are additional; no percentile is inferred.')
     p('The hosted workflow defines six scan jobs, build/test and one final aggregate job. It uses read-only PR permissions, pinned action SHAs, full history for secrets, an integrity-checked image archive between jobs and cleanup of its own staging cluster. Skipped jobs, malformed/missing receipts, scanner errors and mixed identities cannot pass the execution check.')
-    p('Hosted verification: ' + hosted.get('status', 'not yet recorded') + '; conclusion: ' + str(hosted.get('conclusion', 'not yet recorded')) + '. Run: ' + hosted.get('url', 'see the delivery evidence index'), small=True)
+    p('Earlier hosted baseline, before critical remediation: ' + hosted.get('status', 'not yet recorded') + '; conclusion: ' + str(hosted.get('conclusion', 'not yet recorded')) + '. Run: ' + hosted.get('url', 'see the delivery evidence index'), small=True)
 
     heading(6, 'Hardening and software inventory')
     table([['Measure', 'Baseline', 'Hardened'], ['Failed Kubernetes checks', 15, 1], ['Failed Dockerfile checks', 2, 0],
            ['Image vulnerability identities', 101, 100], ['Critical / high / unknown', '11 / 27 / 1', '11 / 27 / 0'],
            ['Image bytes', '351,789,266', '345,391,667'], ['CycloneDX components', 'Not claimed here', day4['sbom']['components']]], [210, (WIDTH - 210) / 2, (WIDTH - 210) / 2])
     p('The runtime uses UID/GID 65532, no effective or bounding capabilities, no-new-privileges, RuntimeDefault seccomp and a read-only root filesystem. Application code and immutable seed reject writes. Explicit bounded writable mounts preserve SQLite, restored training files, translations, customized frontend media, uploads, logs, CSAF metadata and temporary files.')
-    p('Both immutable image configuration IDs were scanned under one frozen Trivy database. One unknown CA-certificate advisory was removed; no new identity was introduced in that comparison. The 38 high/critical image identities remain. Syft CycloneDX 1.6 validates against hash-pinned official schemas and representative installed package versions.')
+    p('In the historical Day 4 comparison, both immutable image configuration IDs were scanned under one frozen Trivy database. One unknown CA-certificate advisory was removed; no new identity was introduced in that comparison. That comparison predates the later zero-critical remediation; current residual counts are shown separately. Syft CycloneDX 1.6 validates against hash-pinned official schemas and representative installed package versions.')
     p('Selected controls are mapped to CIS Kubernetes 2.0.0. NetworkPolicy remains a declared gap and enforcement is unverified. No full benchmark or cluster certification is claimed. A Docker configuration ID, a registry base index digest and a local containerd manifest digest are different identifiers.')
 
     heading(7, 'Passive DAST and coverage limits')
@@ -224,7 +226,7 @@ def main():
     p('These examples modify only the legacy baseline deployment manifest through fixed local templates. They disable unnecessary service-account token mounting, explicitly require non-root execution and add a liveness probe. The original baseline image already runs non-root; the second proposal adds an explicit policy guarantee rather than claiming an observed root process was removed.')
     p('Each proposal has a bounded single-file diff, before/after hashes, actual selected-check evidence, functional observations and rollback instructions. Unsupported operations, path traversal, credential access, arbitrary commands and workflow edits are outside the adapter allowlist.')
     p('The Codex coding assistant authored the templates. The unavailable external application API is not credited with generating them. Three examples do not close the larger risk backlog, which remains deferred by the user.')
-    p('Draft PR links recorded: ' + str(len(prs.get('prs', []))) + '. Genuine review/first-review correctness is pending unless the review ledger records a real verdict. No author self-approval, fabricated independent review or automatic merge is claimed.')
+    p('Earlier infrastructure draft PR links recorded: ' + str(len(prs.get('prs', []))) + '. Genuine review/first-review correctness is pending unless the review ledger records a real verdict. No author self-approval, fabricated independent review or automatic merge is claimed.')
 
     heading(11, 'Reproduction and maturity self-assessment')
     p('Reproduction bootstraps project-local Python/pip/Node and verified scanner/tool distributions, runs the selected application suites, rebuilds the image, scans all stages, deploys into a uniquely named temporary kind cluster, runs passive DAST, normalizes, checks mock AI safeguards and regenerates the dashboard. Live API usage is excluded from reproduction by default.')
@@ -244,7 +246,7 @@ def main():
             ('CIS benchmark scope', 'https://www.cisecurity.org/benchmark/kubernetes'), ('OWASP SAMM v2', 'https://owaspsamm.org/model/'),
             ('OpenAI model / price', 'https://developers.openai.com/api/docs/models/gpt-6-luna'), ('OpenAI data controls', 'https://developers.openai.com/api/docs/guides/your-data')]
     table([['Reference', 'Location'], *refs], [125, WIDTH - 125])
-    p('Submission limits: successful external live triage, genuine PR review and any unrecorded hosted/fresh run must remain open requirements. No grade, exhaustive detection, full CIS compliance or production readiness is asserted.', small=True)
+    p('Submission limits: successful external live triage, genuine PR review and hosted verification of the new critical-remediation revision remain open requirements. No grade, exhaustive detection, full CIS compliance or production readiness is asserted.', small=True)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     document = SimpleDocTemplate(str(OUT), pagesize=A4, rightMargin=42, leftMargin=42, topMargin=40, bottomMargin=54,

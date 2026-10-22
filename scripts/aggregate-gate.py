@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""One authoritative study gate: vulnerabilities are deferred, execution errors are explicit."""
+"""Fail on critical findings or execution errors; retain deferred lower severities."""
 import argparse
 import json
 import os
@@ -21,7 +21,7 @@ def main():
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, indent=2) + '\n')
     print(json.dumps({k: result[k] for k in ['verdict', 'stage_count', 'deferred_observations', 'operational_errors']}))
-    return 2 if result['operational_errors'] else 0
+    return 2 if result['operational_errors'] else 1 if result['security_blockers'] else 0
 
 
 if __name__ == '__main__':

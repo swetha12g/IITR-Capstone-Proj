@@ -4,9 +4,11 @@ PipelineFortress — Secure CI/CD with GenAI-Assisted Triage.
 
 The detailed execution roadmap is available in [docs/PipelineFortress_Detailed_Roadmap.pdf](docs/PipelineFortress_Detailed_Roadmap.pdf).
 
-Status on 22 October 2026: the six-stage security pipeline passes locally and in [hosted CI](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39821125926), including all eight jobs and verified downloaded evidence. The dashboard, source-free AI safeguards, twelve-page report and three focused draft remediation PRs are delivered; all three PR workflows pass. The offline application profile passes 2,326 tests with seven skips; nine external-service availability tests are excluded explicitly. See [current completion state](docs/project-completion.md) for reproduction evidence and the remaining live AI, independent-review and assessment requirements.
+Status on 22 October 2026: **critical findings are fixed locally: 11 → 0** in fresh dependency and rebuilt-image scans. All six scanner stages, exact-image runtime checks and the existing owned study deployment pass. The selected application suites have 2,332 passes and six skips; nine external availability tests are excluded. [Critical remediation and verification](docs/critical-remediation.md).
 
-The user directed finishing the study implementation and fixing vulnerabilities later. All critical/high issue aliases are retained in the [deferred register](docs/deferred-remediation.md). Scanner errors, missing stages and invalid reports remain execution errors. All three bounded OpenAI generation attempts returned HTTP429; no successful live triage is claimed. No API purchase, top-up or further automatic attempt is made.
+The refreshed dashboard records 180 underlying issues: zero critical and 91 high; high/lower findings remain deferred. A new gate fails if a critical finding returns. The updated source/lock changes are local and uncommitted; the earlier [eight-job hosted pass](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39821125926) predates this repair. See [current completion state](docs/project-completion.md) for publication and remaining assessment work.
+
+The twelve-page report and three infrastructure draft PRs are delivered. Successful live OpenAI evaluation and genuine independent review remain open; the three bounded generation attempts returned HTTP429. No additional API call or purchase occurred during this repair.
 
 - [Dashboard](reports/sanitized/dashboard/index.html)
 - [Twelve-page study report](output/pdf/PipelineFortress_Study_Report.pdf)

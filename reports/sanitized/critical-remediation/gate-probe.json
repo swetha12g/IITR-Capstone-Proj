@@ -1,0 +1,23 @@
+{
+  "scope": "synthetic receipt contract; no scanner report or production evidence modified",
+  "cases": [
+    {
+      "case": "current-zero",
+      "exit_code": 0,
+      "verdict": "PASS_WITH_DEFERRED_RISKS",
+      "critical_observations": 0,
+      "security_blockers": [],
+      "operational_errors": []
+    },
+    {
+      "case": "critical-present",
+      "exit_code": 1,
+      "verdict": "FAIL_CRITICAL",
+      "critical_observations": 1,
+      "security_blockers": [
+        "critical-vulnerabilities-remain"
+      ],
+      "operational_errors": []
+    }
+  ]
+}

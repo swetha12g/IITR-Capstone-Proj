@@ -22,7 +22,7 @@ RUN npm prune --omit=dev --ignore-scripts --no-audit --no-fund \
 FROM gcr.io/distroless/nodejs24-debian13:nonroot@sha256:78f07ef1b5ea71ad7c055df15d0dd8997f2d288f9158623c4d4ae3d765b7d50d
 LABEL org.opencontainers.image.title="PipelineFortress Juice Shop lab" \
     org.opencontainers.image.source="https://github.com/juice-shop/juice-shop" \
-    org.opencontainers.image.revision="f189f521266f42c6bd05884468292000cee852ed" \
+    io.pipelinefortress.upstream-revision="f189f521266f42c6bd05884468292000cee852ed" \
     org.opencontainers.image.licenses="MIT"
 ENV NODE_ENV=production
 WORKDIR /juice-shop

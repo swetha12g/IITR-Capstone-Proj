@@ -1,10 +1,14 @@
-# Day 1 setup checkpoint — updated 22 October 2026
+# Day 1 setup checkpoint — updated 23 October 2026
 
 Repository: `/home/popos/Capstone/IITR-Capstone-Proj`.
 
 **Status:** Day 1 work is complete and published on 17 October 2026. The real fork, pinned source import, supported Node/Python environments, dependency locks, production build, and finite frontend/server/API suites are verified. There were 2,334 passed tests, 8 upstream skips, and zero failures; lint passed. The user-authorized source commit `425d129` and setup/evidence/next-day-plan commit `9bca61f` were successfully pushed to `feature-16-kick-start`. See the [execution log](daily-log.md#execution-on-17-october-2026) and [evidence index](evidence-index.md).
 
+**Latest repair — 22 October:** All 11 critical issues are fixed in the local remediation variant. Fresh source/image scans show zero critical, all six scanner stages pass, and the existing owned study deployment runs the exact verified image. Application tests: 2,332 passed / six skipped; nine external availability tests excluded. Sixty-four pipeline/safeguard and 25 source contracts pass. Current dashboard: 180 issues, zero critical / 91 high. Updated source/root lock are uncommitted; earlier hosted CI predates this repair. [Critical evidence](critical-remediation.md). No new provider request, purchase or host settings change occurred. Older dated handoffs below are historical.
+
 **Documentation convention:** Every request is reflected in the relevant Markdown files before reporting completion. This file tracks current setup state; [daily-log.md](daily-log.md) records request outcomes, decisions, verification, blockers, and next steps. Personal details and credentials are omitted. The preference is also saved in personal Codex instructions outside the repository.
+
+**Completion clarification — 22 October:** The ten-day implementation is delivered; full assignment acceptance remains open for independent detection labels (Day 6), successful live OpenAI evaluation (Day 8), genuine PR review (Day 9), and oral-defense/submission acceptance (Day 10). The report, reproduction, dashboard and green hosted checks are already available. Vulnerability repairs remain deferred. This status request only rechecked records and updated Markdown; no new execution, provider request, purchase, merge or submission occurred. See [remaining acceptance work](project-completion.md#remaining-assessment-work).
 
 **Connection check — 22 October 2026:** Chat and local workspace access are working; the project records were read and updated. External services and application health were not rechecked. The project handoff below remains unchanged.
 
@@ -224,3 +228,9 @@ The reproduction script now preserves its project-local kind/kubectl PATH after 
 The clean-PATH end-to-end run passed in 252.36 pipeline seconds without build/test reuse and removed its owned cluster. Final hosted run 39821125926 passed all eight jobs at the same code revision; all downloaded mandatory receipts share that run/revision and exact image linkage. The local dashboard now contains 371 observations / 234 underlying issues; one passive medium-instance difference from the historical 235-issue snapshot is crawl variation, not a fix. All critical/high aliases remain in the deferred register. Report/evidence and publication checks are recorded in the delivery packet; no new provider call, purchase or billing change occurred.
 
 The refreshed delivery packet was pushed as `c7f25d9`, with zero local/remote divergence and a clean working tree at verification. It contains documentation, sanitized evidence and the inspected twelve-page PDF; tested implementation remains `bef6664`. [Publication receipt](../reports/sanitized/delivery/publication.json). No additional API call, purchase or billing change occurred.
+
+Final repair handoff reviewed after midnight on 23 October IST: zero critical findings remain verified for the remediated local source/image and updated owned study deployment. Local tests, runtime controls, report rendering, hashes and links are checked. Ten unchanged upstream fixture lines remain in the publication scan; no new matched credential content or exception entry was introduced. Changes are uncommitted/unpushed, with no new hosted CI claim.
+
+### Hosted critical-repair publication in progress — 23 October 2026 IST
+
+Commit/push and hosted CI publication are now explicitly authorized. The zero-critical local snapshot above is complete; the new Actions Summary will report the actual hosted run rather than reuse its success. New hosted verification and report publication are in progress; no additional API usage or purchase is required.

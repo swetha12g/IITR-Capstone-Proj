@@ -1,6 +1,20 @@
 # PipelineFortress daily log
 
+## Critical findings repair requested — 22 October 2026
+
+- Request: fix critical findings first and reach zero critical. Critical deferral is superseded; high/lower findings remain deferred, and no additional provider call/purchase is authorized.
+- Actions: traced the 11 issue identities to seven dependency families, replaced the two unpatched dependency paths, upgraded affected packages and hardened JWT/query handling. Updated exploit-success tests to assert rejection and added meaningful regression controls. Preserved the earlier baseline and local work.
+- Evidence so far: fresh source and rebuilt-image scans have zero critical findings; old/new immutable-image probes reproduce then reject unsigned JWTs and executable queries. Sixty-four pipeline contracts and the snippet consistency check pass. Full final application/runtime/pipeline checks are in progress.
+- No finding suppression, severity changes, exact-exception widening, external messages, merges, commits or pushes have occurred for this repair. [Current repair state](critical-remediation.md).
+
 This log records sanitized request outcomes and decisions. Current setup details, version pins, checksums, and rollback commands are maintained in [day1-checkpoint.md](day1-checkpoint.md). Each future request receives a concise entry here, and relevant project documents are updated before reporting completion.
+
+## Completion status clarification — 22 October 2026
+
+- Request: explain remaining work and whether all ten planned days are completed before doing more work.
+- Outcome: implementation across Days 1–10 is delivered; full assignment acceptance remains open. Remaining items are independently validated labels (Day 6), successful live OpenAI evaluation (Day 8), genuine PR review (Day 9), and oral defense/submission acceptance (Day 10). Report, dashboard, reproduction and hosted checks already have evidence.
+- Verification: re-read the completion record, acceptance checklist and publication receipt. No new tests/scans, API calls, purchases, reviews, merges, submissions, commits or pushes occurred for this status request. Critical/high repairs remain deferred as directed.
+- Next: address the genuine remaining assessment evidence separately; no new automatic provider attempt or purchase is authorized.
 
 ## Day 1 — 2026-10-16
 
@@ -518,3 +532,21 @@ Commit `d68686a` / [run 39111621696](https://github.com/swetha12g/IITR-Capstone-
 - Pushed delivery packet `c7f25d9` to the integration branch; local HEAD matched the remote-tracking revision with zero divergence and a clean working tree. This commit changes only documentation, sanitized evidence and the generated PDF; tested implementation remains `bef6664`.
 - Published report/evidence checks show twelve inspected pages, zero publication-secret findings, valid linked evidence hashes and unchanged source/locks/exact approvals. Three focused draft PRs retain green hosted runs and pending human review.
 - [Publication receipt](../reports/sanitized/delivery/publication.json) records the verified delivery revision. No new API request or purchase occurred. Remaining next steps require genuine live access, independent labels/review and the oral assessment; vulnerability fixes remain deferred as directed.
+
+## Critical remediation completed locally — 22 October 2026
+
+- Outcome: all 11 critical underlying issues are absent from fresh source and exact-image scans, without ignore entries or severity changes. Dependencies were patched/replaced; old/new immutable-image probes demonstrate rejection of unsigned JWTs and executable selectors. The CLI critical gate returns exit1 when a synthetic critical count is introduced.
+- Verification: full application run `20261022T181052Z` passed all six stages: 2,332 tests passed, six upstream skips, zero failures; nine external availability tests excluded. Five new regression tests, 64 pipeline/safeguard and 25 source contracts, lint, snippet consistency and server coverage pass. Earlier incompatible legacy-exploit assertions and the download-client size-option error were corrected; prior failed attempts remain recorded.
+- Local pipeline `20261022T181348556832Z` passed all six scans, exact-image runtime and aggregate in 93.19 seconds with explicit reuse of the fresh 143.51-second application sequence and rebuilt image. Project-tree hashes agree. Seven Docker, seven temporary Kubernetes and seven existing-owned-lab checks pass; original owned deployment was updated, temporary resources removed.
+- Current results: 251 observations / 180 underlying issues; zero critical, 91 high, 45 medium, 28 low and 16 informational. High/lower risks remain deferred. Updated dashboard and twelve-page report; all PDF pages rendered/inspected and original PDF retained in history.
+- Source/root lock are intentionally changed; frontend lock, license and original exact approvals are unchanged. Changes remain local/uncommitted. No provider requests, purchases, host kernel changes, external messages, merges or pushes occurred. New hosted CI and independent review remain next steps, alongside the existing assessment dependencies. [Verification](../reports/sanitized/critical-remediation/verification.json).
+
+Final repair review: all twelve regenerated report pages were inspected. Changed/new publication candidates and extracted PDF text have ten Gitleaks matches, all unchanged upstream fixture lines verified against the base commit; no new matched credential content or exception entry. Current local file links and evidence hashes pass. This is a reviewed local working copy, not a new hosted publication; no commits or pushes were made.
+
+### Final handoff — 23 October 2026 IST
+
+The final documentation/privacy review crossed local midnight; execution receipts retain their actual UTC timestamps. Critical remediation is complete locally: 11 → 0, owned deployment updated, 2,332 selected application passes / six skips, 64 current contracts and 25 source contracts, twelve rendered/inspected report pages, valid hashes and file links. Current project source remains hash-bound and uncommitted; no push, provider call or purchase occurred. The next publication step is review/commit/push and hosted verification of this repair, with high/lower findings still deferred.
+
+## Critical repair publication requested — 23 October 2026 IST
+
+The user authorized committing and pushing the completed critical repairs, running hosted CI and publishing a detailed one-stop GitHub Actions Summary. The reviewed local repair snapshot remains historical evidence; a fresh hosted run will bind the published commit, tests and scans. High/lower findings remain deferred. No provider calls, purchases, merges or reviewer messages are included. Next: commit repairs, add a dynamic failure-aware summary, push and verify the hosted result and downloadable report.

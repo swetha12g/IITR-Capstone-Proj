@@ -2,25 +2,28 @@
   "schema_version": 1,
   "stage": "dast",
   "execution": "complete",
-  "run_id": "20261022T171521035420Z",
-  "commit": "bef666437f60416fed4d5bceed675c2a6d8513af",
-  "observed_at_utc": "2026-10-22T17:19:33.367351+00:00",
+  "run_id": "20261022T181348556832Z",
+  "commit": "895ee08e2c0cea1d7b19d3c59d367a6f9ff84ebc",
+  "project_tree_sha256": "4b53c134e63adb5fa6dc7b5265a5be5520bbb419ae736239f6062daa4591b7e7",
+  "worktree_modified": true,
+  "observed_at_utc": "2026-10-22T18:15:21.734447+00:00",
   "reports": [
     {
       "scanner_stage": "dast",
       "exit_code": 1,
-      "sha256": "c447d6a195adaabddd3494f441c76c11d02c14ac7dd82159d1e97e5d46a0f8f2"
+      "sha256": "95495b6bd7adbebe643f99832aca4e36caf81aa00b89678645cacca89367bb2b"
     }
   ],
   "findings_by_severity": {
     "INFO": 16,
     "LOW": 21,
-    "MEDIUM": 9
+    "MEDIUM": 10
   },
   "finding_fingerprints": [
     "00abf5cff5a99eb7610deee2290b41ee166cd96f8b289675d7c0275ed0445353",
     "0ab2bb24191c80d0e466a0978622645bc40b9f1de8b645220f6d1cac78f112bf",
     "0f8e01e32fa3919271bbfa2882bb3a1b672c9252ce4ebede4ebea7f0baa9a688",
+    "10a720a7674c8ca82e39b70458e97bd9dd232a4f7230af5891491adb1c8fbe9b",
     "138e45805be39abd2debbf511ae8bbed765da66b52e3274728d7515588e63a18",
     "163550c54b24f10248c9ed64863292a0aa2f76b2367a16e50092ee40dbb2b05c",
     "18fd23dc9054110f1107096b2a6c0a249ca97c739552a058f29f69f9fcdc0513",
@@ -45,7 +48,6 @@
     "a6c470ee31fc1d35eb450b75fff1d1f7898c5a56d8348e1c03aca3585e2a59bb",
     "aa7e34735408854fa0b7af905c758d0c96dadb211aaec2fd7ce673572dee9ac0",
     "b150601d6b70014ad502cf6e58c6bbf4fce231a8c718fe1d635d294abeb684c0",
-    "b492ae2ab02ff753ebc55355e45d87dae4650aaf6697f8b409856bdc19fc8681",
     "c49b72b29a7843a67cd8525e02b1b37f76c44accf99ca094fbb3b3656727aa43",
     "c7683a5de3bddeb9f14944ea660b8bda428913b4347c4bbe46008b243c3a67d2",
     "d36c4c5637f1ee7fec482c8445c49dfe821412d818822f3561f8b8df0b5a6384",
@@ -57,16 +59,17 @@
     "f4e95df1a7b91a8ff7b90f3bc1886ec2357ba8d2013ffa33dcc1f3dd3d21e1a0",
     "f6712b5ea32d2c4013e9e3d7194574c9e89b05ae406a2125adb95adcea39a1ad",
     "f718abbc9bab5bfb3b22f2cac4549cf5c06439f20fadcd8f3b7780e5758d4a04",
+    "f8f3dec4af778eb0672e52a556220fad0e86a453e5171ac7730147823e025ac3",
     "fd08f4aaeb9cf576bbd690f420fb197f964ab315e007e852c9fb228d7153dc8b",
     "ff44f4a7d11917811658d1fc3369c1caba9cbd5e62f3438cd46520ebdaf241f7"
   ],
   "profile": "study-lab",
-  "deferred_findings": 46,
-  "image_config_id": "sha256:3eb3e0ff60e5fba12f014e5fcc9f6086fa7f366139d52a4bce44e598a3e860e9",
+  "deferred_findings": 47,
+  "image_config_id": "sha256:483df66c5bdfb2d47a740243a6db215e6abe43637a3bf23863ebc857997a59d0",
   "routes_verified": true,
   "cleanup_verified": true,
   "urls_reached": 121,
   "scanner_image": "ghcr.io/zaproxy/zaproxy@sha256:5ccfff9a411743ab2615136a2edd7416bec9ce41572fa94e935df38c14adb2b6",
-  "duration_seconds": 57.4,
+  "duration_seconds": 56.23,
   "duration_scope": "ZAP process execution"
 }

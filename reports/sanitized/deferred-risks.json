@@ -2,136 +2,14 @@
   "schema_version": 1,
   "decision_date": "2026-10-22",
   "scope": "owned study assignment; no production approval",
-  "risk_decision": "User directed completion of the assignment before later remediation.",
+  "risk_decision": "User subsequently requested critical fixes and a zero-critical gate; lower severities remain deferred.",
   "by_severity": {
-    "CRITICAL": 11,
-    "HIGH": 109,
-    "MEDIUM": 69,
-    "LOW": 29,
+    "HIGH": 91,
+    "MEDIUM": 45,
+    "LOW": 28,
     "INFO": 16
   },
   "issues": [
-    {
-      "issue_id": "I-01dd08d5db0f378a008ba40a",
-      "severity": "CRITICAL",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-040bab544abc5c7e45257af1",
-      "severity": "CRITICAL",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-18cdf163d69a2efd2456d285",
-      "severity": "CRITICAL",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-53f93630c50fd2deca26d1f1",
-      "severity": "CRITICAL",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-5ad950b7fefdbb54b8aacd01",
-      "severity": "CRITICAL",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-733d3f1b7a822c30f5e0173d",
-      "severity": "CRITICAL",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-82541fddcedce1da32e93a9d",
-      "severity": "CRITICAL",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-8719a451494783c8c40ac8dc",
-      "severity": "CRITICAL",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-ec4f184e54adf8991a0bbd15",
-      "severity": "CRITICAL",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-f5cd177faf7689fb7ed31349",
-      "severity": "CRITICAL",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-fce7924b1c720ec1d64b78fd",
-      "severity": "CRITICAL",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
     {
       "issue_id": "I-00563f746378f7454c5b88d3",
       "severity": "HIGH",
@@ -155,13 +33,33 @@
       "remediation": "later, per user direction"
     },
     {
+      "issue_id": "I-0a474b31671b49baa0cccd65",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-tree"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-0bd30fc0493c73b4c45f0875",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
       "issue_id": "I-0c022780dff8776b9902f12f",
       "severity": "HIGH",
       "stages": [
-        "secrets-history",
-        "secrets-tree"
+        "secrets-history"
       ],
-      "observations": 2,
+      "observations": 1,
       "status": "deferred-study-lab",
       "remediation": "later, per user direction"
     },
@@ -199,17 +97,6 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-126619bb946e646784bb9476",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-139137c37c2bd0ace1c2b7a5",
       "severity": "HIGH",
       "stages": [
@@ -226,17 +113,6 @@
       "stages": [
         "secrets-history",
         "secrets-tree"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-156e810c1e901f4a49556a03",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
       ],
       "observations": 2,
       "status": "deferred-study-lab",
@@ -271,6 +147,16 @@
         "secrets-tree"
       ],
       "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-1964866cc8ed6dd7f4b49d6f",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-tree"
+      ],
+      "observations": 1,
       "status": "deferred-study-lab",
       "remediation": "later, per user direction"
     },
@@ -310,10 +196,9 @@
       "issue_id": "I-1f5d95972df90e1ca9eea1b5",
       "severity": "HIGH",
       "stages": [
-        "secrets-history",
-        "secrets-tree"
+        "secrets-history"
       ],
-      "observations": 2,
+      "observations": 1,
       "status": "deferred-study-lab",
       "remediation": "later, per user direction"
     },
@@ -323,17 +208,6 @@
       "stages": [
         "secrets-history",
         "secrets-tree"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-216683de548f32f8f069a57c",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
       ],
       "observations": 2,
       "status": "deferred-study-lab",
@@ -354,10 +228,9 @@
       "issue_id": "I-25854b7ff667319371231e1e",
       "severity": "HIGH",
       "stages": [
-        "secrets-history",
-        "secrets-tree"
+        "secrets-history"
       ],
-      "observations": 2,
+      "observations": 1,
       "status": "deferred-study-lab",
       "remediation": "later, per user direction"
     },
@@ -365,21 +238,9 @@
       "issue_id": "I-2605162a4461d18f1b024f63",
       "severity": "HIGH",
       "stages": [
-        "secrets-history",
-        "secrets-tree"
+        "secrets-history"
       ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-26fd272f4a8cca924703c18d",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
+      "observations": 1,
       "status": "deferred-study-lab",
       "remediation": "later, per user direction"
     },
@@ -400,17 +261,6 @@
       "stages": [
         "secrets-history",
         "secrets-tree"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-31b68729e9621e1793081d1b",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
       ],
       "observations": 2,
       "status": "deferred-study-lab",
@@ -450,17 +300,6 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-349b0785db7de085045fc68d",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-35b2c24a61b14f2ba83ddf99",
       "severity": "HIGH",
       "stages": [
@@ -482,33 +321,11 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-364109138e6f92d6de6da4f4",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-3731d235cde33db5bb549e13",
       "severity": "HIGH",
       "stages": [
         "secrets-history",
         "secrets-tree"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-3acd5fe0ae48c765ea9049d0",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
       ],
       "observations": 2,
       "status": "deferred-study-lab",
@@ -536,17 +353,6 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-3d0a6c61bad1c9fe7f2a7b8b",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-3dd147279ccecfff02fd00da",
       "severity": "HIGH",
       "stages": [
@@ -569,17 +375,6 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-4092fdf52d1cd65e88fa2167",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-43cd22092288fd5d459eea63",
       "severity": "HIGH",
       "stages": [
@@ -591,44 +386,11 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-4541d81904dc6808500371c7",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-48d192a5751e099e99850800",
       "severity": "HIGH",
       "stages": [
         "secrets-history",
         "secrets-tree"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-4cb4c10bf22d6166e085246f",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-51c57c1b7789c9be6a1f31b6",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
       ],
       "observations": 2,
       "status": "deferred-study-lab",
@@ -709,17 +471,6 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-6900888ec9a8a04229952d8f",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-705a10fdd874f129f7c448e6",
       "severity": "HIGH",
       "stages": [
@@ -774,13 +525,12 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-86e4fb26eaa2866338b57846",
+      "issue_id": "I-88c8eabdc712150230ee6f35",
       "severity": "HIGH",
       "stages": [
-        "container",
-        "sca"
+        "secrets-tree"
       ],
-      "observations": 2,
+      "observations": 1,
       "status": "deferred-study-lab",
       "remediation": "later, per user direction"
     },
@@ -801,17 +551,6 @@
       "stages": [
         "secrets-history",
         "secrets-tree"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-8d819b716b719fbb43cb55bf",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
       ],
       "observations": 2,
       "status": "deferred-study-lab",
@@ -845,28 +584,6 @@
       "stages": [
         "secrets-history",
         "secrets-tree"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-9cca7acac1fc1cdd7b51d638",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-9dc2d243107609634b080193",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
       ],
       "observations": 2,
       "status": "deferred-study-lab",
@@ -950,17 +667,6 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-a7b6718e5afdd63c8db0728b",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-ab7f631963d1190398d5c8af",
       "severity": "HIGH",
       "stages": [
@@ -1018,10 +724,9 @@
       "issue_id": "I-b8b3be58b12e571b61796fbd",
       "severity": "HIGH",
       "stages": [
-        "secrets-history",
-        "secrets-tree"
+        "secrets-history"
       ],
-      "observations": 2,
+      "observations": 1,
       "status": "deferred-study-lab",
       "remediation": "later, per user direction"
     },
@@ -1042,17 +747,6 @@
       "stages": [
         "secrets-history",
         "secrets-tree"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-bf2b0645ae883614ea4efa55",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
       ],
       "observations": 2,
       "status": "deferred-study-lab",
@@ -1155,17 +849,6 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-dc00b88f1938a366877e35e3",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-dcea947d12fc597f51535fca",
       "severity": "HIGH",
       "stages": [
@@ -1210,6 +893,16 @@
       "remediation": "later, per user direction"
     },
     {
+      "issue_id": "I-e28f883860ba36fbc33075be",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-tree"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
       "issue_id": "I-e76b929d5ba73c17902bf943",
       "severity": "HIGH",
       "stages": [
@@ -1241,17 +934,6 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-e88c94f5bfcdb798fc9479f3",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-e9c098cd9860ab5cbdca76b5",
       "severity": "HIGH",
       "stages": [
@@ -1266,10 +948,9 @@
       "issue_id": "I-f198a959e6031b6a479bd81b",
       "severity": "HIGH",
       "stages": [
-        "secrets-history",
-        "secrets-tree"
+        "secrets-history"
       ],
-      "observations": 2,
+      "observations": 1,
       "status": "deferred-study-lab",
       "remediation": "later, per user direction"
     },
@@ -1288,21 +969,9 @@
       "issue_id": "I-f64d53489d6a1df558ed2114",
       "severity": "HIGH",
       "stages": [
-        "secrets-history",
-        "secrets-tree"
+        "secrets-history"
       ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-fa432e861f2e1fb84a2b5a42",
-      "severity": "HIGH",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
+      "observations": 1,
       "status": "deferred-study-lab",
       "remediation": "later, per user direction"
     },
@@ -1312,17 +981,6 @@
       "stages": [
         "secrets-history",
         "secrets-tree"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-0281c2ce5fab0de1845b71ed",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
       ],
       "observations": 2,
       "status": "deferred-study-lab",
@@ -1350,7 +1008,7 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-0f0d06ff8d0dd129c0b3582e",
+      "issue_id": "I-129e4f5eec979fb49c070059",
       "severity": "MEDIUM",
       "stages": [
         "dast"
@@ -1411,45 +1069,12 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-34b419aca9ddff4bd3496ced",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-3ae213ba7c01ff669edc45e5",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-3b4d44528c992c1276c8e9cc",
       "severity": "MEDIUM",
       "stages": [
         "container"
       ],
       "observations": 1,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-4659a48f9956b3451f1f22e5",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
       "status": "deferred-study-lab",
       "remediation": "later, per user direction"
     },
@@ -1464,17 +1089,6 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-4a56089e6f385fc538725e03",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-4c751c8f2fa2e072b0019fd6",
       "severity": "MEDIUM",
       "stages": [
@@ -1485,13 +1099,12 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-4ca0776f4056ddfc8e05a2e3",
+      "issue_id": "I-4f372dfdbee4176e38dbff01",
       "severity": "MEDIUM",
       "stages": [
-        "container",
-        "sca"
+        "sast"
       ],
-      "observations": 2,
+      "observations": 1,
       "status": "deferred-study-lab",
       "remediation": "later, per user direction"
     },
@@ -1526,34 +1139,12 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-5b6fa11b4e6a9ec50c2182ab",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-5df49a2bed92786daa23c159",
       "severity": "MEDIUM",
       "stages": [
         "container"
       ],
       "observations": 1,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-68a75c8f794bac259b05a32c",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
       "status": "deferred-study-lab",
       "remediation": "later, per user direction"
     },
@@ -1568,17 +1159,6 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-6c768e77c0377ef643866a2b",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-6ccf6f6ab4ac8a4bc1c08e04",
       "severity": "MEDIUM",
       "stages": [
@@ -1589,31 +1169,10 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-6fe86e86c2d649e83bb399b2",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-72056532da0f00f80348a5bb",
       "severity": "MEDIUM",
       "stages": [
         "container"
-      ],
-      "observations": 1,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-77188006b32aa1b47736f0b6",
-      "severity": "MEDIUM",
-      "stages": [
-        "sast"
       ],
       "observations": 1,
       "status": "deferred-study-lab",
@@ -1630,17 +1189,6 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-8601079bad6ab16460999a82",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-8883e8da13f84c6c5ff225ee",
       "severity": "MEDIUM",
       "stages": [
@@ -1651,34 +1199,12 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-8e644c0702555ca30fc64940",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-929e559b52e9a43875ab2d73",
       "severity": "MEDIUM",
       "stages": [
         "container"
       ],
       "observations": 1,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-9315a2bb18d9f4319bc61ec2",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
       "status": "deferred-study-lab",
       "remediation": "later, per user direction"
     },
@@ -1744,17 +1270,6 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-aab743eab2976b5988a42f2f",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-b57c0d2b77538732f2c89cc7",
       "severity": "MEDIUM",
       "stages": [
@@ -1785,28 +1300,6 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-c31889ea23f5cc28ce7a8563",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-c74630be3c88843555d43794",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-cc7379b7f2a300b278d7b0bf",
       "severity": "MEDIUM",
       "stages": [
@@ -1817,34 +1310,12 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-cff8e72f2b806dc2be9be96b",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-d19413f377ef469cff904728",
       "severity": "MEDIUM",
       "stages": [
         "sca"
       ],
       "observations": 1,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-d51bac760691938befee77ea",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
       "status": "deferred-study-lab",
       "remediation": "later, per user direction"
     },
@@ -1869,35 +1340,12 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-d94897c796bf7eaf65ace344",
+      "issue_id": "I-dbabaefd16a308c8b458a7e9",
       "severity": "MEDIUM",
       "stages": [
-        "container",
-        "sca"
+        "dast"
       ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-d979b3a0902f3ba9d346d216",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-dd81ab5552860c8b1c092585",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
+      "observations": 1,
       "status": "deferred-study-lab",
       "remediation": "later, per user direction"
     },
@@ -1918,28 +1366,6 @@
         "container"
       ],
       "observations": 1,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-e4acd34b3604fab5a69fd671",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-ec84660e4960cfc831ac2b34",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
       "status": "deferred-study-lab",
       "remediation": "later, per user direction"
     },
@@ -1994,17 +1420,6 @@
       "remediation": "later, per user direction"
     },
     {
-      "issue_id": "I-f9395d3b479e56796133cd98",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
       "issue_id": "I-f95a3418666d1cd0b1731fab",
       "severity": "MEDIUM",
       "stages": [
@@ -2021,17 +1436,6 @@
         "sca"
       ],
       "observations": 1,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-feecc6e6b8a1153150ae8ec9",
-      "severity": "MEDIUM",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
       "status": "deferred-study-lab",
       "remediation": "later, per user direction"
     },
@@ -2083,17 +1487,6 @@
         "dast"
       ],
       "observations": 1,
-      "status": "deferred-study-lab",
-      "remediation": "later, per user direction"
-    },
-    {
-      "issue_id": "I-349a95fbe11788a2e84b71a5",
-      "severity": "LOW",
-      "stages": [
-        "container",
-        "sca"
-      ],
-      "observations": 2,
       "status": "deferred-study-lab",
       "remediation": "later, per user direction"
     },

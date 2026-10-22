@@ -28,3 +28,5 @@ Review reference: [GitHub required-review documentation](https://docs.github.com
 ## Current operating decision
 
 The acknowledgement is confirmed. The user directed completing the study implementation before fixing vulnerabilities; every critical/high issue alias is retained for later remediation. Operational failures and missing evidence are still reported honestly. Current implementation, draft PRs and report status are in [project-completion.md](project-completion.md). Successful live AI evaluation and genuine independent review remain distinct from implementation completion. See [AI evaluation limits](ai-evaluation.md).
+
+The later critical-remediation request supersedes critical-risk deferral: current source and image scans have zero critical findings, and the aggregate rejects any returning critical count. High/lower risks remain deferred. Changes are local/uncommitted and the owned study deployment is updated; no production deployment or new API purchase occurred. [Repair scope and limitations](critical-remediation.md).

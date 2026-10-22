@@ -46,7 +46,7 @@
     "merged": false
   },
   "report": {
-    "file": "output/pdf/PipelineFortress_Study_Report.pdf",
+    "file": "output/pdf/history/c7f25d9/PipelineFortress_Study_Report.pdf",
     "pages": 12,
     "sha256": "dc7bfb3621eed3fc211707f3dfaf8e80c356fcd9b00dfd8fb9a689a65f21b024",
     "all_pages_rendered_and_visually_checked": true
@@ -70,5 +70,7 @@
     "No browser surface available for dashboard visual inspection"
   ],
   "additional_api_requests": 0,
-  "purchases_topups_or_billing_changes": false
+  "purchases_topups_or_billing_changes": false,
+  "historical_snapshot": true,
+  "superseded_by": "reports/sanitized/critical-remediation/verification.json"
 }

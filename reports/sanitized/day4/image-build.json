@@ -1,15 +1,16 @@
 {
-  "observed_at_utc": "2026-10-22T17:18:00.181723+00:00",
+  "observed_at_utc": "2026-10-22T18:10:28.228692+00:00",
   "exit_code": 0,
-  "app_source_commit": "f189f521266f42c6bd05884468292000cee852ed",
+  "app_source_base_commit": "f189f521266f42c6bd05884468292000cee852ed",
+  "source_variant": "critical-remediation; runtime input hashes bind local modifications",
   "context_files": 1201,
-  "context_input_sha256": "e9d8e5286e951b2c517f11d73f2af446c4f4968e4a5f95705a74a2bfac9a2487",
+  "context_input_sha256": "8bd543b3b0085590c492c04d48c81e6a15115293587df0322c6f9414576ae767",
   "locks": {
-    "package-lock.json": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c",
+    "package-lock.json": "02b9263631882e4b27e9f08e11d581d75af56ab0fdfa62ee9bdda8864f7d43da",
     "frontend/package-lock.json": "2cab8508e02d7ca0b74df30010cfefa1c98ce4e76708928726f80e090d931503"
   },
-  "dockerfile_sha256": "cc828201858151386e84c6db36f8ef1040def7fdc9b41f458a3a6e638ca834b6",
-  "image_config_id": "sha256:3eb3e0ff60e5fba12f014e5fcc9f6086fa7f366139d52a4bce44e598a3e860e9",
-  "size_bytes": 345391667,
+  "dockerfile_sha256": "3da1bc9b00b33eb556ac661fcac2715302e555ac4b1a18be0309b5b08ff8f0f2",
+  "image_config_id": "sha256:483df66c5bdfb2d47a740243a6db215e6abe43637a3bf23863ebc857997a59d0",
+  "size_bytes": 356314500,
   "user": "65532:65532"
 }
