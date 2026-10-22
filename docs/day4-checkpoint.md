@@ -1,6 +1,6 @@
 # Day 4 checkpoint — updated 22 October 2026
 
-**Current status: hardening verified locally; vulnerabilities deferred for continued study execution.** Day 3 was the last completed stage. On 22 October the user confirmed signing the Responsible AI acknowledgement and explicitly requested resumption, clearing the entry condition in the [execution guide](../10-days-work-break-down.md#day-4--iac-secure-image-and-sbom). Actual signing date was not supplied; no signature or signed record is stored here. The historical strict gate identifies 39 residual findings. The later user-directed study profile passes execution while deferring these findings; operational errors remain errors. See [current completion state](project-completion.md) for Days 5–10.
+**Current status: hardening verified locally; vulnerabilities deferred for continued study execution.** Days 1–3 have historical local/hosted evidence. On 22 October the user confirmed signing the Responsible AI acknowledgement and explicitly requested resumption, clearing the entry condition in the [execution guide](../10-days-work-break-down.md#day-4--iac-secure-image-and-sbom). Actual signing date was not supplied; no signature or signed record is stored here. The historical strict gate identifies 39 residual findings. The later user-directed study profile passes execution while deferring these findings; operational errors remain errors. See [current completion state](project-completion.md) for Days 5–10.
 
 ## Historical preflight — 19 October
 
@@ -28,7 +28,7 @@ Those preflight checks were read-only; the work below was performed after the 22
 | PF-D4-03 | Build a supported, digest-pinned, minimal non-root image; verify required writable paths and application behavior | Verified production build and seven Docker runtime checks; source/locks preserved |
 | PF-D4-04 | Test Kubernetes security contexts, disabled service-account token, resources/probes and read-only root with explicit writable mounts in the owned lab | Verified Ready rollout, exact CRI/Docker config match, seven HTTP checks and process/filesystem enforcement checks |
 | PF-D4-05 | Pin Syft; scan and inventory the exact hardened image, validate CycloneDX schema/packages and retain image/SBOM/DB identities | Verified Syft 1.55.0, Trivy 0.76.0, 2,748-component CycloneDX 1.6 schema/representative-package validation |
-| PF-D4-06 | Compare actual baseline/hardened results and runtime; extend gate/evidence without widening the existing 186 risk approvals | Comparison and 15 gate contracts verified; acceptance open on one IaC and 38 high/critical container findings |
+| PF-D4-06 | Compare actual baseline/hardened results and runtime; extend gate/evidence without widening the existing 186 risk approvals | Comparison and 15 gate contracts verified; one IaC and 38 high/critical container findings are deferred under the study profile |
 
 ## Measured result
 
@@ -63,4 +63,4 @@ python scripts/test-day4-gates.py
 python scripts/gate-day4.py --manifest "$(cat reports/private/day4/latest-manifest.txt)"
 ```
 
-Requires the recorded Day 3 Trivy binary and the existing owned kind cluster/kubeconfig; install those with their existing documented procedures if absent. The last command currently exits **1** for the 39 real blockers; exit 2 represents invalid/missing/stale/error evidence. Different future DBs/builds can change results. No hosted Day 4 run, full aggregate/DAST gate, new application-suite run, live model call, source remediation, commit or push is claimed. Next: resolve/review residual risks and lab network isolation, then proceed to Day 5 integration.
+The comparison requires both recorded immutable baseline/hardened Docker images, the pinned Day 3 Trivy binary and the existing owned kind cluster/kubeconfig. The final command uses the authorized study profile and exits 0 with 39 deferred findings. `--profile strict` retains the separate security decision; exit 2 denotes invalid/missing/stale/error evidence. Later DBs/builds can change counts. Days 5–10 now have additional execution, AI boundary and report evidence; see [current completion state](project-completion.md) and [fresh reproduction](reproduction.md). No full cluster compliance or production safety is asserted.

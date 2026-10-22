@@ -3,6 +3,7 @@
 from datetime import datetime, timezone
 import hashlib
 import json
+import os
 from pathlib import Path
 import subprocess
 import time
@@ -32,7 +33,19 @@ def main():
         label = 'fixed' if fixed else 'bad'
         private = ROOT / 'reports/private/day5' / ('fixture-' + run + '-' + label)
         private.mkdir(parents=True)
-        private.chmod(0o777)
+        # Prove the hosted-runner mismatch with an actual different-UID write,
+        # then prove supplementary group access repairs it without mode0777.
+        probe_uid = 65532 if os.getuid() != 65532 else 65533
+        private.chmod(0o755)
+        probe = ['docker', 'run', '--rm', '--network', 'none', '--user', str(probe_uid) + ':' + str(probe_uid),
+                 '--group-add', str(private.stat().st_gid), '-v', str(private) + ':/zap/wrk:rw', pin['image'],
+                 'python3', '-c', "from pathlib import Path;Path('/zap/wrk/write-probe').write_text('owned fixture')"]
+        with (private / 'access-probe.log').open('wb') as log:
+            before_write = subprocess.run(probe, stdout=log, stderr=subprocess.STDOUT, timeout=30).returncode
+            private.chmod(0o770)
+            after_write = subprocess.run(probe, stdout=log, stderr=subprocess.STDOUT, timeout=30).returncode
+        assert before_write != 0 and after_write == 0
+        (private / 'write-probe').unlink()
         (private / 'hook.py').write_text(HOOK)
         (private / 'rules.conf').write_text('10038\tFAIL\tMissing CSP\n10021\tFAIL\tMissing nosniff\n')
         name = 'pf-zap-fixture-' + run.lower() + '-' + label
@@ -41,6 +54,7 @@ def main():
         try:
             with (private / 'scan.log').open('wb') as log:
                 process = subprocess.run(['docker', 'run', '--rm', '--name', name, '--network', 'none',
+                    '--group-add', str(private.stat().st_gid),
                     '-e', 'PF_FIXTURE_FIXED=' + str(int(fixed)), '-v', str(private) + ':/zap/wrk:rw', pin['image'],
                     'zap-baseline.py', '--autooff', '-t', 'http://127.0.0.1:8089', '-m', '1', '-T', '3',
                     '-c', 'rules.conf', '-J', 'zap.json', '--hook', '/zap/wrk/hook.py',
@@ -56,6 +70,7 @@ def main():
         clean = not subprocess.check_output(['docker', 'ps', '-a', '--filter', 'name=^/' + name + '$', '--format', '{{.ID}}']).strip()
         passed = code in ({0, 2} if fixed else {1}) and selected == (set() if fixed else {'10038', '10021'}) and clean
         results.append({'case': label, 'passed': passed, 'exit_code': code, 'selected_alert_ids': sorted(selected),
+                        'different_uid_write_before_exit': before_write, 'different_uid_write_after_exit': after_write,
                         'report_sha256': hashlib.sha256(report.read_bytes()).hexdigest(), 'cleanup_verified': clean,
                         'network': 'none; fixture and scanner share container loopback only',
                         'duration_seconds': round(time.monotonic() - started, 2)})
