@@ -222,3 +222,5 @@ The reproduction script now preserves its project-local kind/kubectl PATH after 
 ### Continuation verified — 22 October 2026
 
 The clean-PATH end-to-end run passed in 252.36 pipeline seconds without build/test reuse and removed its owned cluster. Final hosted run 39821125926 passed all eight jobs at the same code revision; all downloaded mandatory receipts share that run/revision and exact image linkage. The local dashboard now contains 371 observations / 234 underlying issues; one passive medium-instance difference from the historical 235-issue snapshot is crawl variation, not a fix. All critical/high aliases remain in the deferred register. Report/evidence and publication checks are recorded in the delivery packet; no new provider call, purchase or billing change occurred.
+
+The refreshed delivery packet was pushed as `c7f25d9`, with zero local/remote divergence and a clean working tree at verification. It contains documentation, sanitized evidence and the inspected twelve-page PDF; tested implementation remains `bef6664`. [Publication receipt](../reports/sanitized/delivery/publication.json). No additional API call, purchase or billing change occurred.
