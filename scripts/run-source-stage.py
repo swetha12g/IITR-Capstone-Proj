@@ -19,6 +19,16 @@ scans = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(scans)
 
 
+def prepare_locks(root):
+    for origin, destination in [('package-lock.json', 'package-lock.json'), ('frontend-package-lock.json', 'frontend/package-lock.json')]:
+        source = root / 'locks/juice-shop' / origin
+        target = root / 'app/juice-shop' / destination
+        if target.exists() and target.read_bytes() != source.read_bytes():
+            raise ValueError('application lock differs from retained pin; local file preserved')
+        if not target.exists():
+            shutil.copyfile(source, target)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--stage', choices=['sast', 'sca', 'secrets'], required=True)
@@ -26,7 +36,10 @@ def main():
     started = time.monotonic()
     private = ROOT / 'reports/private/pipeline' / (args.stage + '-' + datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ'))
     private.mkdir(parents=True)
+    (ROOT / 'reports/sanitized/pipeline' / (args.stage + '.json')).unlink(missing_ok=True)
     env = scans.tool_environment(private)
+    if args.stage == 'sca':
+        prepare_locks(ROOT)
     if args.stage == 'secrets':
         if subprocess.check_output(['git', 'rev-parse', '--is-shallow-repository'], cwd=ROOT).strip() != b'false':
             raise ValueError('full history is required')
@@ -36,10 +49,6 @@ def main():
     for stage, command, finding_code in scans.commands(private, ROOT / 'app/juice-shop', ROOT):
         if stage not in selected:
             continue
-        if stage == 'sca':
-            for origin, destination in [('package-lock.json', 'package-lock.json'), ('frontend-package-lock.json', 'frontend/package-lock.json')]:
-                if (ROOT / 'locks/juice-shop' / origin).read_bytes() != (ROOT / 'app/juice-shop' / destination).read_bytes():
-                    raise ValueError('application lock differs from retained pin')
         entry = scans.collect(stage, command, private / (stage + '.json'), private, env, finding_code)
         if entry['execution'] == 'error':
             raise RuntimeError('scanner execution failed')
