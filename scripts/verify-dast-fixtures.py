@@ -28,6 +28,14 @@ threading.Thread(target=server.serve_forever,daemon=True).start()
 def main():
     pin = json.loads((ROOT / 'locks/scanners/zap.json').read_text())
     run = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
+    base = ROOT / 'reports/private/day5'
+    base.mkdir(parents=True, exist_ok=True)
+    # Acquire the large image separately: a cold pull must not consume the
+    # short timeout intended for the actual filesystem permission probe.
+    with (base / ('fixture-image-' + run + '.log')).open('wb') as log:
+        present = subprocess.run(['docker', 'image', 'inspect', pin['image']], stdout=log, stderr=subprocess.STDOUT)
+        if present.returncode:
+            subprocess.run(['docker', 'pull', pin['image']], check=True, stdout=log, stderr=subprocess.STDOUT, timeout=600)
     results = []
     for fixed in [False, True]:
         label = 'fixed' if fixed else 'bad'
@@ -44,7 +52,7 @@ def main():
             before_write = subprocess.run(probe, stdout=log, stderr=subprocess.STDOUT, timeout=30).returncode
             private.chmod(0o770)
             after_write = subprocess.run(probe, stdout=log, stderr=subprocess.STDOUT, timeout=30).returncode
-        assert before_write != 0 and after_write == 0
+        assert before_write != 0 and after_write == 0 and 'PermissionError' in (private / 'access-probe.log').read_text()
         (private / 'write-probe').unlink()
         (private / 'hook.py').write_text(HOOK)
         (private / 'rules.conf').write_text('10038\tFAIL\tMissing CSP\n10021\tFAIL\tMissing nosniff\n')

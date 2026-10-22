@@ -474,3 +474,9 @@ Commit `d68686a` / [run 39111621696](https://github.com/swetha12g/IITR-Capstone-
 - Hosted run `39805306325` passed application/build, SAST, SCA, secrets, IaC, container and hardened runtime checks, but ZAP exited3 without report files. The DAST receipt was absent and aggregate correctly failed; historical failure receipt retained. It is not labeled a full hosted pass.
 - Reproduced the host/scanner UID mismatch with a real different-UID Docker write probe: mode0755 fails and mode0770 plus the mounted directory's supplementary group passes. Applied that group access to ZAP while retaining its UID and avoiding world-writable workdirs. Both selected header bad/fixed scans still pass and clean up.
 - Added source-free error-presence flags for future DAST diagnostics. A local app scan and the repaired hosted run are being verified. No security finding was suppressed and no API call/purchase occurred.
+
+### Continue remaining delivery verification — 22 October 2026
+
+- Request: continue the project. Preserved the OpenAI-only and no-new-purchase decision; no further live calls or ledger reset.
+- Local verification: the cold-image fixture bug is fixed by acquiring the pinned image before the short permission probe. Different-UID access and both selected bad/fixed ZAP header checks pass; all 62 current contracts pass.
+- Hosted run `39808260517` is retained as failed: SAST produced an incomplete report, and the new short permission probe timed out while implicitly pulling a cold scanner image. Added source-free SAST error-category diagnostics; invalid reports remain errors. A repaired hosted run and final evidence/report refresh are next.
