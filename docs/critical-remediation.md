@@ -28,7 +28,7 @@ The seven affected dependency families include two old JWT versions. The origina
 | Lodash | 2.4.2 under the old sanitizer | sanitize-html 2.18.1 removes the old dependency; remaining Lodash is 4.18.1 |
 | tar | 6.2.1 | 7.5.19 |
 
-All six scanner stages and build/test passed in run `20261022T181348556832Z`: zero critical observations, zero security blockers and zero operational errors. The scan/runtime sequence took 93.19 seconds after explicit reuse of the fresh application/image checks. The full six-step application sequence took 143.51 seconds separately; setup and cluster creation are additional. Every stage binds the same project-tree hash. Changes are local and uncommitted on base `895ee08`; earlier hosted passes predate this repair.
+All six scanner stages and build/test passed in run `20261022T181348556832Z`: zero critical observations, zero security blockers and zero operational errors. The scan/runtime sequence took 93.19 seconds after explicit reuse of the fresh application/image checks. The full six-step application sequence took 143.51 seconds separately; setup and cluster creation are additional. Every stage binds the same project-tree hash. That local measurement used uncommitted changes on base `895ee08`; subsequent commits and fresh hosted verification are recorded below.
 
 The selected application suites have **2,332 passed, six upstream skips and zero failures**: frontend 1,372; server 422; local API 538. Nine external availability tests remain explicitly excluded. Sixty-four pipeline/safeguard contracts, 25 source-gate contracts, five new critical regression tests, lint and snippet consistency checks pass. Server unit coverage regenerated successfully (41.85% lines; not a whole-application coverage claim).
 
@@ -44,7 +44,7 @@ The dashboard and twelve-page report now reflect the current results; all report
 
 Tests now expect rejection of forged JWTs, executable review/order queries and the old sanitizer bypass. Those training exploits are no longer solvable in this variant. Signing keys are process-local, so a backend restart requires signing in again. The root dependency lock is updated; the frontend lock, original license and exact historical source-approval file are unchanged. No finding suppressions or new exception entries are used.
 
-No full legacy Cypress challenge-suite pass is claimed; no Cypress binary is installed. New hosted CI and independent review of these uncommitted changes remain to be done. Successful live AI, independent label/PR review and oral assessment remain separate project requirements. No additional provider request, purchase, billing change, commit or push occurred during this repair.
+No full legacy Cypress challenge-suite pass is claimed; no Cypress binary is installed. Independent review remains pending; subsequent hosted CI publication is recorded below. Successful live AI, independent label/PR review and oral assessment remain separate project requirements. No additional provider request, purchase, billing change, commit or push occurred during the local repair phase.
 
 ## Primary references
 
@@ -55,3 +55,7 @@ No full legacy Cypress challenge-suite pass is claimed; no Cypress binary is ins
 - [Maintained NeDB API](https://github.com/seald/nedb), [HTTP download API](https://github.com/npm/make-fetch-happen), [JWT verification API](https://github.com/auth0/node-jsonwebtoken).
 
 Final privacy/link review: changed/new files and extracted PDF text were scanned. Gitleaks reports ten unchanged upstream test-fixture lines, each verified byte-for-byte against the base commit; no new matched credential content was introduced. No new ignore entries were added and no zero-finding secrets-scan claim is made. [Review receipt](../reports/sanitized/critical-remediation/publication-review.json). Current evidence hashes and local file links validate.
+
+## Subsequent hosted publication — 23 October 2026 IST
+
+The user separately authorized commits, push and hosted verification. Repair commit `8ac412e` and report/workflow commit `1616f14` are pushed. [Run 39842575944](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39842575944) passed all eight jobs on `1616f14`, with zero critical findings, 2,332 application passes / six skips, 76 contracts, validated SBOM and all seven runtime checks. The Summary and ten-file report packet are published; official archive digest, gate recomputation, identity/image linkage and identical poster bytes are verified. [Hosted verification](../reports/sanitized/critical-remediation/ci/verification.json). The original local receipt and PDF retain their historical measurement scope. [Actions poster design and verification](actions-summary.md).

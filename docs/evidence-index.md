@@ -183,7 +183,7 @@ Collection run `20261022T151417042900Z`; SBOM has 2,748 CycloneDX 1.6 components
 
 ## Current critical-remediation evidence — 22 October 2026
 
-The later repair supersedes critical deferral. **Fresh source/image scans: 11 → 0 critical underlying issues.** The current local source/root lock are modified and uncommitted; all new stage receipts bind the project tree. Earlier hosted runs and fresh-directory datasets below predate this variant. [Current repair state](critical-remediation.md).
+The later repair supersedes critical deferral. **Fresh source/image scans: 11 → 0 critical underlying issues.** The recorded local source/root-lock snapshot was modified and uncommitted at measurement time; all its stage receipts bind that project tree. Repairs are now committed/pushed as `8ac412e`, with the dynamic Actions report at `1616f14`; fresh hosted run 39842575944 passed all eight jobs with zero critical findings. Earlier hosted runs and fresh-directory datasets below predate this variant. [Current repair state](critical-remediation.md).
 
 | Evidence | Verified scope | SHA-256 |
 |---|---|---|
@@ -223,3 +223,13 @@ The user directed completing the study assignment with vulnerabilities deferred.
 Fresh-directory runs at 6ef16a0 and 1e0115c share host caches; they are not fresh-machine tests. The later clean-PATH run verifies the Kubernetes-tool selection correction in the existing project directory. Historical fresh datasets have 372 normalized observations / 235 issues; the current local dataset has one fewer passive medium alert instance. No fix is inferred from crawl variation. [Reproduction scope](reproduction.md).
 
 [Hosted run 39821125926](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39821125926) and the three remediation PR workflows passed. All earlier failed runs remain historical failures. Successful live AI, independent labels/human review and oral assessment remain open; no provider retry or purchase was made. [Final validation record](../reports/sanitized/delivery/validation.json) records the historical publication checks; its original report is retained in output history. The current repair receipt identifies the updated report.
+
+## Critical repair hosted publication — 23 October 2026 IST
+
+[Actions Summary](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39842575944) passed on `1616f14`; source and exact-image critical counts are zero. All 2,332 selected application tests and 76 contracts passed; six application skips and nine excluded external checks remain explicit. Hosted totals are 257 cross-stage observations, including 159 high; these are not the local deduplicated register. The original local proof and checked-in PDF remain historical snapshots.
+
+| Evidence | Verified scope | SHA-256 |
+| --- | --- | --- |
+| [Hosted publication verification](../reports/sanitized/critical-remediation/ci/verification.json) | Eight green jobs; archive digest, recomputed gate and run/commit/image bindings | `f18e944842db3c425e54113a257c9dccc48be2d906e7e23fece1683fbedeebbe` |
+| [Published poster copy](../reports/sanitized/critical-remediation/ci/actions-summary.md) | 7,435 bytes identical to logged Actions Summary write and regeneration | `fb6f1dd2e2485b31097d2e55ca9ed2b4ea8e2f06f44123db898632cc0471694c` |
+| [Hosted aggregate](../reports/sanitized/critical-remediation/ci/pipeline/aggregate.json) | Seven stage receipts; zero critical, zero operational errors | `4630822fa0cc3385a2d55a626975a5a3728f2b82cb3d3350dcb8f02221bbea4a` |
