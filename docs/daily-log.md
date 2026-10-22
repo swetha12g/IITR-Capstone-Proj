@@ -462,3 +462,15 @@ Commit `d68686a` / [run 39111621696](https://github.com/swetha12g/IITR-Capstone-
 - The isolated bad/fixed header fixture passed actual pinned ZAP scans in a container with no external network. Both selected alerts (10021 and 10038) appear before and disappear after adding the headers. Other passive warnings remain visible; this is not a clean-security claim. Both containers were removed.
 - Added the same verification and current contract tests to hosted execution; fresh reproduction also runs the fixture. CI clears checked-in stage receipts before collecting new evidence, preventing stale uploaded results after early failures. Documentation/evidence-only pushes do not restart expensive full scans.
 - The fresh owned reproduction cluster reached Ready with all system pods Ready and no restarts. The original cluster was not modified. Full fresh application/scanner execution is in progress.
+
+### Fresh reproduction passed
+
+- A new full-history directory at `6ef16a0` bootstrapped project-local tools and executed all six application stages, rebuilt the exact image, ran all six scanners, deployed/verified the workload, performed mock triage and rebuilt the dashboard. Verdict PASS_WITH_DEFERRED_RISKS, zero operational errors; no live API call/purchase.
+- Pipeline commands took 268.94 seconds including the fresh 154.47-second application sequence; downloads/setup are additional. Shared host Docker/download caches are declared. Both runs normalize to 372 observations / 235 underlying issues; raw ZAP duplicate-instance counts differ by one.
+- The new cluster and all system pods were Ready with zero restarts during verification; the uniquely owned cluster was removed and no owned node container remained. Retained sanitized receipts under reproduction evidence. Hosted verification and final report/evidence refresh remain in progress; live API success and genuine human review are not fabricated.
+
+### Hosted DAST mount-permission regression
+
+- Hosted run `39805306325` passed application/build, SAST, SCA, secrets, IaC, container and hardened runtime checks, but ZAP exited3 without report files. The DAST receipt was absent and aggregate correctly failed; historical failure receipt retained. It is not labeled a full hosted pass.
+- Reproduced the host/scanner UID mismatch with a real different-UID Docker write probe: mode0755 fails and mode0770 plus the mounted directory's supplementary group passes. Applied that group access to ZAP while retaining its UID and avoiding world-writable workdirs. Both selected header bad/fixed scans still pass and clean up.
+- Added source-free error-presence flags for future DAST diagnostics. A local app scan and the repaired hosted run are being verified. No security finding was suppressed and no API call/purchase occurred.

@@ -88,6 +88,8 @@ That execution took 115.75 seconds after explicit reuse of a freshly verified bu
 
 The hosted workflow defines six scan jobs, build/test and one final aggregate job. It uses read-only PR permissions, pinned action SHAs, full history for secrets, an integrity-checked image archive between jobs and cleanup of its own staging cluster. Skipped jobs, malformed/missing receipts, scanner errors and mixed identities cannot pass the execution check.
 
+Hosted verification: completed; conclusion: failure. Run: https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39805306325
+
 
 ## 6. Hardening and software inventory
 
@@ -122,6 +124,8 @@ The scan uses a traditional unauthenticated crawler and passive checks. It does 
 
 Early scanner-start attempts exposed loopback IPv6 and API Host-header allowlist mismatches. The corrections allow only the local API client and retain diagnostics. Successful scanning is supported by recorded app routes and report hashes, rather than a container exit code alone.
 
+A different-UID container probe reproduces the hosted workdir write failure, then verifies the group-access repair. The scanner retains its own UID; only the owned mounted workdir receives group write access. Selected header failures are also detected before and absent after repair in isolated fixtures.
+
 HTTP findings remain visible in normalization and the deferred register. The security result is not rewritten as clean merely because assignment execution continues.
 
 
@@ -142,6 +146,17 @@ The measured 93.3% fixture recall exceeds the scenario target on this small set.
 The dashboard recomputes from normalized evidence and labels, exports JSON/CSV, separates observations from underlying issues and displays known misses. Empty denominators are N/A. It does not present percentiles from one timing observation. Current global underlying issue count is 235.
 
 
+### Deferred underlying issues by severity
+
+| Severity | Underlying issues |
+|---|---|
+| CRITICAL | 11 |
+| HIGH | 109 |
+| MEDIUM | 70 |
+| LOW | 29 |
+| INFO | 16 |
+
+
 ## 9. AI safeguards and honest live status
 
 | Boundary | Implemented evidence |
@@ -152,7 +167,7 @@ The dashboard recomputes from normalized evidence and labels, exports JSON/CSV, 
 | Grounding | Unknown IDs, invented CVEs/versions, unsupported operations and omissions rejected |
 | Live restrictions | OpenAI only; no tools; store=false; bounded tokens, attempts and conservative reservations |
 
-60 tests cover the relevant normalization, aggregate, boundary, grounding and bounded-patch behavior. A twenty-finding mock batch validates; mock output is deterministic policy behavior and is not reported as a real model evaluation.
+62 tests cover the relevant normalization, aggregate, boundary, grounding and bounded-patch behavior. A twenty-finding mock batch validates; mock output is deterministic policy behavior and is not reported as a real model evaluation.
 
 The user-selected existing OpenAI key passed read-only model lookup. All three bounded generation attempts returned HTTP429; a specific underlying cause was not established. No successful model output or actual token/invoice cost is fabricated. The request cap is exhausted. No credits were purchased, account topped up or billing settings changed.
 
@@ -173,14 +188,14 @@ Each proposal has a bounded single-file diff, before/after hashes, actual select
 
 The Codex coding assistant authored the templates. The unavailable external application API is not credited with generating them. Three examples do not close the larger risk backlog, which remains deferred by the user.
 
-Draft PR links recorded: 0. Genuine review/first-review correctness is pending unless the review ledger records a real verdict. No author self-approval, fabricated independent review or automatic merge is claimed.
+Draft PR links recorded: 3. Genuine review/first-review correctness is pending unless the review ledger records a real verdict. No author self-approval, fabricated independent review or automatic merge is claimed.
 
 
 ## 11. Reproduction and maturity self-assessment
 
 Reproduction bootstraps project-local Python/pip/Node and verified scanner/tool distributions, runs the selected application suites, rebuilds the image, scans all stages, deploys into a uniquely named temporary kind cluster, runs passive DAST, normalizes, checks mock AI safeguards and regenerates the dashboard. Live API usage is excluded from reproduction by default.
 
-Fresh-directory result: not yet recorded. The script deletes only its own temporary cluster and retains sanitized execution evidence. The original study cluster is a separate resource.
+Fresh-directory result: PASS_WITH_DEFERRED_RISKS, commit 6ef16a0. Temporary-cluster cleanup verified: True. This is a fresh project directory on the same Docker host with standard caches, not a fresh-machine test. The later isolated DAST fixture was verified separately. The original study cluster is a separate resource.
 
 
 ### OWASP SAMM v2 lens

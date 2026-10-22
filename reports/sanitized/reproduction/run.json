@@ -1,0 +1,68 @@
+{
+  "scope": "fresh directory, project-local bootstrap, unique ephemeral owned cluster, no live API",
+  "verdict": "PASS_WITH_DEFERRED_RISKS",
+  "run_id": "20261022T152803854522Z",
+  "operational_errors": [],
+  "application_profile": "offline-local; external service availability suite excluded",
+  "cleanup": "handled by shell finalization; verify cleanup.log and cluster inventory",
+  "project_commit": "6ef16a09d9c60ab5b78136f3430590fcefba8d7a",
+  "cleanup_verified": true,
+  "script_exit_code": 0,
+  "shared_host_docker_and_download_caches": true,
+  "fresh_machine_claimed": false,
+  "implementation_note": "Commit 6ef16a0 full fresh clone; subsequent isolated DAST header fixture verified separately at bc5a054",
+  "evidence": [
+    {
+      "file": "application.json",
+      "sha256": "2755ea6c957c9d00f1bed65b1ef5793ae8f4a5a78121230e82cf55fabaa64caa"
+    },
+    {
+      "file": "bootstrap.json",
+      "sha256": "18d290df956a2ee1d04af70831854de68f174947e4f129144c8d11ef451a95fc"
+    },
+    {
+      "file": "dashboard.json",
+      "sha256": "dc361e2300dea99e7f01c61ed04bf6833d589a2292e83afc0551e5bef93345e3"
+    },
+    {
+      "file": "dast.json",
+      "sha256": "d097a9fa0ffa84e2b4243261abfca1eb83569ef43730208c857736c34e3e1f31"
+    },
+    {
+      "file": "mock-triage.json",
+      "sha256": "656d4254cfa2f2b90d9989d74cb18073b25ccb0cd515e2c36efb9ab244d34b13"
+    },
+    {
+      "file": "pipeline/aggregate.json",
+      "sha256": "19bbecadfe51813da7bc15296b7efebb2988dcbf9529bf617ce68f0bb80bf860"
+    },
+    {
+      "file": "pipeline/build-test.json",
+      "sha256": "6e8701eb38fe920f16d94ada7c0ade9d92881063f046cc7185e73d3a60228260"
+    },
+    {
+      "file": "pipeline/container.json",
+      "sha256": "863c1410d6c14144adc684944be32918aa62d83c9d8392f6298ce030d8a5cc83"
+    },
+    {
+      "file": "pipeline/dast.json",
+      "sha256": "15df0062c7937ec023f34f07b151ef2d9156b312984243a7cb687ee5f08d356e"
+    },
+    {
+      "file": "pipeline/iac.json",
+      "sha256": "c82e237c4be185e59b037e2f8f5f6532e1a98a6152ae9fc17cc1456bf09d19c8"
+    },
+    {
+      "file": "pipeline/sast.json",
+      "sha256": "dd740b6963f271ced3bea4f2f69bbec484eac81a75f1d3a3fadbde49780dfcb4"
+    },
+    {
+      "file": "pipeline/sca.json",
+      "sha256": "aca13935049bbe3a31d32b93ab7de55e580b23e2a33e2655c99e8079dbe484da"
+    },
+    {
+      "file": "pipeline/secrets.json",
+      "sha256": "414f11577f52c6f05ed5567ecfb45c6268514bdf056da2be7b0df783607b4e48"
+    }
+  ]
+}

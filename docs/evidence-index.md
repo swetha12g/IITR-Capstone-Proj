@@ -163,27 +163,23 @@ The prior approval run's source gate passed but its post-rollout pod wait failed
 
 Active exact policy SHA-256: `ec0f59810986dd92d89bdaf73c11ae9aa460f7feeb87036ea320004f60fac78c`.
 
-## Day 4 local evidence — 22 October 2026
+## Day 4 local comparison evidence — 22 October 2026
 
-User acknowledgement confirmed before resumed implementation. Project HEAD at collection is `993f1df104f309ce71c3babe22a5cc7e7205a31b`; Day 4 files are local/uncommitted, so this commit alone does not contain them. The scan manifest binds current implementation/policy/lock inputs by SHA-256. [Checkpoint](day4-checkpoint.md), [control mapping and limits](day4-controls.md), [residual-risk record](day4-risk-review.md). No hosted Day 4 receipt is claimed.
+Acknowledgement was confirmed before resumed work. Collection at repository HEAD `993f1df` binds the then-local implementation inputs by SHA-256; that HEAD alone did not contain the implementation. The study profile continues with 39 deferred findings and zero operational errors, while the historical strict security result is retained. Exact source approvals are unchanged.
 
-| ID | Evidence | Result / limitation | SHA-256 |
-|---|---|---|---|
-| D4-TOOLS-20261022 | [tools-verification.json](../reports/sanitized/day4/tools-verification.json) | Checkov 3.3.30 / Syft 1.55.0 hash/isolation verification | `4135be334089347843ee17fef22edb270688617fd248fccd12abc7e2869d5229` |
-| D4-POLICY-20261022 | [policy-fixtures.json](../reports/sanitized/day4/policy-fixtures.json) | Eight real CLI positive/negative policy fixtures pass | `fb169aa211235fcbad7b990328d018df87cf28ab192ad6dcc745f7990685d821` |
-| D4-BUILD-20261022 | [image-build.json](../reports/sanitized/day4/image-build.json) | Hardened production build passed; app/lock bytes preserved | `a3238442400a25676097aa93ad2d21c979da19020e8f93f66ceb20fe56a81a1d` |
-| D4-DOCKER-20261022 | [runtime-docker.json](../reports/sanitized/day4/runtime-docker.json) | Seven HTTP observations plus enforced identity/capability/filesystem controls pass | `6b435530ac780564790cd20227a16eacd516466d16cd5dc699957a9d4ae46220` |
-| D4-KUBE-20261022 | [runtime-kubernetes.json](../reports/sanitized/day4/runtime-kubernetes.json) | Ready zero-restart hardened workload; exact image and seven HTTP observations pass | `4692c07d5afca3d61b69ff32e8fe45d046e2c4cae0aeb8a9ab67f241123fe06c` |
-| D4-DEPLOY-20261022 | [deployment.json](../reports/sanitized/day4/deployment.json) | Local kind canonical manifest/config identities verified; not a registry publication | `f3c67478f77bf83a7fa4faf6b4a897d4c76e1bcb9c1b9ddd642a1635d5b03be7` |
-| D4-SCANS-20261022 | [scan-execution.json](../reports/sanitized/day4/scan-execution.json) | All seven stages complete; same frozen DB for both immutable images | `ba1a025bed099d0833ab033cd709f35da053762adb5694fe0ff7ef69892afa2d` |
-| D4-GATE-20261022 | [gate-summary.json](../reports/sanitized/day4/gate-summary.json) | Study: 39 deferred findings, zero operational errors; historical strict result separate | `7dfeff0a40b58e8892a69e14953883883a1b51e98ee20752ed60fa04d999394b` |
-| D4-CONTRACTS-20261022 | [gate-tests.json](../reports/sanitized/day4/gate-tests.json) | 15 fail-closed contracts pass; synthetic clean case is not the actual verdict | `805e9692b39d20b927dad09caebc4abfa9a842387dc950b2bc5f6c676102b820` |
+| Evidence | Result | SHA-256 |
+|---|---|---|
+| [tools-verification.json](../reports/sanitized/day4/tools-verification.json) | Pinned isolated Checkov/Syft | `4135be334089347843ee17fef22edb270688617fd248fccd12abc7e2869d5229` |
+| [policy-fixtures.json](../reports/sanitized/day4/policy-fixtures.json) | Eight actual CLI fixtures passed | `fb169aa211235fcbad7b990328d018df87cf28ab192ad6dcc745f7990685d821` |
+| [image-build.json](../reports/sanitized/day4/image-build.json) | Allowlisted source-built hardened image | `a3238442400a25676097aa93ad2d21c979da19020e8f93f66ceb20fe56a81a1d` |
+| [runtime-docker.json](../reports/sanitized/day4/runtime-docker.json) | Seven functional checks and runtime controls passed | `6b435530ac780564790cd20227a16eacd516466d16cd5dc699957a9d4ae46220` |
+| [runtime-kubernetes.json](../reports/sanitized/day4/runtime-kubernetes.json) | Ready workload; exact image and seven checks passed | `4692c07d5afca3d61b69ff32e8fe45d046e2c4cae0aeb8a9ab67f241123fe06c` |
+| [deployment.json](../reports/sanitized/day4/deployment.json) | Local manifest/config identities verified | `f3c67478f77bf83a7fa4faf6b4a897d4c76e1bcb9c1b9ddd642a1635d5b03be7` |
+| [scan-execution.json](../reports/sanitized/day4/scan-execution.json) | Seven comparison stages; one frozen DB | `ba1a025bed099d0833ab033cd709f35da053762adb5694fe0ff7ef69892afa2d` |
+| [gate-summary.json](../reports/sanitized/day4/gate-summary.json) | Study execution passed; 39 findings deferred | `7dfeff0a40b58e8892a69e14953883883a1b51e98ee20752ed60fa04d999394b` |
+| [gate-tests.json](../reports/sanitized/day4/gate-tests.json) | 15 error/security gate contracts passed | `805e9692b39d20b927dad09caebc4abfa9a842387dc950b2bc5f6c676102b820` |
 
-Current collection run: `20261022T121325249566Z`. SBOM SHA-256: `8b4a49be55ad1696372364dddfd266cf344c54fd8aebdea8a772686dc82a42c3`; schema-valid CycloneDX 1.6, 2,748 components. Raw scanner/SBOM files remain private. DB update time: `2026-10-22T07:10:52.423530461Z`; unchanged DB SHA-256: `fadaf0bac1910af783e6565afeb6b92540db046d4a095ab2ba8d2c6eadc8fac9`. A local Docker config ID and the local containerd manifest digest are different identifiers, both recorded in deployment/runtime evidence.
-
-Measured deltas: 16 IaC/Dockerfile failures removed; one unknown image advisory removed; zero new image identities; 100 retained. The 38 high/critical image findings and missing NetworkPolicy remain unaccepted. Existing Day 3 exception bytes are unchanged. Other system pods have readiness issues; app readiness is not full lab health.
-
-Final local validation: [validation.json](../reports/sanitized/day4/validation.json), SHA-256 `9c37f129328822c60b70410d01bac511249b3c570f6605a9cd12fb3decf62975`. Python/Node syntax, five existing rollout regressions, eight policy fixtures, 15 gate contracts, project Python dependency checks, changed-record links/contact checks and whitespace checks passed. Gitleaks found zero findings in the reviewed changed-file snapshot. Imported app, lockfiles and existing source-risk approvals have no Git diff. These checks do not establish hosted CI or full cluster health.
+Collection run `20261022T151417042900Z`; SBOM has 2,748 CycloneDX 1.6 components. Kubernetes/Dockerfile failures fell from 17 to one; image identities from 101 to 100 with no new identities. The 38 high/critical image findings and NetworkPolicy gap remain deferred. Raw reports/SBOM stay ignored. The later fresh cluster was healthy; this does not claim recovery of historical unready system pods in the original lab.
 
 ## Days 5–10 study evidence — current local snapshot
 
@@ -194,7 +190,11 @@ The user directed continued assignment execution with vulnerabilities deferred. 
 | [Local six-stage execution](../reports/sanitized/pipeline/aggregate.json) | All stages complete; findings deferred; zero execution errors | `ecd4986b325616f6dea33347d64d054af2a8c8c769f3a60160fff0071f1e8833` |
 | [Passive ZAP](../reports/sanitized/day5/dast.json) | 121 URLs, route proof and scanner cleanup | `a89cfd3f938d97df327cacede6b5161e3f0cbdc421df4080452fffa75bb8aecb` |
 | [Dashboard inputs/results](../reports/sanitized/dashboard/index.json) | Post-hoc labeled metrics and normalized counts | `84a366f5486f43762fd895e81496c4a25ce806801016895b0368ea9bc5cbe71a` |
-| [Current contract proof](../reports/sanitized/day7/redaction-tests.json) | 60 tests passed; current boundary hash | `caa93c82c673d64ed59ff4898fd72e47cc07b91c2e3da39fb2fb38de69ad4f7b` |
+| [Current contract proof](../reports/sanitized/day7/redaction-tests.json) | 62 tests passed; current boundary hash | `62be8f6c95189e51422bb7362fae00141a27048af26525c8c6a01ed7b863e6f7` |
 | [Real OpenAI failure](../reports/sanitized/day8/triage-live-error.json) | HTTP429; no successful live result or billing change | `d9f67208a0f2cd9835dc6752479627032a4d0eb478a962196f04ca0c2a61dddb` |
 | [Three focused proposals](../reports/sanitized/day9/proposals.json) | Actual selected-check and runtime before/after evidence | `3530cd44eaefeecde02df661bc02eb72c78a3a9b4f71176511b9957434b989e4` |
 | [Bootstrap](../reports/sanitized/reproduction/bootstrap.json) | Verified project-local tools; no system packages changed | `18d290df956a2ee1d04af70831854de68f174947e4f129144c8d11ef451a95fc` |
+
+Fresh clone `6ef16a0` passed all application/pipeline/runtime/mock stages and cleanup: [reproduction receipt](../reports/sanitized/reproduction/run.json), [fresh aggregate](../reports/sanitized/reproduction/pipeline/aggregate.json). It uses the same host Docker/download caches, not a fresh machine. [Controlled bad/fixed DAST proof](../reports/sanitized/day5/fixture-evidence.json) is separate and passed both selected header checks. [Published draft PRs](../reports/sanitized/day9/pr-receipt.json) each retain one focused file diff; genuine review remains pending.
+
+Hosted verdict and downloaded artifact verification are recorded in [the delivery receipt](../reports/sanitized/delivery/ci-receipt.json). Full hosted completion is not claimed while jobs remain in progress. The twelve-page report and its checksum will be indexed with final delivery validation.
