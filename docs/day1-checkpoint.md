@@ -216,3 +216,5 @@ Fresh-directory reproduction has now passed all application, scanner, runtime, m
 Continuation confirmed on 22 October. No new OpenAI generation request, purchase/top-up or billing change is made. Current delivery verification includes the explicit pinned-image prefetch correction for hosted DAST and source-free diagnostics for incomplete SAST reports. Earlier failed hosted runs remain failed; final hosted validation is still being completed.
 
 The second fresh clone at `1e0115c` passed the full local reproduction and verified cleanup, including the different-UID permission probes. Hosted SAST diagnostics identified a per-rule/file timeout; the explicit budget is now 60 seconds with strict error handling and unchanged scope. A complete hosted pass is still being verified; no new API purchase or call has been made.
+
+The reproduction script now preserves its project-local kind/kubectl PATH after Python activation. A clean-PATH check confirms repository-local kind, kubectl and Node selection; end-to-end verification follows. Earlier fresh-directory results used the same pinned versions and shared host caches, and are not claimed as fresh-machine runs.

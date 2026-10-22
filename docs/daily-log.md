@@ -486,3 +486,14 @@ Commit `d68686a` / [run 39111621696](https://github.com/swetha12g/IITR-Capstone-
 - The safe hosted diagnostics identify `Timeout`, with 643 scanned files and 11 findings, rather than a clean complete report. Installed/official Semgrep documentation confirms the default per-rule/file budget is five seconds.
 - Increased the explicit budget to 60 seconds and disabled timeout-based file skipping, while retaining strict errors, the unchanged coverage/rules and the 900-second process cap. Local scan completes with 643 files, 11 findings and zero errors; all 25 source gate contracts and 62 current contracts pass. [CLI reference](https://docs.semgrep.dev/cli-reference).
 - The second fresh full-history reproduction at `1e0115c` passed all stages in 286.23 seconds, including 156.59 seconds of application checks, with no build/test reuse or API calls; the temporary cluster was deleted. The earlier 6ef16a0 snapshot is retained separately. The current hosted code is being reverified after the resource-budget correction.
+
+### Hosted SAST resource correction verified
+
+- The corrected hosted SAST job completes all 643 selected files with 11 visible findings and an empty error list. Secrets, dependency and IaC jobs also pass. The application build/test and downstream runtime jobs remain in progress; no full hosted pass is asserted yet.
+- Imported application source, dependency locks and exact source approvals remain unchanged. Local source gate contracts total 25 passed, and current evidence/redaction/patch contracts total 62 passed. No further live AI requests or purchases occurred.
+
+### Reproduction PATH portability correction
+
+- A clean-PATH check exposed that activating the Python environment twice removed the newly bootstrapped Kubernetes tools from PATH, allowing the earlier local runs to fall back to the same pinned user-local tools. The earlier results remain valid same-host runs, not fresh-machine proof.
+- Activate once with the project-local Node selection, then prepend the project-local kind/kubectl directory. The clean-PATH check now resolves all three tools inside this repository. A full clean-PATH run verifies that the script does not depend on user-local executables.
+- Report timing text now distinguishes full execution from explicit build/test reuse using the actual receipt. No scanner coverage/rules, application source, API policy or exact risk approvals changed.

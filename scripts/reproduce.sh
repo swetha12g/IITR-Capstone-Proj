@@ -4,10 +4,9 @@ pipelinefortress_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$pipelinefortress_root"
 mkdir -p reports/private/reproduction
 python3 scripts/bootstrap-project.py > reports/private/reproduction/bootstrap.log 2>&1
-source scripts/dev-env.sh
-export PATH="$pipelinefortress_root/.tools/ci/pipelinefortress-tools:$PATH"
 export PIPELINEFORTRESS_NODE_DIR="$pipelinefortress_root/.tools/node/node-v24.22.0-linux-x64"
 source scripts/dev-env.sh
+export PATH="$pipelinefortress_root/.tools/ci/pipelinefortress-tools:$PATH"
 docker info > reports/private/reproduction/docker-info.log 2>&1
 python scripts/install-scanners.py > reports/private/reproduction/source-tools.log 2>&1
 python scripts/install-day4-tools.py > reports/private/reproduction/day4-tools.log 2>&1

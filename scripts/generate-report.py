@@ -125,6 +125,7 @@ def main():
     risks = read('reports/sanitized/deferred-risks.json')
     checks = read('reports/sanitized/day7/redaction-tests.json')
     hosted = read('reports/sanitized/delivery/ci-receipt.json', {})
+    application = read('reports/sanitized/day1-latest.json')
     detection = metrics['detection']
 
     heading(1, 'PipelineFortress')
@@ -166,7 +167,10 @@ def main():
     for stage, counts in metrics['stage_observations'].items():rows.append([stage.upper(), sum(counts.values()), 'Complete; findings deferred'])
     table(rows, [120, 150, WIDTH - 270])
     p('The complete local run is ' + pipeline['run_id'] + '. Its aggregate verdict is ' + pipeline['verdict'] + ', with ' + str(len(pipeline['operational_errors'])) + ' operational errors. The stage receipts retain raw report hashes and exact image linkage.')
-    p('That execution took ' + str(pipeline['duration_seconds']) + ' seconds after explicit reuse of a freshly verified build/test. The application check stages took 144.17 seconds separately; these observations do not establish a pipeline percentile or include every bootstrap/download cost.')
+    if pipeline.get('build_test_reused'):
+        p('That execution took ' + str(pipeline['duration_seconds']) + ' seconds after explicit reuse of a freshly verified build/test. The application check stages took ' + str(round(sum(s['duration_seconds'] for s in application['steps']), 2)) + ' seconds separately. Bootstrap/download costs are additional; no percentile is inferred.')
+    else:
+        p('That full execution took ' + str(pipeline['duration_seconds']) + ' seconds, including all application check stages, image build, scans and owned runtime checks. Build/test results were not reused. Bootstrap/download/cluster-creation costs are additional; no percentile is inferred.')
     p('The hosted workflow defines six scan jobs, build/test and one final aggregate job. It uses read-only PR permissions, pinned action SHAs, full history for secrets, an integrity-checked image archive between jobs and cleanup of its own staging cluster. Skipped jobs, malformed/missing receipts, scanner errors and mixed identities cannot pass the execution check.')
     p('Hosted verification: ' + hosted.get('status', 'not yet recorded') + '; conclusion: ' + str(hosted.get('conclusion', 'not yet recorded')) + '. Run: ' + hosted.get('url', 'see the delivery evidence index'), small=True)
 
