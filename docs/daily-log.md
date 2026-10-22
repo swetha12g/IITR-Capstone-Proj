@@ -327,27 +327,27 @@ Corrected a prose counting error: the two de-duplications belong to the secret s
 
 Commit `c88ec1f` / [run 39110505372](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39110505372), source job `117625451381`, passed tools, all 25 contracts, real scanner probes, full collection and the approved source gate. The downloaded artifact ZIP matched its official hash; all 221 identities/content bindings match local data, with 186 accepted risks, zero blockers and zero operational errors. Metadata/privacy checks passed. Parallel application baseline is still running; its final result is not assumed. Day 4 acknowledgement remains unconfirmed, so hardening has not begun.
 
-## Next stage — Day 4 hardening checklist (planned, not started)
+## Day 4 hardening checklist — current state on 22 October
 
-The request to fix findings continues here in the guide's sequence. These are Markdown planning IDs, not external JIRA issues. No risk is marked fixed by accepting an exception. Start only after the guide's acknowledgement entry condition is confirmed; signed material remains private.
+These are Markdown planning IDs, not external JIRA issues. The user confirmed the acknowledgement on 22 October and implementation resumed. Earlier dated entries below retain their historical state. No risk is marked fixed by accepting an exception; signed material remains private.
 
 | ID | Planned task | Status | Evidence needed |
 |---|---|---|---|
-| PF-D4-00 | Confirm Responsible AI Use and Lab Conduct acknowledgement completion/date | Not completed; assistance requested | Completion/date only; keep signed record private |
-| PF-D4-01 | Pin and run Checkov with a custom immutable-image policy | To do | Official tool verification, built-in/custom pass/fail fixtures and actual custom-check ID |
-| PF-D4-02 | Map applicable controls and document gaps | To do | Chosen CIS version, applicable check mapping and explicit remaining controls |
-| PF-D4-03 | Build a functional hardened image | To do | Supported base digest, minimal runtime, non-root permissions, clean build context and functional checks |
-| PF-D4-04 | Apply/test Kubernetes hardening in the owned local lab | To do | Before/after security contexts, service-account token, resources/probes, writable-path/read-only-root tests |
-| PF-D4-05 | Scan and inventory the exact hardened image | To do | Trivy results, Syft CycloneDX schema/package verification, image identity, SBOM hash and DB timestamp |
-| PF-D4-06 | Compare baseline and hardening results, update gate/evidence | To do | Actual removed/remaining findings, regressions/runtime, exact residual-risk review; no automatic expansion of the 186 approvals |
+| PF-D4-00 | Confirm Responsible AI Use and Lab Conduct acknowledgement completion/date | Complete | User confirmation received 22 October; signing date unspecified; no signed record stored |
+| PF-D4-01 | Pin and run Checkov with a custom immutable-image policy | Verified locally | Checkov 3.3.30, 100 hashed distributions, eight CLI fixtures, CKV_PF_K8S_1 actually runs |
+| PF-D4-02 | Map applicable controls and document gaps | Verified bounded mapping | CIS 2.0.0 workload mapping with explicit gaps; no cluster certification |
+| PF-D4-03 | Build a functional hardened image | Verified locally | Pinned bases, production dependencies, clean context; seven Docker HTTP checks and enforcement tests |
+| PF-D4-04 | Apply/test Kubernetes hardening in the owned local lab | Verified locally | Ready rollout, zero restarts, exact image match, seven HTTP checks and process/filesystem tests |
+| PF-D4-05 | Scan and inventory the exact hardened image | Verified locally | Frozen-DB comparison and 2,748-component schema/package-validated CycloneDX 1.6 SBOM |
+| PF-D4-06 | Compare baseline and hardening results, update gate/evidence | Evidence verified; acceptance open | 15 gate contracts pass; real gate blocks on one IaC and 38 high/critical image findings; no new risk approvals |
 
-- [ ] PF-D4-00 — acknowledgement entry condition.
-- [ ] PF-D4-01 — Checkov built-in/custom fixtures.
-- [ ] PF-D4-02 — mapped controls/gaps.
-- [ ] PF-D4-03 — functional hardened image.
-- [ ] PF-D4-04 — tested Kubernetes hardening.
-- [ ] PF-D4-05 — same-image scan/SBOM.
-- [ ] PF-D4-06 — measured before/after evidence and gate.
+- [x] PF-D4-00 — acknowledgement entry condition confirmed by user.
+- [x] PF-D4-01 — Checkov built-in/custom fixtures.
+- [x] PF-D4-02 — mapped controls/gaps.
+- [x] PF-D4-03 — functional hardened image.
+- [x] PF-D4-04 — tested Kubernetes hardening.
+- [x] PF-D4-05 — same-image scan/SBOM.
+- [ ] PF-D4-06 — comparison/gate implemented; residual security acceptance remains open.
 
 Three focused AI-assisted remediation PRs remain a separate Day 9 requirement; source-free AI safeguards, provider/model/budget and genuine review evidence must precede that claim. No live model call, new local cluster or application source patch was made during this approval closeout. Hosted CI uses its own ephemeral cluster.
 
@@ -375,3 +375,78 @@ Commit `d68686a` / [run 39111621696](https://github.com/swetha12g/IITR-Capstone-
 - Actual fix: removed the redundant pod-snapshot wait after rollout; runtime requires live pods Ready and bound to the expected image annotation plus actual CRI/Docker config. The successful hosted run encountered **one terminating pod**, ignored it correctly and passed all four runtime checks. Retained the prior failed-run evidence and the earlier Day 2 incident's unconfirmed-cause limitation.
 - Records: synchronized guide/JIRA ticks, setup handoff, Day 2/3 checkpoints, exact review record, versions, requirements, report outline, README and checksum/evidence links. Implementation `d68686a` is published on `feature-16-kick-start`; this closeout carries the final evidence records. Imported source/app locks and system settings remain unchanged.
 - Next/blocker: Day 4 hardening checklist remains **unchecked and unstarted**. The program acknowledgement is not completed; the user requested help and its LMS page link is needed. No personal attestation/signature is fabricated. Full IaC/image/DAST gates, AI work, three remediation PRs and rendered final report remain pending.
+
+## Day 4 start request — 19 October 2026
+
+- Request: start Day 4. Read the guide, completed Day 3 evidence and existing hardening checklist; preserved the clean feature branch at `993f1df`.
+- Actions: performed read-only environment preflight and created [day4-checkpoint.md](day4-checkpoint.md). Node/npm/Python and Python dependency validation passed; both application locks match; Docker is reachable; the existing kind node is Ready and the baseline deployment has one ready replica. Approximately 570 GiB disk remains. No new HTTP/application/scanner run is claimed.
+- Environment drift: both temporary bridge-filter sysctl paths are absent and Docker reports both disabled; IPv4 forwarding remains 1. The cluster's Ready status does not establish fresh network acceptance. No host change was attempted. Checkov/Syft are absent from the selected project PATH.
+- Entry condition: the guide explicitly requires the program acknowledgement before Day 4 implementation. Its last recorded status is incomplete. Requested actual completion status/date or the program/LMS link; the start request is not treated as a personal attestation. No signature or sensitive document is recorded.
+- Outcome: preflight complete; PF-D4-00 awaits clarification and PF-D4-01 through PF-D4-06 remain unstarted. No scanner installation, hardening, new image, deployment mutation, exception expansion, commit, push or external message occurred. Next: resolve the acknowledgement status, then execute the Day 4 checklist and recheck deployment prerequisites.
+- Record verification: `git diff --check` passed; local Markdown link targets resolve across all five changed/new records. Only Markdown files changed; no tests were added for this documentation-only update.
+
+## Connection check — 22 October 2026
+
+- Request/outcome: confirm the assistant is connected and working; chat response and local workspace read/write access are verified.
+- Actions/verification: read the setup checkpoint and daily log, preserved existing local changes, and updated these records; `git diff --check` passed for both records.
+- Limits/next: external services and application health were not checked. No project implementation resumed; the existing Day 4 entry condition remains pending. Await the next task.
+
+## Resume Day 4 — 22 October 2026
+
+- Request: explain the paused point, resume work, and record the user's confirmation that the Responsible AI acknowledgement is signed.
+- Decision: Day 3 remains complete; the acknowledgement confirmation clears PF-D4-00. Confirmation received today; actual signing date was not supplied. No signed material is collected.
+- Actions: read the saved handoff/guide, preserved all existing local Markdown changes, rechecked project runtimes and inspected the owned lab. Several current pods are unready despite the node reporting Ready; fresh runtime health is not assumed.
+- Completed: isolated Checkov 3.3.30 (100 hash-pinned distributions), verified Syft 1.55.0, added strict custom image-digest policy and eight real CLI fixtures. Built a separate project Dockerfile using retained app locks, pinned Node/distroless bases, explicit build and production-only runtime dependencies. App source/locks remain unchanged.
+- Runtime: caught and corrected the app's required CSAF metadata write by adding a bounded writable mount; application code/seed remain read-only. Docker and the Ready hardened Kubernetes deployment each pass seven functional/training checks plus UID/GID 65532, zero capability sets, seccomp, no-new-privileges, root-write denial, explicit writable-directory and token-absence checks. Registered/verified a canonical digest name in local containerd; no registry publication.
+- Lab action/limit: retained private startup/events/kubelet diagnostics and restarted only the owned kind node's kubelet service. No host module/sysctl or unrelated workload changed. Current app is Ready with zero restarts; several existing system pods remain unready and the historical cause is not established. No full-cluster recovery is claimed.
+- Scans: seven collection stages complete without operational errors. Both immutable image IDs use one frozen DB. Kubernetes failures 15→1; Dockerfile failures 2→0. Image identities 101→100, one unknown CA-certificate advisory removed, zero added; 11 critical and 27 high remain. Syft's 2,748-component CycloneDX 1.6 inventory validates against hash-pinned official schemas and representative installed packages. Raw reports/SBOM stay ignored/private.
+- Gate: 15 fail-closed contracts and five existing rollout regressions pass. Actual Day 4 gate exits 1 with **39 blockers and zero operational errors**: one NetworkPolicy control plus 38 image risks. Existing source approvals are byte-unchanged and no Day 4 exception is activated. Bounded CIS 2.0.0 mapping/gaps and a concrete private residual-risk packet are recorded.
+- Outcome/next: PF-D4-00 through PF-D4-05 have local evidence; PF-D4-06 comparison/gate evidence exists but security acceptance is open. Resolve/review residual risks and network isolation, then Day 5 DAST/full-pipeline integration. Existing local work was preserved. No commit, push, hosted Day 4 run, live model call or new full application-suite result is claimed. Final Markdown/privacy/whitespace verification is recorded with the evidence index.
+
+- Final verification: eight policy fixtures, 15 gate contracts, five rollout regressions, Python/Node syntax and project dependency validation passed. Both lock comparisons and source/lock/approved-exception Git diffs are clean. Changed Markdown local links/contact checks and `git diff --check` pass; Gitleaks reports zero findings in the reviewed changed-file snapshot. [Validation record](../reports/sanitized/day4/validation.json). Only the intended local implementation/evidence/docs are changed; no staging, commit or push occurred.
+
+## Complete assignment; defer security findings — 22 October 2026 (in progress)
+
+- Request/decision: the user explicitly instructed recording critical/high findings for later remediation and continuing all remaining assignment stages. Security findings no longer stop owned-lab execution. This supersedes the prior Day 4 acceptance stop; it does not change finding severity or establish remediation/production safety.
+- Actions: preserved strict evidence, introduced an explicit study-lab execution profile, and started Day 5 DAST/full-pipeline implementation. Existing local work is preserved. Operational errors/missing evidence remain distinct from vulnerabilities.
+- Dependencies: asked for provider/model and maximum API spend for the genuine live triage deliverable; continuing mock/local implementation independently. Genuine human review and hosted publication evidence will be recorded only when performed.
+- Next: execute ZAP, integrate all scan stages, normalize/deduplicate findings, add measured dashboard and redaction/grounding tests, implement safe triage/patch adapters, and prepare reproducible report/demonstration artifacts. No future-stage completion is asserted in advance.
+
+### Provider options requested during execution
+
+- Request: list available AI choices so the user can select. Checked current official model/pricing documentation for OpenAI, Google and Anthropic and presented three low-cost choices with explicit proposed caps.
+- Decision/status: recommended GPT-6 Luna with a proposed $1 application cap; free-tier-only Gemini and Haiku 5.5 with a proposed $1 cap are alternatives. No selection, spend authorization or account access is assumed. [Configuration record](ai-configuration.md).
+- Verification/next: official pages were fetched; account-specific availability and credentials remain unverified. Independent local project work continues while selection is pending.
+
+### Existing editor token reuse question
+
+- Request/outcome: asked whether the existing editor API token can be reused. Confirmed that a normal API credential may be reusable, while an editor account sign-in token is a separate credential type.
+- Actions/verification: checked only known configuration files and credential/provider-field presence; found an Anthropic-compatible credential/custom endpoint available to the session. No secret value or endpoint address was printed, copied to project files or sent to a new service. No paid/model request was made.
+- Next: target the existing compatible integration, verify its behavior/pricing and live limit, and complete pre-egress tests while independent pipeline work continues. A public provider price is not assumed to apply to a custom endpoint.
+
+### OpenAI credential selection and correction
+
+- Requests: the user supplied the location of an existing OpenAI token file, then explicitly corrected the provider choice to OpenAI only.
+- Decision/actions: use that external file at runtime, official OpenAI API origin, GPT-6 Luna and the proposed $1 total application cap. Anthropic credentials/custom endpoints are excluded. No token content is copied into project records or displayed.
+- Verification/next: read-only model-access validation is being attempted without a generation request; complete captured-body redaction/grounding tests before any real triage call. Remaining local pipeline work continues.
+
+### No new API purchase
+
+- Request/decision: the user declined buying additional API credit. No purchase/top-up/billing change is authorized or performed. Clarified that the proposed $1 was an application usage ceiling, not a required purchase.
+- Next: use only the specified OpenAI token and existing available credit for a small bounded evaluation after safeguards; continue independent implementation regardless of account-credit availability. No live result is assumed.
+
+### Remaining stages implemented and locally exercised
+
+- Day 5: added pinned ZAP 2.17.0 baseline scanning inside the owned node's private network namespace, loopback-only API access and route capture. Resolved IPv6-loopback/Host-header allowlist mismatches from retained diagnostics; a real run reached 121 URLs and retained 14 alert groups. Findings are deferred; the scanner container was removed.
+- Added six separate hosted scan jobs plus build/test and an authoritative aggregate gate, exact image archive/config verification, read-only PR permissions and sanitized-only scanner receipts. actionlint passed. The complete local execution `20261022T145253045022Z` passed all stages in 115.75 seconds after explicit reuse of a fresh build/test; no hosted execution is yet claimed.
+- New online application run had six external-service DNS failures. The explicit offline profile excludes the nine-test internet-resource availability suite, then all six stages pass: 2,326 application tests passed, seven upstream skips, zero failures. Retained the failed online evidence; source and locks remain unchanged.
+- Day 6: implemented schema-checked normalization, cross-stage issue deduplication with provenance, public dashboard/JSON/CSV and a post-hoc 21-case curated label set. A real non-executed authorization fixture is missed by the authored SAST patterns. Metrics: TP14/FP0/FN1/TN6, recall 93.3%; no general coverage or independent-label claim. Current data: 372 observations, 235 underlying issues (11 critical, 109 high); all are in the deferred register.
+- Days 7–8: 58 tests pass across normalization, aggregate/error/skip contracts, actual captured-body redaction, zero-call refusal, grounding and bounded patch adapters. OpenAI model lookup succeeded, but all three bounded real generation attempts returned HTTP429. No successful live triage, invoice cost or external-API-generated patch is claimed; no further automatic calls/top-ups/purchases. Twenty-finding mock triage validates and remains labeled mock.
+- Day 9: three actual Codex-authored local templates address legacy baseline token mounting, non-root policy and liveness. Each selected Checkov check fails before and passes after; isolated Ready deployments pass home/product HTTP checks before and after; all three namespaces are deleted. Draft PR creation and genuine human review remain pending.
+- Day 10: authored project-local bootstrap and uniquely named ephemeral-cluster reproduction; report tooling is isolated. Fresh-clone execution, report rendering/visual QA, final privacy review and delivery remain in progress. [Current completion record](project-completion.md).
+
+### No additional purchase; final delivery preparation
+
+- Request reaffirmed: no additional API credit purchase. No purchase, top-up or billing change was made; the three real HTTP429 attempts exhaust automatic retries. Continue local work.
+- Verification: project-local bootstrap passed; fresh-catalog tests verify current hash-bound evidence without historical private state and reject tampered raw data. All 60 current tests pass. actionlint and Bash syntax checks pass.
+- Actions: generated a twelve-page study PDF, rendered every page and inspected page order/overflow; authored reproduction, genuine-review ledger and defense notes. The automatic study workflow defers findings while retaining execution errors; the strict historical workflow is manual. Fresh clone execution and draft PR publication remain in progress.

@@ -1,0 +1,2502 @@
+{
+  "schema_version": 1,
+  "decision_date": "2026-10-22",
+  "scope": "owned study assignment; no production approval",
+  "risk_decision": "User directed completion of the assignment before later remediation.",
+  "by_severity": {
+    "CRITICAL": 11,
+    "HIGH": 109,
+    "MEDIUM": 70,
+    "LOW": 29,
+    "INFO": 16
+  },
+  "issues": [
+    {
+      "issue_id": "I-01dd08d5db0f378a008ba40a",
+      "severity": "CRITICAL",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-040bab544abc5c7e45257af1",
+      "severity": "CRITICAL",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-18cdf163d69a2efd2456d285",
+      "severity": "CRITICAL",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-53f93630c50fd2deca26d1f1",
+      "severity": "CRITICAL",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-5ad950b7fefdbb54b8aacd01",
+      "severity": "CRITICAL",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-733d3f1b7a822c30f5e0173d",
+      "severity": "CRITICAL",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-82541fddcedce1da32e93a9d",
+      "severity": "CRITICAL",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-8719a451494783c8c40ac8dc",
+      "severity": "CRITICAL",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-ec4f184e54adf8991a0bbd15",
+      "severity": "CRITICAL",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-f5cd177faf7689fb7ed31349",
+      "severity": "CRITICAL",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-fce7924b1c720ec1d64b78fd",
+      "severity": "CRITICAL",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-00563f746378f7454c5b88d3",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-03ac45b4391af76a5864d78b",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-0c022780dff8776b9902f12f",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-0c9ffebd2af3636996365f61",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-0f2bf00ed0a9dfd8435d1418",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-10dc7e66c40c071d1d87e1e9",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-126619bb946e646784bb9476",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-139137c37c2bd0ace1c2b7a5",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-13f91a43d595b3d195903bbf",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-156e810c1e901f4a49556a03",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-15efb5218ad0724c14c25e22",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-18a0245aebdcab179b5aa843",
+      "severity": "HIGH",
+      "stages": [
+        "sast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-18c6bb1dfd414c30fd6d9e5a",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-1af1b10e95fb97a20b362f54",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-1cdb3c622eb66f6f6e9d7f22",
+      "severity": "HIGH",
+      "stages": [
+        "sca"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-1ee95fd8919e2aaa178f3e24",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-1f5d95972df90e1ca9eea1b5",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-206ee7f8404c2a49d7d6e722",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-216683de548f32f8f069a57c",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-219303cd6b9c6bc6a7ab2cb6",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-25854b7ff667319371231e1e",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-2605162a4461d18f1b024f63",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-26fd272f4a8cca924703c18d",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-2ec1a0bde8884e9c8e0ad973",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-308fc174b4ea80c990b875d9",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-31b68729e9621e1793081d1b",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-31cfe322cc2423b63122fc01",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-331cc00ff0c283dd7a46dabd",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-33ce5225073ca1d89570d8ec",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-349b0785db7de085045fc68d",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-35b2c24a61b14f2ba83ddf99",
+      "severity": "HIGH",
+      "stages": [
+        "sca"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-3622f766a60c2d227bf2ee62",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-364109138e6f92d6de6da4f4",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-3731d235cde33db5bb549e13",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-3acd5fe0ae48c765ea9049d0",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-3b3b868323883a8a0e3bb59d",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-3c0a26590459935b3b80f3e8",
+      "severity": "HIGH",
+      "stages": [
+        "sast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-3d0a6c61bad1c9fe7f2a7b8b",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-3dd147279ccecfff02fd00da",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-3e43992866861be8f026998f",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-4092fdf52d1cd65e88fa2167",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-43cd22092288fd5d459eea63",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-4541d81904dc6808500371c7",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-48d192a5751e099e99850800",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-4cb4c10bf22d6166e085246f",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-51c57c1b7789c9be6a1f31b6",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-52d532a7e83982fa1c4f56aa",
+      "severity": "HIGH",
+      "stages": [
+        "sast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-53759e279ddcdaa2a9c1d983",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-5493c0c0582144882ac9fb9c",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-564d17606bfbe3f14ef20e7c",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-5f0eb458a2ba44109527a055",
+      "severity": "HIGH",
+      "stages": [
+        "sca"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-60eaa36f3116caf8e334ee2c",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-655aff4793f13fb4b7eecfc6",
+      "severity": "HIGH",
+      "stages": [
+        "sast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-6900888ec9a8a04229952d8f",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-705a10fdd874f129f7c448e6",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-709280129b48891ab65c75f3",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-71f04fa6d7011fe92ca807f1",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-7a44cfcdd51dec77d5c562b2",
+      "severity": "HIGH",
+      "stages": [
+        "sast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-83ddbd00ed5cef879ea6494c",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-86e4fb26eaa2866338b57846",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-8a43079e6ec1d4fc9f2020d0",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-8b52eadcbea45c1d411782fe",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-8d819b716b719fbb43cb55bf",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-902e108af6057bfa651d1c7e",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-9877a1634bb39aa801ec1bcc",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-98902d1445752d57808e6874",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-9cca7acac1fc1cdd7b51d638",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-9dc2d243107609634b080193",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-9e02f873b7b30ecc734d9d53",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-9faa725a0bd464004aa46727",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-a0dc4570090df9a5e2a98010",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-a4bb639d795c8c84c4b8a623",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-a647594ed22b187b0b54a974",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-a70f47a1f269fd4fa2f091aa",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-a7a7c569d381308dced2ab22",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-a7b6718e5afdd63c8db0728b",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-ab7f631963d1190398d5c8af",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-ac78cd5e73be063f19c8e597",
+      "severity": "HIGH",
+      "stages": [
+        "sast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-ae5d8a3b150a2d8b95f559bc",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-afcbe9bc931355c8691dca0a",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-b2e449daddc672906b33e2f1",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-b8b3be58b12e571b61796fbd",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-bb1a1d6478ae134ab3a715a6",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-bd8c6e65c97a3c29e95f0d8d",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-bf2b0645ae883614ea4efa55",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-c3da11160ff809e23479cb3e",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-c695778caf18a8ac2a97457f",
+      "severity": "HIGH",
+      "stages": [
+        "sast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-c8796c280e321919df689b31",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-ca09dd91ccba4b11f28c4c4e",
+      "severity": "HIGH",
+      "stages": [
+        "sca"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-cb3268ba8a4d43ea31e2cd6c",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-ce25923d2ff4eeac8c87e79a",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-d7127eabeaf4bc8249034a60",
+      "severity": "HIGH",
+      "stages": [
+        "sast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-d9f1818bb25451494079d72a",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-da32379563474089ac844930",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-dc00b88f1938a366877e35e3",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-dcea947d12fc597f51535fca",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-dd9f750a9d3586ed6088319e",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-de160229193a12d3af7938be",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-df113bf304b7203651c95aa6",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-e76b929d5ba73c17902bf943",
+      "severity": "HIGH",
+      "stages": [
+        "sca"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-e79f7063c277a387acbf9ff7",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-e811017021e3b58f47f7868c",
+      "severity": "HIGH",
+      "stages": [
+        "iac"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-e88c94f5bfcdb798fc9479f3",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-e9c098cd9860ab5cbdca76b5",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-f198a959e6031b6a479bd81b",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-f62172219d2402946ff07efb",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-f64d53489d6a1df558ed2114",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-fa432e861f2e1fb84a2b5a42",
+      "severity": "HIGH",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-fc8b95bcc7ff9002be19c26b",
+      "severity": "HIGH",
+      "stages": [
+        "secrets-history",
+        "secrets-tree"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-0281c2ce5fab0de1845b71ed",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-041868d9997aa23272fb6b1f",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-09da1f06cf2c12d13d01e0d7",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-18f9909fd906f2616889011c",
+      "severity": "MEDIUM",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-1ac4bdf30e96fa47a7b9911a",
+      "severity": "MEDIUM",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-2344becaa0cc0213ba39c577",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-261da10b7597ef112c280015",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-29245b1d201afef19111dbbf",
+      "severity": "MEDIUM",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-2a8e138a2732d33f685fe684",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-2bb58367eca4047e8c7afe68",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-2be08b6cbd4fa9f922da94a9",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-34b419aca9ddff4bd3496ced",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-3ae213ba7c01ff669edc45e5",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-3b4d44528c992c1276c8e9cc",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-4659a48f9956b3451f1f22e5",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-47eb214451b73aedca7013ea",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-4a56089e6f385fc538725e03",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-4c751c8f2fa2e072b0019fd6",
+      "severity": "MEDIUM",
+      "stages": [
+        "sca"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-4ca0776f4056ddfc8e05a2e3",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-52d329e0bf982a90b7e4de42",
+      "severity": "MEDIUM",
+      "stages": [
+        "sast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-5512cc2b83c2047a1b70d8c2",
+      "severity": "MEDIUM",
+      "stages": [
+        "sast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-564ab790da4c91ddb44ce42c",
+      "severity": "MEDIUM",
+      "stages": [
+        "sca"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-578fbf8210e57c8519087edf",
+      "severity": "MEDIUM",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-5b6fa11b4e6a9ec50c2182ab",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-5df49a2bed92786daa23c159",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-6780d5ad18eb423c616c0cea",
+      "severity": "MEDIUM",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-68a75c8f794bac259b05a32c",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-6c768e77c0377ef643866a2b",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-6ccf6f6ab4ac8a4bc1c08e04",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-6fe86e86c2d649e83bb399b2",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-72056532da0f00f80348a5bb",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-77188006b32aa1b47736f0b6",
+      "severity": "MEDIUM",
+      "stages": [
+        "sast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-8073ecb250a3b5caf0ef2c04",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-8601079bad6ab16460999a82",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-8e644c0702555ca30fc64940",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-929e559b52e9a43875ab2d73",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-9315a2bb18d9f4319bc61ec2",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-94fc1a16186b9b139080f1d4",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-976da5874d5ab6475cbbf88d",
+      "severity": "MEDIUM",
+      "stages": [
+        "sca"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-9da72f6d650688246d0bf3df",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-9ed81bf11e7cce43acc73864",
+      "severity": "MEDIUM",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-a56e29a46ef2b43b5ca60643",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-a8afac21c453d1167516b775",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-aab743eab2976b5988a42f2f",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-b57c0d2b77538732f2c89cc7",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-b67c8640b815972a93610648",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-beefc668f9a3a65f14605d70",
+      "severity": "MEDIUM",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-c31889ea23f5cc28ce7a8563",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-c74630be3c88843555d43794",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-cc7379b7f2a300b278d7b0bf",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-cff8e72f2b806dc2be9be96b",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-d19413f377ef469cff904728",
+      "severity": "MEDIUM",
+      "stages": [
+        "sca"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-d3ec5e1ea5873cb812f05e55",
+      "severity": "MEDIUM",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-d51bac760691938befee77ea",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-d6231f4eaa2e627b4178a882",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-d94897c796bf7eaf65ace344",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-d979b3a0902f3ba9d346d216",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-da872591625536559d10a821",
+      "severity": "MEDIUM",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-dd81ab5552860c8b1c092585",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-ddd2e56cdbdbec551e02868f",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-e18e78aa4e1a95e3843b4a9d",
+      "severity": "MEDIUM",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-e27483d1cdcf233c66bc5492",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-e4acd34b3604fab5a69fd671",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-ec84660e4960cfc831ac2b34",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-f06a25c8f563f337350eb0d8",
+      "severity": "MEDIUM",
+      "stages": [
+        "sca"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-f5b2e6c098faf68ac0811336",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-f6310e795dfe4521bc5745fc",
+      "severity": "MEDIUM",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-f9395d3b479e56796133cd98",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-fead3bd4813ff0c517442caf",
+      "severity": "MEDIUM",
+      "stages": [
+        "sca"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-feecc6e6b8a1153150ae8ec9",
+      "severity": "MEDIUM",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-06f669414602002e77268b0c",
+      "severity": "LOW",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-08e06b8e42508f6791dc2fe9",
+      "severity": "LOW",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-14436378d0282b57afd55840",
+      "severity": "LOW",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-1bf54ca1329c576b19bcde2b",
+      "severity": "LOW",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-223e01c2450fa2e933977315",
+      "severity": "LOW",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-349a95fbe11788a2e84b71a5",
+      "severity": "LOW",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-3dbdcd2b3d463d303c8a1990",
+      "severity": "LOW",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-41e08af8f04f0988753a19fb",
+      "severity": "LOW",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-48a15104019c3057d5e0edf1",
+      "severity": "LOW",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-58b30e116b7b257cda1d839a",
+      "severity": "LOW",
+      "stages": [
+        "container",
+        "sca"
+      ],
+      "observations": 2,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-5a8f89d3be5377014ba4fe13",
+      "severity": "LOW",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-6fcc1b9b312fc16e63c66fab",
+      "severity": "LOW",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-784baefa69c511df1fabb37d",
+      "severity": "LOW",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-79f05ba0f2de9d4daa8dd0ff",
+      "severity": "LOW",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-826066881c4934ee60f7fcaf",
+      "severity": "LOW",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-82dfa6bdb1831e2a2d035e16",
+      "severity": "LOW",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-87835fbab43399bd9ea4199a",
+      "severity": "LOW",
+      "stages": [
+        "sca"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-87aeb5edbbc6e4185241eb06",
+      "severity": "LOW",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-88b1d998d57e0021ec69406a",
+      "severity": "LOW",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-8d5418b13013952ec50572f9",
+      "severity": "LOW",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-9f45d2475c904fd1baba17e6",
+      "severity": "LOW",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-a9602397df4a944ca75e45bb",
+      "severity": "LOW",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-b256612346444060619c1ffd",
+      "severity": "LOW",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-c60869caddc94bb98872be93",
+      "severity": "LOW",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-cf4ecf0b1f3647572b496442",
+      "severity": "LOW",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-dfed5f2766c39c3c1ff0a1a4",
+      "severity": "LOW",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-e25e0bf7284c7fb8d163c78e",
+      "severity": "LOW",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-f9d784fdb308b701058760e4",
+      "severity": "LOW",
+      "stages": [
+        "sca"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-f9f663ea47e9679a095d55af",
+      "severity": "LOW",
+      "stages": [
+        "container"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-0ef881793145d194e987186d",
+      "severity": "INFO",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-0fd460685cb6c9389e91fe75",
+      "severity": "INFO",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-25c244681225e565fa2b3d5a",
+      "severity": "INFO",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-2f1cd17cef54f30e4576fdf5",
+      "severity": "INFO",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-530e1694b90bf464bc9a4fb0",
+      "severity": "INFO",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-562d095fd74fb2ecde09cf94",
+      "severity": "INFO",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-6eef5b08fa6fdbc1f275c01f",
+      "severity": "INFO",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-7428cb09f57e3a87197bc57c",
+      "severity": "INFO",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-7b56b0a94565fcc2b9484d5b",
+      "severity": "INFO",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-7ca7afffe6c8a2897d369c08",
+      "severity": "INFO",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-7cbd2f61026a4436ffac7125",
+      "severity": "INFO",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-99b5dc64aacd4202ff0cd5ba",
+      "severity": "INFO",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-acf00f25359ecee32215489b",
+      "severity": "INFO",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-ae165ce239ce3673ccc2ab5a",
+      "severity": "INFO",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-bbbc434fcd0245708827c783",
+      "severity": "INFO",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    },
+    {
+      "issue_id": "I-fb10fb0dab2c345d86691a1a",
+      "severity": "INFO",
+      "stages": [
+        "dast"
+      ],
+      "observations": 1,
+      "status": "deferred-study-lab",
+      "remediation": "later, per user direction"
+    }
+  ]
+}

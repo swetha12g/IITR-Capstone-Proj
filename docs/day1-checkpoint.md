@@ -1,10 +1,16 @@
-# Day 1 setup checkpoint — updated 17 October 2026
+# Day 1 setup checkpoint — updated 22 October 2026
 
 Repository: `/home/popos/Capstone/IITR-Capstone-Proj`.
 
 **Status:** Day 1 work is complete and published on 17 October 2026. The real fork, pinned source import, supported Node/Python environments, dependency locks, production build, and finite frontend/server/API suites are verified. There were 2,334 passed tests, 8 upstream skips, and zero failures; lint passed. The user-authorized source commit `425d129` and setup/evidence/next-day-plan commit `9bca61f` were successfully pushed to `feature-16-kick-start`. See the [execution log](daily-log.md#execution-on-17-october-2026) and [evidence index](evidence-index.md).
 
 **Documentation convention:** Every request is reflected in the relevant Markdown files before reporting completion. This file tracks current setup state; [daily-log.md](daily-log.md) records request outcomes, decisions, verification, blockers, and next steps. Personal details and credentials are omitted. The preference is also saved in personal Codex instructions outside the repository.
+
+**Connection check — 22 October 2026:** Chat and local workspace access are working; the project records were read and updated. External services and application health were not rechecked. The project handoff below remains unchanged.
+
+**Latest direction — 22 October:** the user directed continuing the complete study assignment and deferring the 39 Day 4 security findings for later fixes. The study-lab profile records those risks and allows work to continue; strict assessment remains available. Days 5–10 implementation is active. Provider/model/API spending configuration was requested while independent local/mock work continues. This direction supersedes the security-acceptance pause described in the earlier handoff below.
+
+**Current handoff — 22 October:** Day 3 is complete. The user confirmed signing the Responsible AI acknowledgement, clearing the pause. Day 4 tools, custom policy fixtures, hardened build, exact-image scans/SBOM and Docker/Kubernetes runtime checks are verified locally. The hardened deployment is Ready with zero restarts. Its new gate blocks on one NetworkPolicy control and 38 high/critical container findings; no Day 4 risks were accepted. Existing source approvals and both application locks are unchanged. Checkov/Syft are project-local; no host settings or system tools changed. Other system pods have readiness issues and full cluster recovery is not claimed. See [Day 4 checkpoint](day4-checkpoint.md) for evidence, reproduction and remaining acceptance. All work from this request remains local and uncommitted. Tables and dated sections below retain historical Day 1–3 evidence.
 
 | Checkpoint | Status | Verified result / next action |
 |---|---|---|
@@ -198,3 +204,9 @@ The user requested assistance because the Day 4 program acknowledgement is not c
 ### Verified Day 3 handoff
 
 All six PF-D3 tasks are complete; code `d68686a` / run `39111621696` passed source gates and the corrected application baseline. All 221 findings remain visible with 186 exact lab-risk approvals until 25 October at 00:00 IST; no baseline security fix is claimed. A deployment/runtime readiness race was corrected and tested. Setup/system settings are unchanged. Day 4 is unstarted pending actual program acknowledgement; the user requested help and the LMS page link is needed.
+
+## Current setup and delivery state — 22 October 2026
+
+The acknowledgement is confirmed and the study project has resumed through Days 5–10. This supersedes earlier pause/entry-condition notes. Project-local bootstrap has actually verified Python 3.10, pinned pip/Node and kind/kubectl without changing system packages. Current selected offline application checks pass 2,326 tests with seven skips; nine external-service availability tests are excluded. The six-stage local execution passes with deferred findings. See [current completion record](project-completion.md) for precise evidence and remaining dependencies.
+
+No new API purchase/top-up or billing change is authorized. OpenAI only is configured; three HTTP429 generation attempts exhausted the automatic request cap. Continue local work without further paid retries. Independent human review and a successful live evaluation remain open evidence requirements.

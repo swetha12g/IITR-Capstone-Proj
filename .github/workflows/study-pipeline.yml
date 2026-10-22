@@ -1,0 +1,252 @@
+name: Complete six-stage study pipeline
+'on':
+  push:
+    branches:
+    - feature-16-kick-start
+  pull_request: {}
+  workflow_dispatch: {}
+permissions:
+  contents: read
+concurrency:
+  group: study-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+env:
+  CI: 'true'
+  NODE_OPTIONS: --max-old-space-size=4096
+  NG_BUILD_MAX_WORKERS: '2'
+jobs:
+  build-test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+    - &id001
+      name: Check out reviewed source
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        persist-credentials: false
+        fetch-depth: 0
+    - &id002
+      uses: actions/setup-python@83679a892e2d95755f2dac6acb0bfd1e9ac5d548
+      with:
+        python-version: '3.10'
+    - &id003
+      name: Install project check dependencies
+      run: 'mkdir -p reports/private/pipeline
+
+        python -m pip install -r requirements-dev.txt > reports/private/pipeline/python-install.log 2>&1
+
+        python -m pip check'
+    - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+      with:
+        node-version: 24.22.0
+    - name: Build and test the pinned application
+      run: python scripts/run-day1-checks.py --offline
+    - name: Build allowlisted hardened image
+      run: python scripts/build-hardened-image.py > reports/private/pipeline/image-build.log 2>&1
+    - name: Bind build receipt and export image
+      run: 'python scripts/run-artifact-stage.py --stage build-test
+
+        python scripts/image-transfer.py export'
+    - name: Transfer only the reviewed clean image
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: hardened-image
+        path: 'reports/private/image-transfer/hardened.tar.gz
+
+          reports/private/image-transfer/image.json'
+        if-no-files-found: error
+        retention-days: 7
+    - name: Publish sanitized stage receipt
+      if: always()
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: stage-build-test
+        path: reports/sanitized/pipeline/build-test.json
+        if-no-files-found: error
+        retention-days: 14
+  sast:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+    - *id001
+    - *id002
+    - *id003
+    - name: Install verified source scanners
+      run: python scripts/install-scanners.py
+    - name: Execute sast and retain all findings
+      run: python scripts/run-source-stage.py --stage sast
+    - name: Publish sanitized stage receipt
+      if: always()
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: stage-sast
+        path: reports/sanitized/pipeline/sast.json
+        if-no-files-found: error
+        retention-days: 14
+  sca:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+    - *id001
+    - *id002
+    - *id003
+    - name: Install verified source scanners
+      run: python scripts/install-scanners.py
+    - name: Execute sca and retain all findings
+      run: python scripts/run-source-stage.py --stage sca
+    - name: Publish sanitized stage receipt
+      if: always()
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: stage-sca
+        path: reports/sanitized/pipeline/sca.json
+        if-no-files-found: error
+        retention-days: 14
+  secrets:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+    - *id001
+    - *id002
+    - *id003
+    - name: Install verified source scanners
+      run: python scripts/install-scanners.py
+    - name: Execute secrets and retain all findings
+      run: python scripts/run-source-stage.py --stage secrets
+    - name: Publish sanitized stage receipt
+      if: always()
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: stage-secrets
+        path: reports/sanitized/pipeline/secrets.json
+        if-no-files-found: error
+        retention-days: 14
+  iac:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+    - *id001
+    - *id002
+    - *id003
+    - name: Install verified IaC and SBOM tools
+      run: python scripts/install-day4-tools.py
+    - name: Prove custom policy behavior
+      run: python scripts/verify-day4-policies.py
+    - name: Collect IaC stage
+      run: python scripts/run-artifact-stage.py --stage iac
+    - name: Publish sanitized stage receipt
+      if: always()
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: stage-iac
+        path: reports/sanitized/pipeline/iac.json
+        if-no-files-found: error
+        retention-days: 14
+  container:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+    - *id001
+    - *id002
+    - *id003
+    - name: Download exact built image
+      uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        name: hardened-image
+        path: reports/private/image-transfer
+    - name: Verify archive and import exact image
+      run: python scripts/image-transfer.py import
+    - name: Install verified source scanners
+      run: python scripts/install-scanners.py
+    - name: Install verified IaC and SBOM tools
+      run: python scripts/install-day4-tools.py
+    - name: Scan and inventory the exact image
+      run: python scripts/run-artifact-stage.py --stage container
+    - name: Publish sanitized stage receipt
+      if: always()
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: stage-container
+        path: reports/sanitized/pipeline/container.json
+        if-no-files-found: error
+        retention-days: 14
+    needs:
+    - build-test
+  dast:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+    - *id001
+    - *id002
+    - *id003
+    - name: Download exact built image
+      uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        name: hardened-image
+        path: reports/private/image-transfer
+    - name: Verify archive and import exact image
+      run: python scripts/image-transfer.py import
+    - name: Install kind and kubectl
+      run: bash scripts/install-ci-tools.sh
+    - name: Create owned ephemeral staging
+      run: 'mkdir -p reports/private/day2
+
+        kind create cluster --name pipelinefortress --config infra/kind.yaml --kubeconfig "$KUBECONFIG" --wait 180s --retain'
+    - name: Deploy exact image and verify controls
+      run: 'python scripts/deploy-hardened.py
+
+        python scripts/verify-hardened-runtime.py --mode kubernetes'
+    - name: Pinned passive scan of the owned app
+      run: 'python scripts/run-dast.py
+
+        python scripts/run-artifact-stage.py --stage dast'
+    - name: Publish sanitized stage receipt
+      if: always()
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: stage-dast
+        path: reports/sanitized/pipeline/dast.json
+        if-no-files-found: error
+        retention-days: 14
+    - name: Clean up only the ephemeral staging cluster
+      if: always()
+      run: if command -v kind >/dev/null; then kind delete cluster --name pipelinefortress --kubeconfig "$KUBECONFIG"; fi
+    needs:
+    - build-test
+    env:
+      KUBECONFIG: ${{ github.workspace }}/reports/private/day2/kubeconfig
+      PIPELINEFORTRESS_KUBECONFIG: ${{ github.workspace }}/reports/private/day2/kubeconfig
+  aggregate:
+    runs-on: ubuntu-24.04
+    if: ${{ always() }}
+    needs:
+    - build-test
+    - sast
+    - sca
+    - secrets
+    - iac
+    - container
+    - dast
+    timeout-minutes: 10
+    steps:
+    - *id001
+    - *id002
+    - name: Retrieve only sanitized receipts
+      uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        pattern: stage-*
+        merge-multiple: true
+        path: reports/sanitized/pipeline
+    - name: Authoritative study-lab execution verdict
+      if: always()
+      env:
+        PIPELINEFORTRESS_JOB_RESULTS: ${{ toJSON(needs) }}
+      run: python scripts/aggregate-gate.py
+    - name: Publish final execution verdict
+      if: always()
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: aggregate-study-evidence
+        path: reports/sanitized/pipeline/
+        if-no-files-found: error
+        retention-days: 14

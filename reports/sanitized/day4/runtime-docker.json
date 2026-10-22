@@ -1,0 +1,91 @@
+{
+  "observed_at_utc": "2026-10-22T12:02:35.826817+00:00",
+  "mode": "docker",
+  "image_config_id": "sha256:3eb3e0ff60e5fba12f014e5fcc9f6086fa7f366139d52a4bce44e598a3e860e9",
+  "image_size_bytes": 345391667,
+  "checks": [
+    {
+      "id": "http-home",
+      "http_status": 200,
+      "passed": true,
+      "response_sha256": "7c6f95782553529abc32cf969eb83c650281de0a5418be8b5f1cf9372dd32a45"
+    },
+    {
+      "id": "products",
+      "http_status": 200,
+      "passed": true,
+      "response_sha256": "ee9cd39559a05a4335b1d548d5546257aadfc396320b046c651c25b0f8834385"
+    },
+    {
+      "id": "languages",
+      "http_status": 200,
+      "passed": true,
+      "response_sha256": "495e7822f0049ed1fef94dbc590435b7bc1ec0146829ce1641ba34cd599aef1b"
+    },
+    {
+      "id": "coding-challenge",
+      "http_status": 200,
+      "passed": true,
+      "response_sha256": "c20411967a0aad7e503c7eb8d83d6346ba5dcceaaa92b97ae912a8210ad69e8d"
+    },
+    {
+      "id": "training-directory-listing",
+      "http_status": 200,
+      "passed": true,
+      "response_sha256": "0c2e4aeb98c1af92c7bd4b73580605d2f7317de6e35cea61ce3cf087da56b87d"
+    },
+    {
+      "id": "training-metrics",
+      "http_status": 200,
+      "passed": true,
+      "response_sha256": "818fea411546b67f17747ac0c1d28cea3fb9036048cdf5b9d9128269528447a2"
+    },
+    {
+      "id": "training-sql-error",
+      "http_status": 500,
+      "passed": true,
+      "response_sha256": "ab786d4c67b44a133e1449596df68717ddfbb00bb87032f0aeca77a254a3c289"
+    }
+  ],
+  "enforcement": {
+    "ReadonlyRootfs": true,
+    "CapDrop": [
+      "ALL"
+    ],
+    "SecurityOpt": [
+      "no-new-privileges:true"
+    ],
+    "Memory": 805306368,
+    "NanoCpus": 1000000000,
+    "PidsLimit": 256
+  },
+  "controls": {
+    "uid": 65532,
+    "gid": 65532,
+    "process": {
+      "Uid": "65532\t65532\t65532\t65532",
+      "Gid": "65532\t65532\t65532\t65532",
+      "CapEff": "0000000000000000",
+      "CapBnd": "0000000000000000",
+      "NoNewPrivs": "1",
+      "Seccomp": "2"
+    },
+    "readonly": [
+      "/juice-shop",
+      "/juice-shop/build",
+      "/opt/juice-shop-seed"
+    ],
+    "writable": [
+      "data",
+      "ftp",
+      "i18n",
+      "frontend/dist",
+      "uploads",
+      "logs",
+      ".well-known"
+    ],
+    "service_account_token_absent": true,
+    "shell_and_npm_absent": true
+  },
+  "passed": true
+}

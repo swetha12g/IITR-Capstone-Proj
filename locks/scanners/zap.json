@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "image": "ghcr.io/zaproxy/zaproxy@sha256:5ccfff9a411743ab2615136a2edd7416bec9ce41572fa94e935df38c14adb2b6",
+  "image_config_id": "sha256:4610c8ba23ed92d2edb2313a9b1554f769e6a04e99d32a1f50ae282a272a9185",
+  "scope": "owned lab passive baseline only"
+}

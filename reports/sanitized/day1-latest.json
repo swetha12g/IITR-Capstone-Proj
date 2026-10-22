@@ -1,5 +1,5 @@
 {
-  "run_id": "20261016T183808Z",
+  "run_id": "20261022T144931Z",
   "source_commit": "f189f521266f42c6bd05884468292000cee852ed",
   "node_version": "v24.22.0",
   "npm_version": "11.19.1",
@@ -20,11 +20,11 @@
         "--no-audit",
         "--no-fund"
       ],
-      "started_at_utc": "2026-10-16T18:38:08.551836+00:00",
-      "duration_seconds": 102.83,
+      "started_at_utc": "2026-10-22T14:49:31.328088+00:00",
+      "duration_seconds": 89.41,
       "exit_code": 0,
-      "log_reference": "reports/private/day1/20261016T183808Z/install-server.log",
-      "log_sha256": "0aebbeb48c6e27a996399e4e86141e390fc9da72958772715eb8978ecd576a09"
+      "log_reference": "reports/private/day1/20261022T144931Z/install-server.log",
+      "log_sha256": "b74f7f434791aac69e477d1f00eb1c9981a6f31e689916b66c124a606a893f95"
     },
     {
       "step": "install-frontend",
@@ -36,10 +36,10 @@
         "--no-audit",
         "--no-fund"
       ],
-      "started_at_utc": "2026-10-16T18:39:51.385061+00:00",
-      "duration_seconds": 4.63,
+      "started_at_utc": "2026-10-22T14:51:00.742624+00:00",
+      "duration_seconds": 4.69,
       "exit_code": 0,
-      "log_reference": "reports/private/day1/20261016T183808Z/install-frontend.log",
+      "log_reference": "reports/private/day1/20261022T144931Z/install-frontend.log",
       "log_sha256": "dc526652870ca66cc1447e46c4e643b87fcf0413e27cd9d83a29f6a087d504d0"
     },
     {
@@ -49,11 +49,11 @@
         "run",
         "build"
       ],
-      "started_at_utc": "2026-10-16T18:39:56.014085+00:00",
-      "duration_seconds": 10.65,
+      "started_at_utc": "2026-10-22T14:51:05.437203+00:00",
+      "duration_seconds": 10.64,
       "exit_code": 0,
-      "log_reference": "reports/private/day1/20261016T183808Z/build.log",
-      "log_sha256": "7c18bc97415c9f33aab2a2750a08565aa3a231de77a1b7b723594541ec1c423c"
+      "log_reference": "reports/private/day1/20261022T144931Z/build.log",
+      "log_sha256": "d945d727f1241c8fb54e0cb52ad058176dbcc5ec149c0a03424857145d89c7cd"
     },
     {
       "step": "test-frontend",
@@ -62,11 +62,11 @@
         "run",
         "test:frontend:coverage"
       ],
-      "started_at_utc": "2026-10-16T18:40:06.660308+00:00",
-      "duration_seconds": 21.47,
+      "started_at_utc": "2026-10-22T14:51:16.072747+00:00",
+      "duration_seconds": 21.27,
       "exit_code": 0,
-      "log_reference": "reports/private/day1/20261016T183808Z/test-frontend.log",
-      "log_sha256": "44263b81ad477505dfe6396c2428f38a051e1e1bf1c6342cf06429c12f75918d"
+      "log_reference": "reports/private/day1/20261022T144931Z/test-frontend.log",
+      "log_sha256": "5de3d5e3d2ab0f91105c98c31f3d918576858805a372fa47f6e1c91c435e3198"
     },
     {
       "step": "test-server",
@@ -75,27 +75,86 @@
         "run",
         "test:server"
       ],
-      "started_at_utc": "2026-10-16T18:40:28.131475+00:00",
-      "duration_seconds": 3.09,
+      "started_at_utc": "2026-10-22T14:51:37.340310+00:00",
+      "duration_seconds": 2.89,
       "exit_code": 0,
-      "log_reference": "reports/private/day1/20261016T183808Z/test-server.log",
-      "log_sha256": "1a86379d575180190117b1edc1fa4deca82331bc3fa8eb582c4dda46ae77c692"
+      "log_reference": "reports/private/day1/20261022T144931Z/test-server.log",
+      "log_sha256": "fb12232926e4479d02ac1ea597c002855d5ca07ede1abce92ad2626c99c78a7c"
     },
     {
       "step": "test-api",
       "command": [
-        "npm",
-        "run",
-        "test:api"
+        "node",
+        "--import",
+        "./test/api/helpers/test-env.mjs",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-force-exit",
+        "test/api/2fa.test.ts",
+        "test/api/address.test.ts",
+        "test/api/administration.test.ts",
+        "test/api/angular-dist.test.ts",
+        "test/api/api.test.ts",
+        "test/api/authenticated-users.test.ts",
+        "test/api/b2b-order.test.ts",
+        "test/api/basket-item.test.ts",
+        "test/api/basket.test.ts",
+        "test/api/challenge.test.ts",
+        "test/api/chat.test.ts",
+        "test/api/checkKeys.test.ts",
+        "test/api/complaint.test.ts",
+        "test/api/country-mapping.test.ts",
+        "test/api/data-export.test.ts",
+        "test/api/delivery.test.ts",
+        "test/api/deluxe.test.ts",
+        "test/api/erasure-request.test.ts",
+        "test/api/feedback.test.ts",
+        "test/api/file-serving.test.ts",
+        "test/api/file-upload.test.ts",
+        "test/api/ftp-folder.test.ts",
+        "test/api/http.test.ts",
+        "test/api/languages.test.ts",
+        "test/api/logfile-server.test.ts",
+        "test/api/login.test.ts",
+        "test/api/memory.test.ts",
+        "test/api/metrics.test.ts",
+        "test/api/nftMint.test.ts",
+        "test/api/order-history.test.ts",
+        "test/api/password.test.ts",
+        "test/api/payment.test.ts",
+        "test/api/privacy-request.test.ts",
+        "test/api/product-review.test.ts",
+        "test/api/product.test.ts",
+        "test/api/profile-image-upload.test.ts",
+        "test/api/promotion-video.test.ts",
+        "test/api/quantity.test.ts",
+        "test/api/quarantine-server.test.ts",
+        "test/api/recycle.test.ts",
+        "test/api/redirect.test.ts",
+        "test/api/repeat-notification.test.ts",
+        "test/api/search.test.ts",
+        "test/api/security-answer.test.ts",
+        "test/api/security-question.test.ts",
+        "test/api/socket.test.ts",
+        "test/api/track-result.test.ts",
+        "test/api/user-profile.test.ts",
+        "test/api/user.test.ts",
+        "test/api/vuln-code-fixes.test.ts",
+        "test/api/vuln-code-snippet.test.ts",
+        "test/api/wallet.test.ts",
+        "test/api/web3Wallet.test.ts"
       ],
-      "started_at_utc": "2026-10-16T18:40:31.225730+00:00",
-      "duration_seconds": 17.1,
+      "started_at_utc": "2026-10-22T14:51:40.237806+00:00",
+      "duration_seconds": 15.27,
       "exit_code": 0,
-      "log_reference": "reports/private/day1/20261016T183808Z/test-api.log",
-      "log_sha256": "a940d294bae17bdb39a3675162c7f5e7bb9a4959fba51673e8d99759661e5633"
+      "log_reference": "reports/private/day1/20261022T144931Z/test-api.log",
+      "log_sha256": "a055b779c3dc4a9e5dccb6c0f4cefedef21795fea38f67bcb7fa152da5c335bf"
     }
   ],
   "status": "passed",
+  "profile": "offline-local",
+  "external_availability_suite": "not-selected",
   "locks_unchanged": true,
-  "finished_at_utc": "2026-10-16T18:40:48.333395+00:00"
+  "finished_at_utc": "2026-10-22T14:51:55.517642+00:00"
 }

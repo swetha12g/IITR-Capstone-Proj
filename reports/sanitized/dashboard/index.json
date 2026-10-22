@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "scope": "post-hoc curated fixture/control set; not independent real-world coverage or an exhaustive benchmark",
+  "labels_independently_human_reviewed": false,
+  "counts": {
+    "observations": 372,
+    "unique_issues": 235,
+    "by_stage": {
+      "sast": 11,
+      "sca": 82,
+      "secrets-history": 68,
+      "secrets-tree": 68,
+      "iac": 1,
+      "container": 100,
+      "dast": 42
+    }
+  },
+  "stage_observations": {
+    "sast": {
+      "MEDIUM": 3,
+      "HIGH": 8
+    },
+    "sca": {
+      "MEDIUM": 34,
+      "LOW": 5,
+      "HIGH": 32,
+      "CRITICAL": 11
+    },
+    "secrets": {
+      "HIGH": 136
+    },
+    "iac": {
+      "HIGH": 1
+    },
+    "container": {
+      "MEDIUM": 51,
+      "HIGH": 27,
+      "LOW": 11,
+      "CRITICAL": 11
+    },
+    "dast": {
+      "LOW": 16,
+      "MEDIUM": 10,
+      "INFO": 16
+    }
+  },
+  "detection": {
+    "TP": 14,
+    "FP": 0,
+    "FN": 1,
+    "TN": 6,
+    "precision": 1.0,
+    "recall": 0.9333333333333333,
+    "f1": 0.9655172413793104,
+    "sample_size": 21,
+    "introduced_known_issues": 15,
+    "caught_known_issues": 14,
+    "missed_known_issues": 1,
+    "fixture_target_80_percent_met": true
+  },
+  "detection_by_stage": {
+    "sast": {
+      "TP": 6,
+      "FP": 0,
+      "FN": 1,
+      "TN": 1,
+      "precision": 1.0,
+      "recall": 0.8571428571428571,
+      "f1": 0.923076923076923,
+      "sample_size": 8,
+      "introduced_known_issues": 7,
+      "caught_known_issues": 6,
+      "missed_known_issues": 1,
+      "fixture_target_80_percent_met": true
+    },
+    "sca": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "TN": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sample_size": 2,
+      "introduced_known_issues": 1,
+      "caught_known_issues": 1,
+      "missed_known_issues": 0,
+      "fixture_target_80_percent_met": true
+    },
+    "secrets": {
+      "TP": 1,
+      "FP": 0,
+      "FN": 0,
+      "TN": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sample_size": 2,
+      "introduced_known_issues": 1,
+      "caught_known_issues": 1,
+      "missed_known_issues": 0,
+      "fixture_target_80_percent_met": true
+    },
+    "iac": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 0,
+      "TN": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sample_size": 3,
+      "introduced_known_issues": 2,
+      "caught_known_issues": 2,
+      "missed_known_issues": 0,
+      "fixture_target_80_percent_met": true
+    },
+    "container": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 0,
+      "TN": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sample_size": 3,
+      "introduced_known_issues": 2,
+      "caught_known_issues": 2,
+      "missed_known_issues": 0,
+      "fixture_target_80_percent_met": true
+    },
+    "dast": {
+      "TP": 2,
+      "FP": 0,
+      "FN": 0,
+      "TN": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sample_size": 3,
+      "introduced_known_issues": 2,
+      "caught_known_issues": 2,
+      "missed_known_issues": 0,
+      "fixture_target_80_percent_met": true
+    }
+  },
+  "stage_durations": [
+    {
+      "stage": "sast",
+      "seconds": 4.04,
+      "observations": 1
+    },
+    {
+      "stage": "sca",
+      "seconds": 0.17,
+      "observations": 1
+    },
+    {
+      "stage": "secrets",
+      "seconds": 2.3,
+      "observations": 1
+    },
+    {
+      "stage": "iac",
+      "seconds": 3.76,
+      "observations": 1
+    },
+    {
+      "stage": "container",
+      "seconds": 10.09,
+      "observations": 1
+    },
+    {
+      "stage": "dast",
+      "seconds": 91.25,
+      "observations": 1
+    }
+  ],
+  "timing_note": "One observation per available stage; no percentile or end-to-end timing inferred from separate runs.",
+  "image_comparison": {
+    "iac_removed": 16,
+    "iac_added": 0,
+    "container_removed": 1,
+    "container_added": 0,
+    "container_retained": 100,
+    "image_size_reduction_bytes": 6397599
+  },
+  "image_vulnerabilities": {
+    "baseline": {
+      "CRITICAL": 11,
+      "HIGH": 27,
+      "LOW": 11,
+      "MEDIUM": 51,
+      "UNKNOWN": 1
+    },
+    "hardened": {
+      "CRITICAL": 11,
+      "HIGH": 27,
+      "LOW": 11,
+      "MEDIUM": 51
+    }
+  },
+  "sbom_components": 2748,
+  "database_updated_at": "2026-10-22T07:10:52.423530461Z",
+  "deferred_day4_findings": 39,
+  "production_readiness_claimed": false
+}

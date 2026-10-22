@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "run_id": "20261022T151417042900Z",
+  "target_commit": "993f1df104f309ce71c3babe22a5cc7e7205a31b",
+  "started_at_utc": "2026-10-22T15:14:17.066251+00:00",
+  "finished_at_utc": "2026-10-22T15:14:31.758285+00:00",
+  "images": {
+    "baseline": {
+      "config_id": "sha256:79543af23e212f5def487f4daa27763943170f7bb268c46d0aace37920d7ae88",
+      "size_bytes": 351789266,
+      "user": "65532"
+    },
+    "hardened": {
+      "config_id": "sha256:3eb3e0ff60e5fba12f014e5fcc9f6086fa7f366139d52a4bce44e598a3e860e9",
+      "size_bytes": 345391667,
+      "user": "65532:65532"
+    }
+  },
+  "database": {
+    "metadata": {
+      "Version": 2,
+      "NextUpdate": "2026-10-23T07:10:52.423530061Z",
+      "UpdatedAt": "2026-10-22T07:10:52.423530461Z",
+      "DownloadedAt": "2026-10-22T11:58:32.537794943Z"
+    },
+    "sha256": "fadaf0bac1910af783e6565afeb6b92540db046d4a095ab2ba8d2c6eadc8fac9"
+  },
+  "database_unchanged": true,
+  "inputs": {
+    "infra/k8s/deployment.yaml": "28921d73afa3edc5ffbe770be2dea4aee10ab44399c2c6c5262e89b53170569e",
+    "infra/k8s/namespace.yaml": "d7ae74ca2e4a94afff257444aa09b7116c2bc84a2201859c875bb2c8fd47b506",
+    "infra/k8s/service.yaml": "b1989684b0941dc04f8177812629a584306be20dfc7eb0632b9c159818a5d466",
+    "infra/k8s-hardened/deployment.yaml": "f182342160ba15eb574239dd6185eb9871ddf46ad5a7a4cde00df562b5b91d2a",
+    "infra/k8s-hardened/namespace.yaml": "47d1c321c339c0c605f7a11a3cf0c202786706765004ec976862f52803ab65c6",
+    "infra/k8s-hardened/service.yaml": "b1989684b0941dc04f8177812629a584306be20dfc7eb0632b9c159818a5d466",
+    "infra/k8s-hardened/serviceaccount.yaml": "15e51e1ea2625ce6c3020a5a59ce8e8793b06cd23fc58ed48bc0e2ab8d08df16",
+    "infra/docker/Dockerfile": "cc828201858151386e84c6db36f8ef1040def7fdc9b41f458a3a6e638ca834b6",
+    "infra/docker/start.cjs": "e8d7e6139f3dfd99b973cdb994ca4138c97b2c1874afb4be075f001940085542",
+    "policies/checkov/ImmutableImage.py": "44b11a16f6daf55785b30959d3e98275826918564133b3817a4b82634359a86e",
+    "policies/checkov/__init__.py": "d42eb0937279772950e9fa4fe471d470ed1348cc5d0b185d7803c7816ef8c1c6",
+    "locks/scanners/day4-tools.json": "36fa219315ca7f7561498c907e5bb6c6ca264880ea1441b24770876cbad8a986",
+    "locks/scanners/checkov-requirements.txt": "528145dbc0a703f04830ee4f2b81797710d65db6365fcb83b381291c327d3451",
+    "locks/scanners/cyclonedx-schemas.json": "d649cb77c82876bcc3d07e16f51571437ae8ca63c113c615e13ab37105150058",
+    "locks/scanners/tools.json": "2e60e87e45aced77545e8f90a6549e7c58625df3af3474e1f9da5cae743c7fd9",
+    "policies/day4-gates.json": "2f7e75730ea4508c282674b1c0666e3c1e88879ffed893be093d0e1a390b5d8d",
+    "policies/baseline-exceptions.json": "ec0f59810986dd92d89bdaf73c11ae9aa460f7feeb87036ea320004f60fac78c",
+    "locks/juice-shop/package-lock.json": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c",
+    "locks/juice-shop/frontend-package-lock.json": "2cab8508e02d7ca0b74df30010cfefa1c98ce4e76708928726f80e090d931503",
+    "scripts/run-day4-scans.py": "76ce3a0e6bbab2705116335ff79345009a0e233762e07a44e172bc970160d4bb",
+    "scripts/gate-day4.py": "e63bbc5fdcc83f3712d87d8cc122377e62d6c608e06597da09587d711488b334",
+    "scripts/test-day4-gates.py": "6f89a7157d1d22e4b629e32a8e760402bf247f9cd56ae59e15899b42b6073ca7",
+    "scripts/deploy-hardened.py": "7d92f4ceff07ec655e869c6ee10240bb3a4ddc874187d9f56ab5dfc1651e1685",
+    "scripts/build-hardened-image.py": "f90ed77fded2b775cda6ab4b754c89d74902f633b80ac4bdb75074e2678e29b6",
+    "scripts/verify-hardened-runtime.py": "e926158e1bd00ca6df911a899408d51d68fb2897288437fb0fd5646cb6798c3e",
+    "scripts/verify-day4-policies.py": "04f12796eb46ee9de84bf99b8bb818204234cef4a4ed82ca0dac2afb1204ced0",
+    "scripts/install-day4-tools.py": "51ef8b8a3dd27fbdb61fbcb49cd2d23de3a9cac3ff90ad6f388d6679094d506c"
+  },
+  "tools": {
+    "checkov": {
+      "version": "3.3.30",
+      "distribution_hash_verified": true
+    },
+    "syft": {
+      "version": "1.55.0",
+      "distribution_hash_verified": true
+    },
+    "trivy": "0.76.0"
+  },
+  "stages": [
+    {
+      "stage": "iac-baseline",
+      "execution": "complete",
+      "exit_code": 1,
+      "sha256": "3dd51f93a2f672763367dc2439ef7b0318bfabc7c30384b7e295d77f89d250f3",
+      "duration_seconds": 2.99,
+      "image_config_id": null
+    },
+    {
+      "stage": "iac-hardened",
+      "execution": "complete",
+      "exit_code": 1,
+      "sha256": "cd03c54bb58087fc0028ac6e9d9400b634ee318e189868443a7d1f130f508fe9",
+      "duration_seconds": 1.33,
+      "image_config_id": null
+    },
+    {
+      "stage": "dockerfile-baseline",
+      "execution": "complete",
+      "exit_code": 1,
+      "sha256": "3f3eb45887f6f445310a5aef016c3e08fe9c5c8381a48856861f69c52a6dfa65",
+      "duration_seconds": 1.38,
+      "image_config_id": null
+    },
+    {
+      "stage": "dockerfile-hardened",
+      "execution": "complete",
+      "exit_code": 0,
+      "sha256": "2f92caba7398bf962aee42cfa603b57f04af4a370eb4419ad54695fab80bcbde",
+      "duration_seconds": 1.27,
+      "image_config_id": null
+    },
+    {
+      "stage": "container-baseline",
+      "execution": "complete",
+      "exit_code": 20,
+      "sha256": "5a15f5ccf8f04c58991c81c02578949a151f5f3dcc880493300c9714ac8f4bfa",
+      "duration_seconds": 0.12,
+      "image_config_id": "sha256:79543af23e212f5def487f4daa27763943170f7bb268c46d0aace37920d7ae88"
+    },
+    {
+      "stage": "container-hardened",
+      "execution": "complete",
+      "exit_code": 20,
+      "sha256": "5ce594f10d8dce2ee94a3950f799a0833ebe7eff67e558a56ff76fbec93237ae",
+      "duration_seconds": 0.12,
+      "image_config_id": "sha256:3eb3e0ff60e5fba12f014e5fcc9f6086fa7f366139d52a4bce44e598a3e860e9"
+    },
+    {
+      "stage": "sbom",
+      "execution": "complete",
+      "exit_code": 0,
+      "sha256": "1daeca35680531a5eb14986b9e1f76ae9970acb450dbc65be9001575730784b9",
+      "duration_seconds": 4.75,
+      "image_config_id": "sha256:3eb3e0ff60e5fba12f014e5fcc9f6086fa7f366139d52a4bce44e598a3e860e9"
+    }
+  ]
+}

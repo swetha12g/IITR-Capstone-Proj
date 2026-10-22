@@ -1,0 +1,8 @@
+{
+  "scope": "non-executed synthetic missing-authorization route",
+  "known_positive": true,
+  "detected": false,
+  "scanner": "semgrep",
+  "reason": "six authored pattern checks do not implement authorization dataflow",
+  "report_sha256": "4bacf5fdb3464bd8b39e2f6b4aab16b5b589985617c793e6d8570f42de2416b7"
+}

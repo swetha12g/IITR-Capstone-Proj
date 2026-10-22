@@ -337,6 +337,8 @@ Also test scanner crash, invalid JSON, missing report and expired exception. The
 
 **Mandatory entry condition:** complete the program's Responsible AI Use and Lab Conduct acknowledgement **before starting the work corresponding to Week 2**, which starts here in the compressed calendar. Record completion/date privately; do not commit a signature to this public repository.
 
+**22 October resumption:** the user confirmed signing the Responsible AI acknowledgement and requested continuation. PF-D4-00 is complete on that confirmation; actual signing date was not supplied and signed material remains private. Implementation has resumed from the [Day 4 checkpoint](docs/day4-checkpoint.md); remaining acceptance checks require fresh evidence.
+
 ### Step 1. Add Checkov and custom policy-as-code
 
 ```bash
@@ -372,7 +374,7 @@ Validate SBOM format/schema and representative package names/versions. Record ap
 
 Load the hardened tag into kind, update the deployment image, rerun readiness/functional tests and compare vulnerabilities to baseline. Any remaining intentional app weaknesses must stay in the risk register.
 
-**Day 4 acceptance:** [ ] built-in/custom IaC tests; [ ] mapped applicable controls; [ ] functional non-root image; [ ] same image scanned/SBOM generated; [ ] before/after evidence.  
+**Day 4 technical evidence (22 October):** [x] built-in/custom IaC tests; [x] mapped applicable controls; [x] functional non-root image; [x] same image scanned/SBOM generated; [x] before/after evidence. **Security acceptance remains open:** the local gate blocks on one NetworkPolicy control and 38 high/critical image findings; no Day 4 exceptions were activated. See [checkpoint](docs/day4-checkpoint.md) and [residual risks](docs/day4-risk-review.md). Hosted Day 4/Day 5 integration has not run.
 **Suggested commit:** `feat: add IaC policies image hardening and SBOM`.
 
 ## Day 5 — ZAP and the complete pipeline

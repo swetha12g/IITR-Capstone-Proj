@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "default_profile": "study-lab",
+  "study_lab": {
+    "authorized_on": "2026-10-22",
+    "decision": "Defer security findings for later remediation and continue the full assignment",
+    "scope": "owned study lab only; no production promotion",
+    "operational_errors_remain_errors": true
+  },
+  "required_stages": ["iac-baseline", "iac-hardened", "dockerfile-baseline", "dockerfile-hardened", "container-baseline", "container-hardened", "sbom"],
+  "blocking_container_severities": ["HIGH", "CRITICAL", "UNKNOWN"],
+  "block_all_failed_iac_checks": true,
+  "required_custom_check": "CKV_PF_K8S_1",
+  "maximum_database_age_hours": 48,
+  "exceptions": []
+}

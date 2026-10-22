@@ -1,0 +1,16 @@
+{
+  "tools": {
+    "checkov": {
+      "version": "3.3.30",
+      "distribution_hash_verified": true
+    },
+    "syft": {
+      "version": "1.55.0",
+      "distribution_hash_verified": true
+    }
+  },
+  "checkov_hashed_distributions": 100,
+  "platform": "linux-x86_64",
+  "python": "3.10",
+  "system_installation": false
+}

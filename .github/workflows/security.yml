@@ -1,33 +1,6 @@
-name: Baseline deployment and source security gates
+name: Historical strict baseline (manual)
 
 on:
-  push:
-    branches: [feature-16-kick-start]
-    paths:
-      - .github/workflows/security.yml
-      - app/juice-shop/**
-      - infra/**
-      - scripts/**
-      - locks/**
-      - requirements-dev.txt
-      - policies/**
-      - tests/day3/**
-      - tests/runtime/**
-      - .semgrepignore
-      - .gitignore
-  pull_request:
-    paths:
-      - .github/workflows/security.yml
-      - app/juice-shop/**
-      - infra/**
-      - scripts/**
-      - locks/**
-      - requirements-dev.txt
-      - policies/**
-      - tests/day3/**
-      - tests/runtime/**
-      - .semgrepignore
-      - .gitignore
   workflow_dispatch:
 
 permissions:

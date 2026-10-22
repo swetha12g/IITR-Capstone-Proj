@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "scope": "post-hoc curated fixture/control set; not independent real-world coverage or an exhaustive benchmark",
+  "human_review": "not independently reviewed",
+  "labels": [
+    {
+      "stage": "sast",
+      "issue_id": "fixture-sast-sql-template",
+      "ground_truth_positive": true,
+      "detected": true,
+      "rationale": "Unsafe pattern introduced in the non-executed fixture before the recorded scanner run.",
+      "evidence": "day3/fixture-evidence.json",
+      "label_author_role": "coding-agent fixture curator"
+    },
+    {
+      "stage": "sast",
+      "issue_id": "fixture-sast-eval",
+      "ground_truth_positive": true,
+      "detected": true,
+      "rationale": "Unsafe pattern introduced in the non-executed fixture before the recorded scanner run.",
+      "evidence": "day3/fixture-evidence.json",
+      "label_author_role": "coding-agent fixture curator"
+    },
+    {
+      "stage": "sast",
+      "issue_id": "fixture-sast-shell-command",
+      "ground_truth_positive": true,
+      "detected": true,
+      "rationale": "Unsafe pattern introduced in the non-executed fixture before the recorded scanner run.",
+      "evidence": "day3/fixture-evidence.json",
+      "label_author_role": "coding-agent fixture curator"
+    },
+    {
+      "stage": "sast",
+      "issue_id": "fixture-sast-weak-hash",
+      "ground_truth_positive": true,
+      "detected": true,
+      "rationale": "Unsafe pattern introduced in the non-executed fixture before the recorded scanner run.",
+      "evidence": "day3/fixture-evidence.json",
+      "label_author_role": "coding-agent fixture curator"
+    },
+    {
+      "stage": "sast",
+      "issue_id": "fixture-sast-tls-validation",
+      "ground_truth_positive": true,
+      "detected": true,
+      "rationale": "Unsafe pattern introduced in the non-executed fixture before the recorded scanner run.",
+      "evidence": "day3/fixture-evidence.json",
+      "label_author_role": "coding-agent fixture curator"
+    },
+    {
+      "stage": "sast",
+      "issue_id": "fixture-sast-jwt-decode",
+      "ground_truth_positive": true,
+      "detected": true,
+      "rationale": "Unsafe pattern introduced in the non-executed fixture before the recorded scanner run.",
+      "evidence": "day3/fixture-evidence.json",
+      "label_author_role": "coding-agent fixture curator"
+    },
+    {
+      "stage": "sast",
+      "issue_id": "fixture-sast-authorization",
+      "ground_truth_positive": true,
+      "detected": false,
+      "rationale": "An unprotected export route is a known authorization defect outside the six pattern checks.",
+      "evidence": "day6/known-miss.json",
+      "label_author_role": "coding-agent fixture curator"
+    },
+    {
+      "stage": "sast",
+      "issue_id": "fixture-sast-safe",
+      "ground_truth_positive": false,
+      "detected": false,
+      "rationale": "Repaired fixture has no authored-rule findings.",
+      "evidence": "day3/fixture-evidence.json",
+      "label_author_role": "coding-agent fixture curator"
+    },
+    {
+      "stage": "sca",
+      "issue_id": "fixture-sca-reviewed-advisory",
+      "ground_truth_positive": true,
+      "detected": true,
+      "rationale": "Deliberate nonfunctional/isolated positive fixture.",
+      "evidence": "day3/fixture-evidence.json",
+      "label_author_role": "coding-agent fixture curator"
+    },
+    {
+      "stage": "sca",
+      "issue_id": "fixture-sca-safe",
+      "ground_truth_positive": false,
+      "detected": false,
+      "rationale": "Clean isolated fixed fixture, not the history-retention probe.",
+      "evidence": "day3/fixture-evidence.json",
+      "label_author_role": "coding-agent fixture curator"
+    },
+    {
+      "stage": "secrets",
+      "issue_id": "fixture-secrets-synthetic-canary",
+      "ground_truth_positive": true,
+      "detected": true,
+      "rationale": "Deliberate nonfunctional/isolated positive fixture.",
+      "evidence": "day3/fixture-evidence.json",
+      "label_author_role": "coding-agent fixture curator"
+    },
+    {
+      "stage": "secrets",
+      "issue_id": "fixture-secrets-safe",
+      "ground_truth_positive": false,
+      "detected": false,
+      "rationale": "Clean isolated fixed fixture, not the history-retention probe.",
+      "evidence": "day3/fixture-evidence.json",
+      "label_author_role": "coding-agent fixture curator"
+    },
+    {
+      "stage": "iac",
+      "issue_id": "fixture-iac-mutable-image",
+      "ground_truth_positive": true,
+      "detected": true,
+      "rationale": "Mutable reference is deliberately introduced.",
+      "evidence": "day4/policy-fixtures.json",
+      "label_author_role": "coding-agent fixture curator"
+    },
+    {
+      "stage": "iac",
+      "issue_id": "fixture-iac-escalation",
+      "ground_truth_positive": true,
+      "detected": true,
+      "rationale": "Privilege escalation deliberately enabled.",
+      "evidence": "day4/policy-fixtures.json",
+      "label_author_role": "coding-agent fixture curator"
+    },
+    {
+      "stage": "iac",
+      "issue_id": "fixture-iac-restricted",
+      "ground_truth_positive": false,
+      "detected": false,
+      "rationale": "Restricted digest-pinned fixture passes both selected checks.",
+      "evidence": "day4/policy-fixtures.json",
+      "label_author_role": "coding-agent fixture curator"
+    },
+    {
+      "stage": "container",
+      "issue_id": "baseline-ca-advisory",
+      "ground_truth_positive": true,
+      "detected": true,
+      "rationale": "Known CA advisory present in the baseline image.",
+      "evidence": "day4/gate-summary.json",
+      "label_author_role": "coding-agent fixture curator"
+    },
+    {
+      "stage": "container",
+      "issue_id": "baseline-retained-critical",
+      "ground_truth_positive": true,
+      "detected": true,
+      "rationale": "Pinned training dependencies retain confirmed critical advisories.",
+      "evidence": "day4/gate-summary.json",
+      "label_author_role": "coding-agent fixture curator"
+    },
+    {
+      "stage": "container",
+      "issue_id": "hardened-ca-advisory",
+      "ground_truth_positive": false,
+      "detected": false,
+      "rationale": "The removed baseline CA identity is absent after the supported base update.",
+      "evidence": "day4/gate-summary.json",
+      "label_author_role": "coding-agent fixture curator"
+    },
+    {
+      "stage": "dast",
+      "issue_id": "lab-dast-csp-header",
+      "ground_truth_positive": true,
+      "detected": true,
+      "rationale": "Directly observed training response-header gap; passive scanner evidence retained.",
+      "evidence": "day5/dast.json",
+      "label_author_role": "coding-agent fixture curator"
+    },
+    {
+      "stage": "dast",
+      "issue_id": "lab-dast-content-type-options",
+      "ground_truth_positive": true,
+      "detected": true,
+      "rationale": "Directly observed training response-header gap; passive scanner evidence retained.",
+      "evidence": "day5/dast.json",
+      "label_author_role": "coding-agent fixture curator"
+    },
+    {
+      "stage": "dast",
+      "issue_id": "lab-dast-frame-header",
+      "ground_truth_positive": false,
+      "detected": false,
+      "rationale": "The app provides a frame-protection header; no alert for the selected rule.",
+      "evidence": "day5/dast.json",
+      "label_author_role": "coding-agent fixture curator"
+    }
+  ]
+}

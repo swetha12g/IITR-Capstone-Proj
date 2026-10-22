@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "tests": 60,
+  "scope": "actual serialized mock HTTP bodies and zero-call refusals; current code and prompt bound",
+  "code_sha256": "3bcf1b8f39468c3a78d0ebb2dfeaf583b4d0e4b961e0b0be37bceea9bfedf1c3",
+  "pytest_log_sha256": "f3cba7de36e27fa9f09a5331adc2826b076d97a26a120edc815a07e69c0a4d06",
+  "observed_at_utc": "2026-10-22T15:19:29.867027+00:00"
+}

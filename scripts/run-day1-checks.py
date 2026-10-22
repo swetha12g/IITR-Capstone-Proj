@@ -33,6 +33,7 @@ def sha256(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--steps", nargs="+", choices=STEPS, default=list(STEPS))
+    parser.add_argument("--offline", action="store_true", help="Exclude the independent internet-resource availability suite; keep all local application tests")
     args = parser.parse_args()
     node = subprocess.check_output(["node", "--version"], text=True).strip()
     npm = subprocess.check_output(["npm", "--version"], text=True).strip()
@@ -64,6 +65,8 @@ def main():
         "selected_steps": args.steps,
         "steps": [],
         "status": "running",
+        "profile": "offline-local" if args.offline else "upstream-finite",
+        "external_availability_suite": "not-selected" if args.offline else "selected",
     }
     env = os.environ.copy()
     env.update({"CI": "true", "CYPRESS_INSTALL_BINARY": "0",
@@ -79,6 +82,12 @@ def main():
     save()
     for step in args.steps:
         command = STEPS[step]
+        if args.offline and step == "test-api":
+            files = sorted(str(p.relative_to(APP)) for p in (APP / "test/api").rglob("*.test.ts") if p.name != "internet-resources.test.ts")
+            if not files:
+                raise ValueError("No local API test files selected")
+            command = ["node", "--import", "./test/api/helpers/test-env.mjs", "--import", "tsx",
+                       "--test", "--test-force-exit", *files]
         log_path = private / f"{step}.log"
         started = datetime.now(timezone.utc).isoformat()
         before = time.monotonic()

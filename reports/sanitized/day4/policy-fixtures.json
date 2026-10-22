@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "custom_check_id": "CKV_PF_K8S_1",
+  "builtin_check_id": "CKV_K8S_20",
+  "cases": [
+    {
+      "case": "digest",
+      "exit_code": 0,
+      "passed_ids": [
+        "CKV_K8S_20",
+        "CKV_PF_K8S_1"
+      ],
+      "failed_ids": [],
+      "report_sha256": "2f4f5516f8b25db98ced5fc36088693a3b41c23490c926f33578ca92df2ef87c"
+    },
+    {
+      "case": "latest",
+      "exit_code": 1,
+      "passed_ids": [
+        "CKV_K8S_20"
+      ],
+      "failed_ids": [
+        "CKV_PF_K8S_1"
+      ],
+      "report_sha256": "60f6e77be67e54689bb0ba8b76f45202fe61f2384cf4da502da9cd813ec56870"
+    },
+    {
+      "case": "version-tag",
+      "exit_code": 1,
+      "passed_ids": [
+        "CKV_K8S_20"
+      ],
+      "failed_ids": [
+        "CKV_PF_K8S_1"
+      ],
+      "report_sha256": "e6296e17685649a7d525c35508f88751e2ef9fd88895f731ac11802a4b269da8"
+    },
+    {
+      "case": "truncated-digest",
+      "exit_code": 1,
+      "passed_ids": [
+        "CKV_K8S_20"
+      ],
+      "failed_ids": [
+        "CKV_PF_K8S_1"
+      ],
+      "report_sha256": "36701a3fd5b951f56ff5a26e5888596bb381a6de3f22c7c15ee5b22c559d9311"
+    },
+    {
+      "case": "missing-image",
+      "exit_code": 1,
+      "passed_ids": [
+        "CKV_K8S_20"
+      ],
+      "failed_ids": [
+        "CKV_PF_K8S_1"
+      ],
+      "report_sha256": "8da3b917cbab4131d278ccd28f8c04afb97a6cbb4648db25b9d6166e4fbc6717"
+    },
+    {
+      "case": "mutable-init",
+      "exit_code": 1,
+      "passed_ids": [
+        "CKV_K8S_20"
+      ],
+      "failed_ids": [
+        "CKV_PF_K8S_1"
+      ],
+      "report_sha256": "345e5f9f4df62af8d53d5e0f6818de7d0711eb2f6386d6ce2d9ed27a3d7e5d4c"
+    },
+    {
+      "case": "privilege-escalation",
+      "exit_code": 1,
+      "passed_ids": [
+        "CKV_PF_K8S_1"
+      ],
+      "failed_ids": [
+        "CKV_K8S_20"
+      ],
+      "report_sha256": "20b8300c68b9dba3d673decd76527dd0d77d3be7350e264566f1b486d6170e58"
+    },
+    {
+      "case": "cronjob-digest",
+      "exit_code": 0,
+      "passed_ids": [
+        "CKV_K8S_20",
+        "CKV_PF_K8S_1"
+      ],
+      "failed_ids": [],
+      "report_sha256": "7adb4c74f43a7e378dc4e89e344065c5339c4fb33613fa45d701c389b7d922c7"
+    }
+  ]
+}

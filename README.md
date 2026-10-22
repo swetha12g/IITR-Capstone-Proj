@@ -4,7 +4,15 @@ PipelineFortress — Secure CI/CD with GenAI-Assisted Triage.
 
 The detailed execution roadmap is available in [docs/PipelineFortress_Detailed_Roadmap.pdf](docs/PipelineFortress_Detailed_Roadmap.pdf).
 
-Status as of 18 October 2026: Day 1 setup and pinned Juice Shop baseline build/tests passed. Selected tests: 2,334 passed, 8 upstream skips, 0 failures; lint passed. Day 2 source image and local kind deployment now pass runtime checks; [hosted CI passed](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/38957969793). Day 2 is complete, with the earlier deployment incident limitation recorded in its checkpoint. The six-stage security pipeline, AI triage, and final assessment remain pending.
+Status on 22 October 2026: the complete local six-stage security pipeline passes execution with deferred findings. The hardened source-built image, passive ZAP coverage, deduplicated dashboard, source-free AI boundary and three focused remediation examples have real local evidence. The current offline application profile passes 2,326 tests with seven skips; nine external-service availability tests are excluded explicitly. See [current completion state](docs/project-completion.md) for hosted, reproduction and review status.
+
+The user directed finishing the study implementation and fixing vulnerabilities later. All critical/high issue aliases are retained in the [deferred register](docs/deferred-remediation.md). Scanner errors, missing stages and invalid reports remain execution errors. All three bounded OpenAI generation attempts returned HTTP429; no successful live triage is claimed. No API purchase, top-up or further automatic attempt is made.
+
+- [Dashboard](reports/sanitized/dashboard/index.html)
+- [Twelve-page study report](output/pdf/PipelineFortress_Study_Report.pdf)
+- [Reproduction instructions](docs/reproduction.md)
+- [Review ledger](docs/reviews.md)
+- [Defense notes](docs/defense.md)
 
 - [Execution guide](10-days-work-break-down.md)
 - [Day 1 checkpoint](docs/day1-checkpoint.md)
@@ -15,13 +23,10 @@ Status as of 18 October 2026: Day 1 setup and pinned Juice Shop baseline build/t
 - [Upstream fork/source provenance](docs/upstream-provenance.md)
 - [Evidence and remaining requirements](docs/evidence-index.md)
 
-After preparing the recorded user-local Node and Python environments, reproduce the selected local checks from Bash:
+To reproduce in a separate full-history clone with Docker and Python 3.10:
 
 ```bash
-source scripts/dev-env.sh
-python scripts/run-day1-checks.py
+bash scripts/reproduce.sh
 ```
 
-The runner uses the pinned imported source and recorded dependency locks. It keeps raw output in ignored private evidence and writes sanitized status manifests. It does not create a cluster or run live LLM calls. Juice Shop is an intentionally vulnerable lab target; a successful baseline build is not a production-safety claim.
-
-Day 3 is complete for its source-scan/gate scope: [CI run 39111621696 passed](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39111621696), including 25 gate contracts, five rollout regressions, application build/tests, deployment/runtime and cleanup. All 221 findings remain visible; 186 exact lab-only risks are approved until 25 October 2026 at 00:00 IST, with zero remaining blockers/errors. A deployment readiness race was fixed and verified. Accepted risk is not remediation or production readiness. Day 4 awaits the program acknowledgement; assistance is requested. See [Day 3 checkpoint](docs/day3-checkpoint.md) and [daily checklist](docs/daily-log.md).
+This bootstraps project-local tools, uses an owned temporary cluster, retains sanitized receipts and performs mock AI triage without API spending. Raw scanner reports, credentials, full SBOMs and private logs stay ignored. Juice Shop remains intentionally vulnerable. [Historical Day 3 CI](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39111621696) and its exact expiring source approvals are retained separately; the new study workflow is the automatic execution path, while the historical strict workflow is manual.

@@ -7,6 +7,9 @@ fi
 
 pipelinefortress_repo_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 pipelinefortress_node_dir="${PIPELINEFORTRESS_NODE_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/pipelinefortress/node-v24.22.0-linux-x64}"
+if [[ ! -x "$pipelinefortress_node_dir/bin/node" && -x "$pipelinefortress_repo_dir/.tools/node/node-v24.22.0-linux-x64/bin/node" ]]; then
+  pipelinefortress_node_dir="$pipelinefortress_repo_dir/.tools/node/node-v24.22.0-linux-x64"
+fi
 
 if [[ ! -x "$pipelinefortress_node_dir/bin/node" ]]; then
   printf '%s\n' 'Project Node runtime is missing; see docs/versions.md.' >&2

@@ -9,6 +9,7 @@ kubeconfig.*
 .kube/
 local-alias-maps/
 api-traces/
+/tmp/pdfs/
 
 # Python environments and caches
 .venv/
