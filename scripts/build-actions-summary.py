@@ -84,6 +84,10 @@ def report(directory, *, run_id, commit, repository, needs):
         lines.append('| ' + ' | '.join([suite, *(number(totals.get(k)) for k in ['passed', 'failed', 'skipped']),
                                         number(totals.get('cancelled')) + ' / ' + number(totals.get('todo'))]) + ' |')
     contracts = build.get('contract_tests', {})
+    inventory = build.get('server_case_inventory', {})
+    lines += ['', 'Server case inventory: **' + number(inventory.get('executed_cases')) + ' / ' + number(inventory.get('expected_cases')) + '** cases; '
+              + number(inventory.get('missing_cases')) + ' missing; ' + number(inventory.get('critical_regressions')) + ' critical-remediation regressions. '
+              'Case identities are hashed; raw names and JUnit paths remain private.']
     lines += ['', f"Pipeline / AI boundary / report contracts: **{number(contracts.get('tests'))} tests**, "
               f"{number(contracts.get('failures'))} failures, {number(contracts.get('errors'))} errors, {number(contracts.get('skipped'))} skipped.", '',
               'A successful build-test job includes pinned installs, frontend/backend build, selected local application tests, lint and snippet consistency. The independent internet-resource availability suite is excluded; other skips are shown above. Legacy Cypress challenge E2E coverage is not claimed.', '',

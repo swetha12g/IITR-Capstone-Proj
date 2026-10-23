@@ -1,0 +1,35 @@
+{
+  "observed_at_utc": "2026-10-23T05:37:25.769906+00:00",
+  "commit": "89d5db70dc2d19fa5efce81a2439228518f3e6d7",
+  "stage": "bootstrap pip-wheel download",
+  "script_exit_code": 1,
+  "transfer_exit_code": 28,
+  "timeout_seconds": 240,
+  "received_bytes": 735804,
+  "complete_distribution_bytes": 1816632,
+  "owned_cluster_created": false,
+  "test_or_scanner_success_claimed": false,
+  "retry_preparation": "Existing matching hash-verified distribution and download caches preseeded; no installed environment copied",
+  "prefetched_distributions": [
+    {
+      "component": "pip",
+      "sha256": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e"
+    },
+    {
+      "component": "node",
+      "sha256": "cc2f601cee82d9a5a233302fe307abc600727035fd7d2c3a3571755989e95008"
+    },
+    {
+      "component": "trivy",
+      "sha256": "e24b1c51293c1b15e4ba8d45bbc7891ba053f90278ec2698f3562c993e145fe7"
+    },
+    {
+      "component": "gitleaks",
+      "sha256": "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb"
+    },
+    {
+      "component": "syft",
+      "sha256": "bb65249542db5fedeeb4d3f9b018b75e7264dbfbbb10486f044581a92f90490d"
+    }
+  ]
+}

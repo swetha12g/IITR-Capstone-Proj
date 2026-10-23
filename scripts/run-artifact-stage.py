@@ -73,6 +73,10 @@ def main():
         context['app_test_profile'] = app.get('profile', 'upstream-finite')
         context['external_availability_suite'] = app.get('external_availability_suite', 'selected')
         context['test_results'] = {s['step']: s['test_totals'] for s in app['steps'] if 'test_totals' in s}
+        server = next(s for s in app['steps'] if s['step'] == 'test-server')
+        if 'case_inventory' in server:
+            context['server_case_inventory'] = {k: v for k, v in server['case_inventory'].items() if k != 'file_counts'}
+        assert context['server_case_inventory']['matched'] and context['server_case_inventory']['reporter_totals_agree']
         junit_path = ROOT / 'reports/private/pipeline/contracts.xml'
         if junit_path.exists():
             suites = list(ET.parse(junit_path).getroot().iter('testsuite'))

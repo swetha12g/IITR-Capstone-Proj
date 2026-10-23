@@ -1,0 +1,49 @@
+{
+  "observed_at_utc": "2026-10-23T05:45:25.645078+00:00",
+  "earlier_hosted_run": 39842575944,
+  "earlier_server_passed": 422,
+  "later_hosted_run": 39850270120,
+  "later_server_passed": 395,
+  "reported_count_difference": 27,
+  "application_source_diff_between_revisions": "none",
+  "local_concurrency": 2,
+  "local_text_and_junit_agree": true,
+  "local_totals": {
+    "total": 424,
+    "passed": 422,
+    "failed": 0,
+    "skipped": 2
+  },
+  "local_critical_regressions_passed": 5,
+  "root_cause": "unconfirmed; earlier hosted private per-case logs were not retained",
+  "new_control": "Exact hashed case-and-status inventory required before build receipt; sanitized check manifest retained on failure; raw JUnit stays private",
+  "local_junit_sha256": "fed0aaedc24a72f304816d1c53b95710242a9ecf290a362795d70e51adc510d1",
+  "baseline_sha256": "22f866f2a2380d32538c68cfc36136adcd226029eb0161a29d61ad5b683ba480",
+  "default_concurrency_local_reproduction": {
+    "total": 406,
+    "passed": 404,
+    "skipped": 2,
+    "missing_cases": 18,
+    "file": "test/server/insecurity.unit.test.ts",
+    "runner_exit_code": 0
+  },
+  "serialized_runs": [
+    {
+      "run": 1,
+      "passed": 422,
+      "skipped": 2,
+      "case_count": 424,
+      "all_expected_case_identities_match": true,
+      "critical_regressions_passed": 5
+    },
+    {
+      "run": 2,
+      "passed": 422,
+      "skipped": 2,
+      "case_count": 424,
+      "all_expected_case_identities_match": true,
+      "critical_regressions_passed": 5
+    }
+  ],
+  "mitigation": "Run every server file sequentially and require the complete hashed case/status inventory and agreeing spec/JUnit totals before publishing a build receipt"
+}

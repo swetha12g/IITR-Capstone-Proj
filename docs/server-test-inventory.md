@@ -1,0 +1,11 @@
+# Complete server-case coverage
+
+Run 39850270120 passed its eight jobs with zero critical findings but reported 395 server passes, whereas the earlier hosted/local suite reported 422. The application test source did not change. Its earlier private per-case log was not retained, so the exact historical cause remains unconfirmed. [Investigation](../reports/sanitized/final-audit/server-count-investigation.json).
+
+A local default-concurrency run reproduced a successful exit with only 406 of 424 expected cases: eighteen cases in one server test file were absent. Two serialized runs each executed all 424 cases (422 passed, two original upstream skips), including all five critical-remediation regressions. This establishes the observed omission and a verified mitigation; no source test was deleted or ignored.
+
+The application harness now runs the same complete server glob with `--test-concurrency=1` and both spec/JUnit reporters. [The versioned inventory](../locks/juice-shop/server-test-inventory.json) records 424 hashed case/status identities across 41 files. Exact equality, multiplicity, known skip status and agreeing numeric totals are required. Missing, duplicated, unexpectedly skipped or renamed cases fail the application check even when Node exits zero. All five critical regression identities must pass. Intentional test changes require reviewing and updating the baseline alongside their source.
+
+Raw names, XML hostnames and absolute runner paths stay in ignored JUnit evidence. The public build receipt contains only numeric coverage and inventory/baseline hashes. A separate always-published `application-checks` artifact contains the sanitized check manifest, including per-file counts and error classifications. Checked-in old manifests are removed before jobs so an early failure cannot publish stale application evidence.
+
+The Actions poster shows actual executed/expected cases, missing count and critical regression passes. Eighty-five current pipeline, boundary, dashboard and coverage contracts pass; the new tests exercise omitted/duplicate cases, unexpected skips, empty reports and outside-application paths. A subsequent hosted run must pass this stronger gate before the follow-up revision is accepted.

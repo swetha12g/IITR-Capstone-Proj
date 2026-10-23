@@ -42,7 +42,7 @@ jobs:
         fetch-depth: 0
     - &id002
       name: Clear checked-in execution receipts
-      run: python -c "from pathlib import Path; [p.unlink(missing_ok=True) for p in Path('reports/sanitized/pipeline').glob('*.json')]"
+      run: python -c "from pathlib import Path; [p.unlink(missing_ok=True) for p in Path('reports/sanitized/pipeline').glob('*.json')]; Path('reports/sanitized/day1-latest.json').unlink(missing_ok=True)"
     - &id003
       uses: actions/setup-python@83679a892e2d95755f2dac6acb0bfd1e9ac5d548
       with:
@@ -61,6 +61,14 @@ jobs:
       run: python -m pytest tests/triage tests/redaction -q --junitxml=reports/private/pipeline/contracts.xml
     - name: Build and test the pinned application
       run: python scripts/run-day1-checks.py --offline
+    - name: Publish sanitized application check manifest
+      if: always()
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: application-checks
+        path: reports/sanitized/day1-latest.json
+        if-no-files-found: error
+        retention-days: 14
     - name: Verify application lint and snippet consistency
       working-directory: app/juice-shop
       run: |
