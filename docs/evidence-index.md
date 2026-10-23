@@ -209,7 +209,7 @@ The user directed completing the study assignment with vulnerabilities deferred.
 | [Prior full hosted pass](../reports/sanitized/delivery/historical/39818760193/artifact-verification.json) | Independent preserved success at 61b064f | `359ba82b5d4eeda817afed14eba306fe57dd4752d45d9187246a16cc45439dda` |
 | [Passive ZAP](../reports/sanitized/day5/dast.json) | 121 URLs, route proof and scanner cleanup | `4a50fada231abf874580c939f3107af31acf6acb54219a7231aa989d4b811deb` |
 | [DAST controls](../reports/sanitized/day5/fixture-evidence.json) | Real different-UID access probes and selected bad/fixed header detections pass | `e3321d93ea09361e7b85b8cb5c02ac4d7aad3b9c12292e731c5b8ccc9120d707` |
-| [Dashboard inputs/results](../reports/sanitized/dashboard/index.json) | Current 251 observations / 180 underlying issues; post-hoc fixture metrics | `1f41927f83f5665ca72722943c0e9c29088340afdecde8ecafa539a22e008d9a` |
+| [Dashboard inputs/results](../reports/sanitized/dashboard/index.json) | Current 251 observations / 180 underlying issues; post-hoc fixture metrics | `92c7b919d4e6d1e1401c252e230da7b40571c94208617e6086210f174bfefe75` |
 | [Deferred register](../reports/sanitized/deferred-risks.json) | Current zero critical / 91 high; earlier eleven critical identities retained separately | `02066c5861f27f0835d8770b66c638ff03abbbe3e4b5cad7561c81f47178536e` |
 | [Current contract proof](../reports/sanitized/day7/redaction-tests.json) | 64 tests passed; current boundary/prompt hash | `4d2a3de29e565c4d7ed2496e2672db6cc6c192c2977ec206fe4648c1d159a860` |
 | [Source contract proof](../reports/sanitized/day3/gate-tests.json) | 25 fail-closed contracts passed | `2b297e22685b012374c956c4246a508ef253435ef1a1550dab7a935d0622a477` |
@@ -218,7 +218,7 @@ The user directed completing the study assignment with vulnerabilities deferred.
 | [Published draft PRs](../reports/sanitized/day9/pr-receipt.json) | Three green hosted workflows; one-file diffs; independent review pending | `3ed4b17b57df9f8d046283f59d853b2d1547c7bb410b6301d1aa515fe0fd55c5` |
 | [Fresh-directory receipt](../reports/sanitized/reproduction/run.json) | Full 1e0115c pipeline passed; 286.23 seconds; cleanup verified | `50909e46bc99a70c93844894000373f0f86d962feaf5a82c305c89ed4952b600` |
 | [Clean-PATH receipt](../reports/sanitized/reproduction/clean-path-run.json) | Full bef6664 execution; repository-local tools; cleanup verified | `eb3f8d1d01945792476423c0741360f25283f977f1d882fccc11d7df8d4e80f7` |
-| [Final report](../output/pdf/PipelineFortress_Study_Report.pdf) | Current repair report: twelve pages rendered and visually inspected | `51d662b3d574a2879bd07cfa14d3867bec351335f930c8cf343ff2427690a364` |
+| [Final report](../output/pdf/PipelineFortress_Study_Report.pdf) | Current repair report: twelve pages rendered and visually inspected | `e40dc9c60276b800aaa477a4454e0d6aebcdad6761759043d8bfc8dfe2d24e21` |
 
 Fresh-directory runs at 6ef16a0 and 1e0115c share host caches; they are not fresh-machine tests. The later clean-PATH run verifies the Kubernetes-tool selection correction in the existing project directory. Historical fresh datasets have 372 normalized observations / 235 issues; the current local dataset has one fewer passive medium alert instance. No fix is inferred from crawl variation. [Reproduction scope](reproduction.md).
 
@@ -241,8 +241,17 @@ The canonical PDF is refreshed with the accepted hosted repair and fresh b20b9b1
 | Evidence | Verified scope | SHA-256 |
 | --- | --- | --- |
 | [Fresh repaired reproduction](../reports/sanitized/reproduction/critical-variant/run.json) | 274.71 seconds; zero critical; complete application/scans/mock/dashboard and cleanup | `8325212c3afa46d99733ff45335c0a134c19e9d35ffd7747f95991465d2cf1c6` |
-| [Refreshed report validation](../reports/sanitized/final-audit/report-validation.json) | Twelve pages rendered and visually inspected; preserved prior PDF | `1294b85f3ffa9d9b6f34f4d2877cbd352b7dee4cfb29ba3746a634fa29228f7e` |
-| [Dashboard visual/timing verification](../reports/sanitized/final-audit/dashboard-validation.json) | 1440px/390px Chrome layout; same-run feedback timing and explicit scope | `1c422263ec25dc4a2f7763e038fc7aa4e73f95cb9ea4251dc5623e1edec82359` |
+| [Refreshed report validation](../reports/sanitized/final-audit/report-validation.json) | Twelve pages rendered and visually inspected; preserved prior PDF | `8b8ede3b1d5d5e680ab84b40dd9bae05d5c67022500e4deecc53027a10a507e7` |
+| [Dashboard visual/timing verification](../reports/sanitized/final-audit/dashboard-validation.json) | 1440px/390px Chrome layout; same-run feedback timing and explicit scope | `19584bb8336e5b94cdbd8ecda0649e5c8ccc613e106732cc18ae37501befd596` |
 | [Current PR observation](../reports/sanitized/final-audit/review-observation.json) | Three separate unmerged one-file drafts; zero independent reviews | `34646f2aefc685ad596f968860d349278c80c8f7d3bece628442ba3602ec81bd` |
-| [Acceptance audit](../reports/sanitized/final-audit/acceptance.json) | Current implementation proofs; external evidence explicitly unachieved | `fd8578f4f7c2b65f35370d49cb7cdc364161eb532b42c7db837dea8196ed92e7` |
+| [Acceptance audit](../reports/sanitized/final-audit/acceptance.json) | Current implementation proofs; external evidence explicitly unachieved | `89b93884c7b7cff91628f95984bf97717f95b39055bed84de5ae57fbfe236d88` |
 | [Preserved original repair PDF](../output/pdf/history/1616f14/PipelineFortress_Study_Report.pdf) | Original bytes in accepted ten-file hosted packet | `4d3c34febab430dbbed9b897d625b7955d08edc2f195214de5e03c1f5a4ecf9d` |
+
+## Complete-case hosted verification
+
+| Evidence | Verified scope | SHA-256 |
+| --- | --- | --- |
+| [Full-case CI verification](../reports/sanitized/final-audit/full-case-ci/verification.json) | Eight successful jobs, zero critical, 85 contracts, all 424 server identities | `10d81e652158b19db57cbf78eb42584797b34d397dac1db7fd2c20c0e04a5ddb` |
+| [Published full-case poster](../reports/sanitized/final-audit/full-case-ci/actions-summary.md) | Downloaded bytes match regeneration and logged Summary write | `49c595556b86bbc1c4a24d6752a0d030544fba8d2ee2702ac3c904390d3bf664` |
+| [Later checkout retry](../reports/sanitized/reproduction/final-revision/run.json) | 89d5db7 successful with retained setup failures and hash-verified cached wheels | `7128ba094ecd9bb94fedd1e2d563d4218d3206569f670b42d4e24d2e7b682486` |
+| [Previous inspected PDF](../output/pdf/history/89d5db7/PipelineFortress_Study_Report.pdf) | Preserved twelve-page hosted-repair snapshot | `51d662b3d574a2879bd07cfa14d3867bec351335f930c8cf343ff2427690a364` |

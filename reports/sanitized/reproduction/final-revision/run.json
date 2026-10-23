@@ -33,8 +33,20 @@
       "sha256": "5de7a3a4df0ff675bc3e8e3fdfb7aad44d051714559133b61cc3cb587dd67a2e"
     },
     {
+      "file": "bootstrap.json",
+      "sha256": "18d290df956a2ee1d04af70831854de68f174947e4f129144c8d11ef451a95fc"
+    },
+    {
       "file": "dashboard.json",
       "sha256": "df44983b77cc6f7f3ca3f34ca79a6e83cf53370fa0ab485dae67b429a9018a59"
+    },
+    {
+      "file": "dast-fixtures.json",
+      "sha256": "58b939cf6118b1cf6f9e1caa6e60b83c678cf3147621d1695d18e2d572d81257"
+    },
+    {
+      "file": "dast.json",
+      "sha256": "3994bc94ae1be582b3468cf0ffe6813d8481e570d5dc04b6406a6f4a4fef29ae"
     },
     {
       "file": "mock-triage.json",
@@ -71,6 +83,10 @@
     {
       "file": "pipeline/secrets.json",
       "sha256": "ce3f4da6ce68397308d2518358541d8c83f83c611e3fbe17ad7b0c0dc96a3005"
+    },
+    {
+      "file": "runtime.json",
+      "sha256": "7590024f58100f4866a5f2c49e29bc7b106816916b697306589d5a659c3faa84"
     }
   ]
 }

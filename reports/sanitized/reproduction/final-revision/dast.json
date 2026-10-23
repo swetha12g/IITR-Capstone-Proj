@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "run_id": "20261023T055955353731Z",
+  "observed_at_utc": "2026-10-23T06:01:07.911991+00:00",
+  "stage": "dast",
+  "exit_code": 1,
+  "execution": "complete",
+  "duration_seconds": 72.46,
+  "image_config_id": "sha256:483df66c5bdfb2d47a740243a6db215e6abe43637a3bf23863ebc857997a59d0",
+  "scanner_image": "ghcr.io/zaproxy/zaproxy@sha256:5ccfff9a411743ab2615136a2edd7416bec9ce41572fa94e935df38c14adb2b6",
+  "policy_sha256": "80641b4ef12f6ac39a7b5800d5d77bdc47dff553d55ba938e8891cd6c211436e",
+  "scope": "owned kind Ready pod; unauthenticated traditional crawl and passive scan only",
+  "diagnostics": {
+    "report_present": true,
+    "route_log_present": true,
+    "permission_denied_seen": false,
+    "api_connection_error_seen": false,
+    "out_of_memory_seen": false
+  },
+  "cleanup_container_removed": true,
+  "report_sha256": "443a5457526c22b82fcdf8bd764bb0faf645bfad9b769f1f613c0b967efc4c29",
+  "urls_sha256": "29d3a46c67abe79a02c24fdb6583f0a64b009e164e961c4fddb83e78c60e89aa",
+  "urls_reached": 121,
+  "seeded_routes_reached": {
+    "/": true,
+    "/rest/products/search": true,
+    "/rest/languages": true,
+    "/ftp/": true,
+    "/metrics": true
+  },
+  "alerts_by_risk": {
+    "2": 2,
+    "1": 8,
+    "0": 4
+  },
+  "zap_version": "2.17.0"
+}

@@ -1,5 +1,5 @@
 {
-  "observed_at_utc": "2026-10-22T20:35:50.281515+00:00",
+  "observed_at_utc": "2026-10-23T06:35:13.371085+00:00",
   "renderer": "installed headless Chrome; isolated profile; external DNS/background networking disabled",
   "viewports": [
     {
@@ -22,7 +22,7 @@
     }
   ],
   "desktop_and_mobile_visually_inspected": true,
-  "source_html_sha256": "180d17f38397c3d9d4642e03c68791d14047146a029a8d624dfadf72f27b962a",
+  "source_html_sha256": "99f683d75bc1cd21122e7b6d6f27bebfeb4b461ef2dfafe979b45f01c2a90747",
   "timing_samples": 1,
   "first_finding_receipt_seconds": 4.65,
   "pipeline_seconds": 93.19,
@@ -35,5 +35,8 @@
   "bounded_retry_passed": true,
   "final_scope_caption_verified_by_browser_dom": true,
   "final_pixel_capture_timed_out": true,
-  "visual_snapshot_scope": "Desktop/mobile metrics and layout inspected before final timing-caption wording; final caption verified by browser DOM at both widths"
+  "visual_snapshot_scope": "Earlier desktop/mobile metric layout visually inspected; current timing captions and hosted contract count (85) verified by browser DOM at both widths. No new pixel capture claimed.",
+  "hosted_contract_tests_displayed": 85,
+  "final_dom_probe_passed": true,
+  "additional_pixel_capture_attempted": false
 }

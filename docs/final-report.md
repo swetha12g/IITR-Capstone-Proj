@@ -51,7 +51,7 @@ The fresh offline application profile passes root/frontend installation, explici
 
 A separate online attempt retained six failures from external-service DNS lookup errors. The offline profile excludes the entire nine-test internet-resource availability suite. It does not suppress a local application test failure. Historical online baseline counts remain separate.
 
-The historical upstream import remains traceable. The remediation variant updates the root lock, replaces unsafe dependencies and hardens JWT/database queries; the frontend lock is preserved. Hosted run 39842575944 verifies the repaired source at 1616f14. All seven stage receipts bind one source tree, run and commit; build, container and DAST bind the exact image.
+The historical upstream import remains traceable. The remediation variant updates the root lock, replaces unsafe dependencies and hardens JWT/database queries; the frontend lock is preserved. Hosted run 39910883934 verifies the repaired source at 06c8e1d. All seven stage receipts bind one source tree, run and commit; build, container and DAST bind the exact image.
 
 
 ## 4. Observed runtime baseline
@@ -88,9 +88,11 @@ That execution took 93.19 seconds after explicit reuse of a freshly verified bui
 
 The hosted workflow defines six scan jobs, build/test and one final aggregate job. It uses read-only PR permissions, pinned action SHAs, full history for secrets, an integrity-checked image archive between jobs and cleanup of its own staging cluster. Skipped jobs, malformed/missing receipts, scanner errors and mixed identities cannot pass the execution check.
 
-Fresh hosted repair verification: all eight jobs passed. The independently verified artifact contains 257 cross-stage observations and zero critical, security blockers or operational errors. These counts include source/image and history/tree duplicates; they are not the local globally deduplicated register. The published Actions poster includes actual test, scan, runtime and receipt details.
+Fresh hosted repair verification: all eight jobs passed. The independently verified artifact contains 258 cross-stage observations and zero critical, security blockers or operational errors. These counts include source/image and history/tree duplicates; they are not the local globally deduplicated register. The published Actions poster includes actual test, scan, runtime and receipt details.
 
-Actions Summary: https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39842575944. Artifact SHA-256: 3c3359b670f35f08f2d62717ca231d2b6b70148d0edf2e35d1f6e6e2d789e743. Gate recomputation, source/image bindings and identical published poster bytes are verified.
+Server coverage: all 424 expected case/status identities match across 41 files, including five passing critical regressions. Forced exit is disabled; missing verdicts fail the build.
+
+Actions Summary: https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39910883934. Artifact SHA-256: 1a1ea418cfd2b8edff5b31637c9ddf4f0cd6fe3e2c2e248f3be0b412a16a78b3. Gate recomputation, source/image bindings and identical published poster bytes are verified.
 
 
 ## 6. Hardening and software inventory
@@ -111,7 +113,7 @@ The runtime uses UID/GID 65532, no effective or bounding capabilities, no-new-pr
 
 In the historical Day 4 comparison, both immutable image configuration IDs were scanned under one frozen Trivy database. One unknown CA-certificate advisory was removed; no new identity was introduced in that comparison. That comparison predates the later zero-critical remediation; current residual counts are shown separately. Syft CycloneDX 1.6 validates against hash-pinned official schemas and representative installed package versions.
 
-Current hosted repaired image: zero critical and five high observations; schema-valid CycloneDX 1.6 inventory has 2658 components. Its configuration ID is sha256:a6c68295948a3e8275b517244e4acab55c52820884847e776b63200dff1feb5d. The exact-image inventory and seven hosted runtime checks passed.
+Current hosted repaired image: zero critical and five high observations; schema-valid CycloneDX 1.6 inventory has 2658 components. Its configuration ID is sha256:f6009212c760b51c64523806973c7f31b9f1538975025d94b67e0e8098abf247. The exact-image inventory and seven hosted runtime checks passed.
 
 Selected controls are mapped to CIS Kubernetes 2.0.0. NetworkPolicy remains a declared gap and enforcement is unverified. No full benchmark or cluster certification is claimed. A Docker configuration ID, a registry base index digest and a local containerd manifest digest are different identifiers.
 
@@ -174,7 +176,7 @@ The dashboard recomputes from normalized evidence and labels, exports JSON/CSV, 
 | Grounding | Unknown IDs, invented CVEs/versions, unsupported operations and omissions rejected |
 | Live restrictions | OpenAI only; no tools; store=false; bounded tokens, attempts and conservative reservations |
 
-76 hosted contracts pass across normalization, aggregation, AI boundary, grounding, bounded patches and report behavior. A twenty-finding mock batch validates; mock output is deterministic policy behavior and is not reported as a real model evaluation.
+85 hosted contracts pass across normalization, aggregation, AI boundary, grounding, bounded patches and report behavior. A twenty-finding mock batch validates; mock output is deterministic policy behavior and is not reported as a real model evaluation.
 
 The user-selected existing OpenAI key passed read-only model lookup. All three bounded generation attempts returned HTTP429; a specific underlying cause was not established. No successful model output or actual token/invoice cost is fabricated. The request cap is exhausted. No credits were purchased, account topped up or billing settings changed.
 

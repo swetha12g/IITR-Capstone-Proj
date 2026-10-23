@@ -6,7 +6,7 @@ Updated 23 October 2026. The ten-day implementation and the subsequent critical-
 |---|---|
 | Security pipeline | All six scans, build/test and aggregate pass locally and in hosted CI; critical findings now fail the gate |
 | Application | 2,332 passed, six upstream skips, zero selected failures; nine external availability tests excluded |
-| Contracts | 79 current local pipeline/safeguard/report/dashboard contracts pass; accepted hosted repair run has 76; 25 source-gate contracts pass locally; lint and snippet consistency pass |
+| Contracts | 85 current local and hosted pipeline/safeguard/report/dashboard contracts pass; 25 source-gate contracts pass locally; lint and snippet consistency pass |
 | Runtime | Seven Docker, seven temporary Kubernetes and seven existing-owned-lab checks pass; image identities agree |
 | Data and dashboard | 251 observations / 180 underlying issues; 0 critical, 91 high, 45 medium, 28 low and 16 informational |
 | Supply chain | Patched dependencies and two replacements; schema-valid 2,658-component SBOM; root lock updated |
@@ -18,6 +18,8 @@ Local run `20261022T181348556832Z` passed in 93.19 seconds after explicit reuse 
 The original 11 critical issue identities are retained in the before receipt. Fixes replace unpatched MarsDB/archive-extraction paths, upgrade affected dependencies and harden JWT/query handling. Exploit-success assertions now assert rejection; no suppression or severity downgrade was used. High and lower issues remain in [the deferred register](deferred-remediation.md). The root lock and source now differ from the upstream pin at the user's request; frontend lock, license and exact historical source approvals are unchanged.
 
 The owned study deployment is updated to the verified image, and the uniquely owned temporary cluster is deleted. Historical original-cluster system-pod readiness limitations are not claimed resolved. No host kernel settings, unrelated workloads, provider requests or billing settings were changed.
+
+Full-case hosted verification: [run 39910883934](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39910883934) passed all eight jobs on `06c8e1d` with zero critical, 2,332 application passes / six skips and 85 contracts. All 424 server case/status identities match across 41 files; no verdict is missing and all five critical regressions pass. [Verified packet](../reports/sanitized/final-audit/full-case-ci/verification.json).
 
 ## Remaining assessment work
 
@@ -38,10 +40,10 @@ Earlier full-history fresh directories at `6ef16a0` and `1e0115c` passed with sh
 
 The [current report](../output/pdf/PipelineFortress_Study_Report.pdf), [dashboard](../reports/sanitized/dashboard/index.html), [evidence index](evidence-index.md) and [defense guide](defense.md) are available. Dashboard data/HTML checks and isolated headless-Chrome visual checks at 1440px/390px pass; no complete legacy Cypress challenge-suite pass is claimed.
 
-## Current hosted report — 23 October 2026 IST
+## Original hosted repair snapshot — 23 October 2026 IST
 
 [One-stop Actions Summary](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39842575944) and [downloaded identical poster](../reports/sanitized/critical-remediation/ci/actions-summary.md). Hosted results: zero critical; 257 cross-stage observations (159 high, 47 medium, 35 low, 16 informational), not globally deduplicated issue counts. All 2,332 selected application tests and 76 contracts passed, with six application skips and nine external availability tests excluded. The validated SBOM has 2,658 components; seven Kubernetes runtime checks, 121 passive-crawl URLs and scanner/cluster cleanup passed. The downloaded initial CI packet retains its original snapshot. The refreshed canonical PDF now includes that accepted hosted proof and the repaired fresh local checkout; no production-readiness or independent approval is inferred.
 
 ## Continuation audit and refreshed packet
 
-The full-history local b20b9b1 checkout passed `bash scripts/reproduce.sh` in 274.71 pipeline seconds without build/test reuse, including project-local bootstrap, all selected application checks, scans, twenty-item mock triage and dashboard. Its uniquely owned cluster was removed; shared host/cache use is explicit. [Receipt](../reports/sanitized/reproduction/critical-variant/run.json). The dashboard now displays missing timing/confusion-matrix/review/API measures and was visually checked on desktop/mobile. The current twelve-page PDF was rendered/inspected and includes accepted hosted repair evidence; previous PDF snapshots are retained. [Full audit](completion-audit.md), [report verification](../reports/sanitized/final-audit/report-validation.json). Further hosted validation of these report/dashboard changes follows.
+The full-history local b20b9b1 checkout passed `bash scripts/reproduce.sh` in 274.71 pipeline seconds without build/test reuse, including project-local bootstrap, all selected application checks, scans, twenty-item mock triage and dashboard. Its uniquely owned cluster was removed; shared host/cache use is explicit. [Receipt](../reports/sanitized/reproduction/critical-variant/run.json). The dashboard now displays missing timing/confusion-matrix/review/API measures and was visually checked on desktop/mobile. The current twelve-page PDF was rendered/inspected and includes accepted hosted repair evidence; previous PDF snapshots are retained. [Full audit](completion-audit.md), [report verification](../reports/sanitized/final-audit/report-validation.json). The full-case hosted verification below supersedes the incomplete server-count run; historical receipts remain unchanged.

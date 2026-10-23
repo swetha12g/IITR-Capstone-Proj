@@ -1,13 +1,15 @@
 {
-  "observed_at_utc": "2026-10-22T20:23:24.381932+00:00",
+  "observed_at_utc": "2026-10-23T06:34:35.539599+00:00",
   "previous_goal_turn": "progress: critical repairs and hosted one-stop report published",
   "this_turn_progress": [
     "fresh full-history local clone reproduction passed with verified cleanup",
     "dashboard measurements/AI/review status displayed and desktop/mobile visually checked",
-    "twelve-page report refreshed from hosted repair proof and fresh reproduction"
+    "twelve-page report refreshed from hosted repair proof and fresh reproduction",
+    "Forced-exit verdict loss reproduced; missing-case run correctly rejected; corrected hosted runner proves all server identities",
+    "Full-case 85-contract eight-job zero-critical packet verified"
   ],
-  "hosted_repair_run_success": 39842575944,
-  "local_contracts_passed": 79,
+  "hosted_repair_run_success": 39910883934,
+  "local_contracts_passed": 85,
   "source_gate_contracts_passed": 25,
   "fixture_cases": 21,
   "introduced_fixture_issues": 15,
@@ -28,5 +30,25 @@
     "independent detection labels and genuine PR review",
     "actual oral/submission acceptance"
   ],
-  "note": "These evidence gaps do not prevent local implementation/report delivery; no fabricated approval or live result"
+  "note": "These evidence gaps do not prevent local implementation/report delivery; no fabricated approval or live result",
+  "server_case_inventory": {
+    "matched": true,
+    "expected_cases": 424,
+    "executed_cases": 424,
+    "missing_cases": 0,
+    "unexpected_cases": 0,
+    "expected_files": 41,
+    "executed_files": 41,
+    "critical_regressions": 5,
+    "case_inventory_sha256": "3f44b8849146d98914f5ae6a4e01465cf6a592416421aa08f4758a07409c32f7",
+    "junit_totals": {
+      "total": 424,
+      "passed": 422,
+      "failed": 0,
+      "skipped": 2
+    },
+    "baseline_sha256": "22f866f2a2380d32538c68cfc36136adcd226029eb0161a29d61ad5b683ba480",
+    "reporter_totals_agree": true
+  },
+  "implementation_and_ci_delivery_complete": true
 }

@@ -192,12 +192,12 @@
     "scope": "Local sequential pipeline only; bootstrap/download and cluster creation excluded. One observation; no percentiles."
   },
   "hosted_verification": {
-    "run_id": 39842575944,
-    "url": "https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39842575944",
+    "run_id": 39910883934,
+    "url": "https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39910883934",
     "conclusion": "success",
     "critical_observations": 0,
     "contract_tests": {
-      "tests": 76,
+      "tests": 85,
       "failures": 0,
       "errors": 0,
       "skipped": 0
