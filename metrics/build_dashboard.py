@@ -84,7 +84,8 @@ def main():
         path = ROOT / relative
         return json.loads(path.read_text()) if path.exists() else default
     pipeline = read('reports/sanitized/pipeline/aggregate.json', {})
-    hosted = read('reports/sanitized/critical-remediation/ci/verification.json', {})
+    hosted = read('reports/sanitized/final-audit/full-case-ci/verification.json',
+                  read('reports/sanitized/critical-remediation/ci/verification.json', {}))
     prs = read('reports/sanitized/day9/pr-receipt.json', {'prs': []})
     live_error = read('reports/sanitized/day8/triage-live-error.json', {})
     live = read('reports/sanitized/day8/triage-live.json', {})

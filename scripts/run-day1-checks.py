@@ -90,7 +90,7 @@ def main():
         junit_path = private / 'test-server.xml'
         if step == 'test-server':
             command = ['node', '--import', './test/server/helpers/test-env.mjs', '--import', 'tsx',
-                       '--test', '--test-force-exit', '--test-concurrency=1', '--test-reporter=spec', '--test-reporter-destination=stdout',
+                       '--test', '--test-concurrency=1', '--test-reporter=spec', '--test-reporter-destination=stdout',
                        '--test-reporter=junit', '--test-reporter-destination=' + os.path.relpath(junit_path, APP),
                        'test/server/**/*.unit.test.ts']
         if args.offline and step == "test-api":
@@ -98,7 +98,7 @@ def main():
             if not files:
                 raise ValueError("No local API test files selected")
             command = ["node", "--import", "./test/api/helpers/test-env.mjs", "--import", "tsx",
-                       "--test", "--test-force-exit", *files]
+                       "--test", "--test-concurrency=2", *files]
         log_path = private / f"{step}.log"
         started = datetime.now(timezone.utc).isoformat()
         before = time.monotonic()

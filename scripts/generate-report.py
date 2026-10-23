@@ -123,7 +123,8 @@ def main():
     reproduction = read('reports/sanitized/reproduction/critical-variant/run.json', read('reports/sanitized/reproduction/run.json', {}))
     prs = read('reports/sanitized/day9/pr-receipt.json', {'prs': []})
     risks = read('reports/sanitized/deferred-risks.json')
-    hosted = read('reports/sanitized/critical-remediation/ci/verification.json')
+    full_case_ci = ROOT / 'reports/sanitized/final-audit/full-case-ci/verification.json'
+    hosted = read(str(full_case_ci.relative_to(ROOT)) if full_case_ci.exists() else 'reports/sanitized/critical-remediation/ci/verification.json')
     assert hosted['conclusion'] == 'success' and hosted['critical_observations'] == 0
     assert len(hosted['jobs']) == 8 and all(j['conclusion'] == 'success' for j in hosted['jobs'])
     application = read('reports/sanitized/day1-latest.json')
@@ -178,6 +179,8 @@ def main():
         p('That full execution took ' + str(pipeline['duration_seconds']) + ' seconds, including all application check stages, image build, scans and owned runtime checks. Build/test results were not reused. Bootstrap/download/cluster-creation costs are additional; no percentile is inferred.')
     p('The hosted workflow defines six scan jobs, build/test and one final aggregate job. It uses read-only PR permissions, pinned action SHAs, full history for secrets, an integrity-checked image archive between jobs and cleanup of its own staging cluster. Skipped jobs, malformed/missing receipts, scanner errors and mixed identities cannot pass the execution check.')
     p('Fresh hosted repair verification: all eight jobs passed. The independently verified artifact contains ' + str(hosted['cross_stage_observations']) + ' cross-stage observations and zero critical, security blockers or operational errors. These counts include source/image and history/tree duplicates; they are not the local globally deduplicated register. The published Actions poster includes actual test, scan, runtime and receipt details.', small=True)
+    if hosted.get('server_case_inventory', {}).get('matched'):
+        p('Server coverage: all ' + str(hosted['server_case_inventory']['executed_cases']) + ' expected case/status identities match across ' + str(hosted['server_case_inventory']['executed_files']) + ' files, including five passing critical regressions. Forced exit is disabled; missing verdicts fail the build.', small=True)
     p('Actions Summary: ' + hosted['url'] + '. Artifact SHA-256: ' + hosted['archive_sha256'] + '. Gate recomputation, source/image bindings and identical published poster bytes are verified.', small=True)
 
     heading(6, 'Hardening and software inventory')
