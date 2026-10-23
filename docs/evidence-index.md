@@ -244,7 +244,7 @@ The canonical PDF is refreshed with the accepted hosted repair and fresh b20b9b1
 | [Refreshed report validation](../reports/sanitized/final-audit/report-validation.json) | Twelve pages rendered and visually inspected; preserved prior PDF | `8b8ede3b1d5d5e680ab84b40dd9bae05d5c67022500e4deecc53027a10a507e7` |
 | [Dashboard visual/timing verification](../reports/sanitized/final-audit/dashboard-validation.json) | 1440px/390px Chrome layout; same-run feedback timing and explicit scope | `19584bb8336e5b94cdbd8ecda0649e5c8ccc613e106732cc18ae37501befd596` |
 | [Current PR observation](../reports/sanitized/final-audit/review-observation.json) | Three separate unmerged one-file drafts; zero independent reviews | `34646f2aefc685ad596f968860d349278c80c8f7d3bece628442ba3602ec81bd` |
-| [Acceptance audit](../reports/sanitized/final-audit/acceptance.json) | Current implementation proofs; external evidence explicitly unachieved | `89b93884c7b7cff91628f95984bf97717f95b39055bed84de5ae57fbfe236d88` |
+| [Acceptance audit](../reports/sanitized/final-audit/acceptance.json) | Current implementation proofs; external evidence explicitly unachieved | `9f2fc62987f44e5cbf3bdc48964d80432cefe4052a43ab90c00f17b3f5b78342` |
 | [Preserved original repair PDF](../output/pdf/history/1616f14/PipelineFortress_Study_Report.pdf) | Original bytes in accepted ten-file hosted packet | `4d3c34febab430dbbed9b897d625b7955d08edc2f195214de5e03c1f5a4ecf9d` |
 
 ## Complete-case hosted verification
@@ -255,3 +255,10 @@ The canonical PDF is refreshed with the accepted hosted repair and fresh b20b9b1
 | [Published full-case poster](../reports/sanitized/final-audit/full-case-ci/actions-summary.md) | Downloaded bytes match regeneration and logged Summary write | `49c595556b86bbc1c4a24d6752a0d030544fba8d2ee2702ac3c904390d3bf664` |
 | [Later checkout retry](../reports/sanitized/reproduction/final-revision/run.json) | 89d5db7 successful with retained setup failures and hash-verified cached wheels | `7128ba094ecd9bb94fedd1e2d563d4218d3206569f670b42d4e24d2e7b682486` |
 | [Previous inspected PDF](../output/pdf/history/89d5db7/PipelineFortress_Study_Report.pdf) | Preserved twelve-page hosted-repair snapshot | `51d662b3d574a2879bd07cfa14d3867bec351335f930c8cf343ff2427690a364` |
+
+## Final refreshed packet publication
+
+| Evidence | Verified scope | SHA-256 |
+| --- | --- | --- |
+| [Final publication verification](../reports/sanitized/final-audit/publication-ci/verification.json) | Eight green jobs, zero critical, exact refreshed packet and complete case coverage | `8e26e1480cfb2529c387072ab6e84b7fe2e6283944fb93da291fa36801ebdd7d` |
+| [Final published poster](../reports/sanitized/final-audit/publication-ci/actions-summary.md) | Official artifact and logged/regenerated Summary bytes agree | `2f714920fc40e4135800a4630659756f3529b4f5e3a6da05bea318d142207a77` |

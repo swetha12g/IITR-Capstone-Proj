@@ -1,5 +1,5 @@
 {
-  "observed_at_utc": "2026-10-23T06:34:35.539599+00:00",
+  "observed_at_utc": "2026-10-23T06:56:38.265544+00:00",
   "previous_goal_turn": "progress: critical repairs and hosted one-stop report published",
   "this_turn_progress": [
     "fresh full-history local clone reproduction passed with verified cleanup",
@@ -26,9 +26,9 @@
   "oral_or_submission_acceptance_verified": false,
   "full_goal_acceptance_proven": false,
   "remaining": [
-    "successful live OpenAI evaluation under a newly authorized available request budget",
-    "independent detection labels and genuine PR review",
-    "actual oral/submission acceptance"
+    "Successful live OpenAI evaluation: prior three HTTP429 attempts exhausted the request cap; no automatic retry or purchase",
+    "Independent human detection labels and PR review",
+    "Actual oral/submission acceptance"
   ],
   "note": "These evidence gaps do not prevent local implementation/report delivery; no fabricated approval or live result",
   "server_case_inventory": {
@@ -50,5 +50,8 @@
     "baseline_sha256": "22f866f2a2380d32538c68cfc36136adcd226029eb0161a29d61ad5b683ba480",
     "reporter_totals_agree": true
   },
-  "implementation_and_ci_delivery_complete": true
+  "implementation_and_ci_delivery_complete": true,
+  "final_publication_run_success": 39912532895,
+  "final_publication_tested_commit": "42afe37ed4dd44f5760c616ee42ff7854ce32940",
+  "final_packet_archive_sha256": "5ecc0164e5ba729cb863523978be816de7ea6efe3eea16ba153fe2c6055044fd"
 }

@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "run_attempt": 2,
+  "execution_scope": "Same workflow run and commit; successful jobs reused if only failed jobs were retried",
+  "prior_download_failure": "reports/sanitized/final-audit/publication-ci/download-failure-attempt-1.json",
+  "run_id": 39912532895,
+  "url": "https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39912532895",
+  "tested_commit": "42afe37ed4dd44f5760c616ee42ff7854ce32940",
+  "status": "completed",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 120283220823,
+      "name": "container",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120283222126,
+      "name": "sast",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120283222262,
+      "name": "iac",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120283223178,
+      "name": "dast",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120283252049,
+      "name": "build-test",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120283266374,
+      "name": "secrets",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120283276506,
+      "name": "sca",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120284273477,
+      "name": "aggregate",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "artifact": {
+    "id": 12483973651,
+    "name": "aggregate-study-evidence",
+    "digest": "sha256:5ecc0164e5ba729cb863523978be816de7ea6efe3eea16ba153fe2c6055044fd",
+    "size_in_bytes": 45106
+  },
+  "archive_digest_verified": true,
+  "archive_sha256": "5ecc0164e5ba729cb863523978be816de7ea6efe3eea16ba153fe2c6055044fd",
+  "allowlisted_packet_files": 13,
+  "recomputed_aggregate_matches": true,
+  "all_receipts_match_run_commit_and_source_tree": true,
+  "all_receipt_worktrees_clean": true,
+  "project_tree_sha256": "8a558f581516c2a445c3e8f2d8fff201923c3e1acba77a7d6509f23385924be0",
+  "image_config_id": "sha256:0e87d1f74b1ec83d4f5b1cb45248ae562786b324c28f756e256e9e1bc956394b",
+  "verdict": "PASS_WITH_DEFERRED_RISKS",
+  "critical_observations": 0,
+  "findings_by_severity": {
+    "HIGH": 159,
+    "INFO": 16,
+    "LOW": 35,
+    "MEDIUM": 47
+  },
+  "cross_stage_observations": 257,
+  "globally_deduplicated_counts_not_claimed": true,
+  "test_results": {
+    "test-frontend": {
+      "passed": 1372,
+      "failed": 0,
+      "skipped": 0,
+      "todo": 0,
+      "cancelled": 0,
+      "total": 1372
+    },
+    "test-server": {
+      "passed": 422,
+      "failed": 0,
+      "skipped": 2,
+      "cancelled": 0,
+      "todo": 0,
+      "total": 424
+    },
+    "test-api": {
+      "passed": 538,
+      "failed": 0,
+      "skipped": 4,
+      "cancelled": 0,
+      "todo": 0,
+      "total": 542
+    }
+  },
+  "contract_tests": {
+    "tests": 85,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "application_artifact": {
+    "id": 12484160439,
+    "name": "application-checks",
+    "digest": "sha256:a0099e46118b26b8b5d93ad13a76284f1f5384926758d87e3ebebbeedb80f7f8",
+    "size_in_bytes": 2326
+  },
+  "application_archive_sha256": "a0099e46118b26b8b5d93ad13a76284f1f5384926758d87e3ebebbeedb80f7f8",
+  "application_archive_digest_verified": true,
+  "application_manifest_hash_verified": true,
+  "server_case_inventory": {
+    "matched": true,
+    "expected_cases": 424,
+    "executed_cases": 424,
+    "missing_cases": 0,
+    "unexpected_cases": 0,
+    "expected_files": 41,
+    "executed_files": 41,
+    "critical_regressions": 5,
+    "case_inventory_sha256": "3f44b8849146d98914f5ae6a4e01465cf6a592416421aa08f4758a07409c32f7",
+    "junit_totals": {
+      "total": 424,
+      "passed": 422,
+      "failed": 0,
+      "skipped": 2
+    },
+    "baseline_sha256": "22f866f2a2380d32538c68cfc36136adcd226029eb0161a29d61ad5b683ba480",
+    "reporter_totals_agree": true
+  },
+  "sbom": {
+    "schema_valid": true,
+    "spec_version": "1.6",
+    "components": 2658,
+    "representative_packages": {
+      "juice-shop": "20.3.0",
+      "express": "4.22.3",
+      "sqlite3": "5.1.7"
+    },
+    "sha256": "2a6dfb4f58e59e3e5b730890ee6fd4f1e669d4ab132e36d568d8375f071b636a"
+  },
+  "runtime": {
+    "passed": true,
+    "http_checks_passed": 7,
+    "http_checks_total": 7,
+    "evidence_sha256": "7ad08ff89b8a98e1194f6f6a196cc43ad203f709745ed97c3aff63d399a811bb"
+  },
+  "dast_urls_reached": 121,
+  "dast_routes_verified": true,
+  "scanner_cleanup_verified": true,
+  "summary": {
+    "step_conclusion": "success",
+    "github_step_summary_write_completed": true,
+    "bytes": 7641,
+    "sha256": "2f714920fc40e4135800a4630659756f3529b4f5e3a6da05bea318d142207a77",
+    "artifact_matches_logged_summary_hash": true,
+    "regenerated_body_matches_artifact": true,
+    "github_ui_visual_inspection_claimed": false
+  },
+  "packet_assets_match_checked_in_snapshots": [
+    {
+      "file": "output/pdf/PipelineFortress_Study_Report.pdf",
+      "sha256": "e40dc9c60276b800aaa477a4454e0d6aebcdad6761759043d8bfc8dfe2d24e21"
+    },
+    {
+      "file": "reports/sanitized/dashboard/index.csv",
+      "sha256": "b7887a2d8599f3b8314ae53bece9645c2501a6ea937149d6abf3fee88d691c1f"
+    },
+    {
+      "file": "reports/sanitized/dashboard/index.html",
+      "sha256": "99f683d75bc1cd21122e7b6d6f27bebfeb4b461ef2dfafe979b45f01c2a90747"
+    },
+    {
+      "file": "reports/sanitized/dashboard/index.json",
+      "sha256": "92c7b919d4e6d1e1401c252e230da7b40571c94208617e6086210f174bfefe75"
+    }
+  ],
+  "additional_provider_calls": 0,
+  "purchases_or_billing_changes": false,
+  "previous_rejected_run": {
+    "id": 39908648090,
+    "conclusion": "failure",
+    "reason": "Eleven server verdicts missing; inventory gate correctly rejected"
+  },
+  "remaining": "High/lower risks deferred; successful live AI, independent labels/PR reviews, oral/submission evidence unverified"
+}
