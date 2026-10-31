@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "tests": 64,
+  "scope": "captured mock HTTP bodies, zero-call refusals, grounding, receipt/project-tree validation, zero-critical gate and bounded patches",
+  "code_sha256": "3bcf1b8f39468c3a78d0ebb2dfeaf583b4d0e4b961e0b0be37bceea9bfedf1c3",
+  "pytest_log_sha256": "80389fd1295927a6bc713ccf9c04b753ee63c0bd9edb96eafe037d2f568775ae",
+  "observed_at_utc": "2026-10-22T18:19:40.412330+00:00"
+}

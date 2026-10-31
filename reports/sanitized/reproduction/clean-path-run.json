@@ -1,0 +1,19 @@
+{
+  "scope": "existing project directory, PATH initially restricted to /usr/bin:/bin; project-local tools and unique ephemeral cluster; no live API",
+  "verdict": "PASS_WITH_DEFERRED_RISKS",
+  "run_id": "20261022T171521035420Z",
+  "operational_errors": [],
+  "application_profile": "offline-local; external service availability suite excluded",
+  "cleanup": "handled by shell finalization; verify cleanup.log and cluster inventory",
+  "project_commit": "bef666437f60416fed4d5bceed675c2a6d8513af",
+  "cleanup_verified": true,
+  "script_exit_code": 0,
+  "fresh_directory_claimed": false,
+  "clean_path_prerequisites_only": true,
+  "tool_paths": [
+    ".tools/ci/pipelinefortress-tools/kind",
+    ".tools/ci/pipelinefortress-tools/kubectl",
+    ".tools/node/node-v24.22.0-linux-x64/bin/node"
+  ],
+  "pipeline_sha256": "88e1a999700511df1a5e6e594b64dfc28675e74ce5699d9e519e690a4cd16395"
+}

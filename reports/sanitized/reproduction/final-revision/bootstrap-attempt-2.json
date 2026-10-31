@@ -1,0 +1,12 @@
+{
+  "observed_at_utc": "2026-10-23T05:53:52.856240+00:00",
+  "commit": "89d5db70dc2d19fa5efce81a2439228518f3e6d7",
+  "stage": "Checkov environment install",
+  "script_exit_code": 1,
+  "error": "Pinned aiohttp wheel unavailable from current index response",
+  "pin_or_hash_changes": false,
+  "owned_cluster_created": false,
+  "retry_preparation": "Offline wheelhouse reconstructed only from prior project HTTP cache bodies whose SHA-256 matches recorded distribution locks; no installed environments copied",
+  "hash_verified_wheel_count": 148,
+  "all_checkov_locked_wheels_present": true
+}

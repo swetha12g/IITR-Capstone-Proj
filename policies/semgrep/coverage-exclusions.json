@@ -1,0 +1,76 @@
+{
+  "exclusions": [
+    {
+      "path": "app/juice-shop/data/static/codefixes/loginAdminChallenge_1.ts",
+      "sha256": "03b013e1c91c718c5cf3c4741e126ddfc7d58208881d6781395f4233857fc784",
+      "reason": "Upstream lesson fragment; not a standalone parseable TypeScript compilation unit. Runtime authentication/query routes remain scanned.",
+      "source_commit": "f189f521266f42c6bd05884468292000cee852ed"
+    },
+    {
+      "path": "app/juice-shop/data/static/codefixes/loginAdminChallenge_2.ts",
+      "sha256": "9959e817fa1ab2b090e88d5071ed3e72151b57a518aa0fc2614aaa7b5f55847b",
+      "reason": "Upstream lesson fragment; not a standalone parseable TypeScript compilation unit. Runtime authentication/query routes remain scanned.",
+      "source_commit": "f189f521266f42c6bd05884468292000cee852ed"
+    },
+    {
+      "path": "app/juice-shop/data/static/codefixes/loginAdminChallenge_3.ts",
+      "sha256": "e25fdf5e03e95f37ffa483fec64525bf7021aafa246544f1f99356b041563260",
+      "reason": "Upstream lesson fragment; not a standalone parseable TypeScript compilation unit. Runtime authentication/query routes remain scanned.",
+      "source_commit": "f189f521266f42c6bd05884468292000cee852ed"
+    },
+    {
+      "path": "app/juice-shop/data/static/codefixes/loginAdminChallenge_4_correct.ts",
+      "sha256": "9d41f2879260f5ecc2662b16eef16e9bd5683ee47e11736e2c978275fd3a6847",
+      "reason": "Upstream lesson fragment; not a standalone parseable TypeScript compilation unit. Runtime authentication/query routes remain scanned.",
+      "source_commit": "f189f521266f42c6bd05884468292000cee852ed"
+    },
+    {
+      "path": "app/juice-shop/data/static/codefixes/loginBenderChallenge_1.ts",
+      "sha256": "03b013e1c91c718c5cf3c4741e126ddfc7d58208881d6781395f4233857fc784",
+      "reason": "Upstream lesson fragment; not a standalone parseable TypeScript compilation unit. Runtime authentication/query routes remain scanned.",
+      "source_commit": "f189f521266f42c6bd05884468292000cee852ed"
+    },
+    {
+      "path": "app/juice-shop/data/static/codefixes/loginBenderChallenge_2_correct.ts",
+      "sha256": "aba2a46d763fc0ea78e01e632694081835e451091bbe64234a5f3a644186fe20",
+      "reason": "Upstream lesson fragment; not a standalone parseable TypeScript compilation unit. Runtime authentication/query routes remain scanned.",
+      "source_commit": "f189f521266f42c6bd05884468292000cee852ed"
+    },
+    {
+      "path": "app/juice-shop/data/static/codefixes/loginBenderChallenge_3.ts",
+      "sha256": "62ef4e56352013949b99ff6659d471de8d9e135e70fc0fcdf1beca44026f7d61",
+      "reason": "Upstream lesson fragment; not a standalone parseable TypeScript compilation unit. Runtime authentication/query routes remain scanned.",
+      "source_commit": "f189f521266f42c6bd05884468292000cee852ed"
+    },
+    {
+      "path": "app/juice-shop/data/static/codefixes/loginBenderChallenge_4.ts",
+      "sha256": "43491d8e971b59198d9987e754b28c8f6ec8ec7e2edab6a9404c60193238204f",
+      "reason": "Upstream lesson fragment; not a standalone parseable TypeScript compilation unit. Runtime authentication/query routes remain scanned.",
+      "source_commit": "f189f521266f42c6bd05884468292000cee852ed"
+    },
+    {
+      "path": "app/juice-shop/data/static/codefixes/loginJimChallenge_1_correct.ts",
+      "sha256": "9d41f2879260f5ecc2662b16eef16e9bd5683ee47e11736e2c978275fd3a6847",
+      "reason": "Upstream lesson fragment; not a standalone parseable TypeScript compilation unit. Runtime authentication/query routes remain scanned.",
+      "source_commit": "f189f521266f42c6bd05884468292000cee852ed"
+    },
+    {
+      "path": "app/juice-shop/data/static/codefixes/loginJimChallenge_2.ts",
+      "sha256": "43491d8e971b59198d9987e754b28c8f6ec8ec7e2edab6a9404c60193238204f",
+      "reason": "Upstream lesson fragment; not a standalone parseable TypeScript compilation unit. Runtime authentication/query routes remain scanned.",
+      "source_commit": "f189f521266f42c6bd05884468292000cee852ed"
+    },
+    {
+      "path": "app/juice-shop/data/static/codefixes/loginJimChallenge_3.ts",
+      "sha256": "343687cebb0f361dcd946035331e40eefb35eaa7f72b3904fb3fbb85e4f6421e",
+      "reason": "Upstream lesson fragment; not a standalone parseable TypeScript compilation unit. Runtime authentication/query routes remain scanned.",
+      "source_commit": "f189f521266f42c6bd05884468292000cee852ed"
+    },
+    {
+      "path": "app/juice-shop/data/static/codefixes/loginJimChallenge_4.ts",
+      "sha256": "03b013e1c91c718c5cf3c4741e126ddfc7d58208881d6781395f4233857fc784",
+      "reason": "Upstream lesson fragment; not a standalone parseable TypeScript compilation unit. Runtime authentication/query routes remain scanned.",
+      "source_commit": "f189f521266f42c6bd05884468292000cee852ed"
+    }
+  ]
+}

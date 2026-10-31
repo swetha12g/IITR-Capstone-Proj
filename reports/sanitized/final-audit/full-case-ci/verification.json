@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "run_id": 39910883934,
+  "url": "https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39910883934",
+  "tested_commit": "06c8e1d4e7e36041d80071aa1a1d506e50a2d633",
+  "status": "completed",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 120273366418,
+      "name": "secrets",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120273366597,
+      "name": "sca",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120273366614,
+      "name": "sast",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120273366627,
+      "name": "iac",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120273367189,
+      "name": "build-test",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120276080615,
+      "name": "dast",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120276080776,
+      "name": "container",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120277567276,
+      "name": "aggregate",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "artifact": {
+    "id": 12482949109,
+    "name": "aggregate-study-evidence",
+    "digest": "sha256:1a1ea418cfd2b8edff5b31637c9ddf4f0cd6fe3e2c2e248f3be0b412a16a78b3",
+    "size_in_bytes": 45042
+  },
+  "archive_digest_verified": true,
+  "archive_sha256": "1a1ea418cfd2b8edff5b31637c9ddf4f0cd6fe3e2c2e248f3be0b412a16a78b3",
+  "allowlisted_packet_files": 13,
+  "recomputed_aggregate_matches": true,
+  "all_receipts_match_run_commit_and_source_tree": true,
+  "all_receipt_worktrees_clean": true,
+  "project_tree_sha256": "8a558f581516c2a445c3e8f2d8fff201923c3e1acba77a7d6509f23385924be0",
+  "image_config_id": "sha256:f6009212c760b51c64523806973c7f31b9f1538975025d94b67e0e8098abf247",
+  "verdict": "PASS_WITH_DEFERRED_RISKS",
+  "critical_observations": 0,
+  "findings_by_severity": {
+    "HIGH": 159,
+    "INFO": 16,
+    "LOW": 35,
+    "MEDIUM": 48
+  },
+  "cross_stage_observations": 258,
+  "globally_deduplicated_counts_not_claimed": true,
+  "test_results": {
+    "test-frontend": {
+      "passed": 1372,
+      "failed": 0,
+      "skipped": 0,
+      "todo": 0,
+      "cancelled": 0,
+      "total": 1372
+    },
+    "test-server": {
+      "passed": 422,
+      "failed": 0,
+      "skipped": 2,
+      "cancelled": 0,
+      "todo": 0,
+      "total": 424
+    },
+    "test-api": {
+      "passed": 538,
+      "failed": 0,
+      "skipped": 4,
+      "cancelled": 0,
+      "todo": 0,
+      "total": 542
+    }
+  },
+  "contract_tests": {
+    "tests": 85,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "server_case_inventory": {
+    "matched": true,
+    "expected_cases": 424,
+    "executed_cases": 424,
+    "missing_cases": 0,
+    "unexpected_cases": 0,
+    "expected_files": 41,
+    "executed_files": 41,
+    "critical_regressions": 5,
+    "case_inventory_sha256": "3f44b8849146d98914f5ae6a4e01465cf6a592416421aa08f4758a07409c32f7",
+    "junit_totals": {
+      "total": 424,
+      "passed": 422,
+      "failed": 0,
+      "skipped": 2
+    },
+    "baseline_sha256": "22f866f2a2380d32538c68cfc36136adcd226029eb0161a29d61ad5b683ba480",
+    "reporter_totals_agree": true
+  },
+  "sbom": {
+    "schema_valid": true,
+    "spec_version": "1.6",
+    "components": 2658,
+    "representative_packages": {
+      "juice-shop": "20.3.0",
+      "express": "4.22.3",
+      "sqlite3": "5.1.7"
+    },
+    "sha256": "3c1c8564d6b5f6f76ae508835d87c6d4928deb353471cbc148f1eb77c699be3e"
+  },
+  "runtime": {
+    "passed": true,
+    "http_checks_passed": 7,
+    "http_checks_total": 7,
+    "evidence_sha256": "94b0c9a8881df34393dae5aa8390920e0db363557a77c2b089d52389f6472904"
+  },
+  "dast_urls_reached": 121,
+  "dast_routes_verified": true,
+  "scanner_cleanup_verified": true,
+  "summary": {
+    "step_conclusion": "success",
+    "github_step_summary_write_completed": true,
+    "bytes": 7642,
+    "sha256": "49c595556b86bbc1c4a24d6752a0d030544fba8d2ee2702ac3c904390d3bf664",
+    "artifact_matches_logged_summary_hash": true,
+    "regenerated_body_matches_artifact": true,
+    "github_ui_visual_inspection_claimed": false
+  },
+  "packet_assets_match_checked_in_snapshots": [
+    {
+      "file": "output/pdf/PipelineFortress_Study_Report.pdf",
+      "sha256": "51d662b3d574a2879bd07cfa14d3867bec351335f930c8cf343ff2427690a364"
+    },
+    {
+      "file": "reports/sanitized/dashboard/index.csv",
+      "sha256": "b7887a2d8599f3b8314ae53bece9645c2501a6ea937149d6abf3fee88d691c1f"
+    },
+    {
+      "file": "reports/sanitized/dashboard/index.html",
+      "sha256": "180d17f38397c3d9d4642e03c68791d14047146a029a8d624dfadf72f27b962a"
+    },
+    {
+      "file": "reports/sanitized/dashboard/index.json",
+      "sha256": "1f41927f83f5665ca72722943c0e9c29088340afdecde8ecafa539a22e008d9a"
+    }
+  ],
+  "additional_provider_calls": 0,
+  "purchases_or_billing_changes": false,
+  "previous_rejected_run": {
+    "id": 39908648090,
+    "conclusion": "failure",
+    "reason": "Eleven server verdicts missing; inventory gate correctly rejected"
+  },
+  "remaining": "High/lower risks deferred; successful live AI, independent labels/PR reviews, oral/submission evidence unverified"
+}

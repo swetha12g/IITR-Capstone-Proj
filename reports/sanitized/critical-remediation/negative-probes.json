@@ -1,0 +1,19 @@
+{
+  "scope": "Owned immutable old/new image containers; network disabled, read-only root; harmless in-memory marker only; containers automatically removed",
+  "probes": {
+    "before": {
+      "image_config_id": "sha256:3eb3e0ff60e5fba12f014e5fcc9f6086fa7f366139d52a4bce44e598a3e860e9",
+      "unsigned_token_accepted": true,
+      "executable_query_rejected": false,
+      "query_executed": true,
+      "log_sha256": "bee6b8cb95826e7a0992da019e4461f7b2b2ce649dde9446ddb87661cc0a0068"
+    },
+    "after": {
+      "image_config_id": "sha256:483df66c5bdfb2d47a740243a6db215e6abe43637a3bf23863ebc857997a59d0",
+      "unsigned_token_accepted": false,
+      "executable_query_rejected": true,
+      "query_executed": false,
+      "log_sha256": "0755df1c4a5eb7a2a72b988b653581f9a3f271340a3283fc710992cc8893f04b"
+    }
+  }
+}

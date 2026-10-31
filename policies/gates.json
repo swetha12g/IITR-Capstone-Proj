@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+  "profiles": {
+    "day3": [
+      "sast",
+      "sca",
+      "secrets-history",
+      "secrets-tree"
+    ],
+    "full": [
+      "sast",
+      "sca",
+      "secrets-history",
+      "secrets-tree",
+      "iac",
+      "container",
+      "dast"
+    ]
+  },
+  "blocking_severities": [
+    "HIGH",
+    "CRITICAL",
+    "UNKNOWN"
+  ],
+  "semgrep_severities": {
+    "ERROR": "HIGH",
+    "WARNING": "MEDIUM",
+    "INFO": "LOW"
+  },
+  "secrets_severity": "HIGH",
+  "exceptions_file": "baseline-exceptions.json",
+  "exception_owner_role": "project-owner reviewer",
+  "pending_stages": [
+    "iac",
+    "container",
+    "dast"
+  ]
+}

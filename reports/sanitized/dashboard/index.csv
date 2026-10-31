@@ -1,0 +1,14 @@
+stage,severity,observations
+sast,HIGH,8
+sast,MEDIUM,3
+sca,HIGH,10
+sca,LOW,4
+sca,MEDIUM,9
+secrets,HIGH,133
+iac,HIGH,1
+container,HIGH,5
+container,LOW,10
+container,MEDIUM,26
+dast,INFO,16
+dast,LOW,16
+dast,MEDIUM,10

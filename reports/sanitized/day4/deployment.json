@@ -1,0 +1,6 @@
+{
+  "image_config_id": "sha256:483df66c5bdfb2d47a740243a6db215e6abe43637a3bf23863ebc857997a59d0",
+  "cri_manifest_reference": "docker.io/library/pipelinefortress@sha256:9e3aa88e12365ecf45f3d5483638ee280ce857a226a1ee8da25cd3e62a115159",
+  "rendered_manifest_sha256": "38ded89a4a0984d1132ac2e8a854d217bc08d6f3981a1e8a7b054cf54c6a284e",
+  "rollout_passed": true
+}

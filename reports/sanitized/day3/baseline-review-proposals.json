@@ -1,0 +1,3287 @@
+{
+  "schema_version": 1,
+  "scope": "production and development dependency graphs; source and full-history/tree scans",
+  "status": "approved by the designated project-owner reviewer; activated exactly in policies/baseline-exceptions.json",
+  "exceptions": [
+    {
+      "fingerprint": "22b46f8658d4e69dc677023ad57a3f84e34368eca54132219d64c32d8afa496e",
+      "stage": "sast",
+      "identity": {
+        "stage": "sast",
+        "rule": "policies.semgrep.pf-sql-template-query",
+        "path": "app/juice-shop/data/static/codefixes/unionSqlInjectionChallenge_1.ts",
+        "line": 6
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned upstream training source finding; requires exact contextual review, no production-safety claim.",
+      "baseline_file_sha256": "20c2d1c6b6bd85b489abb4c2ecbf054dcbc177f167eeffe268329f2979209504"
+    },
+    {
+      "fingerprint": "22d469ba3bd4edd388dff358f01ae0cc0e2f07b68bdf53cf4d746de61a8917dd",
+      "stage": "sast",
+      "identity": {
+        "stage": "sast",
+        "rule": "policies.semgrep.pf-sql-template-query",
+        "path": "app/juice-shop/data/static/codefixes/unionSqlInjectionChallenge_3.ts",
+        "line": 10
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned upstream training source finding; requires exact contextual review, no production-safety claim.",
+      "baseline_file_sha256": "107ff063f641b01c6ece82177af8ce2b1eaa305d3d8ce4202ae74fd211fb7c53"
+    },
+    {
+      "fingerprint": "2fbfd43275b9c75f06c208d3e381ed79d6d2e1979644dd5e359a71af5f79df50",
+      "stage": "sast",
+      "identity": {
+        "stage": "sast",
+        "rule": "policies.semgrep.pf-sql-template-query",
+        "path": "app/juice-shop/data/static/codefixes/dbSchemaChallenge_3.ts",
+        "line": 11
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned upstream training source finding; requires exact contextual review, no production-safety claim.",
+      "baseline_file_sha256": "74a82592e7b1f28f7d628de1505ab3cdd9ecb9d9c3e22cc740717e0acf8818ca"
+    },
+    {
+      "fingerprint": "5399a25d4b72c88d56589ff4e1458472471a4b726e8e278acb9cd32078627315",
+      "stage": "sast",
+      "identity": {
+        "stage": "sast",
+        "rule": "policies.semgrep.pf-sql-template-query",
+        "path": "app/juice-shop/routes/login.ts",
+        "line": 34
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned upstream training source finding; requires exact contextual review, no production-safety claim.",
+      "baseline_file_sha256": "cf11d682edff6744bcb54339bce4b2dd6da5e80f9038facd7605df857b0a0b7b"
+    },
+    {
+      "fingerprint": "6b461634eada645c4c4f4ae5dfcc55c57bc827a4976b95c3244afcaef8deeade",
+      "stage": "sast",
+      "identity": {
+        "stage": "sast",
+        "rule": "policies.semgrep.pf-eval-input",
+        "path": "app/juice-shop/routes/userProfile.ts",
+        "line": 65
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned upstream training source finding; requires exact contextual review, no production-safety claim.",
+      "baseline_file_sha256": "07251f3d0dd9f4c530da60e3911091d8ff1bded650f72c31cbee499093979b39"
+    },
+    {
+      "fingerprint": "bc75dff7ca0e2876337687377e258807f86dcb72e0916364e1e745eedf9a2db8",
+      "stage": "sast",
+      "identity": {
+        "stage": "sast",
+        "rule": "policies.semgrep.pf-eval-input",
+        "path": "app/juice-shop/test/cypress/e2e/contact.spec.ts",
+        "line": 267
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned upstream training source finding; requires exact contextual review, no production-safety claim.",
+      "baseline_file_sha256": "ff6960cd5697c0c8312c02550185e8ca385ab6c60011a7939ae06c8eb2b181c9"
+    },
+    {
+      "fingerprint": "d1a2d9c3f17dd097c6e15a9542bcab4b6dbd62f7354e37134cfd4684d47943c2",
+      "stage": "sast",
+      "identity": {
+        "stage": "sast",
+        "rule": "policies.semgrep.pf-eval-input",
+        "path": "app/juice-shop/routes/captcha.ts",
+        "line": 22
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned upstream training source finding; requires exact contextual review, no production-safety claim.",
+      "baseline_file_sha256": "b48ecb634f38f033ce1331148a2a0c1dc24aecd3a01e72c773fd74b716cf17e1"
+    },
+    {
+      "fingerprint": "f33c7f7e10f9ba586165c771303e6fb27dfe1328e4ba8ec513eeea5c5d47338e",
+      "stage": "sast",
+      "identity": {
+        "stage": "sast",
+        "rule": "policies.semgrep.pf-sql-template-query",
+        "path": "app/juice-shop/routes/search.ts",
+        "line": 23
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned upstream training source finding; requires exact contextual review, no production-safety claim.",
+      "baseline_file_sha256": "6e3272ef4065d080295d995a04964e8c5e6b1e06c4b4c8ebed3234286686ee5f"
+    },
+    {
+      "fingerprint": "018078a71cede3dae802594e630c97fc9ffd9dd682b8bf84416794e7f8b4520d",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-26960",
+        "path": "package-lock.json",
+        "component": "tar",
+        "version": "6.2.1"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "0b2ba4852296222cf9fd5978ef986555b7d2f3f0d1a82832f8452991524bef36",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-55849",
+        "path": "package-lock.json",
+        "component": "@cyclonedx/cyclonedx-npm",
+        "version": "4.2.1"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact pinned training dependency finding in production or development graph; proposed visible lab-only risk, requiring contextual owner acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "0c5dc7139e717f4fd6d3fc636131b68de91a7cbf41e00b16e763b9f9599eaeea",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-27904",
+        "path": "package-lock.json",
+        "component": "minimatch",
+        "version": "3.0.5"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "117879509d669b4097028d74832f6fe7a3a998aae115f9460f1db8dffaa9dd7e",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-106445",
+        "path": "package-lock.json",
+        "component": "handlebars",
+        "version": "4.7.9"
+      },
+      "accepted_severity": "CRITICAL",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "144c85ed8c00e33c5272d771646b6e89cfe69088df81e87829b6927cafd4ac01",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-23950",
+        "path": "package-lock.json",
+        "component": "tar",
+        "version": "6.2.1"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "15ebf4355245b44a365ecf5a6f0e7be710cd168e15a3dda3b3c0fa11c6722da9",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-71851",
+        "path": "package-lock.json",
+        "component": "crypto-js",
+        "version": "3.3.0"
+      },
+      "accepted_severity": "CRITICAL",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "1d93567cd0a80741787c2582cecf4768a9c5a301dee5bbf0aec712411df3ce89",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-48779",
+        "path": "frontend/package-lock.json",
+        "component": "ws",
+        "version": "8.18.0"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "2cab8508e02d7ca0b74df30010cfefa1c98ce4e76708928726f80e090d931503"
+    },
+    {
+      "fingerprint": "2274e59224d9b45657870f6a2c1ca4f497c9a3758169de1355dd16f93407e297",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-59874",
+        "path": "package-lock.json",
+        "component": "tar",
+        "version": "6.2.1"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "22934eebaa63a62223b94a9b9c00d99584813dcf5c80bef360fe6dde8be03d41",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2025-65945",
+        "path": "package-lock.json",
+        "component": "jws",
+        "version": "0.2.6"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "2cbe1ec104e53b7c6ef525d81d8fb7ee20749576e1200c4c80774b86a0439b0f",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-27903",
+        "path": "package-lock.json",
+        "component": "minimatch",
+        "version": "3.0.5"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "3a2a12a92d2f1bd763f30916d41d7dab8cbb8b7c5eec83525d8c54e2c86b3e49",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "NSWG-ECO-17",
+        "path": "package-lock.json",
+        "component": "jsonwebtoken",
+        "version": "0.4.0"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "3b06b9cf32354d5da70a0870f355c9c3d5b749081474401c5d02abd7dcc2039f",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-102990",
+        "path": "package-lock.json",
+        "component": "basic-ftp",
+        "version": "5.3.1"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "4304f4d364de7760d2938005ee401fc568e891bd3bf7d2c6bd7378e51794c1a5",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2021-23337",
+        "path": "package-lock.json",
+        "component": "lodash",
+        "version": "2.4.2"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "4615cef40cffee513e567852dd43365fd44a250af77a0de42890c5f2aa356b09",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2023-46233",
+        "path": "package-lock.json",
+        "component": "crypto-js",
+        "version": "3.3.0"
+      },
+      "accepted_severity": "CRITICAL",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "498a072d1e0fbddfddb6fcc8795a51fb8bfa17cb4997088e9d920ce4bbce9063",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2022-24785",
+        "path": "package-lock.json",
+        "component": "moment",
+        "version": "2.0.0"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "51ea5eede36551d4cd20d9fb2ef2aee94921033277b3ebf3cf912bc691be88cd",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2015-9235",
+        "path": "package-lock.json",
+        "component": "jsonwebtoken",
+        "version": "0.1.0"
+      },
+      "accepted_severity": "CRITICAL",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "565c92d24f9c2c244eb62b1077202883ce644f626ce92182a44ff18878773ad1",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-73566",
+        "path": "package-lock.json",
+        "component": "tar",
+        "version": "6.2.1"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "58c29ad26ce4c79fadca640a0bea1cec22c0fccc1de00fb8a339f6b9a6c63f4a",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2016-1000223",
+        "path": "package-lock.json",
+        "component": "jws",
+        "version": "0.2.6"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "5ac60bb9dec3b1916a5114faf5f4f7b12bd819e97bf2fb7a1cbea7f374db88e0",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-26996",
+        "path": "package-lock.json",
+        "component": "minimatch",
+        "version": "3.0.5"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "5b5fcfcce185bbcd9dc04d70007ce6a83de1dd8d742be2df8b9f1eaa5a083767",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-93687",
+        "path": "frontend/package-lock.json",
+        "component": "braces",
+        "version": "3.0.3"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact pinned training dependency finding in production or development graph; proposed visible lab-only risk, requiring contextual owner acceptance.",
+      "baseline_file_sha256": "2cab8508e02d7ca0b74df30010cfefa1c98ce4e76708928726f80e090d931503"
+    },
+    {
+      "fingerprint": "6062feaf2c9b59103da1126f06e8ec04fcd0f0495d748710c3fe02d7d233821c",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "NSWG-ECO-428",
+        "path": "package-lock.json",
+        "component": "base64url",
+        "version": "0.0.6"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "6a9042cb5ca86cab2553c46628e1456835d3e5038b013eee81eb8c9e6da734df",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2022-23539",
+        "path": "package-lock.json",
+        "component": "jsonwebtoken",
+        "version": "0.4.0"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "7051ba05a36c10e7c4861b04023f2721bb59c72c42de2f26f055a004cc7a8a74",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-59873",
+        "path": "package-lock.json",
+        "component": "tar",
+        "version": "6.2.1"
+      },
+      "accepted_severity": "CRITICAL",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "86395589bd809ee601427e6e988eb386967a882e646faac6bcf1b35ded4177ff",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-29786",
+        "path": "package-lock.json",
+        "component": "tar",
+        "version": "6.2.1"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "899826bc443d3ea6dfb00f30361d6425d212c4bffc0056606895aee9e6e9a4c9",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2017-18214",
+        "path": "package-lock.json",
+        "component": "moment",
+        "version": "2.0.0"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "942b1ecad5627e0f18770ad9f0dcb5dfc4f876112a9fae1bbe1e1c1a72f1dab5",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-31802",
+        "path": "package-lock.json",
+        "component": "tar",
+        "version": "6.2.1"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "9a93beaf63c62be7bb8033a0419791c911879519bf2bbc67d07d23ba157ac367",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-71538",
+        "path": "package-lock.json",
+        "component": "@cyclonedx/cyclonedx-npm",
+        "version": "4.2.1"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact pinned training dependency finding in production or development graph; proposed visible lab-only risk, requiring contextual owner acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "9ef425659bcc4a52e5da8a5d3c9143f35e549b52117839cb2fd89e346ad10383",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-23745",
+        "path": "package-lock.json",
+        "component": "tar",
+        "version": "6.2.1"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "a18d9f0a8337f41750c5bcacf35956642674d451b4025cf26e5dd7f16c43e075",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-101894",
+        "path": "package-lock.json",
+        "component": "decompress",
+        "version": "4.2.1"
+      },
+      "accepted_severity": "CRITICAL",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "b0d242fa97d65deb9901c3f3ef5b22e4f5a9ea3da59d4466debc7ba38da09adf",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2019-10744",
+        "path": "package-lock.json",
+        "component": "lodash",
+        "version": "2.4.2"
+      },
+      "accepted_severity": "CRITICAL",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "b125895f4315a7ca5da9ce5087102911e9019827c31621eea2a21eb56d3f972c",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2018-16487",
+        "path": "package-lock.json",
+        "component": "lodash",
+        "version": "2.4.2"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "b53d4c47cd23f7c804c8286076189ced1669cfb4d3f7f6caa4ff3c5525352738",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2022-23539",
+        "path": "package-lock.json",
+        "component": "jsonwebtoken",
+        "version": "0.1.0"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "c4c259faf6efc5aa08a7c749fd0cd192329ed105cfa6bc4af80dcd3b7a4cb1b1",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-53486",
+        "path": "package-lock.json",
+        "component": "decompress",
+        "version": "4.2.1"
+      },
+      "accepted_severity": "CRITICAL",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "c8fff3c902d47a6f74f07e4bb88ab8080528fc0b10a5b0ba36ed645a199d0a88",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-24842",
+        "path": "package-lock.json",
+        "component": "tar",
+        "version": "6.2.1"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "c92418e0165b334f059b671344186d740098de9b381313f854cc241e7b8b7e56",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-93748",
+        "path": "package-lock.json",
+        "component": "http-cache-semantics",
+        "version": "3.8.1"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "cb3bbf0d50d6c680ba2f70d7aa48d3a69367298c43b30b0fae3aa478af160d12",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2015-9235",
+        "path": "package-lock.json",
+        "component": "jsonwebtoken",
+        "version": "0.4.0"
+      },
+      "accepted_severity": "CRITICAL",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "cf145c829eea9612428497e5e14eb7b3eddb49a74ff170217a32747c69038c3c",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "NSWG-ECO-17",
+        "path": "package-lock.json",
+        "component": "jsonwebtoken",
+        "version": "0.1.0"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "dd80161299c997bb7cefefe962ebef1d67105b751578cca50d33cbda1b7d994d",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2026-106446",
+        "path": "package-lock.json",
+        "component": "handlebars",
+        "version": "4.7.9"
+      },
+      "accepted_severity": "CRITICAL",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "e1989a498df889d665200aa5a72f1ada35c6b79412b4b3a60aecc32789f35c12",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2020-15084",
+        "path": "package-lock.json",
+        "component": "express-jwt",
+        "version": "0.1.3"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "e36025afc0ddb151ffc134e2cd71fe194e2c51c79aa70f4322cde9cf3e74d51a",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2022-25881",
+        "path": "package-lock.json",
+        "component": "http-cache-semantics",
+        "version": "3.8.1"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "f5d83817203a3e9e39603c6ad513cd683da3c1119d3ea0dc2665fdddac2cb93f",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "GHSA-5mrr-rgp6-x4gr",
+        "path": "package-lock.json",
+        "component": "marsdb",
+        "version": "0.6.11"
+      },
+      "accepted_severity": "CRITICAL",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "fc84ca33819656724f7f0434c294b611e7a134182b666246e4e010608cae3a8e",
+      "stage": "sca",
+      "identity": {
+        "stage": "sca",
+        "rule": "CVE-2022-25887",
+        "path": "package-lock.json",
+        "component": "sanitize-html",
+        "version": "1.4.2"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Pinned intentionally vulnerable training dependency; retain risk visibly in the owned lab only, pending reviewer acceptance.",
+      "baseline_file_sha256": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c"
+    },
+    {
+      "fingerprint": "018ec51cae1219e5c721d13ebe80d21ae8d473fb9ad168766b7c4ba1e28d98ae",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/user.test.ts",
+        "line": 318,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "08a47e8c66e81cf07e4bcaca7b23a0f92a44fc5da16e26fff0362f82ae1e7df1",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "private-key",
+        "path": "app/juice-shop/infrastructure/terraform/networking.tf",
+        "line": 171,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "0aab649e3dd4e5add0a4a8deacb5c5666a95d0863d5aa7168244e76185af5100",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/data/static/users.yml",
+        "line": 151,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "0c4f06afc2aa0fcbb80904fc38de0e8c6a74d5ba3ca22c7e9603d734f92d3309",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 214,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "11b84d7ac2ac5198ddc6a0fe3d43280d9ab88dbba3883b337d45ffe79cf32244",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/data-export.test.ts",
+        "line": 90,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "123d890fc71809d06e23b5cea941e4608ec41d9ac93b444267b026b522fee853",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "jwt",
+        "path": "app/juice-shop/frontend/src/app/last-login-ip/last-login-ip.component.spec.ts",
+        "line": 72,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "128f088034941ea012c6a8bb2c692b6f653e2e2803235c06d50d236f4667f70b",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 42,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "15392e3bac87e1e20367fc3690a72c5b1249dda22f60513a6bf489f733bac46b",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "jwt",
+        "path": "app/juice-shop/test/cypress/e2e/forgedJwt.spec.ts",
+        "line": 22,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "1b65814e55dde264ac771cfb3b388065a52d278b79abfc2a953fc01397109070",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "jwt",
+        "path": "app/juice-shop/test/server/verify.unit.test.ts",
+        "line": 316,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "1ba541b7a741261034b3f61430d23c804b9044e3d51216b51a428b5aeb0dfc42",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/login.test.ts",
+        "line": 267,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "1c45de0a90c7334ad0989f4e50363ae7b19c253516fd69a46caa95103c57461d",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/login.test.ts",
+        "line": 147,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "209c7ec942f65a9ce9a51fb07da4622078e0c72292d19e394cac509e7b8618a0",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "jwt",
+        "path": "app/juice-shop/frontend/src/app/app.guard.spec.ts",
+        "line": 46,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "216af59b4288e73a1e4da6792bd47f97219007ee67dab07bf7c358a6815f6ea3",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/frontend/src/app/last-login-ip/last-login-ip.component.spec.ts",
+        "line": 78,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "2691f3f62426844afc5817560e680375be4a55328484939d47219e31afd2e935",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 85,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "2726e59fcc0c1a59f86770183fd72cb3c31a2ee070d3780cbe98397989a1a327",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/erasure-request.test.ts",
+        "line": 94,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "37b746e2386d9f8a4958666fe1a7b20c580e59223a587d50eebdc6f50b48f8a4",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/product-review.test.ts",
+        "line": 170,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "38e1c7458dcadc9dc9980cc68a03b04638795dcea79d9b2f9a4410312451ed66",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 317,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "3a9a958eaec1d2ae40e31d8a68d5d06276298c41f8107432c79601ea9a676c4e",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/erasure-request.test.ts",
+        "line": 106,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "3abcc4ee8944846a33c5c76a996b8ed8eedb35ed4c99085e6e950aefbdd591f1",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/erasure-request.test.ts",
+        "line": 82,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "3af8c19d2d93f083e0915c38518017d80c83a2c4ad918633ae92ffedb5553751",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/erasure-request.test.ts",
+        "line": 55,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "3afacb458daad4b4695a1a8b1c6c159159db325ed7b1a3b934faff610a3dce79",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/checkKeys.test.ts",
+        "line": 46,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "42b7f17a92fa160f672a36bba2e3f7cd899d0646399bcd9be3130c8e7ca8124b",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/frontend/src/app/oauth/oauth.component.spec.ts",
+        "line": 91,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "4b181d34e0d17d7876f30fc0fe6b288154fd9325b73c96f3c9ab14d6e62e0f0b",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/data-export.test.ts",
+        "line": 53,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "4ea2836cb27f32ef979e708a94fa4c2ff193e9295e776ba7e56c41df0698614a",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/basket.test.ts",
+        "line": 241,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "4fadfe866982c6846aaceea2a07652d9ff93b80e85dea5dc08f16bf3276b7778",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 66,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "5445de298312b1c5b046e37b779fb565de780161da4a3fc5ac3e3b76c73b2026",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/routes/login.ts",
+        "line": 64,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "58f157f61c3a701165da17984dc1440f565169ba3036d99560fbe227d5e54254",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/login.test.ts",
+        "line": 245,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "598f94b54da397d258f33c98250f1fdf84238734a7ab9b024c39c1587e6f848d",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/data-export.test.ts",
+        "line": 110,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "693ebf8133ee1a4b8098f8b1356ae0f3cf11c9bff1ec3a2bd38a65feefa9deec",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/frontend/src/app/oauth/oauth.component.spec.ts",
+        "line": 98,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "71fd8be4ca59d3184e48f42a0470858a9f93e66df0083453924047f7567959ca",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 182,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "73c12e2c7dea011a11c0e5394a48bda4f0bb90fe190e487e5dfadc4dbedd0186",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "jwt",
+        "path": "app/juice-shop/test/server/verify.unit.test.ts",
+        "line": 283,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "74c905ec2832a29f9b1e39ce99ed1ad352e7d39f674edd87d21b3e5ed249ae77",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/basket.test.ts",
+        "line": 115,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "74f6511e7f8b0f962893c83ea28f993ce60ae82b64bc7320069f6ec9ce809ef8",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 142,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "7923d9534e7a45ea71653a0020fde35ef81cd7d63150386f79630cdf5cc31bcf",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 266,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "7978d50ac9b4b4ae2db31a01b9e8db70038e9f49ef61da0aaa426daeb4fc03d0",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "jwt",
+        "path": "app/juice-shop/test/server/verify.unit.test.ts",
+        "line": 291,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "7c93aa230c232fd2bdcaf08705e9a3c6468ef5994b6b45f24fda6a04b48b98b8",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/checkKeys.test.ts",
+        "line": 68,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "8339a6d90c073999cde654135d933572f96d625eb02ac36ea6a1b6f699320f43",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 292,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "90ba566ab87a9cfccb61e7f28c49ccde518d26d9fa51f789ea3a750ac0e25f02",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 257,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "923262aec1fff77f7a06cddd5d0d6309440a8455feb4d8898e5a10dd902de6ac",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "jwt",
+        "path": "app/juice-shop/test/server/currentUser.unit.test.ts",
+        "line": 34,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "94467c177cd2c46a77881e1511e1fcb8c6ae79eaf90d4eef32aea8bad9c5c442",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/checkKeys.test.ts",
+        "line": 57,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "9bfb6af4f6ea2854de9bf7052547dd701ede03be7727a3dc81a97768ab2c95ed",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/erasure-request.test.ts",
+        "line": 68,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "9f359a9fbbb715ae4af4267ba01c9b81da07f186b76599f1df92beba0a4241d1",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/cypress/e2e/login.spec.ts",
+        "line": 126,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "a1ae1faf6b4d59be3ee34f95fb71d1999f80240623cbc2675b52272062a55cd2",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/feedback.test.ts",
+        "line": 143,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "a243719582d3ae997927645ce7109a02b92d290a1d3632294e399b5948c40fc1",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "jwt",
+        "path": "app/juice-shop/test/cypress/e2e/forgedJwt.spec.ts",
+        "line": 38,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "a2775704b3dccf2796e915ecf174b438d7110579dd2e96b9a7e27d83b5bfc579",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/frontend/src/app/faucet/faucet.component.ts",
+        "line": 34,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "a3ddf489f61e48638cac14cd00066f5b629d1cf16611a00ee1b211b788ae0cd0",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/user.test.ts",
+        "line": 240,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "ac0ded3739276e7d833a1400a5469b5c115890d5d3525b83617f8006f24816fa",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/user.test.ts",
+        "line": 289,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "ac75c8f5cb1ee7e79e58dfaffb11efe4db7401cebc66f8dc1d7fe5be4868a17f",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 412,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "ae57a576437075b44cfa8c2216ef07d3e6ed6d36d61bb8b946f3d8216f960318",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/user.test.ts",
+        "line": 304,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "af2e7dfdc44897823ded32386bf0e58dbe6cb45fd98d0f219293993a3208ac74",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/chat.test.ts",
+        "line": 261,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "b245bf150ca8d7a69611aaa305540f43418d135ea7ade52acbadea06059baba2",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/data-export.test.ts",
+        "line": 73,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "b3c27074dfa7269484c6f3663b18038d42a3f471f0df2b109a2df6987126ab5b",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 104,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "b447da69247f220da6962813df50a8c021fc98f10132839b3793a059efb4cd5c",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/product-review.test.ts",
+        "line": 184,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "bc2338a979e9341719a8bff632d6777d5c0fcd590b815cd5470a74956e5ee23e",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/cypress/e2e/totpSetup.spec.ts",
+        "line": 7,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "bdb9df7779e70d560da7fd6e459e5d955a4aa93acf8910abe5d52dfd67dcb827",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "jwt",
+        "path": "app/juice-shop/test/server/verify.unit.test.ts",
+        "line": 308,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "be99917c3da64fd779751cf3e42969c7c2ab2f9042bceb01a032b6e66df24d9f",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 379,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "c082bd4ef72a1d3d2fbc4d6295e7030e80fb24956a78dffc87bf35f08a52d8c1",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/feedback.test.ts",
+        "line": 117,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "c8c307e9ed9664c2178b1f63ed7905583443791ed3cff17f65bceca740d674e5",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "jwt",
+        "path": "app/juice-shop/test/cypress/e2e/forgedJwt.spec.ts",
+        "line": 7,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "cd0451c473e94aa5408d0e0489949df2ea86196b6631640e6d361e4ddf4a43a9",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 240,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "cfeab9ce2a757c640cb5fec4c22a614e7d9bdb57d59a27650c3521280cc69fdc",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/user.test.ts",
+        "line": 280,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "d4dd7ad75daa9ac30c7ac16e0c218a5ea724e6ff4a1e054c549759c90b088e32",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "private-key",
+        "path": "app/juice-shop/terraform/networking.tf",
+        "line": 171,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "d8a241aea2338690cd96f79e64f3f0e8b7e7dc49fc31158a583f310e4f4cc4e2",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 352,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "e10ae244dafd498cf4420f911094bfb1017ffd9be4e123b42de7304e5780f0f1",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "jwt",
+        "path": "app/juice-shop/test/api/user.test.ts",
+        "line": 280,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "e5eba66f1cde2c191fb62ea71d8f81204428cf6a0611923473ed32ccfa64732f",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "jwt",
+        "path": "app/juice-shop/test/server/currentUser.unit.test.ts",
+        "line": 31,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "e6535a483be57045d28a085dd6ee8a6fcb3d6bf7f99cfddd01e7542b7d5938cf",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 123,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "ea71ee740218867fa7f325a734ed5df02120968cf4dd4bf801e35040359b770f",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "private-key",
+        "path": "app/juice-shop/lib/insecurity.ts",
+        "line": 21,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "f8609a9a82b7f7c20a64fb6df1138c88b5526f29de408965d60ce1502c5ec29d",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/erasure-request.test.ts",
+        "line": 36,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "fa8d15dde97b16914dc9dc859d253673f57f77e478b3ca94bebe81bf908984fe",
+      "stage": "secrets-history",
+      "identity": {
+        "stage": "secrets-history",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/data/static/users.yml",
+        "line": 88,
+        "commit": "425d12928e7c16166918e3d9e872841116414b86"
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": null
+    },
+    {
+      "fingerprint": "014f8558e492b7eb2e5f4f33fe83064d6647aac263f90dcd469369489d4fe5c8",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 85
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
+    },
+    {
+      "fingerprint": "0284e2fb3ab29787d0206a558c1b29f879172c25442655e56e9dead6c8ed3b5c",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "jwt",
+        "path": "app/juice-shop/test/cypress/e2e/forgedJwt.spec.ts",
+        "line": 38
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "bdfb7d951677301fd286785caa42a005766a814c004a8b611cdc7c1d085b8eff"
+    },
+    {
+      "fingerprint": "0493d7349937f04cfedac7e16e513e9198102d97a1ffaf1b75ef8e6a9239c1ac",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 412
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
+    },
+    {
+      "fingerprint": "065e00661786a20f4df24790cbbd4f8ac21c72df5fab0ab06a9079d4b081561d",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 66
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
+    },
+    {
+      "fingerprint": "092db201e573ad4bd559ca2ff417b213a5dd51d058daeeb3de8d2a05dfa3e9aa",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/data/static/users.yml",
+        "line": 151
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "c272d03459144fda794346f23f42575cb92c1709ff60e2744b28cd4fe9ab5010"
+    },
+    {
+      "fingerprint": "0b89317d8f79cf731ad2824402fb2ef32412db3bf4e667e24851b249cd36b669",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "private-key",
+        "path": "app/juice-shop/terraform/networking.tf",
+        "line": 171
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "2ac74e053edf128b31d0596af6ff8e09b3966dacfb56b80dd7f7778bb8acf0ab"
+    },
+    {
+      "fingerprint": "1328029f4ef16ca603f7e71eabb15b64cf85d41f7b039bccfcc8642b497d70c2",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "jwt",
+        "path": "app/juice-shop/frontend/src/app/app.guard.spec.ts",
+        "line": 46
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "8fab4d9f754ee3cfb135d1eca2aaab42c05f699c8d23ff454db42e3b9449832d"
+    },
+    {
+      "fingerprint": "15e30d7ca24b94a2fadc215d3ba021871c173ea335ecdb2399549fdee571dcc5",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/login.test.ts",
+        "line": 267
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "303810c2000dbd92e383a368b5d9e2fab98bd3e9204a0d8b638069b45fda3353"
+    },
+    {
+      "fingerprint": "1a96f747b56cc58ee5ff409c31e60a5561afed792d830a09d5dcebfa269c4bde",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/user.test.ts",
+        "line": 280
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "e91761b7382fa9fd4f1e738979abbeb7df0791c7b648297b7f2278bddae0fbc0"
+    },
+    {
+      "fingerprint": "1daec422e06e5db085bde0021161e0eaa9ad31b0f1f34e1732a2bba21d428b9c",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 142
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
+    },
+    {
+      "fingerprint": "1e2a4c7a3eed293dd8fd3f675c365db99c7045a47f236c767373de528483d6d2",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/product-review.test.ts",
+        "line": 170
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "cdb9b11f32eabf749c31c16e23c9e9d6695407df1f26bd7f62e378ff3ccb52db"
+    },
+    {
+      "fingerprint": "2506c084695c81ebb64ecbda61ccb94b147b8e6e1f7d6a0e05147c721cd4768f",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/data/static/users.yml",
+        "line": 88
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "c272d03459144fda794346f23f42575cb92c1709ff60e2744b28cd4fe9ab5010"
+    },
+    {
+      "fingerprint": "258d10014b5afb8e54fd39ea91815a5ec0333e4ba66649171db74a374acb0c63",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "private-key",
+        "path": "app/juice-shop/lib/insecurity.ts",
+        "line": 21
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "c3496760cac6a5fde403bf739a8ab5e2536d2bbc57a6e3b6a0ac50b01a6e8b8d"
+    },
+    {
+      "fingerprint": "2a2aacb6edb9ac89cf093e70afb066394a71c78a3ab65f03dd89b8610be5cf5f",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/checkKeys.test.ts",
+        "line": 57
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "2bc31caf05eedf31c5e3c80efe6006f4acf7781a658a5e42e8321bebef60fe39"
+    },
+    {
+      "fingerprint": "2ca283bbdcd35f8f01717ef6ead4446529e51ceddf93f0c7be6e1c40c34cdd0a",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/erasure-request.test.ts",
+        "line": 106
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "901792f76f236022b0d498342a2dc027ccc089534f3d4ccc1cacd2cd34eadcb0"
+    },
+    {
+      "fingerprint": "354a0c788ccb639d9efac8134a2e89b70ed07f54a71dcc905a7d8d972b34551d",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 240
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
+    },
+    {
+      "fingerprint": "38ee3d4c176dbde87ef4301a9f791714ce6812dc537191b07048942755c8b169",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "jwt",
+        "path": "app/juice-shop/test/server/verify.unit.test.ts",
+        "line": 283
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "906d755fbed0cc7d3cccb481bd399bd71e6ee5936c01bb73057e37a0c2c0a268"
+    },
+    {
+      "fingerprint": "45d99c0ff95c70025cdc9feb5f34300243cdac51f5b5195ff7b95ccda663e7be",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/product-review.test.ts",
+        "line": 184
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "cdb9b11f32eabf749c31c16e23c9e9d6695407df1f26bd7f62e378ff3ccb52db"
+    },
+    {
+      "fingerprint": "47a8c4f7f726eaabb5bbb56bdd5e8fbc53bf6513338a3996f2703b4b58c318ee",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/frontend/src/app/oauth/oauth.component.spec.ts",
+        "line": 98
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "d0eeb8efd5bd781bb7a230fe60bebd662c6e6522bfc6c739d4636ac9a1e88cb1"
+    },
+    {
+      "fingerprint": "4802ea5683cc02d9f1f08881bcf8d1e5be3305784497910acf60fa3c526d5134",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "jwt",
+        "path": "app/juice-shop/test/server/currentUser.unit.test.ts",
+        "line": 31
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "c60cd6996a40c261a84e7c59706d07bac10f7fe8ec4b9601a88ff291077afd14"
+    },
+    {
+      "fingerprint": "4cf0e57831b8b586e7fbae4da5e75941bb581473d6802881745444fc74d003e3",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/basket.test.ts",
+        "line": 241
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "23df9d8bf127a9f35b09e7f322b21882e9c686e68db8003fb4baec3c6aefdb03"
+    },
+    {
+      "fingerprint": "4d45e03a628b75d5a8fe213401f35d2328866110d1a712ba117585cc26b0164c",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 352
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
+    },
+    {
+      "fingerprint": "505c40fe391229a63fca1b920b7084c1117d093ea55f9707417e9c28fe2ad4e9",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/frontend/src/app/faucet/faucet.component.ts",
+        "line": 34
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "42efaef6b66ed49bb4d6bda85c19d02862a2ff9edd209aacb6e223d9144cf7e1"
+    },
+    {
+      "fingerprint": "51accdf32d16beebc79e28ca3f5d53eee9b2fb76c667e5d83fe7d1bc1a10b385",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 257
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
+    },
+    {
+      "fingerprint": "573b908b92281b13c7af5aedf2f1abfd28d54a735d77fe6fe08e7a422c820199",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/routes/login.ts",
+        "line": 64
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "cf11d682edff6744bcb54339bce4b2dd6da5e80f9038facd7605df857b0a0b7b"
+    },
+    {
+      "fingerprint": "5d792637bac9565cbe8584caceebc191f3a50499edf0a6c32b34710baaaea464",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/frontend/src/app/last-login-ip/last-login-ip.component.spec.ts",
+        "line": 78
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "bac91432deb769a507fd03dede15f883e3d86094e898c9fc397b104a348cfd98"
+    },
+    {
+      "fingerprint": "61265410b12d0dcf03595e2116ba72656738fc5432b8eba08a160c8b032cf4ac",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "jwt",
+        "path": "app/juice-shop/frontend/src/app/last-login-ip/last-login-ip.component.spec.ts",
+        "line": 72
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "bac91432deb769a507fd03dede15f883e3d86094e898c9fc397b104a348cfd98"
+    },
+    {
+      "fingerprint": "67d4caf96c37b76dd8412ac1f9317e7995569227f9bc69bc7581bbdaab10b5cd",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/checkKeys.test.ts",
+        "line": 46
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "2bc31caf05eedf31c5e3c80efe6006f4acf7781a658a5e42e8321bebef60fe39"
+    },
+    {
+      "fingerprint": "684c1a39e1acaa86af0ee2b6a634ef584f09ff5d79bcb3917d07e125b19f1016",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "jwt",
+        "path": "app/juice-shop/test/server/currentUser.unit.test.ts",
+        "line": 34
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "c60cd6996a40c261a84e7c59706d07bac10f7fe8ec4b9601a88ff291077afd14"
+    },
+    {
+      "fingerprint": "699e21d227d804c383230c916f824d378e5f2965f69b5ac6ec80b3596a85da5e",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/user.test.ts",
+        "line": 240
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "e91761b7382fa9fd4f1e738979abbeb7df0791c7b648297b7f2278bddae0fbc0"
+    },
+    {
+      "fingerprint": "6b3cd4376dbca50f4944a380979217cb6be622f4579452021d829b6258881c0e",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/checkKeys.test.ts",
+        "line": 68
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "2bc31caf05eedf31c5e3c80efe6006f4acf7781a658a5e42e8321bebef60fe39"
+    },
+    {
+      "fingerprint": "7a2eb213062b56b147dd54d188a193df032290ea765762d518e8fdb6d2415013",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/erasure-request.test.ts",
+        "line": 55
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "901792f76f236022b0d498342a2dc027ccc089534f3d4ccc1cacd2cd34eadcb0"
+    },
+    {
+      "fingerprint": "7e9c3d1bcadf1e4b0c4b51d8670128357f5fa4faf25a17cd0a082a63c427336f",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "jwt",
+        "path": "app/juice-shop/test/api/user.test.ts",
+        "line": 280
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "e91761b7382fa9fd4f1e738979abbeb7df0791c7b648297b7f2278bddae0fbc0"
+    },
+    {
+      "fingerprint": "8765c3049edca3c4ac748da23484f27325a8f41abfe182a204a66d29ae22d1ee",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "jwt",
+        "path": "app/juice-shop/test/server/verify.unit.test.ts",
+        "line": 291
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "906d755fbed0cc7d3cccb481bd399bd71e6ee5936c01bb73057e37a0c2c0a268"
+    },
+    {
+      "fingerprint": "894d0965ad3e11f8479687b24c6ff68e6bcce4de1979a87e6afe17585cb3668d",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/data-export.test.ts",
+        "line": 90
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "dcec2d1d66c13e659edc23cfe3d2fb3d3f8da25d666167995d94c01f7ccae617"
+    },
+    {
+      "fingerprint": "898f2d53b822fab442f39b4a48500573b9fb64886c0511ec7cd5f239228333eb",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/erasure-request.test.ts",
+        "line": 94
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "901792f76f236022b0d498342a2dc027ccc089534f3d4ccc1cacd2cd34eadcb0"
+    },
+    {
+      "fingerprint": "8b5188d37827ac0a8d7d401d65a29bb52a4952d30fb9cae57a9c17118077c308",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/feedback.test.ts",
+        "line": 143
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "a23e302677748dbaaae2b2fb80cf6a8c04ae0fe14154bd91aad81519a4f4f274"
+    },
+    {
+      "fingerprint": "8c2df1a5940856ac7693225b2bc68460a8edd3c2967052e8c920086aea1da906",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/user.test.ts",
+        "line": 318
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "e91761b7382fa9fd4f1e738979abbeb7df0791c7b648297b7f2278bddae0fbc0"
+    },
+    {
+      "fingerprint": "8f77e9d42fd2a8c7ab90b6fc442e3f63970515c976cb12c1341bd78a45fa407b",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/cypress/e2e/totpSetup.spec.ts",
+        "line": 7
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "52d3f5727c9a93a774d0d036aca167dcebd207a9ff4a089071696d47ce06802d"
+    },
+    {
+      "fingerprint": "909f57075d2c2e6b8206427a9ca7cd0a4925e6713f32c3b17d49ec27b88f1c2f",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "jwt",
+        "path": "app/juice-shop/test/server/verify.unit.test.ts",
+        "line": 308
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "906d755fbed0cc7d3cccb481bd399bd71e6ee5936c01bb73057e37a0c2c0a268"
+    },
+    {
+      "fingerprint": "9df46df1111bda33fba1c7bf4f587eb7bc1a408a742f0a652e2aeced4fd52cc4",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "jwt",
+        "path": "app/juice-shop/test/cypress/e2e/forgedJwt.spec.ts",
+        "line": 7
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "bdfb7d951677301fd286785caa42a005766a814c004a8b611cdc7c1d085b8eff"
+    },
+    {
+      "fingerprint": "a270066c07e817c46e56a1a7a0b13a8ee8b5073ca1517013c20a3b230ca58fd1",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "private-key",
+        "path": "app/juice-shop/infrastructure/terraform/networking.tf",
+        "line": 171
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "2ac74e053edf128b31d0596af6ff8e09b3966dacfb56b80dd7f7778bb8acf0ab"
+    },
+    {
+      "fingerprint": "a5dea1174792e4ab37bc0d1d5362e712525c4b6a6b980f74d534c35baa45c272",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/login.test.ts",
+        "line": 147
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "303810c2000dbd92e383a368b5d9e2fab98bd3e9204a0d8b638069b45fda3353"
+    },
+    {
+      "fingerprint": "aa441923e4070ccd2b955172258af3afae184123ebf531841e9fd5b49c37e77a",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/user.test.ts",
+        "line": 289
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "e91761b7382fa9fd4f1e738979abbeb7df0791c7b648297b7f2278bddae0fbc0"
+    },
+    {
+      "fingerprint": "acef82c04c625824f38f58fce2cd457c6f5346ede8e315060e8836554a189ad7",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/data-export.test.ts",
+        "line": 53
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "dcec2d1d66c13e659edc23cfe3d2fb3d3f8da25d666167995d94c01f7ccae617"
+    },
+    {
+      "fingerprint": "b03f1cee70b9308213f8a8fd6529d3430e529229e16c2ec483a51aa416f20d76",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 182
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
+    },
+    {
+      "fingerprint": "b0c248e9760d075dc9ff8b2b0873992af2daee773eb8d98e1e129d5ee22781dd",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/data-export.test.ts",
+        "line": 110
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "dcec2d1d66c13e659edc23cfe3d2fb3d3f8da25d666167995d94c01f7ccae617"
+    },
+    {
+      "fingerprint": "b2f62c65272b55c5a50b73cddd399b71d1810305052677563b18dac3016d7e87",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/erasure-request.test.ts",
+        "line": 82
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "901792f76f236022b0d498342a2dc027ccc089534f3d4ccc1cacd2cd34eadcb0"
+    },
+    {
+      "fingerprint": "bf97f0468060d96a75638d2e63db6779aab71dc3f41e49b137e2f549937a1624",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/erasure-request.test.ts",
+        "line": 36
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "901792f76f236022b0d498342a2dc027ccc089534f3d4ccc1cacd2cd34eadcb0"
+    },
+    {
+      "fingerprint": "c1610df6e7f07ddbd907f22fd9ebd8b76b117eba1df39e4bbfc6f1a4245b2425",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "jwt",
+        "path": "app/juice-shop/test/server/verify.unit.test.ts",
+        "line": 316
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "906d755fbed0cc7d3cccb481bd399bd71e6ee5936c01bb73057e37a0c2c0a268"
+    },
+    {
+      "fingerprint": "c28a5f44a48febd39e571d6fc7053da5e8248051e0e943f40f7a915da147ef39",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/cypress/e2e/login.spec.ts",
+        "line": 126
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "aa63fed3a9038e2fb74d0fdaacd2ec6d3cdcf31bf45afe60d49e3ce8fa58836b"
+    },
+    {
+      "fingerprint": "cb897bd658c15163bf3747e33de98ab84181005d4b07109c0a915b2db6acbe39",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 42
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
+    },
+    {
+      "fingerprint": "cd2bb65d323f74554f37ec24917debef6f5aafb33feba1e2d8ae50c2be50309a",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/feedback.test.ts",
+        "line": 117
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "a23e302677748dbaaae2b2fb80cf6a8c04ae0fe14154bd91aad81519a4f4f274"
+    },
+    {
+      "fingerprint": "cf648dbdf8d59d04418c439629513806a3d8666810b05f61ac2e58609c334dad",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/frontend/src/app/oauth/oauth.component.spec.ts",
+        "line": 91
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "d0eeb8efd5bd781bb7a230fe60bebd662c6e6522bfc6c739d4636ac9a1e88cb1"
+    },
+    {
+      "fingerprint": "d625384cd724d3e74cb1c40f5c939bca2ef85540fbfe4938ce0e557a979e17c1",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/erasure-request.test.ts",
+        "line": 68
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "901792f76f236022b0d498342a2dc027ccc089534f3d4ccc1cacd2cd34eadcb0"
+    },
+    {
+      "fingerprint": "d6f7fc094edc28652af333ba17f09b0ebe715bfab544ed12aea058256691ea98",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/data-export.test.ts",
+        "line": 73
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "dcec2d1d66c13e659edc23cfe3d2fb3d3f8da25d666167995d94c01f7ccae617"
+    },
+    {
+      "fingerprint": "d8345cbb35f325bff3f2e2e4629db6b13267641938284d9863372fee166eb8e3",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 104
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
+    },
+    {
+      "fingerprint": "de2e6654f33bbce3285f63d3e3ad566270f0a36d489f463012385ee8b8949e62",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 317
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
+    },
+    {
+      "fingerprint": "de6a316a5b7a7f0bda0d2934c38391cbd9c5cfcb6dc2b113e7754198f9ad8db8",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 214
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
+    },
+    {
+      "fingerprint": "e1e14dd85b608cf48f6e8c699bca85810111c27576ff72ad7a8fc81be6e19fe2",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/chat.test.ts",
+        "line": 261
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "55ed1a61905c5355e4b7b6b8d88000a56c81c25456a6452d763a8436e3d65100"
+    },
+    {
+      "fingerprint": "e876221863f821a9bf501125973f22aae264e6f76442452f8cc5718a3c18fc98",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "jwt",
+        "path": "app/juice-shop/test/cypress/e2e/forgedJwt.spec.ts",
+        "line": 22
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "bdfb7d951677301fd286785caa42a005766a814c004a8b611cdc7c1d085b8eff"
+    },
+    {
+      "fingerprint": "e917ef28e24f240aa338f86517b01da6e0ed5ef9e2fd33fefc69eb6872f53c4f",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/user.test.ts",
+        "line": 304
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "e91761b7382fa9fd4f1e738979abbeb7df0791c7b648297b7f2278bddae0fbc0"
+    },
+    {
+      "fingerprint": "ecf2e2aa406cad106a72893a17ddbceb62ce83e98676b331731c213d1f09e61e",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 379
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
+    },
+    {
+      "fingerprint": "f288426f4f8c9b58dd471928a46f6d12c2140366484e0754b894da3be8f91180",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/login.test.ts",
+        "line": 245
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "303810c2000dbd92e383a368b5d9e2fab98bd3e9204a0d8b638069b45fda3353"
+    },
+    {
+      "fingerprint": "f88aadb32e3c0f10530e1345b0fa39744f9bc2a06ab959bb32dde66d2fd79bc1",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 292
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
+    },
+    {
+      "fingerprint": "f8a6cbbe145b24e68d2b06beb8b7fdf629c72fead7f29c5a34c5e13fcc92eff2",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 123
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
+    },
+    {
+      "fingerprint": "f933eff438979b3f68159a32d9093351b81f5790173225426a60473220c1449f",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/2fa.test.ts",
+        "line": 266
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "ae4b11e6bec04ff0dd8a9dc964d7898c8548402db90016d0eab371ca566190a8"
+    },
+    {
+      "fingerprint": "faf0fae1d3e065b1d6e193a2cbe21a365b47851b725b7f1e3cadde22514caa58",
+      "stage": "secrets-tree",
+      "identity": {
+        "stage": "secrets-tree",
+        "rule": "generic-api-key",
+        "path": "app/juice-shop/test/api/basket.test.ts",
+        "line": 115
+      },
+      "accepted_severity": "HIGH",
+      "baseline_commit": "d32e43deb931b5062d3b6132aa7abb655aa3426f",
+      "owner_role": "project-owner reviewer",
+      "expires_on": "2026-10-25",
+      "review_status": "approved",
+      "reason": "Exact match in unchanged public upstream training/test material, verified by Git blob against the pinned source; proposed owned-lab-only accepted risk, not a production credential approval.",
+      "baseline_file_sha256": "23df9d8bf127a9f35b09e7f322b21882e9c686e68db8003fb4baec3c6aefdb03"
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-10-18",
+    "reviewer_role": "project-owner reviewer",
+    "method": "explicit acceptance of the current 186 exact entries in the user reply",
+    "scope": "owned study and experimental lab only; no production use",
+    "expires_at": "2026-10-25T00:00:00+05:30",
+    "remediation_claim": false
+  }
+}

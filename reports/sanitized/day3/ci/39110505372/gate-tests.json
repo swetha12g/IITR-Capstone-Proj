@@ -1,0 +1,9 @@
+{
+  "observed_at_utc": "2026-10-18T08:12:10.971705+00:00",
+  "tests": 25,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "scope": "synthetic fail-closed contracts; not an application detection metric"
+}

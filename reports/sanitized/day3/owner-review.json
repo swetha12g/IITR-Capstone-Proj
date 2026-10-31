@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-18",
+  "reviewer_role": "project-owner reviewer",
+  "method": "explicit acceptance of the current 186 exact entries in the user reply",
+  "scope": "owned study and experimental lab only; no production use",
+  "expires_at": "2026-10-25T00:00:00+05:30",
+  "remediation_claim": false,
+  "accepted_entry_count": 186,
+  "proposal_file": "reports/sanitized/day3/baseline-review-proposals.json",
+  "active_policy_file": "policies/baseline-exceptions.json",
+  "new_or_changed_findings_remain_blocking": true,
+  "scanner_failures_remain_blocking": true,
+  "requested_follow_up": "Continue the guide and remediate findings separately; accepted baseline risk is not a fix."
+}

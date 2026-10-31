@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "verified_at_utc": "2026-10-23T06:35:13.370714+00:00",
+  "file": "output/pdf/PipelineFortress_Study_Report.pdf",
+  "sha256": "e40dc9c60276b800aaa477a4454e0d6aebcdad6761759043d8bfc8dfe2d24e21",
+  "pages": 12,
+  "all_pages_rendered_and_visually_inspected": true,
+  "text_present_on_all_pages": true,
+  "stale_hosted_pending_wording_removed": true,
+  "hosted_repair_run": 39910883934,
+  "hosted_contract_tests": 85,
+  "current_local_contract_tests": 85,
+  "source_gate_contract_tests": 25,
+  "fresh_reproduction_commit": "b20b9b1d9e0c1fc2cded21650fd954f2be7bbf20",
+  "fresh_reproduction_pipeline_seconds": 274.71,
+  "previous_report_preserved": "output/pdf/history/89d5db7/PipelineFortress_Study_Report.pdf",
+  "source_inputs": [
+    {
+      "file": "scripts/generate-report.py",
+      "sha256": "ec36e8941e2b7b8c9363208f250c6ecd74d020de3e1f83a060d55f69ea8caa83"
+    },
+    {
+      "file": "reports/sanitized/final-audit/full-case-ci/verification.json",
+      "sha256": "10d81e652158b19db57cbf78eb42584797b34d397dac1db7fd2c20c0e04a5ddb"
+    },
+    {
+      "file": "reports/sanitized/reproduction/critical-variant/run.json",
+      "sha256": "8325212c3afa46d99733ff45335c0a134c19e9d35ffd7747f95991465d2cf1c6"
+    },
+    {
+      "file": "reports/sanitized/final-audit/report-input-dashboard.json",
+      "sha256": "92c7b919d4e6d1e1401c252e230da7b40571c94208617e6086210f174bfefe75"
+    },
+    {
+      "file": "reports/sanitized/deferred-risks.json",
+      "sha256": "02066c5861f27f0835d8770b66c638ff03abbbe3e4b5cad7561c81f47178536e"
+    },
+    {
+      "file": "reports/sanitized/final-audit/review-observation.json",
+      "sha256": "34646f2aefc685ad596f968860d349278c80c8f7d3bece628442ba3602ec81bd"
+    }
+  ],
+  "remaining": "Successful live AI, independent labels/PR reviews, oral and actual submission acceptance unverified; no additional provider call or purchase",
+  "all_project_tests_passed": 115,
+  "server_case_inventory": {
+    "matched": true,
+    "expected_cases": 424,
+    "executed_cases": 424,
+    "missing_cases": 0,
+    "unexpected_cases": 0,
+    "expected_files": 41,
+    "executed_files": 41,
+    "critical_regressions": 5,
+    "case_inventory_sha256": "3f44b8849146d98914f5ae6a4e01465cf6a592416421aa08f4758a07409c32f7",
+    "junit_totals": {
+      "total": 424,
+      "passed": 422,
+      "failed": 0,
+      "skipped": 2
+    },
+    "baseline_sha256": "22f866f2a2380d32538c68cfc36136adcd226029eb0161a29d61ad5b683ba480",
+    "reporter_totals_agree": true
+  }
+}

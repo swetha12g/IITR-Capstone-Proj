@@ -1,0 +1,36 @@
+{
+  "run_id": "20261016T183808Z",
+  "source_commit": "f189f521266f42c6bd05884468292000cee852ed",
+  "suites": {
+    "test-frontend": {
+      "files_passed": 123,
+      "files_total": 123,
+      "tests_passed": 1372,
+      "tests_total": 1372,
+      "tests_failed": 0,
+      "tests_skipped": 0
+    },
+    "test-server": {
+      "tests": 419,
+      "suites": 133,
+      "pass": 417,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 2,
+      "todo": 0
+    },
+    "test-api": {
+      "tests": 551,
+      "suites": 112,
+      "pass": 545,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 6,
+      "todo": 0
+    }
+  },
+  "total_tests": 2342,
+  "passed": 2334,
+  "failed": 0,
+  "skipped": 8
+}

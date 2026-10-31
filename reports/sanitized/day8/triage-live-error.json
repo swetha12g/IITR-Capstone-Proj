@@ -1,0 +1,12 @@
+{
+  "observed_at_utc": "2026-10-22T15:03:00.119402+00:00",
+  "model": "gpt-6-luna",
+  "prompt_version": "pf-triage-v1",
+  "validation": "not-complete",
+  "error": "openai-http-429",
+  "mode": "live",
+  "raw_source_sent": false,
+  "billing_purchase_or_topup": false,
+  "generation_success_claimed": false,
+  "request_sha256": "5af5ddb0c8e1cbdcaf45d6f960b5c727722aa287365398bb3fa554ea8927f57f"
+}

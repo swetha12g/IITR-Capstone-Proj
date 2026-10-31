@@ -1,0 +1,23 @@
+{
+  "verified_at_utc": "2026-10-16T19:19:25.721594+00:00",
+  "kind": {
+    "version": "kind v0.33.0 go1.26.7 linux/amd64",
+    "sha256": "aee6151561422756b764a4ae28e7f44cda5af5a9eead3cc9985112b1de8d8e0d",
+    "official_checksum_passed": true
+  },
+  "kubectl": {
+    "version": "v1.37.0",
+    "sha256": "6129359f4e1f3848a5572ccb0b26cf28b8ca08cef38c95a765b2f64a2c961a2f",
+    "official_checksum_passed": true
+  },
+  "actionlint": {
+    "version": "1.7.12",
+    "official_checksum_passed": true,
+    "workflow_passed": true
+  },
+  "syntax_checks": {
+    "bash": true,
+    "python_compile": true
+  },
+  "kubernetes_server_dry_run": true
+}

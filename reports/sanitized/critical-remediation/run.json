@@ -1,0 +1,9 @@
+{
+  "observed_at_utc": "2026-10-22T18:15:22.698600+00:00",
+  "scope": "existing directory; corrected critical-remediation code; project-local tools; unique owned temporary cluster; no live API",
+  "cleanup_verified": true,
+  "script_exit_code": 0,
+  "fresh_machine_claimed": false,
+  "fresh_directory_claimed": false,
+  "additional_api_requests": 0
+}

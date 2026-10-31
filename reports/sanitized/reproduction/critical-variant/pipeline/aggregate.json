@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "profile": "study-lab",
+  "verdict": "PASS_WITH_DEFERRED_RISKS",
+  "operational_errors": [],
+  "stage_count": 7,
+  "security_scan_stages": 6,
+  "security_blockers": [],
+  "critical_observations": 0,
+  "findings_by_severity": {
+    "HIGH": 159,
+    "INFO": 16,
+    "LOW": 35,
+    "MEDIUM": 48
+  },
+  "deferred_observations": 258,
+  "note": "Critical findings fail the gate; lower severities remain visible and deferred. Counts include cross-stage observations, not deduplicated global issues.",
+  "receipts": [
+    {
+      "stage": "build-test",
+      "sha256": "519b35db048c559274fe857e93b72e42c1c91d2e6d7ddc7de4a039bf82601000"
+    },
+    {
+      "stage": "container",
+      "sha256": "2e24985424df234438c753c0a80cc5bf61d26066885d5ad3239648a399eb56a7"
+    },
+    {
+      "stage": "dast",
+      "sha256": "2b0d839bf24f4f195bcc1ad7d8a90bc174b4350548b8afc95d5b7df4e72f7a18"
+    },
+    {
+      "stage": "iac",
+      "sha256": "c755d6eea7c4304c144db5dfa0b49d445044fe76e0f886b8a9eb27737d0f365c"
+    },
+    {
+      "stage": "sast",
+      "sha256": "90b026fcf562d33c154038abe9216b7a15275b736ab4fcdee7a8756d2b01f717"
+    },
+    {
+      "stage": "sca",
+      "sha256": "8138a79c53a40a6e190e925ff2bbe0fcd7fe39342e4aa1e075b18ce338865ff8"
+    },
+    {
+      "stage": "secrets",
+      "sha256": "3b091a9a82e231ad6f9a7d0d3e23aaac42582765d4fbf99cdaa0977c56f96438"
+    }
+  ],
+  "run_id": "20261022T201424706630Z",
+  "duration_seconds": 274.71,
+  "build_test_reused": false,
+  "execution_steps": [
+    {
+      "step": "application",
+      "exit_code": 0,
+      "duration_seconds": 163.98
+    },
+    {
+      "step": "build-image",
+      "exit_code": 0,
+      "duration_seconds": 0.47
+    },
+    {
+      "step": "build-test",
+      "exit_code": 0,
+      "duration_seconds": 0.11
+    },
+    {
+      "step": "sast",
+      "exit_code": 0,
+      "duration_seconds": 4.44
+    },
+    {
+      "step": "sca",
+      "exit_code": 0,
+      "duration_seconds": 17.04
+    },
+    {
+      "step": "secrets",
+      "exit_code": 0,
+      "duration_seconds": 2.33
+    },
+    {
+      "step": "iac",
+      "exit_code": 0,
+      "duration_seconds": 3.03
+    },
+    {
+      "step": "container",
+      "exit_code": 0,
+      "duration_seconds": 12.15
+    },
+    {
+      "step": "deploy",
+      "exit_code": 0,
+      "duration_seconds": 12.09
+    },
+    {
+      "step": "runtime",
+      "exit_code": 0,
+      "duration_seconds": 2.48
+    },
+    {
+      "step": "zap",
+      "exit_code": 0,
+      "duration_seconds": 56.46
+    },
+    {
+      "step": "dast",
+      "exit_code": 0,
+      "duration_seconds": 0.11
+    }
+  ]
+}

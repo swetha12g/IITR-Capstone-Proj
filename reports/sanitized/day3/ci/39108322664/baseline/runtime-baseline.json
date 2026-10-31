@@ -1,0 +1,91 @@
+{
+  "observed_at_utc": "2026-10-18T07:46:21.308141+00:00",
+  "scope": "owned kind-pipelinefortress lab; loopback HTTP only; no login or mutating HTTP methods",
+  "source_commit": "f189f521266f42c6bd05884468292000cee852ed",
+  "image": {
+    "id": "sha256:c9349b6b3094d26bc4df9b5f069ee5c5830fc3ad9d160a33d1f6ffef7ced02b2",
+    "architecture": "amd64",
+    "os": "linux",
+    "user": "65532",
+    "ports": [
+      "3000/tcp"
+    ]
+  },
+  "nodes": [
+    {
+      "name": "pipelinefortress-control-plane",
+      "ready": true,
+      "kubelet": "v1.37.0"
+    }
+  ],
+  "pods": [
+    {
+      "name": "juice-shop-748c96c4c5-wwllz",
+      "ready": true,
+      "containers": [
+        {
+          "image": "docker.io/library/pipelinefortress:baseline",
+          "image_id": "docker.io/library/import-2026-10-18@sha256:e443efa44ed6bf968f5e39fc81d6f4681ba892da8711e53a449c90891bb08e7b",
+          "restarts": 0,
+          "config_id": "sha256:c9349b6b3094d26bc4df9b5f069ee5c5830fc3ad9d160a33d1f6ffef7ced02b2"
+        }
+      ]
+    },
+    {
+      "name": "juice-shop-886f4bd7-22s7c",
+      "ready": true,
+      "containers": [
+        {
+          "image": "docker.io/library/pipelinefortress:baseline",
+          "image_id": "docker.io/library/import-2026-10-18@sha256:e443efa44ed6bf968f5e39fc81d6f4681ba892da8711e53a449c90891bb08e7b",
+          "restarts": 0,
+          "config_id": "sha256:c9349b6b3094d26bc4df9b5f069ee5c5830fc3ad9d160a33d1f6ffef7ced02b2"
+        }
+      ]
+    }
+  ],
+  "service_type": "ClusterIP",
+  "checks": [
+    {
+      "id": "http-home",
+      "method": "GET",
+      "path": "/",
+      "http_status": 200,
+      "confirmed": true,
+      "response_bytes": 9984,
+      "sha256": "7c6f95782553529abc32cf969eb83c650281de0a5418be8b5f1cf9372dd32a45",
+      "private_evidence": "reports/private/day2/http-home.response"
+    },
+    {
+      "id": "unauthenticated-directory-listing",
+      "method": "GET",
+      "path": "/ftp/",
+      "http_status": 200,
+      "confirmed": true,
+      "response_bytes": 11275,
+      "sha256": "aa97e152db17513e11733d6c91df416ab5c5ebf0cb4e682472d68829e2613294",
+      "private_evidence": "reports/private/day2/unauthenticated-directory-listing.response"
+    },
+    {
+      "id": "unauthenticated-metrics",
+      "method": "GET",
+      "path": "/metrics",
+      "http_status": 200,
+      "confirmed": true,
+      "response_bytes": 25988,
+      "sha256": "03080ccf6974e87445981ab8c8a4bc2218d2a9d26aa1ec73c7c7922f50885a90",
+      "private_evidence": "reports/private/day2/unauthenticated-metrics.response"
+    },
+    {
+      "id": "sql-error-disclosure",
+      "method": "GET",
+      "path": "/rest/products/search?q=%27%29",
+      "http_status": 500,
+      "confirmed": true,
+      "response_bytes": 974,
+      "sha256": "ab786d4c67b44a133e1449596df68717ddfbb00bb87032f0aeca77a254a3c289",
+      "private_evidence": "reports/private/day2/sql-error-disclosure.response"
+    }
+  ],
+  "passed": true
+}

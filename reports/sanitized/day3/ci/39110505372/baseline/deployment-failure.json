@@ -1,0 +1,92 @@
+{
+  "deployment_passed": false,
+  "control_messages": [
+    " \u2022 Ensuring node image (kindest/node:v1.37.0) \ud83d\uddbc\ufe0f  ...",
+    " \u2713 Ensuring node image (kindest/node:v1.37.0) \ud83d\uddbc\ufe0f",
+    " \u2022 Preparing nodes \ud83d\udce6   ...",
+    " \u2713 Preparing nodes \ud83d\udce6 ",
+    " \u2022 Starting control-plane \ud83d\udd79\ufe0f  ...",
+    " \u2713 Starting control-plane \ud83d\udd79\ufe0f",
+    " \u2022 Installing CNI \ud83d\udd0c  ...",
+    " \u2713 Installing CNI \ud83d\udd0c",
+    " \u2022 Installing StorageClass \ud83d\udcbe  ...",
+    " \u2713 Installing StorageClass \ud83d\udcbe",
+    "Set kubectl context to \"kind-pipelinefortress\"",
+    "node/pipelinefortress-control-plane condition met",
+    "Waiting for deployment \"juice-shop\" rollout to finish: 1 old replicas are pending termination...",
+    "Waiting for deployment \"juice-shop\" rollout to finish: 1 old replicas are pending termination...",
+    "Waiting for deployment \"juice-shop\" rollout to finish: 1 old replicas are pending termination...",
+    "deployment \"juice-shop\" successfully rolled out",
+    "timed out waiting for the condition on pods/juice-shop-748c96c4c5-gqc26",
+    "timed out waiting for the condition on pods/juice-shop-7596cd77d7-x8ddq",
+    "deployment failed: line 33 exit 1"
+  ],
+  "probes": {
+    "docker_disk": {
+      "exit_code": 124,
+      "output": "Diagnostic timed out"
+    },
+    "runner_disk": {
+      "exit_code": 0,
+      "output": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/root        72G   67G  5.2G  93% /\n"
+    },
+    "kubelet": {
+      "exit_code": 0,
+      "output": [
+        "Oct 18 08:22:23 pipelinefortress-control-plane kubelet[727]: I1018 08:22:23.515488     727 pod_startup_latency_tracker.go:144] \"Observed pod startup duration\" pod=\"local-path-storage/local-path-provisioner-75f7fc7dc5-p9sdq\" podStartSLOduration=16.515471961 podStartE2EDuration=\"16.515471961s\" totalImagesPullingTime=\"0s\" totalInitContainerRuntime=\"0s\" isStatefulPod=false podCreationTimestamp=\"2026-10-18 08:22:07 +0000 UTC\" imagePullSessionsCount=0 imagePullSessionsStartsCount=0 observedRunningTime=\"2026-10-18 08:22:22.583603397 +0000 UTC m=+25.567942858\" watchObservedRunningTime=\"2026-10-18 08:22:23.515471961 +0000 UTC m=+26.499811412\"",
+        "Oct 18 08:22:25 pipelinefortress-control-plane kubelet[727]: I1018 08:22:25.272336     727 server.go:177] \"Pod update broadcasted\" podUID=\"29f90987-9a02-4646-abd5-e76bda6d1223\" type=\"MODIFIED\"",
+        "Oct 18 08:22:25 pipelinefortress-control-plane kubelet[727]: I1018 08:22:25.272597     727 server.go:177] \"Pod update broadcasted\" podUID=\"ba028722-ec82-4633-a643-da79ab34dfcd\" type=\"MODIFIED\"",
+        "Oct 18 08:22:44 pipelinefortress-control-plane kubelet[727]: I1018 08:22:44.550068     727 server.go:177] \"Pod update broadcasted\" podUID=\"d1af6d92-bf6f-4f7c-a2c7-7cc2f268893f\" type=\"ADDED\"",
+        "Oct 18 08:22:44 pipelinefortress-control-plane kubelet[727]: I1018 08:22:44.699433     727 server.go:177] \"Pod update broadcasted\" podUID=\"a4c95707-22fd-44ae-a9ed-4418e65e9e91\" type=\"ADDED\"",
+        "Oct 18 08:22:44 pipelinefortress-control-plane kubelet[727]: I1018 08:22:44.708761     727 reconciler_common.go:251] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"kube-api-access-ldkqf\\\" (UniqueName: \\\"kubernetes.io/projected/d1af6d92-bf6f-4f7c-a2c7-7cc2f268893f-kube-api-access-ldkqf\\\") pod \\\"juice-shop-748c96c4c5-gqc26\\\" (UID: \\\"d1af6d92-bf6f-4f7c-a2c7-7cc2f268893f\\\") \" pod=\"pipelinefortress/juice-shop-748c96c4c5-gqc26\"",
+        "Oct 18 08:22:44 pipelinefortress-control-plane kubelet[727]: I1018 08:22:44.808997     727 reconciler_common.go:251] \"operationExecutor.VerifyControllerAttachedVolume started for volume \\\"kube-api-access-v9595\\\" (UniqueName: \\\"kubernetes.io/projected/a4c95707-22fd-44ae-a9ed-4418e65e9e91-kube-api-access-v9595\\\") pod \\\"juice-shop-7596cd77d7-x8ddq\\\" (UID: \\\"a4c95707-22fd-44ae-a9ed-4418e65e9e91\\\") \" pod=\"pipelinefortress/juice-shop-7596cd77d7-x8ddq\"",
+        "Oct 18 08:22:45 pipelinefortress-control-plane kubelet[727]: I1018 08:22:45.007355     727 server.go:177] \"Pod update broadcasted\" podUID=\"d1af6d92-bf6f-4f7c-a2c7-7cc2f268893f\" type=\"MODIFIED\"",
+        "Oct 18 08:22:45 pipelinefortress-control-plane kubelet[727]: I1018 08:22:45.119444     727 server.go:177] \"Pod update broadcasted\" podUID=\"d1af6d92-bf6f-4f7c-a2c7-7cc2f268893f\" type=\"MODIFIED\"",
+        "Oct 18 08:22:45 pipelinefortress-control-plane kubelet[727]: I1018 08:22:45.126586     727 pod_startup_latency_tracker.go:144] \"Observed pod startup duration\" pod=\"pipelinefortress/juice-shop-748c96c4c5-gqc26\" podStartSLOduration=1.126575419 podStartE2EDuration=\"1.126575419s\" totalImagesPullingTime=\"0s\" totalInitContainerRuntime=\"0s\" isStatefulPod=false podCreationTimestamp=\"2026-10-18 08:22:44 +0000 UTC\" imagePullSessionsCount=0 imagePullSessionsStartsCount=0 observedRunningTime=\"2026-10-18 08:22:45.126004226 +0000 UTC m=+48.110343677\" watchObservedRunningTime=\"2026-10-18 08:22:45.126575419 +0000 UTC m=+48.110914871\"",
+        "Oct 18 08:22:45 pipelinefortress-control-plane kubelet[727]: I1018 08:22:45.201444     727 server.go:177] \"Pod update broadcasted\" podUID=\"a4c95707-22fd-44ae-a9ed-4418e65e9e91\" type=\"MODIFIED\"",
+        "Oct 18 08:22:45 pipelinefortress-control-plane kubelet[727]: I1018 08:22:45.313748     727 server.go:177] \"Pod update broadcasted\" podUID=\"a4c95707-22fd-44ae-a9ed-4418e65e9e91\" type=\"MODIFIED\"",
+        "Oct 18 08:22:49 pipelinefortress-control-plane kubelet[727]: I1018 08:22:49.874320     727 server.go:177] \"Pod update broadcasted\" podUID=\"d1af6d92-bf6f-4f7c-a2c7-7cc2f268893f\" type=\"MODIFIED\"",
+        "Oct 18 08:22:50 pipelinefortress-control-plane kubelet[727]: I1018 08:22:50.036802     727 server.go:177] \"Pod update broadcasted\" podUID=\"a4c95707-22fd-44ae-a9ed-4418e65e9e91\" type=\"MODIFIED\"",
+        "Oct 18 08:22:50 pipelinefortress-control-plane kubelet[727]: I1018 08:22:50.627771     727 pod_startup_latency_tracker.go:144] \"Observed pod startup duration\" pod=\"pipelinefortress/juice-shop-7596cd77d7-x8ddq\" podStartSLOduration=6.627755877 podStartE2EDuration=\"6.627755877s\" totalImagesPullingTime=\"0s\" totalInitContainerRuntime=\"0s\" isStatefulPod=false podCreationTimestamp=\"2026-10-18 08:22:44 +0000 UTC\" imagePullSessionsCount=0 imagePullSessionsStartsCount=0 observedRunningTime=\"2026-10-18 08:22:45.333181349 +0000 UTC m=+48.317520810\" watchObservedRunningTime=\"2026-10-18 08:22:50.627755877 +0000 UTC m=+53.612095328\"",
+        "Oct 18 08:22:55 pipelinefortress-control-plane kubelet[727]: I1018 08:22:55.043402     727 server.go:177] \"Pod update broadcasted\" podUID=\"a4c95707-22fd-44ae-a9ed-4418e65e9e91\" type=\"MODIFIED\"",
+        "Oct 18 08:22:55 pipelinefortress-control-plane kubelet[727]: I1018 08:22:55.047218     727 server.go:177] \"Pod update broadcasted\" podUID=\"a4c95707-22fd-44ae-a9ed-4418e65e9e91\" type=\"MODIFIED\"",
+        "Oct 18 08:22:55 pipelinefortress-control-plane kubelet[727]: I1018 08:22:55.237228     727 server.go:177] \"Pod update broadcasted\" podUID=\"d1af6d92-bf6f-4f7c-a2c7-7cc2f268893f\" type=\"MODIFIED\"",
+        "Oct 18 08:22:56 pipelinefortress-control-plane kubelet[727]: I1018 08:22:56.320922     727 server.go:177] \"Pod update broadcasted\" podUID=\"d1af6d92-bf6f-4f7c-a2c7-7cc2f268893f\" type=\"MODIFIED\"",
+        "Oct 18 08:22:56 pipelinefortress-control-plane kubelet[727]: I1018 08:22:56.387262     727 scope.go:118] \"RemoveContainer\" containerID=\"68c9a44d7073f594dda9d1dc1693375fe620e531eb8790736874d6fb9aa54f0d\"",
+        "Oct 18 08:22:56 pipelinefortress-control-plane kubelet[727]: I1018 08:22:56.387675     727 server.go:177] \"Pod update broadcasted\" podUID=\"d1af6d92-bf6f-4f7c-a2c7-7cc2f268893f\" type=\"MODIFIED\"",
+        "Oct 18 08:22:56 pipelinefortress-control-plane kubelet[727]: I1018 08:22:56.471738     727 scope.go:118] \"RemoveContainer\" containerID=\"68c9a44d7073f594dda9d1dc1693375fe620e531eb8790736874d6fb9aa54f0d\"",
+        "Oct 18 08:22:56 pipelinefortress-control-plane kubelet[727]: E1018 08:22:56.472442     727 remote_runtime.go:657] \"ContainerStatus from runtime service failed\" err=\"rpc error: code = NotFound desc = an error occurred when try to find container \\\"68c9a44d7073f594dda9d1dc1693375fe620e531eb8790736874d6fb9aa54f0d\\\": not found\" containerID=\"68c9a44d7073f594dda9d1dc1693375fe620e531eb8790736874d6fb9aa54f0d\"",
+        "Oct 18 08:22:56 pipelinefortress-control-plane kubelet[727]: I1018 08:22:56.472474     727 pod_container_deletor.go:56] \"DeleteContainer returned error\" containerID={\"Type\":\"containerd\",\"ID\":\"68c9a44d7073f594dda9d1dc1693375fe620e531eb8790736874d6fb9aa54f0d\"} err=\"failed to get container status \\\"68c9a44d7073f594dda9d1dc1693375fe620e531eb8790736874d6fb9aa54f0d\\\": rpc error: code = NotFound desc = an error occurred when try to find container \\\"68c9a44d7073f594dda9d1dc1693375fe620e531eb8790736874d6fb9aa54f0d\\\": not found\"",
+        "Oct 18 08:22:56 pipelinefortress-control-plane kubelet[727]: I1018 08:22:56.482638     727 reconciler_common.go:163] \"operationExecutor.UnmountVolume started for volume \\\"kubernetes.io/projected/d1af6d92-bf6f-4f7c-a2c7-7cc2f268893f-kube-api-access-ldkqf\\\" (UniqueName: \\\"kubernetes.io/projected/d1af6d92-bf6f-4f7c-a2c7-7cc2f268893f-kube-api-access-ldkqf\\\") pod \\\"d1af6d92-bf6f-4f7c-a2c7-7cc2f268893f\\\" (UID: \\\"d1af6d92-bf6f-4f7c-a2c7-7cc2f268893f\\\") \"",
+        "Oct 18 08:22:56 pipelinefortress-control-plane kubelet[727]: I1018 08:22:56.486759     727 operation_generator.go:791] UnmountVolume.TearDown succeeded for volume \"kubernetes.io/projected/d1af6d92-bf6f-4f7c-a2c7-7cc2f268893f-kube-api-access-ldkqf\" pod \"d1af6d92-bf6f-4f7c-a2c7-7cc2f268893f\" (UID: \"d1af6d92-bf6f-4f7c-a2c7-7cc2f268893f\"). InnerVolumeSpecName \"kube-api-access-ldkqf\". PluginName \"kubernetes.io/projected\", VolumeGIDValue \"\"",
+        "Oct 18 08:22:56 pipelinefortress-control-plane kubelet[727]: I1018 08:22:56.583675     727 reconciler_common.go:299] \"Volume detached for volume \\\"kube-api-access-ldkqf\\\" (UniqueName: \\\"kubernetes.io/projected/d1af6d92-bf6f-4f7c-a2c7-7cc2f268893f-kube-api-access-ldkqf\\\") on node \\\"pipelinefortress-control-plane\\\" DevicePath \\\"\\\"\"",
+        "Oct 18 08:22:56 pipelinefortress-control-plane kubelet[727]: I1018 08:22:56.699693     727 server.go:190] \"Pod removed broadcasted\" podUID=\"d1af6d92-bf6f-4f7c-a2c7-7cc2f268893f\"",
+        "Oct 18 08:22:59 pipelinefortress-control-plane kubelet[727]: I1018 08:22:59.110260     727 kubelet_volumes.go:161] \"Cleaned up orphaned pod volumes dir\" podUID=\"d1af6d92-bf6f-4f7c-a2c7-7cc2f268893f\" path=\"/var/lib/kubelet/pods/d1af6d92-bf6f-4f7c-a2c7-7cc2f268893f/volumes\"",
+        "Oct 18 08:23:15 pipelinefortress-control-plane kubelet[727]: I1018 08:23:15.108644     727 server.go:177] \"Pod update broadcasted\" podUID=\"56fb6f5e-d3ae-4b5e-a56d-7b4edac37737\" type=\"MODIFIED\""
+      ]
+    },
+    "nodes": {
+      "exit_code": 0,
+      "output": "NAME                             STATUS   ROLES           AGE     VERSION\npipelinefortress-control-plane   Ready    control-plane   4m22s   v1.37.0\n"
+    },
+    "pods": {
+      "exit_code": 0,
+      "output": "NAME                          READY   STATUS    RESTARTS   AGE     IP           NODE                             NOMINATED NODE   READINESS GATES\njuice-shop-7596cd77d7-x8ddq   1/1     Running   0          3m32s   10.244.0.6   pipelinefortress-control-plane   <none>           <none>\n"
+    },
+    "events": {
+      "exit_code": 0,
+      "output": [
+        {
+          "reason": "Unhealthy",
+          "message": "Startup probe failed: Get \"http://10.244.0.5:3000/\": dial tcp 10.244.0.5:3000: connect: connection refused",
+          "object": "juice-shop-748c96c4c5-gqc26"
+        },
+        {
+          "reason": "Unhealthy",
+          "message": "Startup probe failed: Get \"http://10.244.0.6:3000/\": dial tcp 10.244.0.6:3000: connect: connection refused",
+          "object": "juice-shop-7596cd77d7-x8ddq"
+        }
+      ]
+    }
+  }
+}

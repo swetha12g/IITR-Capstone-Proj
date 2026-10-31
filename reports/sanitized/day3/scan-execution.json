@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "scope": "application",
+  "run_id": "20261018T084514414843Z",
+  "target_commit": "d68686a761c13e5b5f0276f71dfbeca8a8999c40",
+  "full_history": true,
+  "dependency_scope": "production-and-development",
+  "started_at_utc": "2026-10-18T08:45:14.418462+00:00",
+  "finished_at_utc": "2026-10-18T08:45:20.324129+00:00",
+  "stages": [
+    {
+      "stage": "sast",
+      "execution": "findings",
+      "exit_code": 1,
+      "duration_seconds": 3.88,
+      "sha256": "39e6e1174567a96ca49a9b59491138e5805c51a455d5d7d934435c9ae688256b",
+      "log_sha256": "5b32b498af475979ddfdd9ac9d9f84e6d964e2175125975081cf2498f554de42"
+    },
+    {
+      "stage": "sca",
+      "execution": "findings",
+      "exit_code": 20,
+      "duration_seconds": 0.17,
+      "sha256": "596b96cb23f9a86f43626211cd0c429f5ae3bf8d1aa472515a0ef0284e4ec2ed",
+      "log_sha256": "9c2d9a22a115c637d36ccbdbd3bd62a0cf285e7a9c6504487662e9426900f547"
+    },
+    {
+      "stage": "secrets-history",
+      "execution": "findings",
+      "exit_code": 20,
+      "duration_seconds": 0.92,
+      "sha256": "f07ee93622395b3df845bf072633a60acc0cb8a20d68a5aa4dc7f0fa0fe2735f",
+      "log_sha256": "2a0f6b5db038a0c400af667ae545d497d73f659f46d9c8c2ab698028e4a4cdbe"
+    },
+    {
+      "stage": "secrets-tree",
+      "execution": "findings",
+      "exit_code": 20,
+      "duration_seconds": 0.82,
+      "sha256": "a9dd177ff78156252f0793c6e40d595ebe3b04544b09cd9b00949ca2077f1f29",
+      "log_sha256": "6ed765fc42214f98fd4fa8312857977dda557e9732a11b70d17bb63f55883b2b"
+    }
+  ],
+  "lock_inputs": {
+    "locks/juice-shop/package-lock.json": "5060cfe6d994f31e4aac2c0f7eeb347675d899fd42ad7acbe12fd5c22fd19e8c",
+    "locks/juice-shop/frontend-package-lock.json": "2cab8508e02d7ca0b74df30010cfefa1c98ce4e76708928726f80e090d931503"
+  }
+}

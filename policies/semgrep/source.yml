@@ -1,0 +1,55 @@
+rules:
+  - id: pf-sql-template-query
+    languages: [javascript, typescript]
+    severity: ERROR
+    message: Interpolated SQL requires parameter binding and review.
+    pattern: $DB.query(`...${$VALUE}...`, ...)
+    metadata:
+      category: security
+      cwe: CWE-89
+  - id: pf-eval-input
+    languages: [javascript, typescript]
+    severity: ERROR
+    message: Dynamic evaluation requires removal or explicit data-flow review.
+    pattern: eval(...)
+    metadata:
+      category: security
+      cwe: CWE-95
+  - id: pf-shell-command
+    languages: [javascript, typescript]
+    severity: ERROR
+    message: Shell command execution requires input and invocation review.
+    pattern-either:
+      - pattern: child_process.exec(...)
+      - patterns:
+          - pattern-inside: |
+              import {exec} from 'node:child_process'
+              ...
+          - pattern: exec(...)
+    metadata:
+      category: security
+      cwe: CWE-78
+  - id: pf-weak-md5
+    languages: [javascript, typescript]
+    severity: WARNING
+    message: MD5 use requires context review and a suitable modern algorithm.
+    pattern: $CRYPTO.createHash('md5', ...)
+    metadata:
+      category: security
+      cwe: CWE-327
+  - id: pf-tls-validation-disabled
+    languages: [javascript, typescript]
+    severity: ERROR
+    message: TLS certificate verification is disabled.
+    pattern: '{..., rejectUnauthorized: false, ...}'
+    metadata:
+      category: security
+      cwe: CWE-295
+  - id: pf-jwt-decode
+    languages: [javascript, typescript]
+    severity: WARNING
+    message: JWT decoding alone is not signature verification; review its use.
+    pattern: jwt.decode(...)
+    metadata:
+      category: security
+      cwe: CWE-347
