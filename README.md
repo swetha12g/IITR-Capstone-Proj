@@ -2,6 +2,16 @@
 
 PipelineFortress — Secure CI/CD with GenAI-Assisted Triage.
 
+## Team members
+
+- GUNDA SWETHA
+- SUDHEER KUMAR THAMMANA
+- SRAVANI AVADURTHI
+- NIKHIL KUMAR
+- AMIT SAINI
+
+## Project overview
+
 Release materials: [v1.0.0 notes](docs/releases/v1.0.0.md) and [branch promotion status](docs/release-promotion.md). The project tag is separate from the upstream Juice Shop version. Release publication requires successful study CI for the exact promoted `main` commit.
 
 The detailed execution roadmap is available in [docs/PipelineFortress_Detailed_Roadmap.pdf](docs/PipelineFortress_Detailed_Roadmap.pdf).
