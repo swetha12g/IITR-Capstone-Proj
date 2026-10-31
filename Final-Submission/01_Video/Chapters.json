@@ -1,0 +1,134 @@
+{
+  "duration_seconds": 900,
+  "slides": 16,
+  "chapters": [
+    {
+      "slide": 1,
+      "title": "PipelineFortress",
+      "start_seconds": 0.0,
+      "end_seconds": 53.238625,
+      "video_start_seconds": 0,
+      "video_end_seconds": 53
+    },
+    {
+      "slide": 2,
+      "title": "Project team and presenters",
+      "start_seconds": 53.238625,
+      "end_seconds": 103.97579166666667,
+      "video_start_seconds": 53,
+      "video_end_seconds": 104
+    },
+    {
+      "slide": 3,
+      "title": "Project objective and scope",
+      "start_seconds": 103.97579166666667,
+      "end_seconds": 156.30333333333334,
+      "video_start_seconds": 104,
+      "video_end_seconds": 156
+    },
+    {
+      "slide": 4,
+      "title": "Pipeline architecture",
+      "start_seconds": 156.30333333333334,
+      "end_seconds": 210.64483333333334,
+      "video_start_seconds": 156,
+      "video_end_seconds": 211
+    },
+    {
+      "slide": 5,
+      "title": "Application verification",
+      "start_seconds": 210.64483333333334,
+      "end_seconds": 268.24695833333334,
+      "video_start_seconds": 211,
+      "video_end_seconds": 268
+    },
+    {
+      "slide": 6,
+      "title": "Six security stages",
+      "start_seconds": 268.24695833333334,
+      "end_seconds": 326.5443333333333,
+      "video_start_seconds": 268,
+      "video_end_seconds": 327
+    },
+    {
+      "slide": 7,
+      "title": "A restricted runtime",
+      "start_seconds": 326.5443333333333,
+      "end_seconds": 383.95466666666664,
+      "video_start_seconds": 327,
+      "video_end_seconds": 384
+    },
+    {
+      "slide": 8,
+      "title": "Critical remediation and inventory",
+      "start_seconds": 383.95466666666664,
+      "end_seconds": 438.75166666666667,
+      "video_start_seconds": 384,
+      "video_end_seconds": 439
+    },
+    {
+      "slide": 9,
+      "title": "Runtime coverage",
+      "start_seconds": 438.75166666666667,
+      "end_seconds": 494.96320833333334,
+      "video_start_seconds": 439,
+      "video_end_seconds": 495
+    },
+    {
+      "slide": 10,
+      "title": "Detection on labeled fixtures",
+      "start_seconds": 494.96320833333334,
+      "end_seconds": 550.5993333333333,
+      "video_start_seconds": 495,
+      "video_end_seconds": 551
+    },
+    {
+      "slide": 11,
+      "title": "Developer feedback timing",
+      "start_seconds": 550.5993333333333,
+      "end_seconds": 607.41025,
+      "video_start_seconds": 551,
+      "video_end_seconds": 607
+    },
+    {
+      "slide": 12,
+      "title": "AI input and output controls",
+      "start_seconds": 607.41025,
+      "end_seconds": 668.99225,
+      "video_start_seconds": 607,
+      "video_end_seconds": 669
+    },
+    {
+      "slide": 13,
+      "title": "Live AI evaluation remains open",
+      "start_seconds": 668.99225,
+      "end_seconds": 726.1388333333333,
+      "video_start_seconds": 669,
+      "video_end_seconds": 726
+    },
+    {
+      "slide": 14,
+      "title": "Remediation and release promotion",
+      "start_seconds": 726.1388333333333,
+      "end_seconds": 785.754875,
+      "video_start_seconds": 726,
+      "video_end_seconds": 786
+    },
+    {
+      "slide": 15,
+      "title": "Reproduction and maturity",
+      "start_seconds": 785.754875,
+      "end_seconds": 842.2540833333334,
+      "video_start_seconds": 786,
+      "video_end_seconds": 842
+    },
+    {
+      "slide": 16,
+      "title": "Submission and next steps",
+      "start_seconds": 842.2540833333334,
+      "end_seconds": 900.0,
+      "video_start_seconds": 842,
+      "video_end_seconds": 900
+    }
+  ]
+}

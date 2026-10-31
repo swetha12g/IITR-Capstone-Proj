@@ -1,0 +1,866 @@
+WEBVTT
+
+00:00:00.650 --> 00:00:05.015
+Welcome to the Pipeline Fortress capstone
+presentation Pipeline Fortress
+
+00:00:05.025 --> 00:00:08.522
+integrates security checks into software
+delivery for the OWASP Juice
+
+00:00:08.532 --> 00:00:13.007
+Shop training application The recorded work
+covers six security stages
+
+00:00:13.017 --> 00:00:16.334
+and reduces the eleven baseline critical
+issues to zero in retained
+
+00:00:16.344 --> 00:00:20.400
+source and image scans The selected
+application evidence records two
+
+00:00:20.410 --> 00:00:23.886
+thousand three hundred and thirty two
+passing tests The published
+
+00:00:23.896 --> 00:00:27.372
+version one point zero point zero release
+includes all three focused
+
+00:00:27.382 --> 00:00:28.861
+infrastructure remediations
+
+00:00:30.736 --> 00:00:34.322
+This walkthrough explains how the pipeline
+links each security decision
+
+00:00:34.332 --> 00:00:38.808
+to a specific source revision and image We
+will examine the implementation
+
+00:00:38.948 --> 00:00:43.303
+the measured results and the controls
+around AI assisted triage The
+
+00:00:43.313 --> 00:00:46.840
+presentation uses recorded project evidence
+and a synthetic narrator
+
+00:00:47.529 --> 00:00:50.965
+Detailed receipts and reproduction
+instructions accompany the submission
+
+00:00:53.889 --> 00:00:55.767
+The project team and presenters are
+
+00:00:57.176 --> 00:00:58.055
+Gunda Swetha
+
+00:00:59.672 --> 00:01:00.941
+Sudheer Kumar Thammana
+
+00:01:02.360 --> 00:01:03.539
+Sravani Avadurthi
+
+00:01:04.952 --> 00:01:05.731
+Nikhil Kumar
+
+00:01:07.448 --> 00:01:08.167
+Amit Saini
+
+00:01:09.944 --> 00:01:13.700
+The next slides explain the engineering
+objective the pipeline architecture
+
+00:01:13.830 --> 00:01:18.225
+and the verification behind the release We
+then examine security coverage
+
+00:01:18.375 --> 00:01:21.792
+the AI data boundary and the measured
+limits of the evaluation
+
+00:01:23.655 --> 00:01:27.681
+The source code report and evidence files
+support the technical discussion
+
+00:01:28.370 --> 00:01:32.686
+Each reported result retains its own
+execution scope The team credits
+
+00:01:32.696 --> 00:01:36.012
+identify the presenters without assigning
+individual implementation
+
+00:01:36.022 --> 00:01:40.108
+roles that the evidence does not establish
+Let us begin with the delivery
+
+00:01:40.118 --> 00:01:41.706
+problem that the project addresses
+
+00:01:44.626 --> 00:01:48.062
+The brief describes an engineering team
+that releases frequently and
+
+00:01:48.072 --> 00:01:52.258
+receives security feedback too late
+Pipeline Fortress moves selected
+
+00:01:52.268 --> 00:01:55.764
+checks into the build and review process so
+developers can see findings
+
+00:01:55.774 --> 00:01:59.800
+before a release decision The target is a
+pinned Juice Shop application
+
+00:01:59.810 --> 00:02:04.166
+in an owned training environment No
+external systems or customer data
+
+00:02:04.176 --> 00:02:04.845
+are included
+
+00:02:06.704 --> 00:02:11.130
+The implementation includes static analysis
+dependency analysis secrets
+
+00:02:11.140 --> 00:02:14.746
+scanning infrastructure checks container
+scanning and passive web
+
+00:02:14.756 --> 00:02:18.642
+scanning The submission documents the
+implemented controls and their
+
+00:02:18.652 --> 00:02:22.608
+verification evidence The scenario mentions
+catching eighty percent
+
+00:02:22.618 --> 00:02:26.614
+of vulnerabilities before merge The
+available evaluation measures
+
+00:02:26.624 --> 00:02:30.659
+a small labeled fixture set It cannot
+establish an eighty percent
+
+00:02:30.669 --> 00:02:34.056
+detection rate across the whole application
+or a production service
+
+00:02:36.953 --> 00:02:39.790
+The workflow starts with a pinned source
+checkout and the selected
+
+00:02:39.800 --> 00:02:44.825
+application build and test sequence Source
+scanners inspect code dependencies
+
+00:02:44.955 --> 00:02:48.931
+history and the working tree A separate
+build produces the hardened
+
+00:02:48.941 --> 00:02:53.436
+image Container analysis and software
+inventory operate on that exact
+
+00:02:53.446 --> 00:02:56.903
+image and the staging job deploys the
+transferred artifact into an
+
+00:02:56.913 --> 00:03:01.178
+owned temporary Kubernetes cluster Passive
+web scanning follows functional
+
+00:03:01.188 --> 00:03:02.057
+runtime checks
+
+00:03:03.923 --> 00:03:07.829
+Each job publishes a sanitized receipt with
+its run revision source
+
+00:03:07.839 --> 00:03:12.604
+identity and relevant hashes The aggregate
+job checks those identities
+
+00:03:12.614 --> 00:03:16.670
+before accepting the execution This
+prevents a passing report from
+
+00:03:16.680 --> 00:03:19.736
+one revision being combined with an
+unrelated build or deployment
+
+00:03:20.436 --> 00:03:23.642
+The workflow uses pinned action revisions
+and read only repository
+
+00:03:23.652 --> 00:03:27.728
+permissions Cleanup removes the temporary
+staging resources belonging
+
+00:03:27.738 --> 00:03:28.388
+to that run
+
+00:03:31.295 --> 00:03:34.591
+The release on main completes all eight
+workflow jobs successfully
+
+00:03:34.601 --> 00:03:38.298
+at the recorded release revision The
+retained application evidence
+
+00:03:38.308 --> 00:03:41.344
+contains two thousand three hundred and
+thirty two passing tests and
+
+00:03:41.354 --> 00:03:45.740
+six skips Nine tests that depend on
+external service availability
+
+00:03:45.750 --> 00:03:50.115
+are excluded from the offline profile
+Server verification goes beyond
+
+00:03:50.125 --> 00:03:54.091
+a summary count All four hundred and twenty
+four expected case and
+
+00:03:54.101 --> 00:03:58.037
+status identities match across forty one
+files including five critical
+
+00:03:58.047 --> 00:03:58.986
+regression cases
+
+00:04:00.853 --> 00:04:04.150
+This matters because an earlier run omitted
+eleven server verdicts
+
+00:04:04.160 --> 00:04:08.306
+and the gate correctly rejected it The
+accepted historical publication
+
+00:04:08.316 --> 00:04:12.631
+recorded eighty five safeguard contracts
+Release preparation expanded
+
+00:04:12.641 --> 00:04:16.018
+verification to one hundred and twenty five
+local contracts including
+
+00:04:16.028 --> 00:04:20.084
+the source gate checks These counts
+describe distinct verification
+
+00:04:20.094 --> 00:04:24.219
+scopes The release evidence and earlier
+scanner snapshots retain their
+
+00:04:24.229 --> 00:04:25.988
+own revision and execution dates
+
+00:04:28.897 --> 00:04:32.903
+Each scanner addresses a different part of
+the delivery path Semgrep
+
+00:04:32.913 --> 00:04:37.028
+applies authored source rules Trivy
+examines dependency and image
+
+00:04:37.038 --> 00:04:40.885
+inventories Gitleaks checks both Git
+history and the current tree
+
+00:04:41.584 --> 00:04:45.290
+Checkov evaluates infrastructure and Docker
+configuration while ZAP
+
+00:04:45.300 --> 00:04:47.807
+performs a passive scan of the deployed
+application
+
+00:04:49.681 --> 00:04:53.966
+A completed scanner is not the same as a
+clean security result The
+
+00:04:53.976 --> 00:04:57.483
+current study profile blocks critical
+findings retains high and lower
+
+00:04:57.493 --> 00:05:01.538
+findings as deferred risk and rejects
+missing skipped malformed or
+
+00:05:01.548 --> 00:05:05.784
+inconsistent execution evidence The
+retained local dashboard contains
+
+00:05:05.794 --> 00:05:08.781
+two hundred and fifty one observations
+representing one hundred and
+
+00:05:08.791 --> 00:05:12.667
+eighty underlying issues The hosted
+publication contains two hundred
+
+00:05:12.677 --> 00:05:16.703
+and fifty seven cross stage observations
+Those datasets come from
+
+00:05:16.713 --> 00:05:20.219
+different runs and counting scopes so their
+totals must remain separate
+
+00:05:20.908 --> 00:05:24.295
+Historical approvals also retain their
+original expiry dates
+
+00:05:27.194 --> 00:05:30.711
+The hardened runtime uses a dedicated non
+root identity with user
+
+00:05:30.721 --> 00:05:34.077
+and group identifier sixty five thousand
+five hundred and thirty two
+
+00:05:34.756 --> 00:05:38.892
+It drops capabilities prevents privilege
+escalation uses the runtime
+
+00:05:38.902 --> 00:05:43.318
+default seccomp profile and makes the root
+filesystem read only The
+
+00:05:43.328 --> 00:05:46.854
+application still needs writable locations
+for its database and selected
+
+00:05:46.864 --> 00:05:51.250
+training features Explicit mounts provide
+those locations while protecting
+
+00:05:51.259 --> 00:05:53.557
+application code and immutable seed content
+
+00:05:55.458 --> 00:05:58.755
+Historical infrastructure checks improved
+from fifteen Kubernetes
+
+00:05:58.765 --> 00:06:02.531
+failures to one and Dockerfile failures
+improved from two to zero
+
+00:06:03.220 --> 00:06:06.877
+Those configuration improvements preceded
+the later dependency repair
+
+00:06:06.986 --> 00:06:11.212
+so they are reported separately Selected
+controls map to the documented
+
+00:06:11.222 --> 00:06:16.117
+CIS guidance but a full benchmark
+certification is not claimed Network
+
+00:06:16.127 --> 00:06:19.743
+policy enforcement remains unverified and
+must be addressed before
+
+00:06:19.753 --> 00:06:21.681
+a stronger deployment assurance claim
+
+00:06:24.605 --> 00:06:27.951
+Later remediation addressed the eleven
+critical identities recorded
+
+00:06:27.961 --> 00:06:32.427
+in the baseline The changes include
+dependency upgrades and replacements
+
+00:06:32.526 --> 00:06:36.792
+together with repairs to affected
+application behavior The tests now
+
+00:06:36.802 --> 00:06:40.059
+assert rejection of the relevant unsafe
+behavior rather than preserving
+
+00:06:40.069 --> 00:06:44.254
+exploit success Retained source and rebuilt
+image scans report zero
+
+00:06:44.264 --> 00:06:45.243
+critical findings
+
+00:06:47.115 --> 00:06:50.561
+The local image still has five high
+observations so the result does
+
+00:06:50.571 --> 00:06:54.927
+not establish that the application is free
+of vulnerabilities Syft
+
+00:06:54.937 --> 00:06:58.373
+produced a schema validated Cyclone DX
+inventory with two thousand
+
+00:06:58.383 --> 00:07:01.380
+six hundred and fifty eight components for
+the recorded local image
+
+00:07:02.079 --> 00:07:05.196
+The submission includes that existing
+hardened image as an archive
+
+00:07:05.206 --> 00:07:09.172
+and a derived inventory that omits private
+path metadata Provenance
+
+00:07:09.182 --> 00:07:13.068
+links both to their original receipt Local
+image identity and the
+
+00:07:13.078 --> 00:07:16.494
+separate hosted image identity remain
+explicitly distinguished
+
+00:07:19.402 --> 00:07:22.908
+The runtime evidence establishes that the
+selected application behavior
+
+00:07:22.918 --> 00:07:26.824
+survives the hardening and critical repairs
+Seven functional checks
+
+00:07:26.834 --> 00:07:30.071
+pass against the owned deployment and the
+deployed image agrees with
+
+00:07:30.081 --> 00:07:33.877
+the relevant build receipt The passive ZAP
+run reaches one hundred
+
+00:07:33.887 --> 00:07:37.343
+and twenty one URLs and verifies seed
+routes including the home page
+
+00:07:37.453 --> 00:07:42.488
+product search languages FTP and metrics
+Cleanup evidence confirms
+
+00:07:42.498 --> 00:07:44.895
+that the scanner and temporary resources
+were removed
+
+00:07:46.803 --> 00:07:51.328
+The scan uses a traditional unauthenticated
+crawler It does not establish
+
+00:07:51.338 --> 00:07:55.084
+full single page application navigation
+role coverage business logic
+
+00:07:55.094 --> 00:07:59.509
+correctness or the results of active
+attacks Some intentionally vulnerable
+
+00:07:59.519 --> 00:08:02.826
+training behavior remains visible including
+directory listing and
+
+00:08:02.836 --> 00:08:06.712
+error disclosure Those observations stay in
+the deferred register
+
+00:08:07.411 --> 00:08:10.888
+A successful runtime check proves a
+specific expectation and does
+
+00:08:10.898 --> 00:08:12.696
+not establish complete security
+
+00:08:15.613 --> 00:08:18.900
+The dashboard measures detection on twenty
+one deliberately selected
+
+00:08:18.910 --> 00:08:23.225
+unsafe and repaired fixture cases Fifteen
+cases contain introduced
+
+00:08:23.235 --> 00:08:28.290
+issues The scanners catch fourteen and miss
+one Six negative cases
+
+00:08:28.300 --> 00:08:31.786
+are classified correctly and this small set
+has no recorded false
+
+00:08:31.796 --> 00:08:36.062
+positives Precision is therefore one
+hundred percent recall is ninety
+
+00:08:36.072 --> 00:08:39.389
+three point three percent and the F one
+score is ninety six point
+
+00:08:39.399 --> 00:08:40.118
+six percent
+
+00:08:41.983 --> 00:08:45.270
+The known miss is an unprotected synthetic
+export route that the six
+
+00:08:45.280 --> 00:08:49.585
+authored source patterns do not detect
+Retaining that miss helps explain
+
+00:08:49.595 --> 00:08:53.401
+the rules coverage boundary The labels were
+curated after the study
+
+00:08:53.411 --> 00:08:57.807
+work and have not received independent
+validation These values describe
+
+00:08:57.817 --> 00:09:02.252
+scanner fixtures not AI accuracy and they
+do not estimate recall across
+
+00:09:02.262 --> 00:09:06.468
+all remaining application vulnerabilities
+The scenario target is met
+
+00:09:06.478 --> 00:09:08.336
+only within this limited fixture set
+
+00:09:11.249 --> 00:09:14.456
+The dashboard separates observations from
+deduplicated underlying
+
+00:09:14.466 --> 00:09:20.020
+issues and exports the same data in HTML
+JSON and CSV formats The
+
+00:09:20.030 --> 00:09:23.187
+primary local snapshot contains one hundred
+and eighty underlying
+
+00:09:23.197 --> 00:09:26.953
+issues including ninety one high severity
+issues and zero critical
+
+00:09:26.963 --> 00:09:31.119
+issues Timing is useful only when the build
+and setup scope is clear
+
+00:09:31.818 --> 00:09:34.625
+The repaired fresh directory run took two
+hundred and seventy four
+
+00:09:34.635 --> 00:09:37.812
+point seven one pipeline seconds without
+build or test reuse
+
+00:09:39.681 --> 00:09:42.818
+Its first actionable receipt arrived at one
+hundred and sixty nine
+
+00:09:42.828 --> 00:09:47.553
+seconds Bootstrap downloads and cluster
+creation add time outside
+
+00:09:47.563 --> 00:09:51.629
+that measurement A different historical run
+reused a verified build
+
+00:09:51.639 --> 00:09:55.635
+and recorded ninety three point one nine
+seconds Those timings are
+
+00:09:55.645 --> 00:09:59.661
+not interchangeable Each is one observation
+so the dashboard does
+
+00:09:59.671 --> 00:10:03.567
+not infer percentile latency a service
+level commitment or a measured
+
+00:10:03.577 --> 00:10:05.135
+production delivery improvement
+
+00:10:08.060 --> 00:10:12.086
+The AI boundary constructs a new payload
+from an exact field allowlist
+
+00:10:12.765 --> 00:10:16.102
+It does not forward raw scanner JSON and
+hope that masking removes
+
+00:10:16.112 --> 00:10:20.597
+every sensitive value Generated aliases
+replace local identifiers
+
+00:10:20.697 --> 00:10:24.174
+and advisory versions must come from the
+independently verified scanner
+
+00:10:24.184 --> 00:10:29.408
+catalog The final serialized body receives
+additional checks Captured
+
+00:10:29.418 --> 00:10:33.674
+mock requests demonstrate that private
+paths source text secret canaries
+
+00:10:33.774 --> 00:10:35.981
+and scanner matches do not reach transport
+
+00:10:37.835 --> 00:10:42.570
+Invalid input refuses before a request is
+sent Output validation checks
+
+00:10:42.580 --> 00:10:46.945
+identifiers issue clusters versions
+operations and required coverage
+
+00:10:47.635 --> 00:10:51.900
+Invented advisories unsupported versions
+malformed fixes and omissions
+
+00:10:51.910 --> 00:10:56.865
+fail validation The model receives no shell
+or file write tools These
+
+00:10:56.875 --> 00:11:00.701
+deterministic controls establish boundary
+behavior on the tested cases
+
+00:11:01.390 --> 00:11:04.867
+They cannot prove how an unavailable live
+model would perform across
+
+00:11:04.877 --> 00:11:06.725
+a representative evaluation set
+
+00:11:09.642 --> 00:11:13.418
+The configured external AI triage path
+remains an open evaluation
+
+00:11:13.428 --> 00:11:17.874
+item A read only model lookup succeeded but
+all three bounded generation
+
+00:11:17.884 --> 00:11:22.269
+attempts returned HTTP four twenty nine The
+records do not establish
+
+00:11:22.279 --> 00:11:26.675
+the underlying cause No successful live
+model output or returned usage
+
+00:11:26.685 --> 00:11:30.531
+record is available The project retains the
+failed attempts and the
+
+00:11:30.541 --> 00:11:31.769
+exhausted request cap
+
+00:11:33.639 --> 00:11:36.606
+A deterministic twenty finding mock batch
+passes through the same
+
+00:11:36.616 --> 00:11:41.071
+input boundary and output validation path
+This verifies the integration
+
+00:11:41.081 --> 00:11:45.586
+contract and refusal controls on the tested
+cases It cannot establish
+
+00:11:45.596 --> 00:11:50.631
+live model quality Live precision recall
+hallucination frequency and
+
+00:11:50.641 --> 00:11:54.677
+actual billed cost therefore remain
+unavailable The coding assistant
+
+00:11:54.687 --> 00:11:58.024
+contribution to implementation and
+reporting is disclosed separately
+
+00:11:58.723 --> 00:12:02.369
+The next evaluation step needs working
+authorized model access and
+
+00:12:02.379 --> 00:12:03.868
+independently labeled cases
+
+00:12:06.789 --> 00:12:10.315
+The three remediation proposals modify the
+legacy baseline deployment
+
+00:12:10.325 --> 00:12:14.910
+manifest independently The first disables
+service account token mounting
+
+00:12:14.920 --> 00:12:19.016
+because the application does not use the
+Kubernetes API The second
+
+00:12:19.026 --> 00:12:23.571
+explicitly requires non root execution and
+the expected identity The
+
+00:12:23.581 --> 00:12:27.268
+third adds a bounded HTTP liveness probe
+while retaining startup and
+
+00:12:27.278 --> 00:12:31.543
+readiness checks For each proposal the
+selected Checkov control fails
+
+00:12:31.553 --> 00:12:33.531
+before the change and passes afterward
+
+00:12:35.412 --> 00:12:38.859
+The deployment checks also reach readiness
+and pass selected HTTP
+
+00:12:38.869 --> 00:12:43.284
+expectations with cleanup recorded The
+coding assistant authored bounded
+
+00:12:43.294 --> 00:12:47.860
+local templates The unavailable application
+API did not generate them
+
+00:12:48.569 --> 00:12:52.705
+All three pull requests have now merged
+into the feature branch Promotion
+
+00:12:52.715 --> 00:12:55.801
+then completed through develop and main
+followed by the published
+
+00:12:55.811 --> 00:12:59.947
+version one point zero point zero release
+Independent human review
+
+00:12:59.957 --> 00:13:03.514
+remains unverified so first review
+correctness is still unmeasured
+
+00:13:06.405 --> 00:13:09.641
+Reproduction starts from a separate full
+history checkout and uses
+
+00:13:09.651 --> 00:13:13.607
+project local pinned tools The script
+rebuilds the application and
+
+00:13:13.617 --> 00:13:17.204
+image executes the scanner stages deploys
+an owned temporary kind
+
+00:13:17.214 --> 00:13:21.729
+cluster runs passive DAST checks mock
+triage and regenerates the dashboard
+
+00:13:22.418 --> 00:13:26.624
+Cleanup verifies removal of that run’s
+cluster The submission preserves
+
+00:13:26.634 --> 00:13:29.821
+source history so that history scanning can
+execute without relying
+
+00:13:29.831 --> 00:13:31.129
+on an unavailable remote
+
+00:13:33.015 --> 00:13:36.421
+Earlier fresh directory checks used the
+same Docker host and standard
+
+00:13:36.431 --> 00:13:40.487
+caches They are not fresh machine tests and
+the submission does not
+
+00:13:40.497 --> 00:13:44.593
+claim a new full pipeline execution today
+The maturity assessment
+
+00:13:44.603 --> 00:13:49.228
+uses selected OWASP SAMM practices as an
+organizing lens Repeatable
+
+00:13:49.238 --> 00:13:54.243
+builds security checks and defect records
+demonstrate progress Independent
+
+00:13:54.253 --> 00:13:57.879
+review stronger deployment controls and
+organizational evidence would
+
+00:13:57.889 --> 00:13:59.987
+be needed for a formal maturity assessment
+
+00:14:02.904 --> 00:14:06.091
+The submission brings together the three
+required components this
+
+00:14:06.101 --> 00:14:09.357
+fifteen minute project presentation the
+editable deck and technical
+
+00:14:09.367 --> 00:14:13.893
+report and the source code with related
+project files The source snapshot
+
+00:14:13.903 --> 00:14:17.279
+now matches the published version one point
+zero point zero release
+
+00:14:17.968 --> 00:14:21.884
+The package also includes full committed
+history policy rules a prompt
+
+00:14:21.894 --> 00:14:26.480
+library the metrics dashboard and
+verification receipts The recorded
+
+00:14:26.490 --> 00:14:30.116
+local container and its inventory retain
+their own exact image provenance
+
+00:14:31.983 --> 00:14:35.410
+The demonstrated engineering results are
+six stage security coverage
+
+00:14:35.530 --> 00:14:39.096
+identity checked evidence zero critical
+findings in the retained repaired
+
+00:14:39.106 --> 00:14:43.941
+scans and tested controls around AI input
+and output The remaining
+
+00:14:43.951 --> 00:14:47.677
+assessment work is successful live model
+evaluation independent validation
+
+00:14:47.687 --> 00:14:51.703
+of labels and reviews and the student oral
+assessment The package
+
+00:14:51.713 --> 00:14:55.419
+makes those boundaries visible for the
+reviewer Thank you for reviewing
+
+00:14:55.429 --> 00:14:57.737
+Pipeline Fortress and the work of our
+project team
