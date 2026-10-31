@@ -14,6 +14,7 @@ spec:
         app.kubernetes.io/name: juice-shop
         app.kubernetes.io/part-of: pipelinefortress
     spec:
+      automountServiceAccountToken: false
       containers:
         - name: juice-shop
           image: pipelinefortress:baseline
