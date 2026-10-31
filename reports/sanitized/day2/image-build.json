@@ -1,0 +1,18 @@
+{
+  "command": [
+    "docker",
+    "build",
+    "--progress=plain",
+    "--build-arg",
+    "VCS_REF=f189f521266f42c6bd05884468292000cee852ed",
+    "--build-arg",
+    "BUILD_DATE=2026-10-16T19:03:18.869865+00:00",
+    "-t",
+    "pipelinefortress:baseline",
+    "app/juice-shop"
+  ],
+  "started_at_utc": "2026-10-16T19:03:18.869865+00:00",
+  "duration_seconds": 430.05,
+  "exit_code": 0,
+  "log_reference": "reports/private/day2/image-build.log"
+}

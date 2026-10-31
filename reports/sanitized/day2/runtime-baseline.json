@@ -1,0 +1,80 @@
+{
+  "observed_at_utc": "2026-10-18T08:28:00.313396+00:00",
+  "scope": "owned kind-pipelinefortress lab; loopback HTTP only; no login or mutating HTTP methods",
+  "source_commit": "f189f521266f42c6bd05884468292000cee852ed",
+  "image": {
+    "id": "sha256:79543af23e212f5def487f4daa27763943170f7bb268c46d0aace37920d7ae88",
+    "architecture": "amd64",
+    "os": "linux",
+    "user": "65532",
+    "ports": [
+      "3000/tcp"
+    ]
+  },
+  "nodes": [
+    {
+      "name": "pipelinefortress-control-plane",
+      "ready": true,
+      "kubelet": "v1.37.0"
+    }
+  ],
+  "pods": [
+    {
+      "name": "juice-shop-8577657d7b-trvmn",
+      "ready": true,
+      "containers": [
+        {
+          "image": "docker.io/library/pipelinefortress:baseline",
+          "image_id": "docker.io/library/import-2026-10-16@sha256:602dc0ee4617fc0cd57a10c60edbb38087ce7dd3384db65260d541699ba3cef8",
+          "restarts": 0,
+          "config_id": "sha256:79543af23e212f5def487f4daa27763943170f7bb268c46d0aace37920d7ae88"
+        }
+      ]
+    }
+  ],
+  "service_type": "ClusterIP",
+  "checks": [
+    {
+      "id": "http-home",
+      "method": "GET",
+      "path": "/",
+      "http_status": 200,
+      "confirmed": true,
+      "response_bytes": 9984,
+      "sha256": "7c6f95782553529abc32cf969eb83c650281de0a5418be8b5f1cf9372dd32a45",
+      "private_evidence": "reports/private/day2/http-home.response"
+    },
+    {
+      "id": "unauthenticated-directory-listing",
+      "method": "GET",
+      "path": "/ftp/",
+      "http_status": 200,
+      "confirmed": true,
+      "response_bytes": 11285,
+      "sha256": "2710b4dea4d43f0bafec2f3e3d0413f1c952e931d384e34cb806b1645bc3d751",
+      "private_evidence": "reports/private/day2/unauthenticated-directory-listing.response"
+    },
+    {
+      "id": "unauthenticated-metrics",
+      "method": "GET",
+      "path": "/metrics",
+      "http_status": 200,
+      "confirmed": true,
+      "response_bytes": 26108,
+      "sha256": "860eeb5de844ee37be5706274a91c034c7f6472145270e9735a359f2e6a78f3c",
+      "private_evidence": "reports/private/day2/unauthenticated-metrics.response"
+    },
+    {
+      "id": "sql-error-disclosure",
+      "method": "GET",
+      "path": "/rest/products/search?q=%27%29",
+      "http_status": 500,
+      "confirmed": true,
+      "response_bytes": 974,
+      "sha256": "ab786d4c67b44a133e1449596df68717ddfbb00bb87032f0aeca77a254a3c289",
+      "private_evidence": "reports/private/day2/sql-error-disclosure.response"
+    }
+  ],
+  "ignored_terminating_pods": 0,
+  "passed": true
+}

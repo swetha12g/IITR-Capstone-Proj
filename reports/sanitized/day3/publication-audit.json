@@ -1,0 +1,13 @@
+{
+  "observed_at_utc": "2026-10-18T08:45:40.514869+00:00",
+  "working_tree_files": 1576,
+  "known_baseline_matches": 68,
+  "new_secret_fingerprints": 0,
+  "raw_reports_remain_private": true,
+  "actual_owner_approval_received": true,
+  "current_exact_exception_count": 186,
+  "source_ci_run": 39111621696,
+  "source_and_baseline_ci_conclusion": "success",
+  "source_and_baseline_logs_privacy_checked": true,
+  "scope": "tracked and non-ignored publication candidates; final receipt/hash refresh contains metadata only"
+}

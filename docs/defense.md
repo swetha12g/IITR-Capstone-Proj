@@ -1,0 +1,21 @@
+# Demonstration and oral-defense notes
+
+Prepared sequence for an eight-to-ten-minute demonstration. A live rehearsal with the assessor has not occurred; this is a runnable guide, not evidence of a completed oral defense.
+
+| Time | Demonstration | Evidence / honest boundary |
+|---|---|---|
+| 0–1 min | Explain the owned training target and six scanner stages | Architecture in the report; no production-safety claim |
+| 1–2 min | Show offline build/test receipt and exact image linkage | 2,332 application tests passed, six skipped, nine external availability tests omitted |
+| 2–3 min | Explain strict versus study execution | Critical findings now fail; high/lower risks deferred; missing scans and invalid artifacts remain errors |
+| 3–4 min | Show hardened runtime and image/SBOM comparison | Seven expected behaviors; UID/capabilities/read-only checks; full CIS coverage not claimed |
+| 4–5 min | Open the dashboard and show a known miss | Post-hoc curated fixture metrics; labels not independently reviewed |
+| 5–6 min | Run redaction/refusal and grounding tests | `source scripts/dev-env.sh`, then `python -m pytest tests/redaction tests/triage -q` |
+| 6–7 min | Show an actual bounded proposal and before/after evidence | Coding-assistant authorship; external application API did not generate it |
+| 7–8 min | Show reproduction receipt, report and risk backlog | Raw data stays private; no live API purchase or top-up |
+| 8–10 min | Discuss limitations and answer questions | HTTP429 live triage, pending independent review, limited DAST, deferred defects |
+
+Use the retained sanitized evidence as the recorded-run fallback when network or registry access fails. Do not describe a fallback as a new live execution. Human review and first-review correctness are reported only when genuine review arrives.
+
+The repaired fresh checkout b20b9b1 passed in 274.71 pipeline seconds without build/test reuse and removed its owned cluster. The dashboard now displays measured feedback/stage/pipeline times, sample sizes, API/review limitations and the fixture confusion matrix; desktop/mobile headless-browser checks pass. The refreshed report includes accepted hosted repair run 39842575944. These are recorded-run demonstration inputs, not a completed human oral assessment.
+
+Full-case hosted verification: [run 39910883934](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39910883934) passed all eight jobs on `06c8e1d` with zero critical, 2,332 application passes / six skips and 85 contracts. All 424 server case/status identities match across 41 files; no verdict is missing and all five critical regressions pass. [Verified packet](../reports/sanitized/final-audit/full-case-ci/verification.json). Demonstrate the exact-case coverage row and distinguish the recorded full-case CI run from genuine human oral/submission acceptance.

@@ -1,0 +1,34 @@
+{
+  "scanner_image": "ghcr.io/zaproxy/zaproxy@sha256:5ccfff9a411743ab2615136a2edd7416bec9ce41572fa94e935df38c14adb2b6",
+  "observed_at_utc": "2026-10-23T05:55:53.815994+00:00",
+  "passed": true,
+  "cases": [
+    {
+      "case": "bad",
+      "passed": true,
+      "exit_code": 1,
+      "selected_alert_ids": [
+        "10021",
+        "10038"
+      ],
+      "different_uid_write_before_exit": 1,
+      "different_uid_write_after_exit": 0,
+      "report_sha256": "1ac6a2457924010508fac0381e2fbf7589399d3269d76fbe0cda873e52e6a90e",
+      "cleanup_verified": true,
+      "network": "none; fixture and scanner share container loopback only",
+      "duration_seconds": 15.85
+    },
+    {
+      "case": "fixed",
+      "passed": true,
+      "exit_code": 2,
+      "selected_alert_ids": [],
+      "different_uid_write_before_exit": 1,
+      "different_uid_write_after_exit": 0,
+      "report_sha256": "620b9b411778870cafc4a099afdcb64187982901cb09a178336737a17bf698a2",
+      "cleanup_verified": true,
+      "network": "none; fixture and scanner share container loopback only",
+      "duration_seconds": 15.82
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "prompt_version": "pf-triage-v1",
+  "content": "A schema_version=1 object containing only allowlisted findings is serialized here by triage.redact. No raw scanner messages, source or locations are permitted."
+}

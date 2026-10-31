@@ -1,0 +1,72 @@
+{
+  "observed_at_utc": "2026-10-22T18:30:58.708768+00:00",
+  "candidate_files_scanned": 77,
+  "PDF_extracted_text_included": true,
+  "gitleaks_exit_code": 20,
+  "matched_fixture_lines": 10,
+  "all_matched_lines_identical_to_base_commit": true,
+  "new_matched_credential_content": 0,
+  "findings": [
+    {
+      "rule": "generic-api-key",
+      "file": "app/juice-shop/test/api/product-review.test.ts",
+      "line": 169,
+      "unchanged_source_line_in_base_commit": true
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "app/juice-shop/test/api/product-review.test.ts",
+      "line": 183,
+      "unchanged_source_line_in_base_commit": true
+    },
+    {
+      "rule": "jwt",
+      "file": "app/juice-shop/test/server/verify.unit.test.ts",
+      "line": 283,
+      "unchanged_source_line_in_base_commit": true
+    },
+    {
+      "rule": "jwt",
+      "file": "app/juice-shop/test/server/verify.unit.test.ts",
+      "line": 291,
+      "unchanged_source_line_in_base_commit": true
+    },
+    {
+      "rule": "jwt",
+      "file": "app/juice-shop/test/server/verify.unit.test.ts",
+      "line": 308,
+      "unchanged_source_line_in_base_commit": true
+    },
+    {
+      "rule": "jwt",
+      "file": "app/juice-shop/test/server/verify.unit.test.ts",
+      "line": 316,
+      "unchanged_source_line_in_base_commit": true
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "app/juice-shop/test/api/feedback.test.ts",
+      "line": 117,
+      "unchanged_source_line_in_base_commit": true
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "app/juice-shop/test/api/feedback.test.ts",
+      "line": 143,
+      "unchanged_source_line_in_base_commit": true
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "app/juice-shop/test/api/basket.test.ts",
+      "line": 114,
+      "unchanged_source_line_in_base_commit": true
+    },
+    {
+      "rule": "generic-api-key",
+      "file": "app/juice-shop/test/api/basket.test.ts",
+      "line": 240,
+      "unchanged_source_line_in_base_commit": true
+    }
+  ],
+  "decision": "Retain unchanged upstream test fixtures; do not add exceptions or describe this as a zero-finding Gitleaks scan. Critical-vulnerability counts are separate. No publication performed."
+}

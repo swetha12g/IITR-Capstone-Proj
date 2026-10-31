@@ -1,0 +1,7 @@
+{
+  "python": "3.10",
+  "pip": "26.2.1",
+  "node": "v24.22.0",
+  "distribution_hashes_verified": true,
+  "system_packages_changed": false
+}

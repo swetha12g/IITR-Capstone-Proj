@@ -1,0 +1,4 @@
+title = "PipelineFortress default Gitleaks rules, with no project suppression"
+
+[extend]
+useDefault = true

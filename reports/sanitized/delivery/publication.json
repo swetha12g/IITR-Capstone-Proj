@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-22T17:36:32.815645+00:00",
+  "delivery_packet_commit": "c7f25d91a53e7f76e799481b92570a5b3b4d311a",
+  "branch": "feature-16-kick-start",
+  "remote_tracking_matches": true,
+  "working_tree_clean_at_verification": true,
+  "tested_code_revision": "bef666437f60416fed4d5bceed675c2a6d8513af",
+  "hosted_run_id": 39821125926,
+  "hosted_conclusion": "success",
+  "publication_commit_scope": "Documentation, sanitized evidence and generated PDF only; no implementation changes after tested revision",
+  "remediation_prs": [
+    1,
+    2,
+    3
+  ],
+  "remediation_pr_state": "draft, unmerged; all hosted workflows passed; independent review pending",
+  "private_data_published": false,
+  "gitleaks_publication_findings": 0,
+  "additional_api_requests": 0,
+  "purchases_topups_or_billing_changes": false
+}

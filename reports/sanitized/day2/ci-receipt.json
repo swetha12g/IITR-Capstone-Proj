@@ -1,0 +1,115 @@
+{
+  "run_id": 38957969793,
+  "run_url": "https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/38957969793",
+  "head_sha": "280514f7bd4f58c9d4e93008f30e9bc4eb72bc90",
+  "status": "completed",
+  "conclusion": "success",
+  "created_at_utc": "2026-10-16T19:51:19Z",
+  "updated_at_utc": "2026-10-16T20:03:00Z",
+  "jobs": [
+    {
+      "id": 117165524668,
+      "name": "baseline",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check out the reviewed commit",
+          "conclusion": "success"
+        },
+        {
+          "name": "Select pinned Node",
+          "conclusion": "success"
+        },
+        {
+          "name": "Select Python 3.10",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install verified kind and kubectl",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check runner kind startup before expensive builds",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install pinned check dependencies",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build and run selected finite tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build the exact source image",
+          "conclusion": "success"
+        },
+        {
+          "name": "Deploy to this runner's own kind cluster",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify local runtime and capture safe evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Publish sanitized baseline evidence",
+          "conclusion": "success"
+        },
+        {
+          "name": "Clean up the ephemeral runner cluster",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Select Python 3.10",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Select pinned Node",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Check out the reviewed commit",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "artifact": {
+    "id": 12071418832,
+    "name": "baseline-evidence-38957969793",
+    "sha256": "fd1c109c1eddfcd13708fa0955d4a9a1f16e3a990ce79645acd5ffba19633f42",
+    "size_bytes": 2081,
+    "archive_checksum_verified": true,
+    "downloaded_sanitized_records": [
+      "ci/build-tests.json",
+      "ci/runtime-baseline.json"
+    ]
+  },
+  "prior_runs": [
+    {
+      "id": 38954124002,
+      "conclusion": "cancelled",
+      "reason": "Superseded by image-identity rollout correction"
+    },
+    {
+      "id": 38955433523,
+      "conclusion": "failure",
+      "failed_stage": "deployment",
+      "root_cause": "Unconfirmed: private runner deployment log was discarded"
+    }
+  ],
+  "limitations": [
+    "A successful current run does not establish the exact cause of the earlier failure",
+    "Selected finite suites only; Cypress E2E and Days 3–10 remain pending",
+    "Local manual review was confirmed before the hosted result; no human approval of CI or independent PR approval is claimed"
+  ]
+}

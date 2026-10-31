@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "profile": "study-lab",
+  "verdict": "PASS_WITH_DEFERRED_RISKS",
+  "operational_errors": [],
+  "stage_count": 7,
+  "security_scan_stages": 6,
+  "security_blockers": [],
+  "critical_observations": 0,
+  "findings_by_severity": {
+    "HIGH": 159,
+    "INFO": 16,
+    "LOW": 35,
+    "MEDIUM": 47
+  },
+  "deferred_observations": 257,
+  "note": "Critical findings fail the gate; lower severities remain visible and deferred. Counts include cross-stage observations, not deduplicated global issues.",
+  "receipts": [
+    {
+      "stage": "build-test",
+      "sha256": "6dd678984eceb5311404236b510f74c7ecd260cd9871c849edd1d2831fb0cb22"
+    },
+    {
+      "stage": "container",
+      "sha256": "44e2506e53921ab456425c15c3ff6a1e07a29a962f2c9d7e4076783032567866"
+    },
+    {
+      "stage": "dast",
+      "sha256": "30b0e670478cecb4a2d1d9022514ed14bf0e3232ac1323fa2b34d1bfd381afc2"
+    },
+    {
+      "stage": "iac",
+      "sha256": "aa6af95c7a2af3d2a050eeb3d9806e472aaaac8435f9d10adb93ad51ae740ad7"
+    },
+    {
+      "stage": "sast",
+      "sha256": "4b7ed5b7c460f452505e3573cf5325b5d4e51da5777cfc46b25de256778f89cc"
+    },
+    {
+      "stage": "sca",
+      "sha256": "a7d25c47d91052633b9f690a8ca2d296977126fd8179f3ecce212d703fdcd4d1"
+    },
+    {
+      "stage": "secrets",
+      "sha256": "182eb48014354ff3ebc9fe82fe0034f4c24f80e059d0dbf971c79f5ee7e3988c"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "observed_at_utc": "2026-10-22T16:03:59.598878+00:00",
+  "model": "gpt-6-luna",
+  "prompt_version": "pf-triage-v1",
+  "request_sha256": "1572fa9bda767cc188942b9ebf78d2ab44554c812efc21fb1c8e42a4d960d35b",
+  "response_sha256": "01c88ebd353906249665b503517a393eeb81e7af8212d96b28ee010061914cd9",
+  "findings": 20,
+  "validation": "passed",
+  "duration_seconds": 0.002,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "estimated_usage_usd": 0.0,
+  "store": false,
+  "raw_source_sent": false,
+  "mode": "mock"
+}

@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "cases": 15,
+  "results": [
+    {
+      "case": "actual-collection-blocks",
+      "passed": true,
+      "expected_exit": 1
+    },
+    {
+      "case": "missing-stage",
+      "passed": true,
+      "expected_exit": 2
+    },
+    {
+      "case": "scanner-error",
+      "passed": true,
+      "expected_exit": 2
+    },
+    {
+      "case": "report-tamper",
+      "passed": true,
+      "expected_exit": 2
+    },
+    {
+      "case": "mixed-database",
+      "passed": true,
+      "expected_exit": 2
+    },
+    {
+      "case": "expired-database",
+      "passed": true,
+      "expected_exit": 2
+    },
+    {
+      "case": "changed-scan-input",
+      "passed": true,
+      "expected_exit": 2
+    },
+    {
+      "case": "wrong-container-image",
+      "passed": true,
+      "expected_exit": 2
+    },
+    {
+      "case": "wrong-sbom-image",
+      "passed": true,
+      "expected_exit": 2
+    },
+    {
+      "case": "suppressed-control",
+      "passed": true,
+      "expected_exit": 2
+    },
+    {
+      "case": "missing-custom-check",
+      "passed": true,
+      "expected_exit": 2
+    },
+    {
+      "case": "invalid-sbom-schema",
+      "passed": true,
+      "expected_exit": 2
+    },
+    {
+      "case": "unsupported-sbom-version",
+      "passed": true,
+      "expected_exit": 2
+    },
+    {
+      "case": "empty-sbom",
+      "passed": true,
+      "expected_exit": 2
+    },
+    {
+      "case": "synthetic-clean-passes",
+      "passed": true,
+      "expected_exit": 0
+    }
+  ],
+  "scope": "contracts on copied reports; synthetic pass does not change the actual blocked gate"
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "stage": "build-test",
+  "execution": "complete",
+  "run_id": "39912532895",
+  "commit": "42afe37ed4dd44f5760c616ee42ff7854ce32940",
+  "project_tree_sha256": "8a558f581516c2a445c3e8f2d8fff201923c3e1acba77a7d6509f23385924be0",
+  "worktree_modified": false,
+  "observed_at_utc": "2026-10-23T06:44:25.122809+00:00",
+  "reports": [],
+  "findings_by_severity": {},
+  "finding_fingerprints": [],
+  "profile": "study-lab",
+  "deferred_findings": 0,
+  "image_config_id": "sha256:0e87d1f74b1ec83d4f5b1cb45248ae562786b324c28f756e256e9e1bc956394b",
+  "app_evidence_sha256": "ba651c878951ac1fb878a90f5765cb0000ac9b1faebcc92b2cdfaeb3c1e5f4b5",
+  "build_evidence_sha256": "0f5f98a2ed1ab136f56918ff1dcadf87afcd009a0ba0c51435fd73f9e8c721f5",
+  "app_test_profile": "offline-local",
+  "external_availability_suite": "not-selected",
+  "test_results": {
+    "test-frontend": {
+      "passed": 1372,
+      "failed": 0,
+      "skipped": 0,
+      "todo": 0,
+      "cancelled": 0,
+      "total": 1372
+    },
+    "test-server": {
+      "passed": 422,
+      "failed": 0,
+      "skipped": 2,
+      "cancelled": 0,
+      "todo": 0,
+      "total": 424
+    },
+    "test-api": {
+      "passed": 538,
+      "failed": 0,
+      "skipped": 4,
+      "cancelled": 0,
+      "todo": 0,
+      "total": 542
+    }
+  },
+  "server_case_inventory": {
+    "matched": true,
+    "expected_cases": 424,
+    "executed_cases": 424,
+    "missing_cases": 0,
+    "unexpected_cases": 0,
+    "expected_files": 41,
+    "executed_files": 41,
+    "critical_regressions": 5,
+    "case_inventory_sha256": "3f44b8849146d98914f5ae6a4e01465cf6a592416421aa08f4758a07409c32f7",
+    "junit_totals": {
+      "total": 424,
+      "passed": 422,
+      "failed": 0,
+      "skipped": 2
+    },
+    "baseline_sha256": "22f866f2a2380d32538c68cfc36136adcd226029eb0161a29d61ad5b683ba480",
+    "reporter_totals_agree": true
+  },
+  "contract_tests": {
+    "tests": 85,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "duration_seconds": 320.77,
+  "duration_scope": "application check stages only; image build is not timed here"
+}

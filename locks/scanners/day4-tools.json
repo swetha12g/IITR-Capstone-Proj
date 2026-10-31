@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "platform": "linux-x86_64",
+  "python": "3.10",
+  "checkov": {
+    "version": "3.3.30",
+    "requirements": "locks/scanners/checkov-requirements.txt",
+    "requirements_sha256": "528145dbc0a703f04830ee4f2b81797710d65db6365fcb83b381291c327d3451",
+    "release_url": "https://pypi.org/project/checkov/3.3.30/"
+  },
+  "syft": {
+    "version": "1.55.0",
+    "url": "https://github.com/anchore/syft/releases/download/v1.55.0/syft_1.55.0_linux_amd64.tar.gz",
+    "archive": "syft_1.55.0_linux_amd64.tar.gz",
+    "sha256": "bb65249542db5fedeeb4d3f9b018b75e7264dbfbbb10486f044581a92f90490d",
+    "checksum_url": "https://github.com/anchore/syft/releases/download/v1.55.0/syft_1.55.0_checksums.txt"
+  }
+}

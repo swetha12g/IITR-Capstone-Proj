@@ -1,0 +1,24 @@
+# Generated dependencies, build outputs and private local state only.
+**/node_modules/
+**/build/
+**/dist/
+**/coverage/
+**/.angular/
+.tools/
+.venv/
+reports/private/
+.git/
+
+# Exact upstream partial teaching fragments; see coverage-exclusions.json.
+app/juice-shop/data/static/codefixes/loginAdminChallenge_1.ts
+app/juice-shop/data/static/codefixes/loginAdminChallenge_2.ts
+app/juice-shop/data/static/codefixes/loginAdminChallenge_3.ts
+app/juice-shop/data/static/codefixes/loginAdminChallenge_4_correct.ts
+app/juice-shop/data/static/codefixes/loginBenderChallenge_1.ts
+app/juice-shop/data/static/codefixes/loginBenderChallenge_2_correct.ts
+app/juice-shop/data/static/codefixes/loginBenderChallenge_3.ts
+app/juice-shop/data/static/codefixes/loginBenderChallenge_4.ts
+app/juice-shop/data/static/codefixes/loginJimChallenge_1_correct.ts
+app/juice-shop/data/static/codefixes/loginJimChallenge_2.ts
+app/juice-shop/data/static/codefixes/loginJimChallenge_3.ts
+app/juice-shop/data/static/codefixes/loginJimChallenge_4.ts

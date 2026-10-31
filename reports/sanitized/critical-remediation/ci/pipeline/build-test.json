@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "stage": "build-test",
+  "execution": "complete",
+  "run_id": "39842575944",
+  "commit": "1616f14289479ad7812a6501e10ac9baf62d4495",
+  "project_tree_sha256": "2cb817a0451c5c843b987c03b73828c89b32c93fbb2f4436b0e0b19ea0798174",
+  "worktree_modified": false,
+  "observed_at_utc": "2026-10-22T19:55:06.574480+00:00",
+  "reports": [],
+  "findings_by_severity": {},
+  "finding_fingerprints": [],
+  "profile": "study-lab",
+  "deferred_findings": 0,
+  "image_config_id": "sha256:a6c68295948a3e8275b517244e4acab55c52820884847e776b63200dff1feb5d",
+  "app_evidence_sha256": "079e999f95ed39a70dfedc39800e990f00e744d5d0401251b1ce88f4183b99e8",
+  "build_evidence_sha256": "776c42a1276f2001ed62b8d58a9079c17a0b267fb4029da603fac479bae4f0c6",
+  "app_test_profile": "offline-local",
+  "external_availability_suite": "not-selected",
+  "test_results": {
+    "test-frontend": {
+      "passed": 1372,
+      "failed": 0,
+      "skipped": 0,
+      "todo": 0,
+      "cancelled": 0,
+      "total": 1372
+    },
+    "test-server": {
+      "passed": 422,
+      "failed": 0,
+      "skipped": 2,
+      "cancelled": 0,
+      "todo": 0,
+      "total": 424
+    },
+    "test-api": {
+      "passed": 538,
+      "failed": 0,
+      "skipped": 4,
+      "cancelled": 0,
+      "todo": 0,
+      "total": 542
+    }
+  },
+  "contract_tests": {
+    "tests": 76,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "duration_seconds": 518.46,
+  "duration_scope": "application check stages only; image build is not timed here"
+}

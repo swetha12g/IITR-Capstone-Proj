@@ -1,0 +1,16 @@
+{
+  "observed_at_utc": "2026-10-16T19:20:17.057Z",
+  "url": "http://127.0.0.1:3000/#/",
+  "title": "OWASP Juice Shop",
+  "browser": "130.0.6723.91",
+  "playwright_core": "1.64.1",
+  "viewport": {
+    "width": 1280,
+    "height": 900
+  },
+  "isolated_context": true,
+  "non_loopback_requests_blocked": true,
+  "interaction": "Dismissed welcome dialog; cookie notice retained; no login, purchases or data entry; outside requests blocked; app may automatically record training progress",
+  "file": "reports/sanitized/day2/juice-shop-running.png",
+  "sha256": "834db620cb9fe9ee0fb6219a0b64cba80fe92302eb6b7c0e722a93ffe735c80a"
+}

@@ -1,0 +1,90 @@
+{
+  "scope": "fresh directory, project-local bootstrap, unique ephemeral owned cluster, no live API",
+  "verdict": "PASS_WITH_DEFERRED_RISKS",
+  "run_id": "20261022T201424706630Z",
+  "operational_errors": [],
+  "application_profile": "offline-local; external service availability suite excluded",
+  "cleanup": "handled by shell finalization; verify cleanup.log and cluster inventory",
+  "project_commit": "b20b9b1d9e0c1fc2cded21650fd954f2be7bbf20",
+  "cleanup_verified": true,
+  "script_exit_code": 0,
+  "shared_host_docker_and_download_caches": true,
+  "fresh_machine_claimed": false,
+  "full_history_local_clone": true,
+  "clean_initial_path": "/usr/bin:/bin",
+  "duration_seconds": 274.71,
+  "build_test_reused": false,
+  "critical_observations": 0,
+  "application_passed": 2332,
+  "application_skipped": 6,
+  "evidence": [
+    {
+      "file": "application.json",
+      "sha256": "d2c8de7242572de86c326e128da16c05bdfe4faa857b42ef7147b743fa9dae68"
+    },
+    {
+      "file": "bootstrap.json",
+      "sha256": "18d290df956a2ee1d04af70831854de68f174947e4f129144c8d11ef451a95fc"
+    },
+    {
+      "file": "dashboard.json",
+      "sha256": "6aaced95a1749f2d772f6d4b0b5752537f34efb39bbad64bcab8d5e027b0dc0d"
+    },
+    {
+      "file": "dast-fixtures.json",
+      "sha256": "be030229bcc2934aaa1e7c09d55f1cce18a4eef6ed1c4f92a621ae63e47655da"
+    },
+    {
+      "file": "dast.json",
+      "sha256": "a3c45cb82ee28e5f2d5061b0b55b4ebaf9e038f242293b2c9d2fd2c9aa7f5872"
+    },
+    {
+      "file": "mock-triage.json",
+      "sha256": "92ba88257826ed6cae113dc4339f8c7632ad1424dcb6d3375c150dfedbbe3bcc"
+    },
+    {
+      "file": "pipeline/aggregate.json",
+      "sha256": "1ca01f215c51138943f0a1d3785491a6ea7db4746ac1c0ad3b471287fba30efe"
+    },
+    {
+      "file": "pipeline/build-test.json",
+      "sha256": "519b35db048c559274fe857e93b72e42c1c91d2e6d7ddc7de4a039bf82601000"
+    },
+    {
+      "file": "pipeline/container.json",
+      "sha256": "2e24985424df234438c753c0a80cc5bf61d26066885d5ad3239648a399eb56a7"
+    },
+    {
+      "file": "pipeline/dast.json",
+      "sha256": "2b0d839bf24f4f195bcc1ad7d8a90bc174b4350548b8afc95d5b7df4e72f7a18"
+    },
+    {
+      "file": "pipeline/iac.json",
+      "sha256": "c755d6eea7c4304c144db5dfa0b49d445044fe76e0f886b8a9eb27737d0f365c"
+    },
+    {
+      "file": "pipeline/sast.json",
+      "sha256": "90b026fcf562d33c154038abe9216b7a15275b736ab4fcdee7a8756d2b01f717"
+    },
+    {
+      "file": "pipeline/sca.json",
+      "sha256": "8138a79c53a40a6e190e925ff2bbe0fcd7fe39342e4aa1e075b18ce338865ff8"
+    },
+    {
+      "file": "pipeline/secrets.json",
+      "sha256": "3b091a9a82e231ad6f9a7d0d3e23aaac42582765d4fbf99cdaa0977c56f96438"
+    },
+    {
+      "file": "runtime.json",
+      "sha256": "13e71ac287efce54506647ed58712a99e51b1ff72901d53fb080484b0c9f35ed"
+    }
+  ],
+  "pipeline_timing": {
+    "pipeline_seconds": 274.71,
+    "first_actionable_seconds": 169.0,
+    "observations": 1,
+    "build_test_reused": false,
+    "scope": "Local sequential pipeline only; bootstrap/download and cluster creation excluded. One observation; no percentiles."
+  },
+  "timing_execution_manifest_sha256": "49fa3930c3e65ae3b3514190bbd4d5094405b1dcaf97b774d280593ad8787e96"
+}

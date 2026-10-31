@@ -1,0 +1,13 @@
+{
+  "run_id": 39818760193,
+  "artifact_id": 12444516746,
+  "archive_sha256": "6c9ec5102ae82dc983815d637881b6d09b4d2fbefb3e84481a784a00ecd9b4d1",
+  "archive_digest_verified": true,
+  "recomputed_aggregate_matches": true,
+  "verdict": "PASS_WITH_DEFERRED_RISKS",
+  "operational_errors": [],
+  "commit": "61b064feb1aed949d53d512b05950fcff29e19bd",
+  "deferred_observations": 379,
+  "image_config_id": "sha256:45497ca1fd8a520dba549e783e25e2e6dbf6c31d8a3ef0950472217f0f5ee11a",
+  "commit_matches_tested_revision": true
+}

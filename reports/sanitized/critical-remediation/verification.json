@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-10-22T18:19:40.410137+00:00",
+  "outcome": "11 to 0 critical underlying issues in fresh source and exact-image scans",
+  "before_unique_critical": 11,
+  "after_unique_critical": 0,
+  "resolved_baseline_issue_ids": [
+    "I-01dd08d5db0f378a008ba40a",
+    "I-fce7924b1c720ec1d64b78fd",
+    "I-8719a451494783c8c40ac8dc",
+    "I-82541fddcedce1da32e93a9d",
+    "I-f5cd177faf7689fb7ed31349",
+    "I-5ad950b7fefdbb54b8aacd01",
+    "I-040bab544abc5c7e45257af1",
+    "I-ec4f184e54adf8991a0bbd15",
+    "I-53f93630c50fd2deca26d1f1",
+    "I-18cdf163d69a2efd2456d285",
+    "I-733d3f1b7a822c30f5e0173d"
+  ],
+  "scans": [
+    {
+      "stage": "sca",
+      "critical_count": 0,
+      "findings_by_severity": {
+        "HIGH": 10,
+        "LOW": 4,
+        "MEDIUM": 9
+      },
+      "report_sha256": "a439fbbec2abf5cbade6a5ba94480b5657ec40eb360d61eecf3244b4cfe2670e",
+      "includes_dev_dependencies": true,
+      "ignorefile": "/dev/null",
+      "image_config_id": null
+    },
+    {
+      "stage": "container",
+      "critical_count": 0,
+      "findings_by_severity": {
+        "MEDIUM": 26,
+        "LOW": 10,
+        "HIGH": 5
+      },
+      "report_sha256": "544e943372d400c99ac8846fc8e0a1633b5e85d236b132b48b4b3c0f954bf2fa",
+      "includes_dev_dependencies": false,
+      "ignorefile": "/dev/null",
+      "image_config_id": "sha256:483df66c5bdfb2d47a740243a6db215e6abe43637a3bf23863ebc857997a59d0"
+    }
+  ],
+  "scanner": "Trivy 0.76.0",
+  "scanner_database": {
+    "Version": 2,
+    "NextUpdate": "2026-10-23T07:10:52.423530061Z",
+    "UpdatedAt": "2026-10-22T07:10:52.423530461Z",
+    "DownloadedAt": "2026-10-22T11:58:32.537794943Z"
+  },
+  "project_base_commit": "895ee08e2c0cea1d7b19d3c59d367a6f9ff84ebc",
+  "project_tree_sha256": "4b53c134e63adb5fa6dc7b5265a5be5520bbb419ae736239f6062daa4591b7e7",
+  "working_tree_modified": true,
+  "changes_committed_or_pushed": false,
+  "root_lock_sha256": "02b9263631882e4b27e9f08e11d581d75af56ab0fdfa62ee9bdda8864f7d43da",
+  "frontend_lock_and_original_exact_approvals_unchanged": true,
+  "image_config_id": "sha256:483df66c5bdfb2d47a740243a6db215e6abe43637a3bf23863ebc857997a59d0",
+  "build_input_sha256": "8bd543b3b0085590c492c04d48c81e6a15115293587df0322c6f9414576ae767",
+  "application": {
+    "run_id": "20261022T181052Z",
+    "passed": 2332,
+    "skipped": 6,
+    "failures": 0,
+    "frontend_passed": 1372,
+    "server_passed": 422,
+    "api_passed": 538,
+    "external_availability_tests_not_selected": 9,
+    "profile": "offline-local",
+    "all_six_stages_passed": true,
+    "duration_seconds": 143.51,
+    "receipt_sha256": "c50ba6be4baed4f0fd5265222b6758bf23daaace1d09bb4ccc684f4ee1607fa7"
+  },
+  "pipeline": {
+    "run_id": "20261022T181348556832Z",
+    "duration_seconds": 93.19,
+    "build_test_reused": true,
+    "verdict": "PASS_WITH_DEFERRED_RISKS",
+    "critical_observations": 0,
+    "security_blockers": [],
+    "operational_errors": [],
+    "receipt_sha256": "45beece21cd66f470729729938bd17bce2aaaa7feb4d84dc8a2e8f50b282d5c3"
+  },
+  "runtime": {
+    "docker_checks_passed": 7,
+    "temporary_kubernetes_checks_passed": 7,
+    "owned_study_deployment_updated": true,
+    "owned_study_kubernetes_checks_passed": 7,
+    "all_image_ids_match": true,
+    "temporary_cluster_cleanup_verified": true
+  },
+  "tests": {
+    "pipeline_and_safeguard_contracts_passed": 64,
+    "source_gate_contracts_passed": 25,
+    "critical_regression_tests_passed": 5,
+    "lint_passed": true,
+    "snippet_consistency_passed": true,
+    "server_coverage_command_passed": true,
+    "server_unit_line_coverage_percent": 41.85
+  },
+  "remaining_issues": {
+    "unique_issues": 180,
+    "by_severity": {
+      "HIGH": 91,
+      "MEDIUM": 45,
+      "LOW": 28,
+      "INFO": 16
+    },
+    "high_and_lower_deferred": true
+  },
+  "additional_api_requests": 0,
+  "purchases_topups_or_billing_changes": false,
+  "limitations": [
+    "Local modified working tree; new hosted CI and independent review not performed",
+    "Unsafe JWT/NoSQL/sanitizer training exploits are intentionally prevented in this variant",
+    "No full legacy Cypress challenge-suite run",
+    "No production-readiness or exhaustive vulnerability absence claim"
+  ],
+  "report": {
+    "file": "output/pdf/history/1616f14/PipelineFortress_Study_Report.pdf",
+    "pages": 12,
+    "sha256": "4d3c34febab430dbbed9b897d625b7955d08edc2f195214de5e03c1f5a4ecf9d",
+    "all_pages_rendered_and_visually_checked": true,
+    "historical_report_preserved": "output/pdf/history/c7f25d9/PipelineFortress_Study_Report.pdf",
+    "superseded_by": "reports/sanitized/final-audit/report-validation.json",
+    "original_file_at_measurement": "output/pdf/PipelineFortress_Study_Report.pdf"
+  },
+  "publication_review": {
+    "gitleaks_matches": 10,
+    "unchanged_upstream_fixture_matches": 10,
+    "new_matched_credential_content": 0,
+    "no_new_exception_entries": true,
+    "record": "reports/sanitized/critical-remediation/publication-review.json"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "observed_at_utc": "2026-10-22T18:10:28.228692+00:00",
+  "exit_code": 0,
+  "app_source_base_commit": "f189f521266f42c6bd05884468292000cee852ed",
+  "source_variant": "critical-remediation; runtime input hashes bind local modifications",
+  "context_files": 1201,
+  "context_input_sha256": "8bd543b3b0085590c492c04d48c81e6a15115293587df0322c6f9414576ae767",
+  "locks": {
+    "package-lock.json": "02b9263631882e4b27e9f08e11d581d75af56ab0fdfa62ee9bdda8864f7d43da",
+    "frontend/package-lock.json": "2cab8508e02d7ca0b74df30010cfefa1c98ce4e76708928726f80e090d931503"
+  },
+  "dockerfile_sha256": "3da1bc9b00b33eb556ac661fcac2715302e555ac4b1a18be0309b5b08ff8f0f2",
+  "image_config_id": "sha256:483df66c5bdfb2d47a740243a6db215e6abe43637a3bf23863ebc857997a59d0",
+  "size_bytes": 356314500,
+  "user": "65532:65532"
+}

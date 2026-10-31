@@ -1,0 +1,9 @@
+{
+  "source_commit": "f189f521266f42c6bd05884468292000cee852ed",
+  "fork_url": "https://github.com/swetha12g/juice-shop",
+  "upstream_url": "https://github.com/juice-shop/juice-shop",
+  "tracked_files_verified": 1466,
+  "content_match": true,
+  "nested_git": false,
+  "license_sha256": "fa4ca6d61009e537c953f1c0b8455dd66d69f810888546c48db8ea05f0713093"
+}

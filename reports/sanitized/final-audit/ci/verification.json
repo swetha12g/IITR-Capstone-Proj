@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "run_id": 39850270120,
+  "url": "https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39850270120",
+  "tested_commit": "89d5db70dc2d19fa5efce81a2439228518f3e6d7",
+  "status": "completed",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 120074504554,
+      "name": "build-test",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120074504992,
+      "name": "secrets",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120074505022,
+      "name": "sca",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120074505201,
+      "name": "sast",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120074505279,
+      "name": "iac",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120078295433,
+      "name": "dast",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120078295751,
+      "name": "container",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120080709084,
+      "name": "aggregate",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "artifact": {
+    "id": 12458365335,
+    "name": "aggregate-study-evidence",
+    "digest": "sha256:2b5ccbd9485bf5a367995c4a698d3de8710a4ec0d12aa9cb1c6e4f37fcb3fc6d",
+    "size_in_bytes": 44757
+  },
+  "archive_digest_verified": true,
+  "archive_sha256": "2b5ccbd9485bf5a367995c4a698d3de8710a4ec0d12aa9cb1c6e4f37fcb3fc6d",
+  "allowlisted_packet_files": 13,
+  "recomputed_aggregate_matches": true,
+  "all_receipts_match_run_commit_and_source_tree": true,
+  "all_receipt_worktrees_clean": true,
+  "project_tree_sha256": "0cadfc8f290900fe9c307f16acddfe17845266ddf493283b5624bdc3932ce832",
+  "image_config_id": "sha256:9fa46bc3e7dcbe7c322ac29e33862b7a729f4887a62c387c24ae4e8eb4adb1d0",
+  "verdict": "PASS_WITH_DEFERRED_RISKS",
+  "critical_observations": 0,
+  "findings_by_severity": {
+    "HIGH": 159,
+    "INFO": 16,
+    "LOW": 35,
+    "MEDIUM": 48
+  },
+  "cross_stage_observations": 258,
+  "globally_deduplicated_counts_not_claimed": true,
+  "test_results": {
+    "test-frontend": {
+      "passed": 1372,
+      "failed": 0,
+      "skipped": 0,
+      "todo": 0,
+      "cancelled": 0,
+      "total": 1372
+    },
+    "test-server": {
+      "passed": 395,
+      "failed": 0,
+      "skipped": 2,
+      "cancelled": 0,
+      "todo": 0,
+      "total": 397
+    },
+    "test-api": {
+      "passed": 538,
+      "failed": 0,
+      "skipped": 4,
+      "cancelled": 0,
+      "todo": 0,
+      "total": 542
+    }
+  },
+  "contract_tests": {
+    "tests": 79,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "sbom": {
+    "schema_valid": true,
+    "spec_version": "1.6",
+    "components": 2658,
+    "representative_packages": {
+      "juice-shop": "20.3.0",
+      "express": "4.22.3",
+      "sqlite3": "5.1.7"
+    },
+    "sha256": "cf039728309e94b2094f3decb64c496f6b366d3372e99e5bb335f2db62e96184"
+  },
+  "runtime": {
+    "passed": true,
+    "http_checks_passed": 7,
+    "http_checks_total": 7,
+    "evidence_sha256": "255f67ba0298944472f2efba9db9c8f49269f66f2643b0b45f22182f12977553"
+  },
+  "dast_urls_reached": 121,
+  "dast_routes_verified": true,
+  "scanner_cleanup_verified": true,
+  "summary": {
+    "step_conclusion": "success",
+    "github_step_summary_write_completed": true,
+    "bytes": 7481,
+    "sha256": "eabaec694463d4d4206b0f9522d4fc7dcebfb721e8216dec48ad21864c719535",
+    "artifact_matches_logged_summary_hash": true,
+    "regenerated_body_matches_artifact": true,
+    "github_ui_visual_inspection_claimed": false
+  },
+  "packet_assets_match_checked_in_snapshots": [
+    {
+      "file": "output/pdf/PipelineFortress_Study_Report.pdf",
+      "sha256": "51d662b3d574a2879bd07cfa14d3867bec351335f930c8cf343ff2427690a364"
+    },
+    {
+      "file": "reports/sanitized/dashboard/index.csv",
+      "sha256": "b7887a2d8599f3b8314ae53bece9645c2501a6ea937149d6abf3fee88d691c1f"
+    },
+    {
+      "file": "reports/sanitized/dashboard/index.html",
+      "sha256": "180d17f38397c3d9d4642e03c68791d14047146a029a8d624dfadf72f27b962a"
+    },
+    {
+      "file": "reports/sanitized/dashboard/index.json",
+      "sha256": "1f41927f83f5665ca72722943c0e9c29088340afdecde8ecafa539a22e008d9a"
+    }
+  ],
+  "additional_provider_calls": 0,
+  "purchases_or_billing_changes": false,
+  "superseded_run": {
+    "id": 39849543131,
+    "conclusion": "cancelled",
+    "reason": "timing scope caption corrected through normal branch push/concurrency"
+  },
+  "remaining": "High/lower risks deferred; successful live AI, independent labels/PR reviews, oral/submission evidence unverified",
+  "server_test_count_limitation": "This run reported 395 server passes versus the earlier 422. Critical scan and execution success remain valid; complete server case coverage is not established by this receipt. Mandatory per-case inventory verification is being added in the follow-up revision."
+}

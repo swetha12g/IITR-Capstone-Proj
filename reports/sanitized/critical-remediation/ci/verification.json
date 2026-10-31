@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "run_id": 39842575944,
+  "url": "https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39842575944",
+  "tested_commit": "1616f14289479ad7812a6501e10ac9baf62d4495",
+  "status": "completed",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 120047245793,
+      "name": "secrets",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120047246308,
+      "name": "iac",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120047246315,
+      "name": "build-test",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120047246347,
+      "name": "sast",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120047246628,
+      "name": "sca",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120053484983,
+      "name": "container",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120053485156,
+      "name": "dast",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120055470250,
+      "name": "aggregate",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "artifact": {
+    "id": 12455260499,
+    "name": "aggregate-study-evidence",
+    "digest": "sha256:3c3359b670f35f08f2d62717ca231d2b6b70148d0edf2e35d1f6e6e2d789e743",
+    "size_in_bytes": 38887
+  },
+  "archive_sha256": "3c3359b670f35f08f2d62717ca231d2b6b70148d0edf2e35d1f6e6e2d789e743",
+  "archive_digest_verified": true,
+  "allowlisted_packet_files": 10,
+  "recomputed_aggregate_matches": true,
+  "all_receipts_match_run_commit_and_source_tree": true,
+  "project_tree_sha256": "2cb817a0451c5c843b987c03b73828c89b32c93fbb2f4436b0e0b19ea0798174",
+  "image_config_id": "sha256:a6c68295948a3e8275b517244e4acab55c52820884847e776b63200dff1feb5d",
+  "verdict": "PASS_WITH_DEFERRED_RISKS",
+  "critical_observations": 0,
+  "findings_by_severity": {
+    "HIGH": 159,
+    "INFO": 16,
+    "LOW": 35,
+    "MEDIUM": 47
+  },
+  "cross_stage_observations": 257,
+  "globally_deduplicated_counts_not_claimed": true,
+  "test_results": {
+    "test-frontend": {
+      "passed": 1372,
+      "failed": 0,
+      "skipped": 0,
+      "todo": 0,
+      "cancelled": 0,
+      "total": 1372
+    },
+    "test-server": {
+      "passed": 422,
+      "failed": 0,
+      "skipped": 2,
+      "cancelled": 0,
+      "todo": 0,
+      "total": 424
+    },
+    "test-api": {
+      "passed": 538,
+      "failed": 0,
+      "skipped": 4,
+      "cancelled": 0,
+      "todo": 0,
+      "total": 542
+    }
+  },
+  "contract_tests": {
+    "tests": 76,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "sbom": {
+    "schema_valid": true,
+    "spec_version": "1.6",
+    "components": 2658,
+    "representative_packages": {
+      "juice-shop": "20.3.0",
+      "express": "4.22.3",
+      "sqlite3": "5.1.7"
+    },
+    "sha256": "a3f32fce74e5cc1c0fba04eb813b42617fead4e18a2476f9aade439d5aaae916"
+  },
+  "runtime": {
+    "passed": true,
+    "http_checks_passed": 7,
+    "http_checks_total": 7,
+    "evidence_sha256": "33de8cb8e629099e87d947ba2e36b8c8eebe51850b7b10f5ce87a463f0631a45"
+  },
+  "dast_urls_reached": 121,
+  "dast_routes_verified": true,
+  "scanner_cleanup_verified": true,
+  "summary": {
+    "step_conclusion": "success",
+    "github_step_summary_write_completed": true,
+    "bytes": 7435,
+    "sha256": "fb6f1dd2e2485b31097d2e55ca9ed2b4ea8e2f06f44123db898632cc0471694c",
+    "artifact_matches_logged_summary_hash": true,
+    "regenerated_body_matches_artifact": true,
+    "browser_visual_verification": false
+  },
+  "pdf_scope": "checked-in twelve-page pre-hosted local snapshot; bytes verified unchanged",
+  "additional_provider_calls": 0,
+  "purchases_or_billing_changes": false,
+  "remaining": "High/lower risks deferred; live AI evaluation, independent labels/human review and oral assessment remain pending",
+  "verified_at_utc": "2026-10-22T20:01:58.644034+00:00",
+  "owned_cluster_cleanup_step": "success",
+  "lint_and_snippet_step": "success"
+}

@@ -1,0 +1,135 @@
+{
+  "proposals": [
+    {
+      "id": "pf-001",
+      "operation": "disable-sa-token",
+      "rule_id": "CKV_K8S_38",
+      "target": "infra/k8s/deployment.yaml",
+      "before_sha256": "28921d73afa3edc5ffbe770be2dea4aee10ab44399c2c6c5262e89b53170569e",
+      "after_sha256": "7d14e785b83f3f7492d2c5d4c9327f72163204163ee0801410bf6a756db854a5",
+      "patch_sha256": "a03f1feba8978f8c9f5c71d64d29e8ea0da510255de895bc714f955a056b2292",
+      "files_changed": 1,
+      "authorship": "Codex coding assistant authored bounded local template; external triage API attempts returned HTTP 429",
+      "external_api_generated_plan_claimed": false,
+      "applied_to_working_branch": false,
+      "phases": {
+        "before": {
+          "scanner_exit": 1,
+          "target_check": "failed",
+          "scanner_report_sha256": "30987ee13a4dd8ed05cfcfe1a52b4117fc8578f9933620b4f0ba401018378771",
+          "ready": true,
+          "functional": {
+            "home": 200,
+            "products": 200,
+            "product_count": 3,
+            "uid": 65532,
+            "token_present": true
+          }
+        },
+        "after": {
+          "scanner_exit": 0,
+          "target_check": "passed",
+          "scanner_report_sha256": "12bdbe27736cf22cef9ad225be1ffb4136933ef109b3655b63344d787540d394",
+          "ready": true,
+          "functional": {
+            "home": 200,
+            "products": 200,
+            "product_count": 3,
+            "uid": 65532,
+            "token_present": false
+          }
+        }
+      },
+      "observed_at_utc": "2026-10-22T14:55:03.247853+00:00",
+      "isolated_namespace_cleanup": true
+    },
+    {
+      "id": "pf-002",
+      "operation": "require-nonroot",
+      "rule_id": "CKV_K8S_23",
+      "target": "infra/k8s/deployment.yaml",
+      "before_sha256": "28921d73afa3edc5ffbe770be2dea4aee10ab44399c2c6c5262e89b53170569e",
+      "after_sha256": "52008c535b57da20497b98bf086910b36a6ad29fe3f65b036616bffea2176862",
+      "patch_sha256": "2fa452234aa9deeb1393aceb834601d6b395d2e426e679294ddb0f46f704cf80",
+      "files_changed": 1,
+      "authorship": "Codex coding assistant authored bounded local template; external triage API attempts returned HTTP 429",
+      "external_api_generated_plan_claimed": false,
+      "applied_to_working_branch": false,
+      "phases": {
+        "before": {
+          "scanner_exit": 1,
+          "target_check": "failed",
+          "scanner_report_sha256": "1fcf674e74a5f5bfc3fb3a0a814659ca5d7070f038eb13381902448f15b809c0",
+          "ready": true,
+          "functional": {
+            "home": 200,
+            "products": 200,
+            "product_count": 3,
+            "uid": 65532,
+            "token_present": true
+          }
+        },
+        "after": {
+          "scanner_exit": 0,
+          "target_check": "passed",
+          "scanner_report_sha256": "4156313f2ba0b9a00562f59bab1362b717f7d31da0c80788320749dc077f12c7",
+          "ready": true,
+          "functional": {
+            "home": 200,
+            "products": 200,
+            "product_count": 3,
+            "uid": 65532,
+            "token_present": true
+          }
+        }
+      },
+      "observed_at_utc": "2026-10-22T14:55:28.231857+00:00",
+      "isolated_namespace_cleanup": true
+    },
+    {
+      "id": "pf-003",
+      "operation": "add-liveness-probe",
+      "rule_id": "CKV_K8S_8",
+      "target": "infra/k8s/deployment.yaml",
+      "before_sha256": "28921d73afa3edc5ffbe770be2dea4aee10ab44399c2c6c5262e89b53170569e",
+      "after_sha256": "6f1de41e2f7163c99abec2df20295f4cfe08bc3ea57917e3c6da21b350b43c42",
+      "patch_sha256": "25d2488d3ae64ea854a32687c5bc1c8c3538f14d9dc09e3846ce58e3534460f5",
+      "files_changed": 1,
+      "authorship": "Codex coding assistant authored bounded local template; external triage API attempts returned HTTP 429",
+      "external_api_generated_plan_claimed": false,
+      "applied_to_working_branch": false,
+      "phases": {
+        "before": {
+          "scanner_exit": 1,
+          "target_check": "failed",
+          "scanner_report_sha256": "af4351ae22155215086361412d78bbd6f2d25d3b0be9e0779e677d3bb3293fd7",
+          "ready": true,
+          "functional": {
+            "home": 200,
+            "products": 200,
+            "product_count": 3,
+            "uid": 65532,
+            "token_present": true
+          }
+        },
+        "after": {
+          "scanner_exit": 0,
+          "target_check": "passed",
+          "scanner_report_sha256": "e5aa63ca69a9e851e4bc2f877df932842967b14d8c57f5116a924523ee38dba6",
+          "ready": true,
+          "functional": {
+            "home": 200,
+            "products": 200,
+            "product_count": 3,
+            "uid": 65532,
+            "token_present": true
+          }
+        }
+      },
+      "observed_at_utc": "2026-10-22T14:55:54.301192+00:00",
+      "isolated_namespace_cleanup": true
+    }
+  ],
+  "human_review": "pending",
+  "pr_submission": "pending"
+}
