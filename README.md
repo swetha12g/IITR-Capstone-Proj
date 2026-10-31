@@ -8,7 +8,7 @@ PipelineFortress — Secure CI/CD with GenAI-Assisted Triage.
 - SUDHEER KUMAR THAMMANA
 - SRAVANI AVADURTHI
 - NIKHIL KUMAR
-- AMIT SAINI
+- AMIT KUMAR SAINI
 
 ## Project overview
 
