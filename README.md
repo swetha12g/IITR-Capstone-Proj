@@ -12,6 +12,10 @@ PipelineFortress — Secure CI/CD with GenAI-Assisted Triage.
 
 ## Project overview
 
+PipelineFortress is an educational DevSecOps project built around a pinned OWASP Juice Shop application and an owned study environment. Its GitHub Actions workflow builds and tests the application, then runs six security stages: SAST, software composition analysis (SCA), secret detection, infrastructure-as-code scanning, container scanning, and passive DAST. Hash-bound stage receipts feed an aggregate verdict; critical findings or missing expected server verdicts fail the gate. The pipeline also checks the exact built image in the study environment, with results summarized in a dashboard and study report.
+
+GenAI-assisted triage is constrained to allowlisted, source-free finding metadata. Deterministic checks validate triage output against scanner evidence, and mock mode supports reproducible runs without API usage. Live model evaluation has not succeeded, so mock results do not demonstrate model accuracy. High and lower-severity findings remain deferred; this intentionally vulnerable training application is not production-ready.
+
 Release materials: [v1.0.0 notes](docs/releases/v1.0.0.md) and [branch promotion status](docs/release-promotion.md). The project tag is separate from the upstream Juice Shop version. Release publication requires successful study CI for the exact promoted `main` commit.
 
 The detailed execution roadmap is available in [docs/PipelineFortress_Detailed_Roadmap.pdf](docs/PipelineFortress_Detailed_Roadmap.pdf).
