@@ -1,5 +1,7 @@
 # Remediation review ledger
 
+The PR delivery and unmerged-draft statements below describe the original 22 October 2026 snapshot. On 31 October the user explicitly authorized merging the proposals and promoting a project release. See [release promotion](release-promotion.md) for verified progress. Owner-directed merging does not establish independent human approval or first-review correctness; those assessment requirements remain open.
+
 The three focused proposals are authored by the Codex coding assistant using bounded local templates. The external triage API returned HTTP429 and is not credited with generating these plans. Each branch must target the integration branch independently. No automatic merge or review-request message is authorized by this ledger.
 
 | Proposal | Change | Actual local verification | Independent review / first-review correctness |

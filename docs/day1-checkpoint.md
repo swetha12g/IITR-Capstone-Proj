@@ -1,4 +1,6 @@
-# Day 1 setup checkpoint — updated 23 October 2026
+# Day 1 setup checkpoint — updated 31 October 2026
+
+**Release preparation — 31 October:** The user authorized merging all three remediation PRs into `feature-16-kick-start`, promoting through `develop` to `main`, and creating a release tag/notes. [Current release record](release-promotion.md) separates verified merges, pending promotion/CI and final publication. The isolated candidate retains all three baseline controls; 125 local contracts and three selected Checkov controls pass. Live AI/independent assessment gaps remain open. Existing local submission artifacts and setup are preserved; no runtime deployment or system installation is part of this request.
 
 Repository: `/home/popos/Capstone/IITR-Capstone-Proj`.
 

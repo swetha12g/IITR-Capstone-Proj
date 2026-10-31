@@ -3,6 +3,8 @@ name: Complete six-stage study pipeline
   push:
     branches:
     - feature-16-kick-start
+    - develop
+    - main
     paths:
     - .github/workflows/study-pipeline.yml
     - app/juice-shop/**

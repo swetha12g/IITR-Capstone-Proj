@@ -2,6 +2,8 @@
 
 PipelineFortress — Secure CI/CD with GenAI-Assisted Triage.
 
+Release materials: [v1.0.0 notes](docs/releases/v1.0.0.md) and [branch promotion status](docs/release-promotion.md). The project tag is separate from the upstream Juice Shop version. Release publication requires successful study CI for the exact promoted `main` commit.
+
 The detailed execution roadmap is available in [docs/PipelineFortress_Detailed_Roadmap.pdf](docs/PipelineFortress_Detailed_Roadmap.pdf).
 
 Status on 23 October 2026: **critical repairs are committed and pushed; local and hosted scans confirm 11 → 0 critical findings** in fresh dependency and rebuilt-image scans. All six scanner stages, exact-image runtime checks and the existing owned study deployment pass. The selected application suites have 2,332 passes and six skips; nine external availability tests are excluded. [Critical remediation and verification](docs/critical-remediation.md).
