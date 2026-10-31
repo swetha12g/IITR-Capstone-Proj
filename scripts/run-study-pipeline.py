@@ -70,7 +70,7 @@ def main():
                 index.append({**report, **{k: metadata[k] for k in ['run_id', 'commit', 'observed_at_utc']}})
         (ROOT / 'reports/private/pipeline/latest-index.json').write_text(json.dumps({'run_id': run_id, 'reports': index}, indent=2) + '\n')
     print(json.dumps({k: result[k] for k in ['verdict', 'run_id', 'operational_errors', 'deferred_observations']}))
-    return 2 if result['operational_errors'] else 0
+    return 2 if result['operational_errors'] else 1 if result['security_blockers'] else 0
 
 
 if __name__ == '__main__':

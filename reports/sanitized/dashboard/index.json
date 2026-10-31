@@ -3,44 +3,43 @@
   "scope": "post-hoc curated fixture/control set; not independent real-world coverage or an exhaustive benchmark",
   "labels_independently_human_reviewed": false,
   "counts": {
-    "observations": 372,
-    "unique_issues": 235,
+    "observations": 251,
+    "unique_issues": 180,
     "by_stage": {
       "sast": 11,
-      "sca": 82,
+      "sca": 23,
       "secrets-history": 68,
-      "secrets-tree": 68,
+      "secrets-tree": 65,
       "iac": 1,
-      "container": 100,
+      "container": 41,
       "dast": 42
     }
   },
+  "critical_issues": 0,
   "stage_observations": {
     "sast": {
       "MEDIUM": 3,
       "HIGH": 8
     },
     "sca": {
-      "MEDIUM": 34,
-      "LOW": 5,
-      "HIGH": 32,
-      "CRITICAL": 11
+      "MEDIUM": 9,
+      "LOW": 4,
+      "HIGH": 10
     },
     "secrets": {
-      "HIGH": 136
+      "HIGH": 133
     },
     "iac": {
       "HIGH": 1
     },
     "container": {
-      "MEDIUM": 51,
-      "HIGH": 27,
-      "LOW": 11,
-      "CRITICAL": 11
+      "MEDIUM": 26,
+      "LOW": 10,
+      "HIGH": 5
     },
     "dast": {
-      "LOW": 16,
       "MEDIUM": 10,
+      "LOW": 16,
       "INFO": 16
     }
   },
@@ -147,7 +146,7 @@
   "stage_durations": [
     {
       "stage": "sast",
-      "seconds": 4.04,
+      "seconds": 4.44,
       "observations": 1
     },
     {
@@ -157,26 +156,66 @@
     },
     {
       "stage": "secrets",
-      "seconds": 2.3,
+      "seconds": 2.24,
       "observations": 1
     },
     {
       "stage": "iac",
-      "seconds": 3.76,
+      "seconds": 2.85,
       "observations": 1
     },
     {
       "stage": "container",
-      "seconds": 10.09,
+      "seconds": 11.59,
       "observations": 1
     },
     {
       "stage": "dast",
-      "seconds": 91.25,
+      "seconds": 56.23,
       "observations": 1
     }
   ],
   "timing_note": "One observation per available stage; no percentile or end-to-end timing inferred from separate runs.",
+  "pipeline_timing": {
+    "run_id": "20261022T181348556832Z",
+    "pipeline_seconds": 93.19,
+    "first_actionable_seconds": 4.65,
+    "observations": 1,
+    "build_test_reused": true,
+    "scope": "Local sequential pipeline only; bootstrap/download and cluster creation excluded. One observation; no percentiles."
+  },
+  "fresh_reproduction_timing": {
+    "pipeline_seconds": 274.71,
+    "first_actionable_seconds": 169.0,
+    "observations": 1,
+    "build_test_reused": false,
+    "scope": "Local sequential pipeline only; bootstrap/download and cluster creation excluded. One observation; no percentiles."
+  },
+  "hosted_verification": {
+    "run_id": 39910883934,
+    "url": "https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39910883934",
+    "conclusion": "success",
+    "critical_observations": 0,
+    "contract_tests": {
+      "tests": 85,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "ai_status": {
+    "successful_live_receipt": false,
+    "live_error": "openai-http-429",
+    "mock_findings": 20,
+    "actual_invoice_cost_usd": null,
+    "independent_evaluation": "pending"
+  },
+  "pr_review": {
+    "published_proposals": 3,
+    "recorded_reviews": 0,
+    "first_review_correctness": null,
+    "scope": "Recorded PR receipt; independent review pending"
+  },
   "image_comparison": {
     "iac_removed": 16,
     "iac_added": 0,
@@ -200,8 +239,10 @@
       "MEDIUM": 51
     }
   },
-  "sbom_components": 2748,
+  "sbom_components": 2658,
+  "current_container_image_id": "sha256:483df66c5bdfb2d47a740243a6db215e6abe43637a3bf23863ebc857997a59d0",
   "database_updated_at": "2026-10-22T07:10:52.423530461Z",
+  "database_scope": "historical Day 4 comparison",
   "deferred_day4_findings": 39,
   "production_readiness_claimed": false
 }

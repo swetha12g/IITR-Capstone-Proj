@@ -171,30 +171,94 @@ Acknowledgement was confirmed before resumed work. Collection at repository HEAD
 |---|---|---|
 | [tools-verification.json](../reports/sanitized/day4/tools-verification.json) | Pinned isolated Checkov/Syft | `4135be334089347843ee17fef22edb270688617fd248fccd12abc7e2869d5229` |
 | [policy-fixtures.json](../reports/sanitized/day4/policy-fixtures.json) | Eight actual CLI fixtures passed | `fb169aa211235fcbad7b990328d018df87cf28ab192ad6dcc745f7990685d821` |
-| [image-build.json](../reports/sanitized/day4/image-build.json) | Allowlisted source-built hardened image | `a3238442400a25676097aa93ad2d21c979da19020e8f93f66ceb20fe56a81a1d` |
-| [runtime-docker.json](../reports/sanitized/day4/runtime-docker.json) | Seven functional checks and runtime controls passed | `6b435530ac780564790cd20227a16eacd516466d16cd5dc699957a9d4ae46220` |
-| [runtime-kubernetes.json](../reports/sanitized/day4/runtime-kubernetes.json) | Ready workload; exact image and seven checks passed | `4692c07d5afca3d61b69ff32e8fe45d046e2c4cae0aeb8a9ab67f241123fe06c` |
-| [deployment.json](../reports/sanitized/day4/deployment.json) | Local manifest/config identities verified | `f3c67478f77bf83a7fa4faf6b4a897d4c76e1bcb9c1b9ddd642a1635d5b03be7` |
+| [image-build.json](../reports/sanitized/day4/image-build.json) | Allowlisted source-built hardened image | `ffd17a6a7eb73aec16c6b28c767fda5ff49cce4e52517b34df1746a461bc1b97` |
+| [runtime-docker.json](../reports/sanitized/day4/runtime-docker.json) | Seven functional checks and runtime controls passed | `674da7ad8f63ca8189f791b89edb8f3b533ecea924b7f0e97ba87c412d6485cd` |
+| [runtime-kubernetes.json](../reports/sanitized/day4/runtime-kubernetes.json) | Ready workload; exact image and seven checks passed | `0f63337a29f158b99f7df104d9d37d0c1f29fff885d7606ab704823a4e388548` |
+| [deployment.json](../reports/sanitized/day4/deployment.json) | Local manifest/config identities verified | `91847e190c2ae2c17a1c7fee425aba12a4dc5274d9480033e81d06c28c1430b9` |
 | [scan-execution.json](../reports/sanitized/day4/scan-execution.json) | Seven comparison stages; one frozen DB | `ba1a025bed099d0833ab033cd709f35da053762adb5694fe0ff7ef69892afa2d` |
 | [gate-summary.json](../reports/sanitized/day4/gate-summary.json) | Study execution passed; 39 findings deferred | `7dfeff0a40b58e8892a69e14953883883a1b51e98ee20752ed60fa04d999394b` |
 | [gate-tests.json](../reports/sanitized/day4/gate-tests.json) | 15 error/security gate contracts passed | `805e9692b39d20b927dad09caebc4abfa9a842387dc950b2bc5f6c676102b820` |
 
 Collection run `20261022T151417042900Z`; SBOM has 2,748 CycloneDX 1.6 components. Kubernetes/Dockerfile failures fell from 17 to one; image identities from 101 to 100 with no new identities. The 38 high/critical image findings and NetworkPolicy gap remain deferred. Raw reports/SBOM stay ignored. The later fresh cluster was healthy; this does not claim recovery of historical unready system pods in the original lab.
 
-## Days 5–10 study evidence — current local snapshot
+## Current critical-remediation evidence — 22 October 2026
 
-The user directed continued assignment execution with vulnerabilities deferred. This supersedes earlier acceptance pauses. The original exact source-exception policy remains unchanged; the automatic six-stage study workflow is separate from the manual historical strict workflow. [Current status](project-completion.md) records all remaining dependencies.
+The later repair supersedes critical deferral. **Fresh source/image scans: 11 → 0 critical underlying issues.** The recorded local source/root-lock snapshot was modified and uncommitted at measurement time; all its stage receipts bind that project tree. Repairs are now committed/pushed as `8ac412e`, with the dynamic Actions report at `1616f14`; fresh hosted run 39842575944 passed all eight jobs with zero critical findings. Earlier hosted runs and fresh-directory datasets below predate this variant. [Current repair state](critical-remediation.md).
+
+| Evidence | Verified scope | SHA-256 |
+|---|---|---|
+| [Complete critical verification](../reports/sanitized/critical-remediation/verification.json) | Zero critical source/image; 2,332 application passes / six skips; 64 current contracts | `641ef286c0c9a9a524dd7c9ef3c153a454a03f38aadb06b558e3b2fe3b5a9971` |
+| [Repair privacy review](../reports/sanitized/critical-remediation/publication-review.json) | Ten unchanged upstream fixture matches; no new matched credential content | `5ccd5165ada3129395435a438688af60e23ab5bacc25f5f0173c29c8173dbb37` |
+| [Original critical baseline](../reports/sanitized/critical-remediation/before.json) | Eleven original issue identities retained | `de9436418da4b48779f3c22cf0093898e508042ef9151e6a0e1623c73fff1f57` |
+| [Actual old/new image probes](../reports/sanitized/critical-remediation/negative-probes.json) | Unsigned JWT and executable query accepted before, rejected after | `bef68612d1b2440f45f8618bcf4cbdc1496a50e9f00bca97100db0f7a36c8a20` |
+| [Critical gate control](../reports/sanitized/critical-remediation/gate-probe.json) | Real CLI exit0 at zero, exit1 with synthetic critical; no scanner evidence modified | `49c78a3f9b81b8dd2d5d3631a6ea2ac91009c92a8c581d11b71eb73e9253e38e` |
+| [Owned study deployment](../reports/sanitized/critical-remediation/deployment-owned-lab.json) | Current verified image deployed | `91847e190c2ae2c17a1c7fee425aba12a4dc5274d9480033e81d06c28c1430b9` |
+| [Owned study runtime](../reports/sanitized/critical-remediation/runtime-owned-lab.json) | Seven checks and controls pass against the exact image | `0f63337a29f158b99f7df104d9d37d0c1f29fff885d7606ab704823a4e388548` |
+| [Temporary cluster cleanup](../reports/sanitized/critical-remediation/run.json) | Owned cluster removed; script exit0 | `eb56831484ba3fa51f621727543461d86f1897e6fabe8933beedbac594e8c9cd` |
+| [Pre-remediation PDF](../output/pdf/history/c7f25d9/PipelineFortress_Study_Report.pdf) | Original twelve-page delivery retained | `dc7bfb3621eed3fc211707f3dfaf8e80c356fcd9b00dfd8fb9a689a65f21b024` |
+
+## Days 5–10 delivery evidence — current mutable receipts and historical snapshots
+
+The user directed completing the study assignment with vulnerabilities deferred. This supersedes earlier security-acceptance pauses. Exact historical source approvals are unchanged; scanner errors, skipped jobs, missing reports and mixed identities remain execution failures. [Current state](project-completion.md) distinguishes implementation delivery from remaining assessment requirements.
 
 | Evidence | Result | SHA-256 |
 |---|---|---|
-| [Local six-stage execution](../reports/sanitized/pipeline/aggregate.json) | All stages complete; findings deferred; zero execution errors | `ecd4986b325616f6dea33347d64d054af2a8c8c769f3a60160fff0071f1e8833` |
-| [Passive ZAP](../reports/sanitized/day5/dast.json) | 121 URLs, route proof and scanner cleanup | `a89cfd3f938d97df327cacede6b5161e3f0cbdc421df4080452fffa75bb8aecb` |
-| [Dashboard inputs/results](../reports/sanitized/dashboard/index.json) | Post-hoc labeled metrics and normalized counts | `84a366f5486f43762fd895e81496c4a25ce806801016895b0368ea9bc5cbe71a` |
-| [Current contract proof](../reports/sanitized/day7/redaction-tests.json) | 62 tests passed; current boundary hash | `62be8f6c95189e51422bb7362fae00141a27048af26525c8c6a01ed7b863e6f7` |
+| [Local full pipeline](../reports/sanitized/pipeline/aggregate.json) | Current repair: all scans complete; 93.19 seconds with explicit fresh-build/test reuse; zero operational errors | `45beece21cd66f470729729938bd17bce2aaaa7feb4d84dc8a2e8f50b282d5c3` |
+| [Hosted run receipt](../reports/sanitized/delivery/ci-receipt.json) | Historical before-repair baseline: eight jobs passed at bef6664 | `e14a9b0aa0c2f08c0bce0729873d62eaed5bd07c3322ecbc6862c6225d970eb7` |
+| [Downloaded artifact verification](../reports/sanitized/delivery/artifact-verification.json) | Official ZIP digest, recomputed aggregate, run/revision and exact image linkage verified | `1e9ca3da0e848633463c1171c463eb476e48b92a0a475335c927334869867038` |
+| [Prior full hosted pass](../reports/sanitized/delivery/historical/39818760193/artifact-verification.json) | Independent preserved success at 61b064f | `359ba82b5d4eeda817afed14eba306fe57dd4752d45d9187246a16cc45439dda` |
+| [Passive ZAP](../reports/sanitized/day5/dast.json) | 121 URLs, route proof and scanner cleanup | `4a50fada231abf874580c939f3107af31acf6acb54219a7231aa989d4b811deb` |
+| [DAST controls](../reports/sanitized/day5/fixture-evidence.json) | Real different-UID access probes and selected bad/fixed header detections pass | `e3321d93ea09361e7b85b8cb5c02ac4d7aad3b9c12292e731c5b8ccc9120d707` |
+| [Dashboard inputs/results](../reports/sanitized/dashboard/index.json) | Current 251 observations / 180 underlying issues; post-hoc fixture metrics | `92c7b919d4e6d1e1401c252e230da7b40571c94208617e6086210f174bfefe75` |
+| [Deferred register](../reports/sanitized/deferred-risks.json) | Current zero critical / 91 high; earlier eleven critical identities retained separately | `02066c5861f27f0835d8770b66c638ff03abbbe3e4b5cad7561c81f47178536e` |
+| [Current contract proof](../reports/sanitized/day7/redaction-tests.json) | 64 tests passed; current boundary/prompt hash | `4d2a3de29e565c4d7ed2496e2672db6cc6c192c2977ec206fe4648c1d159a860` |
+| [Source contract proof](../reports/sanitized/day3/gate-tests.json) | 25 fail-closed contracts passed | `2b297e22685b012374c956c4246a508ef253435ef1a1550dab7a935d0622a477` |
 | [Real OpenAI failure](../reports/sanitized/day8/triage-live-error.json) | HTTP429; no successful live result or billing change | `d9f67208a0f2cd9835dc6752479627032a4d0eb478a962196f04ca0c2a61dddb` |
 | [Three focused proposals](../reports/sanitized/day9/proposals.json) | Actual selected-check and runtime before/after evidence | `3530cd44eaefeecde02df661bc02eb72c78a3a9b4f71176511b9957434b989e4` |
-| [Bootstrap](../reports/sanitized/reproduction/bootstrap.json) | Verified project-local tools; no system packages changed | `18d290df956a2ee1d04af70831854de68f174947e4f129144c8d11ef451a95fc` |
+| [Published draft PRs](../reports/sanitized/day9/pr-receipt.json) | Three green hosted workflows; one-file diffs; independent review pending | `3ed4b17b57df9f8d046283f59d853b2d1547c7bb410b6301d1aa515fe0fd55c5` |
+| [Fresh-directory receipt](../reports/sanitized/reproduction/run.json) | Full 1e0115c pipeline passed; 286.23 seconds; cleanup verified | `50909e46bc99a70c93844894000373f0f86d962feaf5a82c305c89ed4952b600` |
+| [Clean-PATH receipt](../reports/sanitized/reproduction/clean-path-run.json) | Full bef6664 execution; repository-local tools; cleanup verified | `eb3f8d1d01945792476423c0741360f25283f977f1d882fccc11d7df8d4e80f7` |
+| [Final report](../output/pdf/PipelineFortress_Study_Report.pdf) | Current repair report: twelve pages rendered and visually inspected | `e40dc9c60276b800aaa477a4454e0d6aebcdad6761759043d8bfc8dfe2d24e21` |
 
-Fresh clone `6ef16a0` passed all application/pipeline/runtime/mock stages and cleanup: [reproduction receipt](../reports/sanitized/reproduction/run.json), [fresh aggregate](../reports/sanitized/reproduction/pipeline/aggregate.json). It uses the same host Docker/download caches, not a fresh machine. [Controlled bad/fixed DAST proof](../reports/sanitized/day5/fixture-evidence.json) is separate and passed both selected header checks. [Published draft PRs](../reports/sanitized/day9/pr-receipt.json) each retain one focused file diff; genuine review remains pending.
+Fresh-directory runs at 6ef16a0 and 1e0115c share host caches; they are not fresh-machine tests. The later clean-PATH run verifies the Kubernetes-tool selection correction in the existing project directory. Historical fresh datasets have 372 normalized observations / 235 issues; the current local dataset has one fewer passive medium alert instance. No fix is inferred from crawl variation. [Reproduction scope](reproduction.md).
 
-Hosted verdict and downloaded artifact verification are recorded in [the delivery receipt](../reports/sanitized/delivery/ci-receipt.json). Full hosted completion is not claimed while jobs remain in progress. The twelve-page report and its checksum will be indexed with final delivery validation.
+[Hosted run 39821125926](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39821125926) and the three remediation PR workflows passed. All earlier failed runs remain historical failures. Successful live AI, independent labels/human review and oral assessment remain open; no provider retry or purchase was made. [Final validation record](../reports/sanitized/delivery/validation.json) records the historical publication checks; its original report is retained in output history. The current repair receipt identifies the updated report.
+
+## Critical repair hosted publication — 23 October 2026 IST
+
+[Actions Summary](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39842575944) passed on `1616f14`; source and exact-image critical counts are zero. All 2,332 selected application tests and 76 contracts passed; six application skips and nine excluded external checks remain explicit. Hosted totals are 257 cross-stage observations, including 159 high; these are not the local deduplicated register. The original local proof and checked-in PDF remain historical snapshots.
+
+| Evidence | Verified scope | SHA-256 |
+| --- | --- | --- |
+| [Hosted publication verification](../reports/sanitized/critical-remediation/ci/verification.json) | Eight green jobs; archive digest, recomputed gate and run/commit/image bindings | `f18e944842db3c425e54113a257c9dccc48be2d906e7e23fece1683fbedeebbe` |
+| [Published poster copy](../reports/sanitized/critical-remediation/ci/actions-summary.md) | 7,435 bytes identical to logged Actions Summary write and regeneration | `fb6f1dd2e2485b31097d2e55ca9ed2b4ea8e2f06f44123db898632cc0471694c` |
+| [Hosted aggregate](../reports/sanitized/critical-remediation/ci/pipeline/aggregate.json) | Seven stage receipts; zero critical, zero operational errors | `4630822fa0cc3385a2d55a626975a5a3728f2b82cb3d3350dcb8f02221bbea4a` |
+
+## Continuation audit packet — 23 October 2026 IST
+
+The canonical PDF is refreshed with the accepted hosted repair and fresh b20b9b1 checkout. The original pre-hosted PDF remains in versioned history; its original verification receipt now points to those exact preserved bytes. [Full requirement audit](completion-audit.md).
+
+| Evidence | Verified scope | SHA-256 |
+| --- | --- | --- |
+| [Fresh repaired reproduction](../reports/sanitized/reproduction/critical-variant/run.json) | 274.71 seconds; zero critical; complete application/scans/mock/dashboard and cleanup | `8325212c3afa46d99733ff45335c0a134c19e9d35ffd7747f95991465d2cf1c6` |
+| [Refreshed report validation](../reports/sanitized/final-audit/report-validation.json) | Twelve pages rendered and visually inspected; preserved prior PDF | `8b8ede3b1d5d5e680ab84b40dd9bae05d5c67022500e4deecc53027a10a507e7` |
+| [Dashboard visual/timing verification](../reports/sanitized/final-audit/dashboard-validation.json) | 1440px/390px Chrome layout; same-run feedback timing and explicit scope | `19584bb8336e5b94cdbd8ecda0649e5c8ccc613e106732cc18ae37501befd596` |
+| [Current PR observation](../reports/sanitized/final-audit/review-observation.json) | Three separate unmerged one-file drafts; zero independent reviews | `34646f2aefc685ad596f968860d349278c80c8f7d3bece628442ba3602ec81bd` |
+| [Acceptance audit](../reports/sanitized/final-audit/acceptance.json) | Current implementation proofs; external evidence explicitly unachieved | `9f2fc62987f44e5cbf3bdc48964d80432cefe4052a43ab90c00f17b3f5b78342` |
+| [Preserved original repair PDF](../output/pdf/history/1616f14/PipelineFortress_Study_Report.pdf) | Original bytes in accepted ten-file hosted packet | `4d3c34febab430dbbed9b897d625b7955d08edc2f195214de5e03c1f5a4ecf9d` |
+
+## Complete-case hosted verification
+
+| Evidence | Verified scope | SHA-256 |
+| --- | --- | --- |
+| [Full-case CI verification](../reports/sanitized/final-audit/full-case-ci/verification.json) | Eight successful jobs, zero critical, 85 contracts, all 424 server identities | `10d81e652158b19db57cbf78eb42584797b34d397dac1db7fd2c20c0e04a5ddb` |
+| [Published full-case poster](../reports/sanitized/final-audit/full-case-ci/actions-summary.md) | Downloaded bytes match regeneration and logged Summary write | `49c595556b86bbc1c4a24d6752a0d030544fba8d2ee2702ac3c904390d3bf664` |
+| [Later checkout retry](../reports/sanitized/reproduction/final-revision/run.json) | 89d5db7 successful with retained setup failures and hash-verified cached wheels | `7128ba094ecd9bb94fedd1e2d563d4218d3206569f670b42d4e24d2e7b682486` |
+| [Previous inspected PDF](../output/pdf/history/89d5db7/PipelineFortress_Study_Report.pdf) | Preserved twelve-page hosted-repair snapshot | `51d662b3d574a2879bd07cfa14d3867bec351335f930c8cf343ff2427690a364` |
+
+## Final refreshed packet publication
+
+| Evidence | Verified scope | SHA-256 |
+| --- | --- | --- |
+| [Final publication verification](../reports/sanitized/final-audit/publication-ci/verification.json) | Eight green jobs, zero critical, exact refreshed packet and complete case coverage | `8e26e1480cfb2529c387072ab6e84b7fe2e6283944fb93da291fa36801ebdd7d` |
+| [Final published poster](../reports/sanitized/final-audit/publication-ci/actions-summary.md) | Official artifact and logged/regenerated Summary bytes agree | `2f714920fc40e4135800a4630659756f3529b4f5e3a6da05bea318d142207a77` |

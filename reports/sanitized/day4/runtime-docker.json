@@ -1,8 +1,8 @@
 {
-  "observed_at_utc": "2026-10-22T12:02:35.826817+00:00",
+  "observed_at_utc": "2026-10-22T18:13:16.409114+00:00",
   "mode": "docker",
-  "image_config_id": "sha256:3eb3e0ff60e5fba12f014e5fcc9f6086fa7f366139d52a4bce44e598a3e860e9",
-  "image_size_bytes": 345391667,
+  "image_config_id": "sha256:483df66c5bdfb2d47a740243a6db215e6abe43637a3bf23863ebc857997a59d0",
+  "image_size_bytes": 356314500,
   "checks": [
     {
       "id": "http-home",
@@ -14,7 +14,7 @@
       "id": "products",
       "http_status": 200,
       "passed": true,
-      "response_sha256": "ee9cd39559a05a4335b1d548d5546257aadfc396320b046c651c25b0f8834385"
+      "response_sha256": "76149f34d2d76a7d10b5bb324c1cb0b86c5faf342eb5cf576779e40ae2e1ba72"
     },
     {
       "id": "languages",
@@ -32,13 +32,13 @@
       "id": "training-directory-listing",
       "http_status": 200,
       "passed": true,
-      "response_sha256": "0c2e4aeb98c1af92c7bd4b73580605d2f7317de6e35cea61ce3cf087da56b87d"
+      "response_sha256": "9769d9627a595c4cf1a2ee97d5b3de4b7d740b5cdb6f37282e6577893a7747d1"
     },
     {
       "id": "training-metrics",
       "http_status": 200,
       "passed": true,
-      "response_sha256": "818fea411546b67f17747ac0c1d28cea3fb9036048cdf5b9d9128269528447a2"
+      "response_sha256": "7d2a9b96705d80f2482476174b17c5c749fd87db450339a3ed27d632cd300896"
     },
     {
       "id": "training-sql-error",

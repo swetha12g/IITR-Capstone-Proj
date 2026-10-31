@@ -2,14 +2,14 @@
   "schema_version": 1,
   "stage": "sast",
   "execution": "complete",
-  "run_id": "20261022T152803854522Z",
-  "commit": "6ef16a09d9c60ab5b78136f3430590fcefba8d7a",
-  "observed_at_utc": "2026-10-22T15:30:43.032881+00:00",
+  "run_id": "20261022T155913232877Z",
+  "commit": "1e0115c14c85fd28332d85151b7ec560b8837c91",
+  "observed_at_utc": "2026-10-22T16:01:54.527493+00:00",
   "reports": [
     {
       "scanner_stage": "sast",
       "exit_code": 1,
-      "sha256": "b64eb53982dab69bd271f3af593ae9fcbf1c93871e814b50a2e170285bf060c3"
+      "sha256": "613bff4c67f6ac82b746877abef2ad84134babb49ccfac1173c182c0cb49cea0"
     }
   ],
   "findings_by_severity": {
@@ -31,5 +31,5 @@
   ],
   "profile": "study-lab",
   "deferred_findings": 11,
-  "duration_seconds": 4.14
+  "duration_seconds": 3.99
 }

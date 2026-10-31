@@ -15,6 +15,9 @@ import time
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from triage.test_results import parse_test_totals
+from triage.server_tests import verify_inventory
 APP = ROOT / "app/juice-shop"
 STEPS = {
     "install-server": ["npm", "ci", "--no-audit", "--no-fund"],
@@ -60,6 +63,8 @@ def main():
     report = {
         "run_id": run_id,
         "source_commit": "f189f521266f42c6bd05884468292000cee852ed",
+        "project_commit": subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
+        "ci_run_id": os.environ.get('GITHUB_RUN_ID'),
         "node_version": node,
         "npm_version": npm,
         "selected_steps": args.steps,
@@ -82,12 +87,18 @@ def main():
     save()
     for step in args.steps:
         command = STEPS[step]
+        junit_path = private / 'test-server.xml'
+        if step == 'test-server':
+            command = ['node', '--import', './test/server/helpers/test-env.mjs', '--import', 'tsx',
+                       '--test', '--test-concurrency=1', '--test-reporter=spec', '--test-reporter-destination=stdout',
+                       '--test-reporter=junit', '--test-reporter-destination=' + os.path.relpath(junit_path, APP),
+                       'test/server/**/*.unit.test.ts']
         if args.offline and step == "test-api":
             files = sorted(str(p.relative_to(APP)) for p in (APP / "test/api").rglob("*.test.ts") if p.name != "internet-resources.test.ts")
             if not files:
                 raise ValueError("No local API test files selected")
             command = ["node", "--import", "./test/api/helpers/test-env.mjs", "--import", "tsx",
-                       "--test", "--test-force-exit", *files]
+                       "--test", "--test-concurrency=2", *files]
         log_path = private / f"{step}.log"
         started = datetime.now(timezone.utc).isoformat()
         before = time.monotonic()
@@ -108,9 +119,27 @@ def main():
         report["steps"].append({
             "step": step, "command": command, "started_at_utc": started,
             "duration_seconds": round(time.monotonic() - before, 2),
-            "exit_code": code, "log_reference": str(log_path.relative_to(ROOT)),
+            "exit_code": code, "process_exit_code": code, "log_reference": str(log_path.relative_to(ROOT)),
             "log_sha256": sha256(log_path),
         })
+        if step.startswith('test-'):
+            try:
+                totals = parse_test_totals(log_path.read_text(), 'vitest' if step == 'test-frontend' else 'node')
+                report['steps'][-1]['test_totals'] = totals
+                if step == 'test-server':
+                    baseline_path = ROOT / 'locks/juice-shop/server-test-inventory.json'
+                    checked = verify_inventory(junit_path, APP, json.loads(baseline_path.read_text()))
+                    checked['baseline_sha256'] = sha256(baseline_path)
+                    checked['reporter_totals_agree'] = all(totals[k] == checked['junit_totals'][k] for k in ['total', 'passed', 'failed', 'skipped'])
+                    report['steps'][-1]['case_inventory'] = checked
+                    if not checked['matched'] or not checked['reporter_totals_agree']:
+                        report['steps'][-1]['test_evidence_error'] = 'server-case-inventory-mismatch'
+                        report['steps'][-1]['exit_code'] = code = code or 1
+                if totals['failed'] or totals['cancelled'] or totals['todo'] or not totals['passed']:
+                    report['steps'][-1]['exit_code'] = code = code or 1
+            except (OSError, ValueError, KeyError, TypeError, SyntaxError):
+                report['steps'][-1]['test_evidence_error'] = 'missing-or-invalid-test-report'
+                report['steps'][-1]['exit_code'] = code = code or 2
         save()
         print(f"Finished {step}: exit {code}.", flush=True)
         if code and step in {"install-server", "install-frontend", "build"}:

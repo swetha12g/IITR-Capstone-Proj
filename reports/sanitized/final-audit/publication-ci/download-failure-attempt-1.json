@@ -1,0 +1,73 @@
+{
+  "observed_at_utc": "2026-10-23T06:46:30.504022+00:00",
+  "run_id": 39912532895,
+  "attempt": 1,
+  "job_id": 120281275604,
+  "stage": "container",
+  "failed_step": "Download exact built image",
+  "error": "GitHub signed artifact URL request ECONNRESET",
+  "scan_executed": false,
+  "image_digest_check_relaxed": false,
+  "retry": "Failed jobs only after terminal run; preserve successful source/build/test execution",
+  "terminal_conclusion": "failure",
+  "jobs": [
+    {
+      "id": 120278568584,
+      "name": "secrets",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120278568822,
+      "name": "sast",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120278568938,
+      "name": "sca",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120278568993,
+      "name": "iac",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120278569084,
+      "name": "build-test",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120281275594,
+      "name": "dast",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 120281275604,
+      "name": "container",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "id": 120282758280,
+      "name": "aggregate",
+      "status": "completed",
+      "conclusion": "failure"
+    }
+  ],
+  "failed_summary_artifact_metadata": {
+    "id": 12484430445,
+    "name": "aggregate-study-evidence",
+    "digest": "sha256:b0140abf5563faf7040e1f1e5ba060c7742f32d635d6309e57ebdb542b45572b",
+    "size_in_bytes": 42810,
+    "created_at": "2026-10-23T06:49:27Z"
+  },
+  "failed_summary_archive_digest_independently_checked": false,
+  "retry_request_accepted": true,
+  "retry_scope": "Failed jobs only; same run ID and commit; successful source/build/test/runtime jobs retained"
+}

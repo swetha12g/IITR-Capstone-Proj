@@ -6,16 +6,16 @@ Generated from the current verified evidence. PDF: `output/pdf/PipelineFortress_
 
 Secure CI/CD with GenAI-assisted triage. CAP-DSE-3W individual study implementation and evidence report.
 
-| Six security stages | Application tests | Underlying issues |
+| Six security stages | Hosted application tests | Local issue register |
 |---|---|---|
-| Executed locally | 2,326 passed / 7 skipped | 235 open and deferred |
+| Local + hosted; zero critical | 2332 passed / 6 skipped | 180 open and deferred |
 
 
 ### Outcome and operating decision
 
 The owned lab now executes SAST, dependency, secret, IaC, image and passive runtime scans. A hardened source-built image is linked through deployment, container inventory and scan evidence. Source-free normalization, mock triage, refusal tests and bounded local patch templates are implemented.
 
-On 22 October the project owner directed completing the study assignment before later vulnerability remediation. The study profile therefore records security findings and continues. It does not convert findings into fixes or authorize production promotion.
+The project owner subsequently requested fixing all critical findings. Current source and image scans report zero critical findings after dependency replacement and authentication/query hardening. A new zero-critical gate rejects regressions; lower severities remain visible and deferred. Production readiness is not claimed.
 
 
 ### Completion boundary
@@ -40,18 +40,18 @@ Validated operations map to fixed local templates. A human review step is separa
 
 | Component | Verified configuration |
 |---|---|
-| Target | OWASP Juice Shop 20.3.0; immutable imported source; original license retained |
+| Target | OWASP Juice Shop 20.3.0; pinned upstream base with documented critical-remediation modifications; original license retained |
 | Node / Python | Build Node 24.22.0; runtime 24.22.1; isolated Python 3.10 |
 | Scanners | Semgrep 1.181.0; Trivy 0.76.0; Gitleaks 8.30.1 |
 | IaC / inventory / runtime | Checkov 3.3.30; Syft 1.55.0; ZAP 2.17.0 |
 | Kubernetes lab | kind 0.33.0; Kubernetes/kubectl 1.37.0 |
 | Installation boundary | Project/user-local tools; scanner distributions and base images pinned |
 
-The fresh offline application profile passes root/frontend installation, explicit production build, frontend tests, server tests and local API tests. Counts are 1,372 frontend, 417 server and 537 API tests passed, with seven upstream skips and zero selected failures.
+The fresh offline application profile passes root/frontend installation, explicit production build, frontend tests, server tests and local API tests. Counts are 1372 frontend, 422 server and 538 API tests passed, with 6 upstream skips and zero selected failures.
 
 A separate online attempt retained six failures from external-service DNS lookup errors. The offline profile excludes the entire nine-test internet-resource availability suite. It does not suppress a local application test failure. Historical online baseline counts remain separate.
 
-Application source and both retained dependency locks are preserved. Supported runtimes, lock comparisons and exact image identity are checked rather than inferred from a tag.
+The historical upstream import remains traceable. The remediation variant updates the root lock, replaces unsafe dependencies and hardens JWT/database queries; the frontend lock is preserved. Hosted run 39910883934 verifies the repaired source at 06c8e1d. All seven stage receipts bind one source tree, run and commit; build, container and DAST bind the exact image.
 
 
 ## 4. Observed runtime baseline
@@ -66,32 +66,39 @@ Application source and both retained dependency locks are preserved. Supported r
 
 Seven functional/training checks pass in Docker and Kubernetes. The observations are against the owned lab only. No external exploitation, authenticated coverage or customer-data access is claimed.
 
-Infrastructure hardening preserves the intentionally vulnerable application. Its behavior is part of the study baseline and remains in the deferred register. A passing runtime check establishes the expected behavior, not absence of security weaknesses.
+The critical repairs prevent unsigned JWTs, executable selectors and the old sanitizer bypass; these training exploits are no longer solvable. Remaining intentional behaviors stay in the deferred register. A passing runtime check establishes specific expected behavior, not absence of weaknesses. Process-local signing keys require renewed sessions after a restart.
 
 The active hardened workload is Ready with zero restarts at verification. Earlier readiness issues in other pre-existing system pods are retained as a lab limitation; application readiness is not a complete cluster-health or CIS assessment.
 
 
 ## 5. Six stages and the authoritative verdict
 
-| Stage | Normalized observations | Execution |
+| Stage | Local normalized observations | Execution |
 |---|---|---|
 | SAST | 11 | Complete; findings deferred |
-| SCA | 82 | Complete; findings deferred |
-| SECRETS | 136 | Complete; findings deferred |
+| SCA | 23 | Complete; findings deferred |
+| SECRETS | 133 | Complete; findings deferred |
 | IAC | 1 | Complete; findings deferred |
-| CONTAINER | 100 | Complete; findings deferred |
+| CONTAINER | 41 | Complete; findings deferred |
 | DAST | 42 | Complete; findings deferred |
 
-The complete local run is 20261022T145253045022Z. Its aggregate verdict is PASS_WITH_DEFERRED_RISKS, with 0 operational errors. The stage receipts retain raw report hashes and exact image linkage.
+The complete local run is 20261022T181348556832Z. Its aggregate verdict is PASS_WITH_DEFERRED_RISKS, with 0 operational errors. The stage receipts retain raw report hashes and exact image linkage.
 
-That execution took 115.75 seconds after explicit reuse of a freshly verified build/test. The application check stages took 144.17 seconds separately; these observations do not establish a pipeline percentile or include every bootstrap/download cost.
+That execution took 93.19 seconds after explicit reuse of a freshly verified build/test. The application check stages took 143.51 seconds separately. Bootstrap/download costs are additional; no percentile is inferred.
 
 The hosted workflow defines six scan jobs, build/test and one final aggregate job. It uses read-only PR permissions, pinned action SHAs, full history for secrets, an integrity-checked image archive between jobs and cleanup of its own staging cluster. Skipped jobs, malformed/missing receipts, scanner errors and mixed identities cannot pass the execution check.
 
-Hosted verification: completed; conclusion: failure. Run: https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39805306325
+Fresh hosted repair verification: all eight jobs passed. The independently verified artifact contains 258 cross-stage observations and zero critical, security blockers or operational errors. These counts include source/image and history/tree duplicates; they are not the local globally deduplicated register. The published Actions poster includes actual test, scan, runtime and receipt details.
+
+Server coverage: all 424 expected case/status identities match across 41 files, including five passing critical regressions. Forced exit is disabled; missing verdicts fail the build.
+
+Actions Summary: https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39910883934. Artifact SHA-256: 1a1ea418cfd2b8edff5b31637c9ddf4f0cd6fe3e2c2e248f3be0b412a16a78b3. Gate recomputation, source/image bindings and identical published poster bytes are verified.
 
 
 ## 6. Hardening and software inventory
+
+
+### Historical Day 4 comparison, before dependency repair
 
 | Measure | Baseline | Hardened |
 |---|---|---|
@@ -104,7 +111,9 @@ Hosted verification: completed; conclusion: failure. Run: https://github.com/swe
 
 The runtime uses UID/GID 65532, no effective or bounding capabilities, no-new-privileges, RuntimeDefault seccomp and a read-only root filesystem. Application code and immutable seed reject writes. Explicit bounded writable mounts preserve SQLite, restored training files, translations, customized frontend media, uploads, logs, CSAF metadata and temporary files.
 
-Both immutable image configuration IDs were scanned under one frozen Trivy database. One unknown CA-certificate advisory was removed; no new identity was introduced in that comparison. The 38 high/critical image identities remain. Syft CycloneDX 1.6 validates against hash-pinned official schemas and representative installed package versions.
+In the historical Day 4 comparison, both immutable image configuration IDs were scanned under one frozen Trivy database. One unknown CA-certificate advisory was removed; no new identity was introduced in that comparison. That comparison predates the later zero-critical remediation; current residual counts are shown separately. Syft CycloneDX 1.6 validates against hash-pinned official schemas and representative installed package versions.
+
+Current hosted repaired image: zero critical and five high observations; schema-valid CycloneDX 1.6 inventory has 2658 components. Its configuration ID is sha256:f6009212c760b51c64523806973c7f31b9f1538975025d94b67e0e8098abf247. The exact-image inventory and seven hosted runtime checks passed.
 
 Selected controls are mapped to CIS Kubernetes 2.0.0. NetworkPolicy remains a declared gap and enforcement is unverified. No full benchmark or cluster certification is claimed. A Docker configuration ID, a registry base index digest and a local containerd manifest digest are different identifiers.
 
@@ -143,17 +152,17 @@ The curated set combines deliberately unsafe and repaired source, advisory, cana
 
 The measured 93.3% fixture recall exceeds the scenario target on this small set. Labels were curated after the broader study work and are not independently human reviewed. The result is not an estimate of all real-world vulnerabilities, a blinded benchmark or evidence that remaining app defects were found.
 
-The dashboard recomputes from normalized evidence and labels, exports JSON/CSV, separates observations from underlying issues and displays known misses. Empty denominators are N/A. It does not present percentiles from one timing observation. Current global underlying issue count is 235.
+The dashboard recomputes from normalized evidence and labels, exports JSON/CSV, separates observations from underlying issues and displays known misses. Empty denominators are N/A. It does not present percentiles from one timing observation. Current global underlying issue count is 180.
 
 
 ### Deferred underlying issues by severity
 
 | Severity | Underlying issues |
 |---|---|
-| CRITICAL | 11 |
-| HIGH | 109 |
-| MEDIUM | 70 |
-| LOW | 29 |
+| CRITICAL | 0 |
+| HIGH | 91 |
+| MEDIUM | 45 |
+| LOW | 28 |
 | INFO | 16 |
 
 
@@ -167,7 +176,7 @@ The dashboard recomputes from normalized evidence and labels, exports JSON/CSV, 
 | Grounding | Unknown IDs, invented CVEs/versions, unsupported operations and omissions rejected |
 | Live restrictions | OpenAI only; no tools; store=false; bounded tokens, attempts and conservative reservations |
 
-62 tests cover the relevant normalization, aggregate, boundary, grounding and bounded-patch behavior. A twenty-finding mock batch validates; mock output is deterministic policy behavior and is not reported as a real model evaluation.
+85 hosted contracts pass across normalization, aggregation, AI boundary, grounding, bounded patches and report behavior. A twenty-finding mock batch validates; mock output is deterministic policy behavior and is not reported as a real model evaluation.
 
 The user-selected existing OpenAI key passed read-only model lookup. All three bounded generation attempts returned HTTP429; a specific underlying cause was not established. No successful model output or actual token/invoice cost is fabricated. The request cap is exhausted. No credits were purchased, account topped up or billing settings changed.
 
@@ -188,14 +197,16 @@ Each proposal has a bounded single-file diff, before/after hashes, actual select
 
 The Codex coding assistant authored the templates. The unavailable external application API is not credited with generating them. Three examples do not close the larger risk backlog, which remains deferred by the user.
 
-Draft PR links recorded: 3. Genuine review/first-review correctness is pending unless the review ledger records a real verdict. No author self-approval, fabricated independent review or automatic merge is claimed.
+Earlier infrastructure draft PR links recorded: 3. Genuine review/first-review correctness is pending unless the review ledger records a real verdict. No author self-approval, fabricated independent review or automatic merge is claimed.
 
 
 ## 11. Reproduction and maturity self-assessment
 
 Reproduction bootstraps project-local Python/pip/Node and verified scanner/tool distributions, runs the selected application suites, rebuilds the image, scans all stages, deploys into a uniquely named temporary kind cluster, runs passive DAST, normalizes, checks mock AI safeguards and regenerates the dashboard. Live API usage is excluded from reproduction by default.
 
-Fresh-directory result: PASS_WITH_DEFERRED_RISKS, commit 6ef16a0. Temporary-cluster cleanup verified: True. This is a fresh project directory on the same Docker host with standard caches, not a fresh-machine test. The later isolated DAST fixture was verified separately. The original study cluster is a separate resource.
+Fresh-directory result: PASS_WITH_DEFERRED_RISKS, commit b20b9b1. Temporary-cluster cleanup verified: True. This is a fresh project directory on the same Docker host with standard caches, not a fresh-machine test. The later isolated DAST fixture was verified separately. The original study cluster is a separate resource.
+
+The repaired fresh checkout completed the full selected pipeline in 274.71 seconds, without build/test reuse. Project-local bootstrap, clean initial PATH, 2,332 application passes, six skips, all scans, a twenty-item mock batch and owned-cluster cleanup passed. No live API request was made.
 
 
 ### OWASP SAMM v2 lens
@@ -214,7 +225,7 @@ SAMM uses maturity activities across three levels and fifteen practices. Selecte
 
 The target is the owned local training application and ephemeral CI/reproduction labs. The acknowledgement was confirmed before Day 4 implementation resumed. Signed material, API credentials, raw scanner matches, private paths and the complete SBOM remain outside public artifacts.
 
-The current deferred register contains 235 underlying issues, including 11 critical and 109 high. Deferral is an explicit study decision, not remediation. Later work should prioritize compatible dependency fixes, tested traffic isolation, genuine-secret response if ever confirmed and human-reviewed behavior-preserving changes.
+The current deferred register contains 180 underlying issues, including 0 critical and 91 high. Deferral is an explicit study decision, not remediation. Later work should prioritize compatible dependency fixes, tested traffic isolation, genuine-secret response if ever confirmed and human-reviewed behavior-preserving changes.
 
 GenAI disclosure: the Codex coding assistant authored implementation, tests, documentation and bounded proposals. OpenAI GPT-6 Luna is the configured external triage model; unsuccessful live attempts and mock results are separated. Human review and remaining assessment dependencies are not invented.
 
@@ -228,4 +239,4 @@ GenAI disclosure: the Codex coding assistant authored implementation, tests, doc
 | OpenAI model / price | https://developers.openai.com/api/docs/models/gpt-6-luna |
 | OpenAI data controls | https://developers.openai.com/api/docs/guides/your-data |
 
-Submission limits: successful external live triage, genuine PR review and any unrecorded hosted/fresh run must remain open requirements. No grade, exhaustive detection, full CIS compliance or production readiness is asserted.
+Submission limits: successful external live triage, independent detection labels, genuine PR review and oral/submission acceptance remain open. Hosted critical-remediation verification is complete. No grade, exhaustive detection, full CIS compliance or production readiness is asserted.

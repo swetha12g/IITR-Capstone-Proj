@@ -1,8 +1,8 @@
 {
-  "observed_at_utc": "2026-10-22T14:53:14.854653+00:00",
+  "observed_at_utc": "2026-10-22T18:17:02.826026+00:00",
   "mode": "kubernetes",
-  "image_config_id": "sha256:3eb3e0ff60e5fba12f014e5fcc9f6086fa7f366139d52a4bce44e598a3e860e9",
-  "image_size_bytes": 345391667,
+  "image_config_id": "sha256:483df66c5bdfb2d47a740243a6db215e6abe43637a3bf23863ebc857997a59d0",
+  "image_size_bytes": 356314500,
   "checks": [
     {
       "id": "http-home",
@@ -14,7 +14,7 @@
       "id": "products",
       "http_status": 200,
       "passed": true,
-      "response_sha256": "4e67c5aa3bb8d20091bebd6e4317f9386aa55a2d6b0ed6f254a5414bce9a40e4"
+      "response_sha256": "132bbbabefc1a983129109dd939f1036bf25973a8d0a5e02ab7a859cea56d9eb"
     },
     {
       "id": "languages",
@@ -32,13 +32,13 @@
       "id": "training-directory-listing",
       "http_status": 200,
       "passed": true,
-      "response_sha256": "84a4df824fbfed008008963fe435fcec637bdea413726140b88ca097a446d2f0"
+      "response_sha256": "c05b4312b04cf992b7ef7bb301532cb7c110ef999d0edae708b2b102f432974f"
     },
     {
       "id": "training-metrics",
       "http_status": 200,
       "passed": true,
-      "response_sha256": "799f6fcf31122c401460cecb984864a1e9468e5e1960ce944d696d8eebae79a9"
+      "response_sha256": "eba1c91254f2054721530c57c2de9986f9bff3736de14ddd742ec835bc9226bf"
     },
     {
       "id": "training-sql-error",
@@ -80,8 +80,8 @@
       }
     },
     "automountServiceAccountToken": false,
-    "cri_manifest_reference": "docker.io/library/import-2026-10-22@sha256:77f2b09d4c678186e64caafef22ec929a01f4211a1e12d67b28d97e008707549",
-    "cri_config_id": "sha256:3eb3e0ff60e5fba12f014e5fcc9f6086fa7f366139d52a4bce44e598a3e860e9",
+    "cri_manifest_reference": "docker.io/library/import-2026-10-22@sha256:9e3aa88e12365ecf45f3d5483638ee280ce857a226a1ee8da25cd3e62a115159",
+    "cri_config_id": "sha256:483df66c5bdfb2d47a740243a6db215e6abe43637a3bf23863ebc857997a59d0",
     "restarts": 0
   },
   "controls": {

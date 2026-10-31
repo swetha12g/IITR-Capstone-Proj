@@ -12,10 +12,17 @@ from .normalize import adapt
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = {'build-test', 'sast', 'sca', 'secrets', 'iac', 'container', 'dast'}
+SOURCE_PATHS = ['app/juice-shop', 'infra', 'scripts', 'locks', 'policies', 'triage', 'metrics', 'prompts', 'tests', 'requirements-dev.txt']
 
 
 def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def project_tree_digest():
+    names = subprocess.check_output(['git', 'ls-files', '--cached', '--others', '--exclude-standard', '-z', '--', *SOURCE_PATHS], cwd=ROOT).decode().split('\0')
+    entries = [{'file': name, 'sha256': sha(ROOT / name)} for name in sorted(set(filter(None, names))) if (ROOT / name).is_file()]
+    return hashlib.sha256(json.dumps(entries, sort_keys=True).encode()).hexdigest()
 
 
 def publish(stage, reports, **context):
@@ -38,6 +45,8 @@ def publish(stage, reports, **context):
     receipt = {'schema_version': 1, 'stage': stage, 'execution': 'complete',
                'run_id': os.environ.get('PIPELINEFORTRESS_RUN_ID', os.environ.get('GITHUB_RUN_ID', 'local')),
                'commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT).decode().strip(),
+               'project_tree_sha256': project_tree_digest(),
+               'worktree_modified': bool(subprocess.check_output(['git', 'status', '--porcelain', '--', *SOURCE_PATHS], cwd=ROOT)),
                'observed_at_utc': datetime.now(timezone.utc).isoformat(), 'reports': evidence,
                'findings_by_severity': dict(sorted(counts.items())), 'finding_fingerprints': sorted(fingerprints),
                'profile': 'study-lab', 'deferred_findings': sum(counts.values()), **context}
@@ -91,11 +100,16 @@ def aggregate(directory, needs=None):
             errors.append('image-linkage-mismatch')
         if not receipts['dast'].get('routes_verified') or not receipts['dast'].get('cleanup_verified'):
             errors.append('dast-coverage-or-cleanup-missing')
+        trees = [r.get('project_tree_sha256') for r in receipts.values()]
+        if any(trees) and (any(not isinstance(t, str) or not re.fullmatch(r'[a-f0-9]{64}', t) for t in trees) or len(set(trees)) != 1):
+            errors.append('mixed-or-invalid-project-tree')
     counts = Counter()
     for receipt in receipts.values():
         counts.update(receipt['findings_by_severity'])
-    return {'schema_version': 1, 'profile': 'study-lab', 'verdict': 'ERROR' if errors else 'PASS_WITH_DEFERRED_RISKS' if counts else 'PASS',
+    security_blockers = ['critical-vulnerabilities-remain'] if counts['CRITICAL'] else []
+    return {'schema_version': 1, 'profile': 'study-lab', 'verdict': 'ERROR' if errors else 'FAIL_CRITICAL' if security_blockers else 'PASS_WITH_DEFERRED_RISKS' if counts else 'PASS',
             'operational_errors': errors, 'stage_count': len(receipts), 'security_scan_stages': len(REQUIRED) - 1,
+            'security_blockers': security_blockers, 'critical_observations': counts['CRITICAL'],
             'findings_by_severity': dict(sorted(counts.items())), 'deferred_observations': sum(counts.values()),
-            'note': 'Study findings do not stop execution; counts include observations across stages, not deduplicated global issues.',
+            'note': 'Critical findings fail the gate; lower severities remain visible and deferred. Counts include cross-stage observations, not deduplicated global issues.',
             'receipts': [{'stage': s, 'sha256': sha(directory / (s + '.json'))} for s in sorted(receipts)]}

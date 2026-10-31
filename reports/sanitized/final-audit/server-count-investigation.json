@@ -1,0 +1,150 @@
+{
+  "observed_at_utc": "2026-10-23T05:45:25.645078+00:00",
+  "earlier_hosted_run": 39842575944,
+  "earlier_server_passed": 422,
+  "later_hosted_run": 39850270120,
+  "later_server_passed": 395,
+  "reported_count_difference": 27,
+  "application_source_diff_between_revisions": "none",
+  "local_concurrency": 2,
+  "local_text_and_junit_agree": true,
+  "local_totals": {
+    "total": 424,
+    "passed": 422,
+    "failed": 0,
+    "skipped": 2
+  },
+  "local_critical_regressions_passed": 5,
+  "root_cause": "Observed verdict loss while using Node --test-force-exit; matches primary upstream issue 64833. Earlier hosted per-case losses cannot be reconstructed exactly.",
+  "new_control": "Exact hashed case-and-status inventory required before build receipt; sanitized check manifest retained on failure; raw JUnit stays private",
+  "local_junit_sha256": "fed0aaedc24a72f304816d1c53b95710242a9ecf290a362795d70e51adc510d1",
+  "baseline_sha256": "22f866f2a2380d32538c68cfc36136adcd226029eb0161a29d61ad5b683ba480",
+  "default_concurrency_local_reproduction": {
+    "total": 406,
+    "passed": 404,
+    "skipped": 2,
+    "missing_cases": 18,
+    "file": "test/server/insecurity.unit.test.ts",
+    "runner_exit_code": 0
+  },
+  "serialized_runs": [
+    {
+      "run": 1,
+      "passed": 422,
+      "skipped": 2,
+      "case_count": 424,
+      "all_expected_case_identities_match": true,
+      "critical_regressions_passed": 5
+    },
+    {
+      "run": 2,
+      "passed": 422,
+      "skipped": 2,
+      "case_count": 424,
+      "all_expected_case_identities_match": true,
+      "critical_regressions_passed": 5
+    }
+  ],
+  "mitigation": "Remove forced exit from server/API suites; bound file concurrency; retain exact server case/status equality and agreeing spec/JUnit totals",
+  "enforced_ci_gate": {
+    "run_id": 39908648090,
+    "node_process_exit": 0,
+    "harness_exit": 1,
+    "reported": {
+      "passed": 411,
+      "failed": 0,
+      "skipped": 2,
+      "cancelled": 0,
+      "todo": 0,
+      "total": 413
+    },
+    "case_inventory": {
+      "matched": false,
+      "expected_cases": 424,
+      "executed_cases": 413,
+      "missing_cases": 11,
+      "unexpected_cases": 0,
+      "expected_files": 41,
+      "executed_files": 41,
+      "file_counts": {
+        "test/server/accuracy.unit.test.ts": 10,
+        "test/server/angular.unit.test.ts": 3,
+        "test/server/antiCheat.unit.test.ts": 23,
+        "test/server/appConfiguration.unit.test.ts": 2,
+        "test/server/appVersion.unit.test.ts": 1,
+        "test/server/b2bOrder.unit.test.ts": 5,
+        "test/server/blueprint.unit.test.ts": 1,
+        "test/server/challengeCountryMapping.unit.test.ts": 2,
+        "test/server/challengeTag.unit.test.ts": 1,
+        "test/server/challengeTutorialSequence.unit.test.ts": 1,
+        "test/server/challengeUtils.unit.test.ts": 21,
+        "test/server/chat.unit.test.ts": 10,
+        "test/server/codeSnippet.unit.test.ts": 7,
+        "test/server/codingChallengeFixes.unit.test.ts": 3,
+        "test/server/codingChallenges.unit.test.ts": 5,
+        "test/server/configValidation.unit.test.ts": 25,
+        "test/server/continueCode.unit.test.ts": 2,
+        "test/server/countryMapping.unit.test.ts": 3,
+        "test/server/criticalRemediation.unit.test.ts": 5,
+        "test/server/currentUser.unit.test.ts": 2,
+        "test/server/customizeApplication.unit.test.ts": 1,
+        "test/server/dataExport.unit.test.ts": 4,
+        "test/server/easterEgg.unit.test.ts": 2,
+        "test/server/fileServer.unit.test.ts": 10,
+        "test/server/fileUpload.unit.test.ts": 10,
+        "test/server/insecurity.unit.test.ts": 48,
+        "test/server/is-docker.unit.test.ts": 4,
+        "test/server/keyServer.unit.test.ts": 2,
+        "test/server/noUpdate.unit.test.ts": 6,
+        "test/server/order.unit.test.ts": 10,
+        "test/server/preconditionValidation.unit.test.ts": 21,
+        "test/server/premiumReward.unit.test.ts": 2,
+        "test/server/redirect.unit.test.ts": 13,
+        "test/server/rsn.unit.test.ts": 19,
+        "test/server/saveLoginIp.unit.test.ts": 3,
+        "test/server/system-prompt-extraction.unit.test.ts": 23,
+        "test/server/terraformCustomization.unit.test.ts": 2,
+        "test/server/utils.unit.test.ts": 55,
+        "test/server/verify.unit.test.ts": 39,
+        "test/server/webhook.unit.test.ts": 3,
+        "test/server/xml.unit.test.ts": 4
+      },
+      "critical_regressions": 5,
+      "case_inventory_sha256": "47d44f97b41a690efa9855c71bdbb67a703d4124172be91b4fba13e1c2f037ce",
+      "junit_totals": {
+        "total": 413,
+        "passed": 411,
+        "failed": 0,
+        "skipped": 2
+      },
+      "baseline_sha256": "22f866f2a2380d32538c68cfc36136adcd226029eb0161a29d61ad5b683ba480",
+      "reporter_totals_agree": true
+    },
+    "result": "Correctly rejected eleven missing verdicts; container/DAST jobs skipped and aggregate failed"
+  },
+  "matching_upstream_report": "https://github.com/nodejs/node/issues/64833",
+  "no_forced_exit_local_probe": {
+    "process_exit_code": 0,
+    "matched_all_case_identities": true,
+    "cases": 424,
+    "passed": 422,
+    "skipped": 2,
+    "critical_regressions_passed": 5
+  },
+  "api_no_forced_exit_local_probe": {
+    "process_exit_code": 0,
+    "junit_written": true,
+    "selected_files": 53,
+    "forced_exit": false,
+    "text_totals": {
+      "passed": 538,
+      "failed": 0,
+      "skipped": 4,
+      "cancelled": 0,
+      "todo": 0,
+      "total": 542
+    },
+    "junit_testcases": 544
+  },
+  "serialized_runs_limitation": "Serial execution alone did not prevent the eleven missing verdicts in run 39908648090"
+}

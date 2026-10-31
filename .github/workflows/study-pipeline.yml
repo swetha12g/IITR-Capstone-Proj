@@ -14,6 +14,7 @@ name: Complete six-stage study pipeline
     - metrics/**
     - prompts/**
     - tests/**
+    - output/pdf/PipelineFortress_Study_Report.pdf
     - requirements-dev.txt
     - .gitignore
     - .gitattributes
@@ -42,7 +43,7 @@ jobs:
         fetch-depth: 0
     - &id002
       name: Clear checked-in execution receipts
-      run: python -c "from pathlib import Path; [p.unlink(missing_ok=True) for p in Path('reports/sanitized/pipeline').glob('*.json')]"
+      run: python -c "from pathlib import Path; [p.unlink(missing_ok=True) for p in Path('reports/sanitized/pipeline').glob('*.json')]; Path('reports/sanitized/day1-latest.json').unlink(missing_ok=True)"
     - &id003
       uses: actions/setup-python@83679a892e2d95755f2dac6acb0bfd1e9ac5d548
       with:
@@ -58,9 +59,22 @@ jobs:
       with:
         node-version: 24.22.0
     - name: Verify evidence, AI boundary and patch contracts
-      run: python -m pytest tests/triage tests/redaction -q
+      run: python -m pytest tests/triage tests/redaction -q --junitxml=reports/private/pipeline/contracts.xml
     - name: Build and test the pinned application
       run: python scripts/run-day1-checks.py --offline
+    - name: Publish sanitized application check manifest
+      if: always()
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: application-checks
+        path: reports/sanitized/day1-latest.json
+        if-no-files-found: error
+        retention-days: 14
+    - name: Verify application lint and snippet consistency
+      working-directory: app/juice-shop
+      run: |
+        npm run lint
+        npm run rsn
     - name: Build allowlisted hardened image
       run: python scripts/build-hardened-image.py > reports/private/pipeline/image-build.log 2>&1
     - name: Bind build receipt and export image
@@ -271,11 +285,22 @@ jobs:
       env:
         PIPELINEFORTRESS_JOB_RESULTS: ${{ toJSON(needs) }}
       run: python scripts/aggregate-gate.py
+    - name: Publish one-stop study report in Actions Summary
+      if: always()
+      env:
+        PIPELINEFORTRESS_JOB_RESULTS: ${{ toJSON(needs) }}
+      run: python scripts/build-actions-summary.py
     - name: Publish final execution verdict
       if: always()
       uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
       with:
         name: aggregate-study-evidence
-        path: reports/sanitized/pipeline/
+        path: |
+          reports/sanitized/pipeline/
+          reports/sanitized/actions-summary.md
+          output/pdf/PipelineFortress_Study_Report.pdf
+          reports/sanitized/dashboard/index.html
+          reports/sanitized/dashboard/index.json
+          reports/sanitized/dashboard/index.csv
         if-no-files-found: error
         retention-days: 14

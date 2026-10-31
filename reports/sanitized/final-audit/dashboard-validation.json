@@ -1,0 +1,42 @@
+{
+  "observed_at_utc": "2026-10-23T06:35:13.371085+00:00",
+  "renderer": "installed headless Chrome; isolated profile; external DNS/background networking disabled",
+  "viewports": [
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "scrollWidth": 1425,
+      "height": 2606,
+      "title": "PipelineFortress study evidence",
+      "scopeLabelsPresent": true,
+      "horizontal_overflow": false
+    },
+    {
+      "viewport": "mobile",
+      "width": 390,
+      "scrollWidth": 390,
+      "height": 4045,
+      "title": "PipelineFortress study evidence",
+      "scopeLabelsPresent": true,
+      "horizontal_overflow": false
+    }
+  ],
+  "desktop_and_mobile_visually_inspected": true,
+  "source_html_sha256": "99f683d75bc1cd21122e7b6d6f27bebfeb4b461ef2dfafe979b45f01c2a90747",
+  "timing_samples": 1,
+  "first_finding_receipt_seconds": 4.65,
+  "pipeline_seconds": 93.19,
+  "timing_scope": "historical local repair run with explicit fresh-build/test reuse; no percentile claim",
+  "fresh_checkout_first_finding_seconds": 169.0,
+  "fresh_checkout_pipeline_seconds": 274.71,
+  "fresh_checkout_build_test_reused": false,
+  "final_probe_stalled_before_viewport_setup": true,
+  "owned_probe_terminated": true,
+  "bounded_retry_passed": true,
+  "final_scope_caption_verified_by_browser_dom": true,
+  "final_pixel_capture_timed_out": true,
+  "visual_snapshot_scope": "Earlier desktop/mobile metric layout visually inspected; current timing captions and hosted contract count (85) verified by browser DOM at both widths. No new pixel capture claimed.",
+  "hosted_contract_tests_displayed": 85,
+  "final_dom_probe_passed": true,
+  "additional_pixel_capture_attempted": false
+}

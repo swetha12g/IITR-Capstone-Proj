@@ -2,14 +2,14 @@
   "schema_version": 1,
   "stage": "dast",
   "execution": "complete",
-  "run_id": "20261022T152803854522Z",
-  "commit": "6ef16a09d9c60ab5b78136f3430590fcefba8d7a",
-  "observed_at_utc": "2026-10-22T15:32:32.778727+00:00",
+  "run_id": "20261022T155913232877Z",
+  "commit": "1e0115c14c85fd28332d85151b7ec560b8837c91",
+  "observed_at_utc": "2026-10-22T16:03:59.435363+00:00",
   "reports": [
     {
       "scanner_stage": "dast",
       "exit_code": 1,
-      "sha256": "4ebc4324db3999506bf73a87afa1afd812a5c9da111439246796fc6c4ca9c6d5"
+      "sha256": "d3c1de2e4c10a776db4c8a86d341dac0f496e436be465db19cffb11e98da4447"
     }
   ],
   "findings_by_severity": {
@@ -30,6 +30,7 @@
     "2bef6a732aa0707360e1d5906b88e314565e369ddd59362065cacaf916c0f490",
     "3e68c77d569c50f32edafec2337d7cdc5ca523414831054d8feafb2c6d30f78e",
     "412ba37d4239ef74cdd3fe70c90c3aab1277c35f9fc466f835f870084b3a1aec",
+    "4ed71414e644541e2d6495d0b6901edfe5fc4d3ce8262bb3e910783530f28c58",
     "532004d7edd06e33299e977f51ef828d22af3c184e87e1e233cea64326f6036a",
     "5597bdcd5cde5c30020468e4a807ac9dea1de54ab1c0168c0dcb9a96bf1f5827",
     "6daf1de63375a6e59353af0e4beca8835bf648c02c520a566f2e68b2c56d615e",
@@ -56,7 +57,6 @@
     "f3fa5e209bbd8b7936ad36ad028aa59ad615b0b0124831c4e245a8fa6b0670f7",
     "f4e95df1a7b91a8ff7b90f3bc1886ec2357ba8d2013ffa33dcc1f3dd3d21e1a0",
     "f6712b5ea32d2c4013e9e3d7194574c9e89b05ae406a2125adb95adcea39a1ad",
-    "f718abbc9bab5bfb3b22f2cac4549cf5c06439f20fadcd8f3b7780e5758d4a04",
     "f8f3dec4af778eb0672e52a556220fad0e86a453e5171ac7730147823e025ac3",
     "fd08f4aaeb9cf576bbd690f420fb197f964ab315e007e852c9fb228d7153dc8b",
     "ff44f4a7d11917811658d1fc3369c1caba9cbd5e62f3438cd46520ebdaf241f7"
@@ -68,6 +68,6 @@
   "cleanup_verified": true,
   "urls_reached": 121,
   "scanner_image": "ghcr.io/zaproxy/zaproxy@sha256:5ccfff9a411743ab2615136a2edd7416bec9ce41572fa94e935df38c14adb2b6",
-  "duration_seconds": 56.28,
+  "duration_seconds": 52.29,
   "duration_scope": "ZAP process execution"
 }

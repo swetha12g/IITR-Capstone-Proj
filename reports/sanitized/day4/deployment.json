@@ -1,6 +1,6 @@
 {
-  "image_config_id": "sha256:3eb3e0ff60e5fba12f014e5fcc9f6086fa7f366139d52a4bce44e598a3e860e9",
-  "cri_manifest_reference": "docker.io/library/pipelinefortress@sha256:77f2b09d4c678186e64caafef22ec929a01f4211a1e12d67b28d97e008707549",
-  "rendered_manifest_sha256": "c69ccfdade22bae45b3de97d0b845cb403188b1aec916bef8ae51260a4a3c884",
+  "image_config_id": "sha256:483df66c5bdfb2d47a740243a6db215e6abe43637a3bf23863ebc857997a59d0",
+  "cri_manifest_reference": "docker.io/library/pipelinefortress@sha256:9e3aa88e12365ecf45f3d5483638ee280ce857a226a1ee8da25cd3e62a115159",
+  "rendered_manifest_sha256": "38ded89a4a0984d1132ac2e8a854d217bc08d6f3981a1e8a7b054cf54c6a284e",
   "rollout_passed": true
 }

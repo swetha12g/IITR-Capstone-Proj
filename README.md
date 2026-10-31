@@ -4,9 +4,11 @@ PipelineFortress — Secure CI/CD with GenAI-Assisted Triage.
 
 The detailed execution roadmap is available in [docs/PipelineFortress_Detailed_Roadmap.pdf](docs/PipelineFortress_Detailed_Roadmap.pdf).
 
-Status on 22 October 2026: the complete local six-stage security pipeline passes execution with deferred findings. The hardened source-built image, passive ZAP coverage, deduplicated dashboard, source-free AI boundary and three focused remediation examples have real local evidence. The current offline application profile passes 2,326 tests with seven skips; nine external-service availability tests are excluded explicitly. See [current completion state](docs/project-completion.md) for hosted, reproduction and review status.
+Status on 23 October 2026: **critical repairs are committed and pushed; local and hosted scans confirm 11 → 0 critical findings** in fresh dependency and rebuilt-image scans. All six scanner stages, exact-image runtime checks and the existing owned study deployment pass. The selected application suites have 2,332 passes and six skips; nine external availability tests are excluded. [Critical remediation and verification](docs/critical-remediation.md).
 
-The user directed finishing the study implementation and fixing vulnerabilities later. All critical/high issue aliases are retained in the [deferred register](docs/deferred-remediation.md). Scanner errors, missing stages and invalid reports remain execution errors. All three bounded OpenAI generation attempts returned HTTP429; no successful live triage is claimed. No API purchase, top-up or further automatic attempt is made.
+The dashboard records 180 underlying issues: zero critical and 91 high; high/lower findings remain deferred. [Full-case hosted CI and one-stop report](https://github.com/swetha12g/IITR-Capstone-Proj/actions/runs/39912532895) passed all eight jobs on `42afe37`: 2,332 application passes / six skips, all 424 expected server identities, five critical regressions and 85 contracts. Critical findings and missing server verdicts fail the gate. See [current completion state](docs/project-completion.md) for verified publication and remaining assessment evidence.
+
+The twelve-page report now includes accepted hosted repair proof and a fresh repaired checkout. The dashboard displays measured timing and API/review status; desktop/mobile visual checks pass. Three infrastructure draft PRs are delivered. Successful live OpenAI evaluation and genuine independent review remain open; the three bounded generation attempts returned HTTP429. No additional API call or purchase occurred during this repair.
 
 - [Dashboard](reports/sanitized/dashboard/index.html)
 - [Twelve-page study report](output/pdf/PipelineFortress_Study_Report.pdf)

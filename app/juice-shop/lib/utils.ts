@@ -7,9 +7,10 @@ import packageJson from '../package.json'
 import fs from 'node:fs'
 import logger from './logger'
 import config from 'config'
-import download from 'download'
+import fetch from 'make-fetch-happen'
 import { ProxyAgent } from 'proxy-agent'
 import crypto from 'node:crypto'
+import { type Readable } from 'node:stream'
 import clarinet from 'clarinet'
 import type { Challenge } from '@juice-shop/data/types'
 
@@ -110,7 +111,29 @@ export const extractFilename = (url: string) => {
 export const downloadToFile = async (
   url: string,
   dest: string,
-  downloadData: (url: string, options: download.DownloadOptions) => Promise<Buffer> = download
+  downloadData: (url: string, options: fetch.FetchOptions) => Promise<Buffer> = async (url, options) => {
+    const requestOptions = { ...options, timeout: 30000, retry: 0, signal: AbortSignal.timeout(30000) }
+    const response = await fetch(url, requestOptions)
+    const body = response.body as Readable
+    if (!response.ok) {
+      body?.destroy()
+      throw new Error(`Download failed with HTTP ${response.status}`)
+    }
+    const chunks: Buffer[] = []
+    let bytes = 0
+    if (body) {
+      for await (const chunk of body) {
+        const data = Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk)
+        bytes += data.length
+        if (bytes > 20 * 1024 * 1024) {
+          body.destroy()
+          throw new Error('Download exceeds the size limit')
+        }
+        chunks.push(data)
+      }
+    }
+    return Buffer.concat(chunks)
+  }
 ) => {
   try {
     const data = await downloadData(url, { agent: proxyAgent })

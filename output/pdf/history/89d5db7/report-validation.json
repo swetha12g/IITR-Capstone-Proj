@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "verified_at_utc": "2026-10-22T20:29:54.923898+00:00",
+  "file": "output/pdf/history/89d5db7/PipelineFortress_Study_Report.pdf",
+  "sha256": "51d662b3d574a2879bd07cfa14d3867bec351335f930c8cf343ff2427690a364",
+  "pages": 12,
+  "all_pages_rendered_and_visually_inspected": true,
+  "text_present_on_all_pages": true,
+  "stale_hosted_pending_wording_removed": true,
+  "hosted_repair_run": 39842575944,
+  "hosted_contract_tests": 76,
+  "current_local_contract_tests": 79,
+  "source_gate_contract_tests": 25,
+  "fresh_reproduction_commit": "b20b9b1d9e0c1fc2cded21650fd954f2be7bbf20",
+  "fresh_reproduction_pipeline_seconds": 274.71,
+  "previous_report_preserved": "output/pdf/history/1616f14/PipelineFortress_Study_Report.pdf",
+  "source_inputs": [
+    {
+      "file": "scripts/generate-report.py",
+      "sha256": "422ba45d003ccdeaf87a089c89ee189ccba458b0e36b1ce140fd6a2a6b242a23"
+    },
+    {
+      "file": "reports/sanitized/critical-remediation/ci/verification.json",
+      "sha256": "f18e944842db3c425e54113a257c9dccc48be2d906e7e23fece1683fbedeebbe"
+    },
+    {
+      "file": "reports/sanitized/reproduction/critical-variant/run.json",
+      "sha256": "8325212c3afa46d99733ff45335c0a134c19e9d35ffd7747f95991465d2cf1c6"
+    },
+    {
+      "file": "output/pdf/history/89d5db7/report-input-dashboard.json",
+      "sha256": "8351ffd935ffc8e00f969601fbfc8f43af5e2d650643077a9b9b87f885114945",
+      "original_file_at_generation": "reports/sanitized/dashboard/index.json"
+    },
+    {
+      "file": "reports/sanitized/deferred-risks.json",
+      "sha256": "02066c5861f27f0835d8770b66c638ff03abbbe3e4b5cad7561c81f47178536e"
+    },
+    {
+      "file": "reports/sanitized/final-audit/review-observation.json",
+      "sha256": "34646f2aefc685ad596f968860d349278c80c8f7d3bece628442ba3602ec81bd"
+    }
+  ],
+  "remaining": "Successful live AI, independent labels/PR reviews, oral and actual submission acceptance unverified; no additional provider call or purchase",
+  "all_final_renders_identical_to_visually_inspected_pages": true,
+  "original_canonical_file": "output/pdf/PipelineFortress_Study_Report.pdf"
+}

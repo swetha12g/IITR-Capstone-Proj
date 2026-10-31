@@ -50,7 +50,8 @@ def main():
         result = subprocess.run(['docker', 'build', '--progress=plain', '-t', 'pipelinefortress:hardened', str(context)],
                                 cwd=ROOT, stdout=output, stderr=subprocess.STDOUT, timeout=1800)
     summary = {'observed_at_utc': datetime.now(timezone.utc).isoformat(), 'exit_code': result.returncode,
-               'app_source_commit': 'f189f521266f42c6bd05884468292000cee852ed',
+               'app_source_base_commit': 'f189f521266f42c6bd05884468292000cee852ed',
+               'source_variant': 'critical-remediation; runtime input hashes bind local modifications',
                'context_files': len(inputs), 'context_input_sha256': hashlib.sha256(json.dumps(inputs, sort_keys=True).encode()).hexdigest(),
                'locks': {p: inputs[p] for p in ['package-lock.json', 'frontend/package-lock.json']},
                'dockerfile_sha256': hashlib.sha256((context / 'Dockerfile').read_bytes()).hexdigest()}
